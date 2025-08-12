@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
-<title>归档|Archives</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本博客运用[hugo+github]技术，主要记录生活琐事。">
+<title>Category: Study.md - 梦幻星河的博客</title>
 
-<link rel='canonical' href='https://charles-lin-cell.github.io/archives/'>
+<link rel='canonical' href='https://charles-lin-cell.github.io/categories/study.md/'>
 
-<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="归档|Archives">
-<meta property='og:description' content="">
-<meta property='og:url' content='https://charles-lin-cell.github.io/archives/'>
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="Category: Study.md - 梦幻星河的博客">
+<meta property='og:description' content="本博客运用[hugo+github]技术，主要记录生活琐事。">
+<meta property='og:url' content='https://charles-lin-cell.github.io/categories/study.md/'>
 <meta property='og:site_name' content='梦幻星河的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2019-05-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-28T16:27:19&#43;08:00'/>
-<meta name="twitter:title" content="归档|Archives">
-<meta name="twitter:description" content="">
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-08-11T18:49:35&#43;08:00 '/>
+<meta name="twitter:title" content="Category: Study.md - 梦幻星河的博客">
+<meta name="twitter:description" content="本博客运用[hugo+github]技术，主要记录生活琐事。"><link rel="alternate" type="application/rss&#43;xml" href="https://charles-lin-cell.github.io/categories/study.md/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
-    <body class="template-archives">
+    <body class="">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -165,7 +165,7 @@
         </li>
         
         
-        <li  class='current' >
+        <li >
             <a href='/archives/' >
                 
                 
@@ -251,41 +251,204 @@
     </ol>
 </aside>
 
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                <section class="widget clock">
+    <div class="widget--clock">
+        <div class="clock-face">
+            <div class="digital-clock"></div>
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-dot"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const clockFace = document.querySelector('.clock-face');
+    if (!clockFace) return;
+    
+    const radius = 62; 
+    const center = 67; 
+
+    
+    const existingMarks = clockFace.querySelectorAll('.mark, .clock-number');
+    existingMarks.forEach(mark => mark.remove());
+
+    for (let i = 0; i < 60; i++) {
+        const angle = i * 6;
+        const radians = (angle * Math.PI) / 180;
+        const x = center + radius * Math.sin(radians);
+        const y = center - radius * Math.cos(radians);
+
+        const mark = document.createElement('div');
+        mark.className = 'mark';
+        mark.style.left = `${x}px`;
+        mark.style.top = `${y}px`;
+        mark.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
+        if (i % 15 === 0) {
+            mark.classList.add('long-mark');
+            const numberRadius = radius - 12;
+            const numberX = center + numberRadius * Math.sin(radians);
+            const numberY = center - numberRadius * Math.cos(radians);
+
+            const number = document.createElement('div');
+            number.textContent = (i / 5) || 12;
+            number.className = 'clock-number';
+            number.style.left = `${numberX}px`;
+            number.style.top = `${numberY}px`;
+            number.style.transform = `translate(-50%, -50%)`;
+            clockFace.appendChild(number);
+        } else if (i % 5 === 0) {
+            mark.classList.add('middle-mark');
+        } else {
+            mark.classList.add('short-mark');
+        }
+
+        clockFace.appendChild(mark);
+    }
+
+    function updateClock() {
+        const now = new Date();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+
+        const hourHand = clockFace.querySelector('.hour-hand');
+        const minuteHand = clockFace.querySelector('.minute-hand');
+        const secondHand = clockFace.querySelector('.second-hand');
+        const digitalClock = clockFace.querySelector('.digital-clock');
+
+        if (hourHand && minuteHand && secondHand && digitalClock) {
+            const hourDeg = (hour % 12) * 30 + (minute / 60) * 30;
+            const minuteDeg = minute * 6 + (second / 60) * 6;
+            const secondDeg = second * 6;
+
+            hourHand.style.transform = `rotate(${hourDeg}deg)`;
+            minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+
+            secondHand.style.transition = second === 0 ? 'none' : 'transform 0.5s linear';
+            secondHand.style.transform = `rotate(${secondDeg}deg)`;
+
+            const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+            digitalClock.textContent = timeString;
+        }
+
+        setTimeout(updateClock, 1000);
+    }
+
+    updateClock();
+});
+</script>
+
+            
+        
+            
+                <form action="/search/" class="search-form widget" >
+        <p>
+            <label>搜索</label>
+            <input name="keyword" required placeholder="输入关键词..." />
+        
+            <button title="搜索">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+            </button>
+        </p>
+    </form>
+            
+        
+            
+                <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">归档</h2>
+
+        
+        
+        
+        
+        
+        <div class="widget-archive--list">
+            <div class="archives-year">
+                    <a href="/archives/#2025">
+                        
+                            <span class="year">2025</span>
+                            <span class="count">1</span>
+                        
+                    </a> 
+                </div>
+            
+        </div>
+    </section>
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">分类</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/study.md/" class="font_size_1">
+                Study.md
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+    </aside>
+
+
             <main class="main full-width">
     <header>
-        <h2 class="section-title">Categories</h2>
-        <div class="subsection-list">
-            <div class="article-list--tile">
-                
-                    
-<article class="">
-    <a href="/categories/study.md/">
-        
-        
+        <h3 class="section-title">
+            
+                Categories
+            
+        </h3>
 
-        <div class="article-details">
-            <h2 class="article-title">Study.md</h2>
-        </div>
-    </a>
-</article>
-
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">1 个页面</h3>
+                <h1 class="section-term">Study.md</h1>
                 
             </div>
         </div>
-        
     </header>
-
     
-    
-    
-
-    
-    
-    <div class="archives-group" id="2025">
-        <h2 class="archives-date section-title"><a href="/archives/#2025">2025</a></h2>
-        <div class="article-list--compact">
-            
-                <article>
+    <section class="article-list--compact">
+        
+            <article>
     <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
         <div class="article-details">
             <h2 class="article-title">计算机等级三级网络技术</h2>
@@ -295,12 +458,9 @@
         </div>
     </a>
 </article>
-            
-        </div>
-    </div>
-    
-
-    <footer class="site-footer">
+        
+    </section>
+<footer class="site-footer">
     <section class="copyright">
         &copy; 
         
