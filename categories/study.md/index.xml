@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Tue, 12 Aug 2025 16:56:06 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/categories/study.md/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 12 Aug 2025 17:37:35 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/categories/study.md/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机等级三级网络技术</title>
         <link>https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</link>
         <pubDate>Sun, 10 Aug 2025 15:38:14 +0800</pubDate>
@@ -144,12 +144,16 @@ IP 地址是类似这样的：&lt;/p&gt;
 &lt;p&gt;11111111.11100000.00000000.00000000&lt;/p&gt;
 &lt;p&gt;转换为十进制即是 255.224.0.0&lt;/p&gt;
 &lt;h4 id=&#34;网络地址转换-nat&#34;&gt;网络地址转换 NAT
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/NAT%e8%bd%ac%e6%8d%a2.jpg&#34;
-	
-	
-	
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/NAT%E8%BD%AC%E6%8D%A2.jpg&#34;
+	width=&#34;627&#34;
+	height=&#34;309&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/NAT%E8%BD%AC%E6%8D%A2_hu1172033220187968911.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/NAT%E8%BD%AC%E6%8D%A2_hu13183193036325779112.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;486px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;问 ① ② 是什么
@@ -159,12 +163,16 @@ IP 地址是类似这样的：&lt;/p&gt;
 &lt;h4 id=&#34;ip-地址块聚合&#34;&gt;IP 地址块聚合
 &lt;/h4&gt;&lt;h5 id=&#34;第一种问聚合后的地址块&#34;&gt;&lt;strong&gt;第一种：问聚合后的地址块&lt;/strong&gt;
 &lt;/h5&gt;&lt;p&gt;下面演示三个地址的聚合&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e5%9c%b0%e5%9d%80%e5%9d%97%e8%81%9a%e5%90%88.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%9C%B0%E5%9D%80%E5%9D%97%E8%81%9A%E5%90%88.jpg&#34;
+	width=&#34;608&#34;
+	height=&#34;311&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%9C%B0%E5%9D%80%E5%9D%97%E8%81%9A%E5%90%88_hu11856352878404606650.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%9C%B0%E5%9D%80%E5%9D%97%E8%81%9A%E5%90%88_hu7226449748215184319.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;469px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;先全部转成二进制；&lt;/p&gt;
@@ -421,12 +429,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;做这种题先看最长的那项有没有超过 8 段。&lt;/p&gt;
 &lt;h4 id=&#34;数据包&#34;&gt;数据包
 &lt;/h4&gt;&lt;p&gt;例：下图是 A 发送的数据包通过路由器转发到 B 的过程示意图，求数据包 3 中的&lt;strong&gt;目的IP地址和目的MAC地址&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e6%95%b0%e6%8d%ae%e5%8c%85%e4%bc%a0%e9%80%92.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BC%A0%E9%80%92.jpg&#34;
+	width=&#34;602&#34;
+	height=&#34;407&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BC%A0%E9%80%92_hu7540234964248215395.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%95%B0%E6%8D%AE%E5%8C%85%E4%BC%A0%E9%80%92_hu4996165124937949989.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;无论哪个数据包，目的 IP 地址就是 B 的 IP 地址，&lt;/p&gt;
@@ -438,23 +450,31 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;恢复速度从快到慢：完全备份、差异备份、增量备份（和上面顺序相反，也好理解，备份时详细的恢复快）&lt;/p&gt;
 &lt;p&gt;空间占用从多到少：完全备份、差异备份、增量备份（备份越详细占用空间越多）&lt;/p&gt;
 &lt;p&gt;题目通常问你其中某一种的顺序。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e4%b8%89%e7%a7%8d%e5%a4%87%e4%bb%bd.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E4%B8%89%E7%A7%8D%E5%A4%87%E4%BB%BD.jpg&#34;
+	width=&#34;927&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E4%B8%89%E7%A7%8D%E5%A4%87%E4%BB%BD_hu16501024216094178438.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E4%B8%89%E7%A7%8D%E5%A4%87%E4%BB%BD_hu17303961771303535243.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;243&#34;
+		data-flex-basis=&#34;583px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;第二类选择题&#34;&gt;第二类选择题
 &lt;/h3&gt;&lt;p&gt;第二类选择题普遍是以下这种长篇的代码选择题，看起来复杂，但也能在不了解知识点的情况下答对&lt;/p&gt;
 &lt;p&gt;这种应试技巧就是“&lt;strong&gt;找不同&lt;/strong&gt;”+“&lt;strong&gt;少数服从多数&lt;/strong&gt;”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e7%ac%ac%e4%ba%8c%e7%b1%bb%e9%80%89%e6%8b%a9%e9%a2%98%e4%be%8b%e9%a2%981.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%981.jpg&#34;
+	width=&#34;940&#34;
+	height=&#34;497&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%981_hu6760785362042453081.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%981_hu15785168981064829661.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;453px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;把他们不同的地方做了荧光标记&lt;/p&gt;
@@ -463,12 +483,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;最后，看&lt;strong&gt;绿色的地方&lt;/strong&gt;，只有 B 项少了一句，所以排除 B；&lt;/p&gt;
 &lt;p&gt;综合选 D。&lt;/p&gt;
 &lt;p&gt;下面一道题自己练习一下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e7%ac%ac%e4%ba%8c%e7%b1%bb%e9%80%89%e6%8b%a9%e9%a2%98%e4%be%8b%e9%a2%982.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%982.jpg&#34;
+	width=&#34;412&#34;
+	height=&#34;468&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%982_hu8404326302060660203.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E7%AC%AC%E4%BA%8C%E7%B1%BB%E9%80%89%E6%8B%A9%E9%A2%98%E4%BE%8B%E9%A2%982_hu5795640269085766647.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;88&#34;
+		data-flex-basis=&#34;211px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;答案是C。&lt;/p&gt;
@@ -810,12 +834,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;对 IP地址和子网掩码做如下处理：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e5%a1%ab%e5%9c%b0%e5%9d%80%e8%a1%a8.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%A1%AB%E5%9C%B0%E5%9D%80%E8%A1%A8.jpg&#34;
+	width=&#34;850&#34;
+	height=&#34;422&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%A1%AB%E5%9C%B0%E5%9D%80%E8%A1%A8_hu4476044768549953420.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E5%A1%AB%E5%9C%B0%E5%9D%80%E8%A1%A8_hu8138513092907290593.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;483px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;第二道-配置路由器&#34;&gt;第二道 配置路由器
@@ -825,29 +853,41 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;校园网内的路由器&lt;strong&gt;R1&lt;/strong&gt;设为&lt;strong&gt;DHCP服务器&lt;/strong&gt;，可分配的IP地址是221.89.23.192/26&lt;/p&gt;
 &lt;p&gt;其中221.89.23.200~221.89.23.254地址除外。&lt;/p&gt;
 &lt;p&gt;地址租用时间为&lt;strong&gt;5小时3分&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e9%85%8d%e7%bd%ae%e8%b7%af%e7%94%b1%e5%99%a8.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8.jpg&#34;
+	width=&#34;511&#34;
+	height=&#34;447&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8_hu11725945469523672596.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8_hu6387507893422635511.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;274px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;黄色是题中的重要信息，红色是经常设置填空的地方，一般相对位置不会变。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e9%85%8d%e7%bd%ae%e8%b7%af%e7%94%b1%e5%99%a8%e7%ad%94%e6%a1%881.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8%E7%AD%94%E6%A1%881.jpg&#34;
+	width=&#34;1179&#34;
+	height=&#34;659&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8%E7%AD%94%E6%A1%881_hu2703495883659180340.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8%E7%AD%94%E6%A1%881_hu3201736158806610175.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;429px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e9%85%8d%e7%bd%ae%e8%b7%af%e7%94%b1%e7%ad%94%e6%a1%882.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E7%AD%94%E6%A1%882.jpg&#34;
+	width=&#34;759&#34;
+	height=&#34;363&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E7%AD%94%E6%A1%882_hu17811770049072353560.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E7%AD%94%E6%A1%882_hu4351119752925941128.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;501px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;第三道-dhcp-报文&#34;&gt;第三道 DHCP 报文
@@ -918,12 +958,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;整个过程确保了即使在客户端没有初始IP地址的情况下，也能通过广播机制成功从服务器获取到所需的网络配置信息。&lt;/p&gt;
 &lt;p&gt;以下是DHCP配置的相关报文：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/DHCP%e6%8a%a5%e6%96%87%e7%ad%94%e6%a1%88.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/DHCP%E6%8A%A5%E6%96%87%E7%AD%94%E6%A1%88.jpg&#34;
+	width=&#34;1003&#34;
+	height=&#34;621&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/DHCP%E6%8A%A5%E6%96%87%E7%AD%94%E6%A1%88_hu16479940299863893294.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/DHCP%E6%8A%A5%E6%96%87%E7%AD%94%E6%A1%88_hu8196168021281215127.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;387px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;第四道-sniffer-数据包&#34;&gt;第四道 sniffer 数据包
@@ -931,12 +975,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;第四道大题是考点中最不稳定的一道，不具有普遍性。&lt;/p&gt;
 &lt;h3 id=&#34;最后一道&#34;&gt;最后一道
 &lt;/h3&gt;&lt;p&gt;主要类型是拓扑图分析。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e6%8b%93%e6%89%91%e5%9b%be.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;692&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE_hu6379320852299821009.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE_hu4114434729528701667.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;填表部分12分&#34;&gt;填表部分（12分）
@@ -975,12 +1023,16 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;解：图中最上方的 RG 有两个分支，左侧分支是 S0 ，有末段为 129 和 130 的两个地址，进行聚合：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e6%8b%93%e6%89%91%e5%9b%be%e7%ad%94%e6%a1%881.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%881.jpg&#34;
+	width=&#34;1070&#34;
+	height=&#34;550&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%881_hu10104820063870470024.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%881_hu14230292982704233807.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;【1】处填 192.168.6.128/30 ；&lt;/p&gt;
@@ -993,20 +1045,28 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;p&gt;【5】是 左下方 192.168.64.0/24、192.168.65.0/24、192.168.66.0/24、192.168.67.0/24 四个地址块的聚合；&lt;/p&gt;
 &lt;p&gt;【6】是 右下方 192.168.96.0/24、192.168.97.0/24、192.168.98.0/24、192.168.99.0/24 四个地址块的聚合；&lt;/p&gt;
 &lt;p&gt;在【3】【4】两空聚合时往往需要多注意&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e6%8b%93%e6%89%91%e5%9b%be%e7%ad%94%e6%a1%882.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%882.jpg&#34;
+	width=&#34;981&#34;
+	height=&#34;456&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%882_hu1316802388061709746.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%882_hu5905845615377336122.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;516px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/images/%e6%8b%93%e6%89%91%e5%9b%be%e7%ad%94%e6%a1%883.jpg&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%883.jpg&#34;
+	width=&#34;984&#34;
+	height=&#34;486&#34;
+	srcset=&#34;https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%883_hu7130583354776971133.jpg 480w, https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/images/%E6%8B%93%E6%89%91%E5%9B%BE%E7%AD%94%E6%A1%883_hu4829975997813890419.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;202&#34;
+		data-flex-basis=&#34;485px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;最终答案应为&lt;/p&gt;
