@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Thu, 14 Aug 2025 14:24:38 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 14 Aug 2025 15:36:17 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机等级三级网络技术</title>
         <link>https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</link>
         <pubDate>Sun, 10 Aug 2025 15:38:14 +0800</pubDate>
@@ -20,8 +20,13 @@
 &lt;p&gt;主要针对该博主原文内容进行个别修改及知识点补充，仅用于个人学习。&lt;/p&gt;
 &lt;h2 id=&#34;基础准备&#34;&gt;基础准备
 &lt;/h2&gt;&lt;h3 id=&#34;题库&#34;&gt;题库
-&lt;/h3&gt;&lt;p&gt;链接&lt;a class=&#34;link&#34; href=&#34;https://pan.quark.cn/s/cefdf956195b#/list/share&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;/h3&gt;&lt;p&gt;总链接：&lt;a class=&#34;link&#34; href=&#34;https://pan.quark.cn/s/cefdf956195b#/list/share&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;夸克网盘分享&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;选择题在线文档：&lt;a class=&#34;link&#34; href=&#34;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NzYxNjc4NQ==&amp;amp;action=getalbum&amp;amp;album_id=1500296869346918403#wechat_redirect&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NCRE三级网络技术&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;未来教育考试系统：&lt;a class=&#34;link&#34; href=&#34;https://pan.baidu.com/s/1IUDXM3CCXU3CUI5ZOXDEmA?pwd=e394&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;未来教育考试系统.rar_免费高速下载|百度网盘-分享无限制&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS：此题库链接是收集全网相关的免费资料所得，非本人原创，警惕部分链接的广告陷阱，避免上当受骗。&lt;/p&gt;
 &lt;h3 id=&#34;二进制转换&#34;&gt;二进制转换
 &lt;/h3&gt;&lt;p&gt;网络技术用到的一般是八位二进制数。&lt;/p&gt;
 &lt;p&gt;也就是 0 ~ 255，&lt;/p&gt;
