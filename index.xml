@@ -19,7 +19,8 @@
 &lt;p&gt;主要针对该博主原文内容进行个别修改及知识点补充，仅用于个人学习。&lt;/p&gt;
 &lt;h2 id=&#34;基础准备&#34;&gt;基础准备
 &lt;/h2&gt;&lt;h3 id=&#34;题库&#34;&gt;题库
-&lt;/h3&gt;&lt;p&gt;链接&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;链接&lt;a class=&#34;link&#34; href=&#34;https://pan.quark.cn/s/cefdf956195b#/list/share&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;夸克网盘分享&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;二进制转换&#34;&gt;二进制转换
 &lt;/h3&gt;&lt;p&gt;网络技术用到的一般是八位二进制数。&lt;/p&gt;
 &lt;p&gt;也就是 0 ~ 255，&lt;/p&gt;
@@ -47,30 +48,30 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th&gt;二进制&lt;/th&gt;
-          &lt;th&gt;十进制&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;二进制&lt;/th&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;十进制&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td&gt;1000 0000&lt;/td&gt;
-          &lt;td&gt;128&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1000 0000&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;128&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;1100 0000&lt;/td&gt;
-          &lt;td&gt;192&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1100 0000&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;192&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;1110 0000&lt;/td&gt;
-          &lt;td&gt;224&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1110 0000&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;224&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;1111 0000&lt;/td&gt;
-          &lt;td&gt;240&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1111 0000&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;240&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td&gt;1111 1111&lt;/td&gt;
-          &lt;td&gt;255&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;1111 1111&lt;/td&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;255&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
