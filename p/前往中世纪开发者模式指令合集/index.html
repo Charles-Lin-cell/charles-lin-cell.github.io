@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在前往中世纪安装对应mod\n相关文章请找链接【前往中世纪Going Medieval】控制台安装傻瓜式教程在此 - 哔哩哔哩\n一、建造与建筑相关 英文命令 中文翻译 dev_Auto Construct_off 关闭自动建造 dev_unlock_all_variants_off 关闭解锁所有变体 dev_spawn_materials_with_building&hellip; 用建筑物生成材料 dev_craft able_buildings_enabled_off 关闭可制作建筑物 dev_allow Edge Placement_false 不允许边缘放置 dev_fill_storage 填充存储 二、阵营与所有权 英文命令 中文翻译 dev_switch Faction Ownership_ 切换阵营所有权 dev_convert All Buildings To Enemy Ow&hellip; 将所有建筑物转换为敌方拥有 dev_faction_set_friendliness 设置阵营友好度 三、研究与生产 英文命令 中文翻译 dev_activate All Research_on 激活所有研究 dev_production_speed_normal 正常生产速度 四、摄像机与界面 英文命令 中文翻译 dev_toggle_alt Camera_ toggle Alt Cam&hellip; 切换备用摄像机 dev_toggle_ui_off 关闭用户界面 五、资源与物品生成 英文命令 中文翻译 dev_spawn_resource 生成资源 dev_spawn_resource_ c 生成资源类别 dev_spawn_item 生成物品 dev_spawn_plant 生成植物 dev_spawn_mature_plant 生成成熟植物 dev_spawn_particle_system 生成粒子系统 dev_spawn_trader 生成商人 dev_spawn_trader_with_bodyguards 生成带保镖的商人 dev_spawn_bard_visitor 生成吟游诗人访客 dev_spawn_animal 生成动物 dev_spawn_fish 生成鱼 dev_try_fish_spawn 尝试生成鱼 dev_spawn_blank_ n p c 生成空白NPC 六、工人与角色管理 英文命令 中文翻译 dev_reset_workers 重置工人 dev_spawn_worker_1 生成1个工人 dev_spawn_worker_10 生成10个工人 dev_remove_worker 移除工人 dev_wound_worker 使工人受伤 dev_faint_worker 使工人昏迷 dev_ un faint _worker 使工人清醒 dev_set_worker_hunger_100 设置工人饥饿为100 dev_set_worker_hunger_50 设置工人饥饿为50 dev_set_worker_hunger_1 设置工人饥饿为1 dev_set_worker_sleep_100 设置工人睡眠为100 dev_set_worker_sleep_50 设置工人睡眠为50 dev_set_worker_sleep_1 设置工人睡眠为1 dev_set_worker_hunger_minus_100 设置工人饥饿减少100 dev_set_worker_stats 设置工人状态 dev_add_ x p _to_skill 向技能添加经验值 七、健康与状态 英文命令 中文翻译 dev_set_health_100 设置健康为100 dev_set_health_1 设置健康为1 dev_set_health_0 设置健康为0 dev_set_mood_plus_10 设置心情增加10 dev_set_mood_minus_10 设置心情减少10 dev_set_freshness_100 设置新鲜度为100 dev_set_freshness_1 设置新鲜度为1 dev_set_freshness_0 设置新鲜度为0 八、战斗与伤害 英文命令 中文翻译 dev_toggle_combat_damage_popup 切换战斗伤害弹出窗口 dev_spawn_enemy 生成敌人 dev_kill_all_enemies 杀死所有敌人 dev_spawn_trebuchet 生成投石机 dev_deal_damage 造成伤害 dev_mark_animals_for_attack 标记动物进行攻击 dev_mark_workers_for_attack 标记工人进行攻击 dev_trigger_trap 触发陷阱 dev_reset_trap 重置陷阱 九、动物与生态 英文命令 中文翻译 dev_domestic 家养 dev_pet 宠物 dev_wild 野生 dev_wild_aggressive 野生攻击性 dev_pregnant 怀孕 dev_birth 出生 dev_animal_prod_finish 动物生产完成 dev_reset_animal_timers 重置动物计时器 dev_kill_all_animals 杀死所有动物 dev_mark_for_ r o p ping 标记用于捕捉 dev_kill_all_fish 杀死所有鱼 dev_relocate_animal_idle_points 重新定位动物闲置点 十、植物与农业 英文命令 中文翻译 dev_crop_next_phase 作物进入下一阶段 dev_force_crop_harvest_phase_off 强制关闭作物收获阶段 dev_force_plant_crops_off 强制关闭种植作物 dev_plant_next_phase 植物进入下一阶段 dev_kill_all_plants 杀死所有植物 十一、天气与环境 英文命令 中文翻译 dev_thunder 雷电 dev_weather_view 天气视图 dev_weather_time 天气时间 dev_water_debug 水调试 dev_refresh_stability_water 刷新稳定性水 十二、调试与可视化 英文命令 中文翻译 dev_toggle_all_debug 切换所有调试 dev_toggle_reachability_debug 切换可达性调试 dev_toggle_proximity_debug 切换邻近性调试 dev_toggle_air_nodes 切换空气节点 dev_toggle_ground_nodes 切换地面节点 dev_toggle_pathing_lines 切换路径线 dev_refresh_nodes 刷新节点 dev_update_node_visualizer 更新节点可视化器 dev_toggle_player_voxel_info 切换玩家体素信息 dev_voxel_info 体素信息 dev_damage_voxel 损坏体素 十三、事件与交互 英文命令 中文翻译 dev_spawn_event 生成事件 dev_schedule_event_group 安排事件组 dev_event_interaction_chance_always 事件交互机会总是发生 dev_event_interaction_chance_default 事件交互机会默认设置 dev_create_warning 创建警告 dev_update_warning 更新警告 dev_remove_warning 移除警告 十四、NPC与访客 英文命令 中文翻译 dev_make_ n p c _leave 让NPC离开 dev_set_ n p c_ be haviour 设置NPC行为 dev_set_ n p c_faction 设置NPC阵营 dev_commander_ai 指挥官AI 十五、采矿与挖掘 英文命令 中文翻译 dev_instant_dig_off 关闭即时挖掘 dev_mining_speed_10 设置采矿速度为10 dev_mining_speed_reset 重置采矿速度 dev_instant_cut_off 立即切断 十六、地图与标记 英文命令 中文翻译 dev_spawn_map_marker 生成地图标记 dev_ambush_caravan 埋伏商队 dev_second_map_timer_enabled 启用第二地图计时器 十七、通用操作 英文命令 中文翻译 dev_toggle_ in v urn ability 切换无敌 dev_toggle_in v urn ability_off 关闭无敌 dev_ladder_ fall down 梯子倒塌 dev_force_exception 强制异常 ">
+<title>前往中世纪开发者模式指令合集</title>
+
+<link rel='canonical' href='https://charles-lin-cell.github.io/p/%E5%89%8D%E5%BE%80%E4%B8%AD%E4%B8%96%E7%BA%AA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="前往中世纪开发者模式指令合集">
+<meta property='og:description' content="在前往中世纪安装对应mod\n相关文章请找链接【前往中世纪Going Medieval】控制台安装傻瓜式教程在此 - 哔哩哔哩\n一、建造与建筑相关 英文命令 中文翻译 dev_Auto Construct_off 关闭自动建造 dev_unlock_all_variants_off 关闭解锁所有变体 dev_spawn_materials_with_building&hellip; 用建筑物生成材料 dev_craft able_buildings_enabled_off 关闭可制作建筑物 dev_allow Edge Placement_false 不允许边缘放置 dev_fill_storage 填充存储 二、阵营与所有权 英文命令 中文翻译 dev_switch Faction Ownership_ 切换阵营所有权 dev_convert All Buildings To Enemy Ow&hellip; 将所有建筑物转换为敌方拥有 dev_faction_set_friendliness 设置阵营友好度 三、研究与生产 英文命令 中文翻译 dev_activate All Research_on 激活所有研究 dev_production_speed_normal 正常生产速度 四、摄像机与界面 英文命令 中文翻译 dev_toggle_alt Camera_ toggle Alt Cam&hellip; 切换备用摄像机 dev_toggle_ui_off 关闭用户界面 五、资源与物品生成 英文命令 中文翻译 dev_spawn_resource 生成资源 dev_spawn_resource_ c 生成资源类别 dev_spawn_item 生成物品 dev_spawn_plant 生成植物 dev_spawn_mature_plant 生成成熟植物 dev_spawn_particle_system 生成粒子系统 dev_spawn_trader 生成商人 dev_spawn_trader_with_bodyguards 生成带保镖的商人 dev_spawn_bard_visitor 生成吟游诗人访客 dev_spawn_animal 生成动物 dev_spawn_fish 生成鱼 dev_try_fish_spawn 尝试生成鱼 dev_spawn_blank_ n p c 生成空白NPC 六、工人与角色管理 英文命令 中文翻译 dev_reset_workers 重置工人 dev_spawn_worker_1 生成1个工人 dev_spawn_worker_10 生成10个工人 dev_remove_worker 移除工人 dev_wound_worker 使工人受伤 dev_faint_worker 使工人昏迷 dev_ un faint _worker 使工人清醒 dev_set_worker_hunger_100 设置工人饥饿为100 dev_set_worker_hunger_50 设置工人饥饿为50 dev_set_worker_hunger_1 设置工人饥饿为1 dev_set_worker_sleep_100 设置工人睡眠为100 dev_set_worker_sleep_50 设置工人睡眠为50 dev_set_worker_sleep_1 设置工人睡眠为1 dev_set_worker_hunger_minus_100 设置工人饥饿减少100 dev_set_worker_stats 设置工人状态 dev_add_ x p _to_skill 向技能添加经验值 七、健康与状态 英文命令 中文翻译 dev_set_health_100 设置健康为100 dev_set_health_1 设置健康为1 dev_set_health_0 设置健康为0 dev_set_mood_plus_10 设置心情增加10 dev_set_mood_minus_10 设置心情减少10 dev_set_freshness_100 设置新鲜度为100 dev_set_freshness_1 设置新鲜度为1 dev_set_freshness_0 设置新鲜度为0 八、战斗与伤害 英文命令 中文翻译 dev_toggle_combat_damage_popup 切换战斗伤害弹出窗口 dev_spawn_enemy 生成敌人 dev_kill_all_enemies 杀死所有敌人 dev_spawn_trebuchet 生成投石机 dev_deal_damage 造成伤害 dev_mark_animals_for_attack 标记动物进行攻击 dev_mark_workers_for_attack 标记工人进行攻击 dev_trigger_trap 触发陷阱 dev_reset_trap 重置陷阱 九、动物与生态 英文命令 中文翻译 dev_domestic 家养 dev_pet 宠物 dev_wild 野生 dev_wild_aggressive 野生攻击性 dev_pregnant 怀孕 dev_birth 出生 dev_animal_prod_finish 动物生产完成 dev_reset_animal_timers 重置动物计时器 dev_kill_all_animals 杀死所有动物 dev_mark_for_ r o p ping 标记用于捕捉 dev_kill_all_fish 杀死所有鱼 dev_relocate_animal_idle_points 重新定位动物闲置点 十、植物与农业 英文命令 中文翻译 dev_crop_next_phase 作物进入下一阶段 dev_force_crop_harvest_phase_off 强制关闭作物收获阶段 dev_force_plant_crops_off 强制关闭种植作物 dev_plant_next_phase 植物进入下一阶段 dev_kill_all_plants 杀死所有植物 十一、天气与环境 英文命令 中文翻译 dev_thunder 雷电 dev_weather_view 天气视图 dev_weather_time 天气时间 dev_water_debug 水调试 dev_refresh_stability_water 刷新稳定性水 十二、调试与可视化 英文命令 中文翻译 dev_toggle_all_debug 切换所有调试 dev_toggle_reachability_debug 切换可达性调试 dev_toggle_proximity_debug 切换邻近性调试 dev_toggle_air_nodes 切换空气节点 dev_toggle_ground_nodes 切换地面节点 dev_toggle_pathing_lines 切换路径线 dev_refresh_nodes 刷新节点 dev_update_node_visualizer 更新节点可视化器 dev_toggle_player_voxel_info 切换玩家体素信息 dev_voxel_info 体素信息 dev_damage_voxel 损坏体素 十三、事件与交互 英文命令 中文翻译 dev_spawn_event 生成事件 dev_schedule_event_group 安排事件组 dev_event_interaction_chance_always 事件交互机会总是发生 dev_event_interaction_chance_default 事件交互机会默认设置 dev_create_warning 创建警告 dev_update_warning 更新警告 dev_remove_warning 移除警告 十四、NPC与访客 英文命令 中文翻译 dev_make_ n p c _leave 让NPC离开 dev_set_ n p c_ be haviour 设置NPC行为 dev_set_ n p c_faction 设置NPC阵营 dev_commander_ai 指挥官AI 十五、采矿与挖掘 英文命令 中文翻译 dev_instant_dig_off 关闭即时挖掘 dev_mining_speed_10 设置采矿速度为10 dev_mining_speed_reset 重置采矿速度 dev_instant_cut_off 立即切断 十六、地图与标记 英文命令 中文翻译 dev_spawn_map_marker 生成地图标记 dev_ambush_caravan 埋伏商队 dev_second_map_timer_enabled 启用第二地图计时器 十七、通用操作 英文命令 中文翻译 dev_toggle_ in v urn ability 切换无敌 dev_toggle_in v urn ability_off 关闭无敌 dev_ladder_ fall down 梯子倒塌 dev_force_exception 强制异常 ">
+<meta property='og:url' content='https://charles-lin-cell.github.io/p/%E5%89%8D%E5%BE%80%E4%B8%AD%E4%B8%96%E7%BA%AA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/'>
+<meta property='og:site_name' content='梦幻星河的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-04T22:58:39&#43;08:00'/><meta property='article:modified_time' content='2025-09-04T23:17:04&#43;08:00'/>
+<meta name="twitter:title" content="前往中世纪开发者模式指令合集">
+<meta name="twitter:description" content="在前往中世纪安装对应mod\n相关文章请找链接【前往中世纪Going Medieval】控制台安装傻瓜式教程在此 - 哔哩哔哩\n一、建造与建筑相关 英文命令 中文翻译 dev_Auto Construct_off 关闭自动建造 dev_unlock_all_variants_off 关闭解锁所有变体 dev_spawn_materials_with_building&hellip; 用建筑物生成材料 dev_craft able_buildings_enabled_off 关闭可制作建筑物 dev_allow Edge Placement_false 不允许边缘放置 dev_fill_storage 填充存储 二、阵营与所有权 英文命令 中文翻译 dev_switch Faction Ownership_ 切换阵营所有权 dev_convert All Buildings To Enemy Ow&hellip; 将所有建筑物转换为敌方拥有 dev_faction_set_friendliness 设置阵营友好度 三、研究与生产 英文命令 中文翻译 dev_activate All Research_on 激活所有研究 dev_production_speed_normal 正常生产速度 四、摄像机与界面 英文命令 中文翻译 dev_toggle_alt Camera_ toggle Alt Cam&hellip; 切换备用摄像机 dev_toggle_ui_off 关闭用户界面 五、资源与物品生成 英文命令 中文翻译 dev_spawn_resource 生成资源 dev_spawn_resource_ c 生成资源类别 dev_spawn_item 生成物品 dev_spawn_plant 生成植物 dev_spawn_mature_plant 生成成熟植物 dev_spawn_particle_system 生成粒子系统 dev_spawn_trader 生成商人 dev_spawn_trader_with_bodyguards 生成带保镖的商人 dev_spawn_bard_visitor 生成吟游诗人访客 dev_spawn_animal 生成动物 dev_spawn_fish 生成鱼 dev_try_fish_spawn 尝试生成鱼 dev_spawn_blank_ n p c 生成空白NPC 六、工人与角色管理 英文命令 中文翻译 dev_reset_workers 重置工人 dev_spawn_worker_1 生成1个工人 dev_spawn_worker_10 生成10个工人 dev_remove_worker 移除工人 dev_wound_worker 使工人受伤 dev_faint_worker 使工人昏迷 dev_ un faint _worker 使工人清醒 dev_set_worker_hunger_100 设置工人饥饿为100 dev_set_worker_hunger_50 设置工人饥饿为50 dev_set_worker_hunger_1 设置工人饥饿为1 dev_set_worker_sleep_100 设置工人睡眠为100 dev_set_worker_sleep_50 设置工人睡眠为50 dev_set_worker_sleep_1 设置工人睡眠为1 dev_set_worker_hunger_minus_100 设置工人饥饿减少100 dev_set_worker_stats 设置工人状态 dev_add_ x p _to_skill 向技能添加经验值 七、健康与状态 英文命令 中文翻译 dev_set_health_100 设置健康为100 dev_set_health_1 设置健康为1 dev_set_health_0 设置健康为0 dev_set_mood_plus_10 设置心情增加10 dev_set_mood_minus_10 设置心情减少10 dev_set_freshness_100 设置新鲜度为100 dev_set_freshness_1 设置新鲜度为1 dev_set_freshness_0 设置新鲜度为0 八、战斗与伤害 英文命令 中文翻译 dev_toggle_combat_damage_popup 切换战斗伤害弹出窗口 dev_spawn_enemy 生成敌人 dev_kill_all_enemies 杀死所有敌人 dev_spawn_trebuchet 生成投石机 dev_deal_damage 造成伤害 dev_mark_animals_for_attack 标记动物进行攻击 dev_mark_workers_for_attack 标记工人进行攻击 dev_trigger_trap 触发陷阱 dev_reset_trap 重置陷阱 九、动物与生态 英文命令 中文翻译 dev_domestic 家养 dev_pet 宠物 dev_wild 野生 dev_wild_aggressive 野生攻击性 dev_pregnant 怀孕 dev_birth 出生 dev_animal_prod_finish 动物生产完成 dev_reset_animal_timers 重置动物计时器 dev_kill_all_animals 杀死所有动物 dev_mark_for_ r o p ping 标记用于捕捉 dev_kill_all_fish 杀死所有鱼 dev_relocate_animal_idle_points 重新定位动物闲置点 十、植物与农业 英文命令 中文翻译 dev_crop_next_phase 作物进入下一阶段 dev_force_crop_harvest_phase_off 强制关闭作物收获阶段 dev_force_plant_crops_off 强制关闭种植作物 dev_plant_next_phase 植物进入下一阶段 dev_kill_all_plants 杀死所有植物 十一、天气与环境 英文命令 中文翻译 dev_thunder 雷电 dev_weather_view 天气视图 dev_weather_time 天气时间 dev_water_debug 水调试 dev_refresh_stability_water 刷新稳定性水 十二、调试与可视化 英文命令 中文翻译 dev_toggle_all_debug 切换所有调试 dev_toggle_reachability_debug 切换可达性调试 dev_toggle_proximity_debug 切换邻近性调试 dev_toggle_air_nodes 切换空气节点 dev_toggle_ground_nodes 切换地面节点 dev_toggle_pathing_lines 切换路径线 dev_refresh_nodes 刷新节点 dev_update_node_visualizer 更新节点可视化器 dev_toggle_player_voxel_info 切换玩家体素信息 dev_voxel_info 体素信息 dev_damage_voxel 损坏体素 十三、事件与交互 英文命令 中文翻译 dev_spawn_event 生成事件 dev_schedule_event_group 安排事件组 dev_event_interaction_chance_always 事件交互机会总是发生 dev_event_interaction_chance_default 事件交互机会默认设置 dev_create_warning 创建警告 dev_update_warning 更新警告 dev_remove_warning 移除警告 十四、NPC与访客 英文命令 中文翻译 dev_make_ n p c _leave 让NPC离开 dev_set_ n p c_ be haviour 设置NPC行为 dev_set_ n p c_faction 设置NPC阵营 dev_commander_ai 指挥官AI 十五、采矿与挖掘 英文命令 中文翻译 dev_instant_dig_off 关闭即时挖掘 dev_mining_speed_10 设置采矿速度为10 dev_mining_speed_reset 重置采矿速度 dev_instant_cut_off 立即切断 十六、地图与标记 英文命令 中文翻译 dev_spawn_map_marker 生成地图标记 dev_ambush_caravan 埋伏商队 dev_second_map_timer_enabled 启用第二地图计时器 十七、通用操作 英文命令 中文翻译 dev_toggle_ in v urn ability 切换无敌 dev_toggle_in v urn ability_off 关闭无敌 dev_ladder_ fall down 梯子倒塌 dev_force_exception 强制异常 ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu407594167405330445.png" width="300"
+                            height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⭐️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">梦幻星河的博客</a></h1>
+            <h2 class="site-description">本博客运用[hugo&#43;github]技术，主要记录生活琐事。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/1510507542'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/login?redirect_to_url=%2F'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8Eabout/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于|About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档|Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索|Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接|Link</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#一建造与建筑相关"><strong>一、建造与建筑相关</strong></a></li>
+        <li><a href="#二阵营与所有权"><strong>二、阵营与所有权</strong></a></li>
+        <li><a href="#三研究与生产"><strong>三、研究与生产</strong></a></li>
+        <li><a href="#四摄像机与界面"><strong>四、摄像机与界面</strong></a></li>
+        <li><a href="#五资源与物品生成"><strong>五、资源与物品生成</strong></a></li>
+        <li><a href="#六工人与角色管理"><strong>六、工人与角色管理</strong></a></li>
+        <li><a href="#七健康与状态"><strong>七、健康与状态</strong></a></li>
+        <li><a href="#八战斗与伤害"><strong>八、战斗与伤害</strong></a></li>
+        <li><a href="#九动物与生态"><strong>九、动物与生态</strong></a></li>
+        <li><a href="#十植物与农业"><strong>十、植物与农业</strong></a></li>
+        <li><a href="#十一天气与环境"><strong>十一、天气与环境</strong></a></li>
+        <li><a href="#十二调试与可视化"><strong>十二、调试与可视化</strong></a></li>
+        <li><a href="#十三事件与交互"><strong>十三、事件与交互</strong></a></li>
+        <li><a href="#十四npc与访客"><strong>十四、NPC与访客</strong></a></li>
+        <li><a href="#十五采矿与挖掘"><strong>十五、采矿与挖掘</strong></a></li>
+        <li><a href="#十六地图与标记"><strong>十六、地图与标记</strong></a></li>
+        <li><a href="#十七通用操作"><strong>十七、通用操作</strong></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+ 
+    <footer class="article-time">
+
+        <div class="article-lastmod">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time>
+                    Sep 04, 2025 23:17 &#43;0800
+                </time>
+            </div></footer>
+
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>在前往中世纪安装对应mod</p>
+<p>相关文章请找链接<a class="link" href="https://www.bilibili.com/opus/762112852798472232"  target="_blank" rel="noopener"
+    >【前往中世纪Going Medieval】控制台安装傻瓜式教程在此 - 哔哩哔哩</a></p>
+<h3 id="一建造与建筑相关"><strong>一、建造与建筑相关</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_Auto Construct_off</td>
+          <td>关闭自动建造</td>
+      </tr>
+      <tr>
+          <td>dev_unlock_all_variants_off</td>
+          <td>关闭解锁所有变体</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_materials_with_building&hellip;</td>
+          <td>用建筑物生成材料</td>
+      </tr>
+      <tr>
+          <td>dev_craft able_buildings_enabled_off</td>
+          <td>关闭可制作建筑物</td>
+      </tr>
+      <tr>
+          <td>dev_allow Edge Placement_false</td>
+          <td>不允许边缘放置</td>
+      </tr>
+      <tr>
+          <td>dev_fill_storage</td>
+          <td>填充存储</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="二阵营与所有权"><strong>二、阵营与所有权</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_switch  Faction Ownership_</td>
+          <td>切换阵营所有权</td>
+      </tr>
+      <tr>
+          <td>dev_convert All Buildings To Enemy Ow&hellip;</td>
+          <td>将所有建筑物转换为敌方拥有</td>
+      </tr>
+      <tr>
+          <td>dev_faction_set_friendliness</td>
+          <td>设置阵营友好度</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="三研究与生产"><strong>三、研究与生产</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_activate All Research_on</td>
+          <td>激活所有研究</td>
+      </tr>
+      <tr>
+          <td>dev_production_speed_normal</td>
+          <td>正常生产速度</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="四摄像机与界面"><strong>四、摄像机与界面</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_toggle_alt Camera_ toggle Alt Cam&hellip;</td>
+          <td>切换备用摄像机</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_ui_off</td>
+          <td>关闭用户界面</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="五资源与物品生成"><strong>五、资源与物品生成</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_spawn_resource</td>
+          <td>生成资源</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_resource_  c</td>
+          <td>生成资源类别</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_item</td>
+          <td>生成物品</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_plant</td>
+          <td>生成植物</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_mature_plant</td>
+          <td>生成成熟植物</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_particle_system</td>
+          <td>生成粒子系统</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_trader</td>
+          <td>生成商人</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_trader_with_bodyguards</td>
+          <td>生成带保镖的商人</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_bard_visitor</td>
+          <td>生成吟游诗人访客</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_animal</td>
+          <td>生成动物</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_fish</td>
+          <td>生成鱼</td>
+      </tr>
+      <tr>
+          <td>dev_try_fish_spawn</td>
+          <td>尝试生成鱼</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_blank_ n p c</td>
+          <td>生成空白NPC</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="六工人与角色管理"><strong>六、工人与角色管理</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_reset_workers</td>
+          <td>重置工人</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_worker_1</td>
+          <td>生成1个工人</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_worker_10</td>
+          <td>生成10个工人</td>
+      </tr>
+      <tr>
+          <td>dev_remove_worker</td>
+          <td>移除工人</td>
+      </tr>
+      <tr>
+          <td>dev_wound_worker</td>
+          <td>使工人受伤</td>
+      </tr>
+      <tr>
+          <td>dev_faint_worker</td>
+          <td>使工人昏迷</td>
+      </tr>
+      <tr>
+          <td>dev_ un faint _worker</td>
+          <td>使工人清醒</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_hunger_100</td>
+          <td>设置工人饥饿为100</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_hunger_50</td>
+          <td>设置工人饥饿为50</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_hunger_1</td>
+          <td>设置工人饥饿为1</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_sleep_100</td>
+          <td>设置工人睡眠为100</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_sleep_50</td>
+          <td>设置工人睡眠为50</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_sleep_1</td>
+          <td>设置工人睡眠为1</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_hunger_minus_100</td>
+          <td>设置工人饥饿减少100</td>
+      </tr>
+      <tr>
+          <td>dev_set_worker_stats</td>
+          <td>设置工人状态</td>
+      </tr>
+      <tr>
+          <td>dev_add_ x p _to_skill</td>
+          <td>向技能添加经验值</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="七健康与状态"><strong>七、健康与状态</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_set_health_100</td>
+          <td>设置健康为100</td>
+      </tr>
+      <tr>
+          <td>dev_set_health_1</td>
+          <td>设置健康为1</td>
+      </tr>
+      <tr>
+          <td>dev_set_health_0</td>
+          <td>设置健康为0</td>
+      </tr>
+      <tr>
+          <td>dev_set_mood_plus_10</td>
+          <td>设置心情增加10</td>
+      </tr>
+      <tr>
+          <td>dev_set_mood_minus_10</td>
+          <td>设置心情减少10</td>
+      </tr>
+      <tr>
+          <td>dev_set_freshness_100</td>
+          <td>设置新鲜度为100</td>
+      </tr>
+      <tr>
+          <td>dev_set_freshness_1</td>
+          <td>设置新鲜度为1</td>
+      </tr>
+      <tr>
+          <td>dev_set_freshness_0</td>
+          <td>设置新鲜度为0</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="八战斗与伤害"><strong>八、战斗与伤害</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_toggle_combat_damage_popup</td>
+          <td>切换战斗伤害弹出窗口</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_enemy</td>
+          <td>生成敌人</td>
+      </tr>
+      <tr>
+          <td>dev_kill_all_enemies</td>
+          <td>杀死所有敌人</td>
+      </tr>
+      <tr>
+          <td>dev_spawn_trebuchet</td>
+          <td>生成投石机</td>
+      </tr>
+      <tr>
+          <td>dev_deal_damage</td>
+          <td>造成伤害</td>
+      </tr>
+      <tr>
+          <td>dev_mark_animals_for_attack</td>
+          <td>标记动物进行攻击</td>
+      </tr>
+      <tr>
+          <td>dev_mark_workers_for_attack</td>
+          <td>标记工人进行攻击</td>
+      </tr>
+      <tr>
+          <td>dev_trigger_trap</td>
+          <td>触发陷阱</td>
+      </tr>
+      <tr>
+          <td>dev_reset_trap</td>
+          <td>重置陷阱</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="九动物与生态"><strong>九、动物与生态</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_domestic</td>
+          <td>家养</td>
+      </tr>
+      <tr>
+          <td>dev_pet</td>
+          <td>宠物</td>
+      </tr>
+      <tr>
+          <td>dev_wild</td>
+          <td>野生</td>
+      </tr>
+      <tr>
+          <td>dev_wild_aggressive</td>
+          <td>野生攻击性</td>
+      </tr>
+      <tr>
+          <td>dev_pregnant</td>
+          <td>怀孕</td>
+      </tr>
+      <tr>
+          <td>dev_birth</td>
+          <td>出生</td>
+      </tr>
+      <tr>
+          <td>dev_animal_prod_finish</td>
+          <td>动物生产完成</td>
+      </tr>
+      <tr>
+          <td>dev_reset_animal_timers</td>
+          <td>重置动物计时器</td>
+      </tr>
+      <tr>
+          <td>dev_kill_all_animals</td>
+          <td>杀死所有动物</td>
+      </tr>
+      <tr>
+          <td>dev_mark_for_ r o p ping</td>
+          <td>标记用于捕捉</td>
+      </tr>
+      <tr>
+          <td>dev_kill_all_fish</td>
+          <td>杀死所有鱼</td>
+      </tr>
+      <tr>
+          <td>dev_relocate_animal_idle_points</td>
+          <td>重新定位动物闲置点</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十植物与农业"><strong>十、植物与农业</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_crop_next_phase</td>
+          <td>作物进入下一阶段</td>
+      </tr>
+      <tr>
+          <td>dev_force_crop_harvest_phase_off</td>
+          <td>强制关闭作物收获阶段</td>
+      </tr>
+      <tr>
+          <td>dev_force_plant_crops_off</td>
+          <td>强制关闭种植作物</td>
+      </tr>
+      <tr>
+          <td>dev_plant_next_phase</td>
+          <td>植物进入下一阶段</td>
+      </tr>
+      <tr>
+          <td>dev_kill_all_plants</td>
+          <td>杀死所有植物</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十一天气与环境"><strong>十一、天气与环境</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_thunder</td>
+          <td>雷电</td>
+      </tr>
+      <tr>
+          <td>dev_weather_view</td>
+          <td>天气视图</td>
+      </tr>
+      <tr>
+          <td>dev_weather_time</td>
+          <td>天气时间</td>
+      </tr>
+      <tr>
+          <td>dev_water_debug</td>
+          <td>水调试</td>
+      </tr>
+      <tr>
+          <td>dev_refresh_stability_water</td>
+          <td>刷新稳定性水</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十二调试与可视化"><strong>十二、调试与可视化</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_toggle_all_debug</td>
+          <td>切换所有调试</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_reachability_debug</td>
+          <td>切换可达性调试</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_proximity_debug</td>
+          <td>切换邻近性调试</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_air_nodes</td>
+          <td>切换空气节点</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_ground_nodes</td>
+          <td>切换地面节点</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_pathing_lines</td>
+          <td>切换路径线</td>
+      </tr>
+      <tr>
+          <td>dev_refresh_nodes</td>
+          <td>刷新节点</td>
+      </tr>
+      <tr>
+          <td>dev_update_node_visualizer</td>
+          <td>更新节点可视化器</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_player_voxel_info</td>
+          <td>切换玩家体素信息</td>
+      </tr>
+      <tr>
+          <td>dev_voxel_info</td>
+          <td>体素信息</td>
+      </tr>
+      <tr>
+          <td>dev_damage_voxel</td>
+          <td>损坏体素</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十三事件与交互"><strong>十三、事件与交互</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_spawn_event</td>
+          <td>生成事件</td>
+      </tr>
+      <tr>
+          <td>dev_schedule_event_group</td>
+          <td>安排事件组</td>
+      </tr>
+      <tr>
+          <td>dev_event_interaction_chance_always</td>
+          <td>事件交互机会总是发生</td>
+      </tr>
+      <tr>
+          <td>dev_event_interaction_chance_default</td>
+          <td>事件交互机会默认设置</td>
+      </tr>
+      <tr>
+          <td>dev_create_warning</td>
+          <td>创建警告</td>
+      </tr>
+      <tr>
+          <td>dev_update_warning</td>
+          <td>更新警告</td>
+      </tr>
+      <tr>
+          <td>dev_remove_warning</td>
+          <td>移除警告</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十四npc与访客"><strong>十四、NPC与访客</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_make_ n p c _leave</td>
+          <td>让NPC离开</td>
+      </tr>
+      <tr>
+          <td>dev_set_ n p c_ be haviour</td>
+          <td>设置NPC行为</td>
+      </tr>
+      <tr>
+          <td>dev_set_ n p c_faction</td>
+          <td>设置NPC阵营</td>
+      </tr>
+      <tr>
+          <td>dev_commander_ai</td>
+          <td>指挥官AI</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十五采矿与挖掘"><strong>十五、采矿与挖掘</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_instant_dig_off</td>
+          <td>关闭即时挖掘</td>
+      </tr>
+      <tr>
+          <td>dev_mining_speed_10</td>
+          <td>设置采矿速度为10</td>
+      </tr>
+      <tr>
+          <td>dev_mining_speed_reset</td>
+          <td>重置采矿速度</td>
+      </tr>
+      <tr>
+          <td>dev_instant_cut_off</td>
+          <td>立即切断</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十六地图与标记"><strong>十六、地图与标记</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_spawn_map_marker</td>
+          <td>生成地图标记</td>
+      </tr>
+      <tr>
+          <td>dev_ambush_caravan</td>
+          <td>埋伏商队</td>
+      </tr>
+      <tr>
+          <td>dev_second_map_timer_enabled</td>
+          <td>启用第二地图计时器</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="十七通用操作"><strong>十七、通用操作</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>英文命令</th>
+          <th>中文翻译</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>dev_toggle_ in v urn ability</td>
+          <td>切换无敌</td>
+      </tr>
+      <tr>
+          <td>dev_toggle_in v urn ability_off</td>
+          <td>关闭无敌</td>
+      </tr>
+      <tr>
+          <td>dev_ladder_ fall down</td>
+          <td>梯子倒塌</td>
+      </tr>
+      <tr>
+          <td>dev_force_exception</td>
+          <td>强制异常</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Sep 04, 2025 23:17 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 梦幻星河
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://charles-lin-cell.github.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://charles-lin-cell.github.io/icons/codeMore.svg"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+
+
+
+
+
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+    </body>
+</html>
