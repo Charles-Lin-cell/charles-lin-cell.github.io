@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Thu, 04 Sep 2025 23:17:04 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Sep 2025 10:18:33 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>前往中世纪开发者模式指令合集</title>
         <link>https://charles-lin-cell.github.io/p/%E5%89%8D%E5%BE%80%E4%B8%AD%E4%B8%96%E7%BA%AA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</link>
         <pubDate>Thu, 04 Sep 2025 22:58:39 +0800</pubDate>
@@ -19515,7 +19515,7 @@ B 中的 /48 做题时可以忽略，写不写没关系。&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;接入技术特征&#34;&gt;接入技术特征
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;ASDL 使用一对铜双绞线，具有非对称技术特性，上行速率 64 kbps&lt;del&gt;640 kbps，下行速率 500 kbps&lt;/del&gt;7 Mbps&lt;/li&gt;
+&lt;li&gt;ASDL 使用一对铜双绞线，具有非对称技术特性，上行速率 64 kbps—640 kbps，下行速率 500 kbps—7 Mbps&lt;/li&gt;
 &lt;li&gt;采用 ADSL 技术可以通过 PSTN 接入 Internet&lt;/li&gt;
 &lt;li&gt;Cable Modom（电缆调制解调器）利用频分复用的方法将信道分为上行信道和下行信道，把用户计算机与有线电视同轴电缆连接起来&lt;/li&gt;
 &lt;li&gt;光纤传输距离可达 100km 以上（这个知道光纤很远就行了）&lt;/li&gt;
