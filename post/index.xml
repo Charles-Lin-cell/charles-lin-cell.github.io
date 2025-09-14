@@ -7,7 +7,298 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Wed, 10 Sep 2025 10:18:33 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Sep 2025 17:00:56 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>网络技术19错题</title>
+        <link>https://charles-lin-cell.github.io/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/</link>
+        <pubDate>Sun, 14 Sep 2025 11:01:16 +0800</pubDate>
+        
+        <guid>https://charles-lin-cell.github.io/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/</guid>
+        <description>&lt;p&gt;本文章所用知识点链接来源于B站UP主的计算机网络技术视频。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/505255763?spm_id_from=333.788.upinfo.detail.click&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;吃饭不留名的个人空间-吃饭不留名个人主页-哔哩哔哩视频&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;添加对应链接是为了方便查找知识点，禁止违规搬运，二次贩卖等行为，违者后果自付。&lt;/p&gt;
+&lt;h3 id=&#34;选择题&#34;&gt;选择题
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;知识点：各种接入技术（x DSL部分的内容）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;各种接入技术&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ADSL&lt;strong&gt;上行速率&lt;/strong&gt;范围是( )。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A) 64Kbps-640Kbps&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;B) 640Kbps-7Mbps&lt;/p&gt;
+&lt;p&gt;C) 7Mbps-10Mbps&lt;/p&gt;
+&lt;p&gt;D) 10Mbps-20Mbps&lt;/p&gt;
+&lt;p&gt;ADSL技术具有非对称带宽特性，上行速率在64kbps-640kbps，下行速率在500kbps-7Mbps。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;知识点：宽带城域网&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=3&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;宽带城域网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于宽带城域网核心交换层特点的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;A) 将多个汇聚层连接起来&lt;/p&gt;
+&lt;p&gt;B) 实现与主干网络的互联，提供城市的宽带IP数据出口&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C) 根据接入层的用户流量进行本地路由、过滤、流量均衡&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;D) 为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境&lt;/p&gt;
+&lt;p&gt;宽带城域网核心交换层特点的是将多个汇聚层连接起来，为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境，提供宽带城域网的用户访问Internet所需要的路由服务。&lt;/p&gt;
+&lt;p&gt;选项C属于汇聚层的功能。&lt;/p&gt;
+&lt;p&gt;知识点：RIP（路由信息协议）&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=17&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RIP表格&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于路由信息协议RIP的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;A) 路由器周期性地向外发送路由刷新报文&lt;/p&gt;
+&lt;p&gt;B) 路由刷新报文主要内容是由(V、D)组成的表&lt;/p&gt;
+&lt;p&gt;C) 路由器在接收到更新报文后按照最短路径原则更新路由表&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D) 矢量V标识该路由器可以到达的目的网络或目的主机的跳数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;矢量V标识该路由器可以到达的目的网络或目的主机。&lt;/p&gt;
+&lt;p&gt;V:路由器所能达到的目的网络&lt;/p&gt;
+&lt;p&gt;D:路由器上的跳数&lt;/p&gt;
+&lt;p&gt;知识点：OSPF&lt;/p&gt;
+&lt;p&gt;链接:&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=18&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OSPF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于OSPF协议的描述中，正确的是( )。&lt;/p&gt;
+&lt;p&gt;A) 链路状态协议“度量”用跳数表示&lt;/p&gt;
+&lt;p&gt;B) 链路状态数据库中保存一个完整的路由表&lt;/p&gt;
+&lt;p&gt;C) 每一个OSPF区域拥有一个30位的区域标识符&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D) 当链路状态发生变化时用洪泛法向所有路由器发送信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OSPF中链路状态协议的度量主要指费用、距离、延时、带宽等。&lt;/p&gt;
+&lt;p&gt;链路状态数据库中保存一个拓扑结构图，并且在全网内保持一致。&lt;/p&gt;
+&lt;p&gt;每一个区域有一个32位的区域标识符，在一个区域内的路由器数不超过200个。&lt;/p&gt;
+&lt;p&gt;当链路状态发生变化时用洪泛法向所有路由器发送信息。&lt;/p&gt;
+&lt;p&gt;知识点：综合布线系统&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=20&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;综合布线系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于综合布线的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;A) 多介质信息插座是用于连接光纤和铜缆&lt;/p&gt;
+&lt;p&gt;B) 干线线缆铺设经常采用点对点结合和分支结合两种方式&lt;/p&gt;
+&lt;p&gt;C) 终端有高速率要求时，水平子系统可采用光纤直接铺设到桌面&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D) 在工作区子系统中更改、增加、交换、扩展线缆用于改变线缆路由&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在管理子系统中更改、增加、交换、扩展线缆用于改变线缆路由，选项D错误。&lt;/p&gt;
+&lt;p&gt;知识点：集线器&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=21&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;中继器，集线器，网桥，交换机&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于集线器的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A) 集线器是基于MAC地址完成数据帧转发的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;B) 连接到一个集线器的所有结点同属一个冲突域&lt;/p&gt;
+&lt;p&gt;C) 连接到集线器的一个结点发送数据时，所有结点能够收到&lt;/p&gt;
+&lt;p&gt;D) 通过在网络链路中串接一个集线器可以监听该链路中的数据包&lt;/p&gt;
+&lt;p&gt;集线器是以太网中心设备，所有结点通过双绞线连接到一个集线器上，&lt;/p&gt;
+&lt;p&gt;当一个结点发送数据时，所有的结点都能接收到数据，&lt;/p&gt;
+&lt;p&gt;因此集线器仍然工作在物理层，所有连接在一个集线器上的结点都属于同一个“冲突域”。&lt;/p&gt;
+&lt;p&gt;在任何一个时间段中，只能有一个结点可以发送数据帧，而其它结点只能处于接收状态。&lt;/p&gt;
+&lt;p&gt;通过解析可知，集线器是通过广播转发帧的。&lt;/p&gt;
+&lt;p&gt;知识点：VLAN虚拟局域网&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=24&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VLAN虚拟局域网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于VLAN标识的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A) 以太网的VLANID范围是1-1005&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;B) IEEE802.1Q标准规定VLANID用12位表示&lt;/p&gt;
+&lt;p&gt;C) VLANID为223时，缺省的VLAN名是VLAN00223&lt;/p&gt;
+&lt;p&gt;D) IEEE802.1Q标准规定，VLAN名最长用32个字符表示&lt;/p&gt;
+&lt;p&gt;以太网VLAN ID标准范围是1-1005，其中可用于Ethernet的VLAN ID为2~1000,1是缺省VLAN&lt;/p&gt;
+&lt;p&gt;FDDI和Token Ring的VLAN ID范围是1002-1005。&lt;/p&gt;
+&lt;p&gt;知识点：VTP配置&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VTP配置&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;关于交换表命令&#34;&gt;关于交换表命令
+&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;下列一台Catalyst 3500显示交换表的命令及显示信息完全正确的是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cisco-3548#&lt;em&gt;show mac-address-table&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;0000.b4c2.bcb8  Dynamic  124 GigabitEthernet0/1&lt;/p&gt;
+&lt;p&gt;0003.6bfb.bd00  Dynamic  112 Fast Ethernet0/48&lt;/p&gt;
+&lt;p&gt;0003.e31b.5a00  Dynamic  120 Fast Ethernet0/44&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在一台Catalyst 6500交换机上连接3台PC机，通过show命令显示该交换机的交换表，下列显示命令及显示的交换表内容，正确的是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Switch-6500&amp;gt;&lt;em&gt;show cam dynamic&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;120   00-03-e3-1b-5a-00             3/2 [ALL]&lt;/p&gt;
+&lt;p&gt;112   00-03-6b-fb-bd-00             3/3 [ALL]&lt;/p&gt;
+&lt;p&gt;124   00-00-b4-c2-bc-b8             3/5 [ALL]&lt;/p&gt;
+&lt;p&gt;区别：
+1、35xx型号的显示交换表命令是show mac-address-table，&lt;/p&gt;
+&lt;p&gt;其它的型号显示交换表的命令是show cam dynamic&lt;/p&gt;
+&lt;p&gt;2、35xx型号的交换表由四部分组成，其他型号的交换表由三部分组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;关于设置时间&#34;&gt;关于设置时间
+&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;将一台Catelyst3548的系统时间设置为2014年6月14日星期六的11点20分10秒，下列配置命令正确的是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Switch-3548#clock set 11:20:10 14 June 2014&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将一台Catelyst6500的系统时间设置为2016年7月1日星期五的10点20分10秒，下列配置命令正确的是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Switch-6500&amp;gt;(enable)set time Friday 7/1/2016 10:20:10&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;区别：
+35xx型号的交换机的关键词是“clock”，时间格式是 &lt;strong&gt;时刻+月份+年份&lt;/strong&gt;，&lt;/p&gt;
+&lt;p&gt;65xx型号的交换机的关键词是“time”，时间格式是 &lt;strong&gt;周几+月/日/年+时刻&lt;/strong&gt;，&lt;/p&gt;
+&lt;p&gt;最显著的区别在于35xx型号的月份用英文表示没有星期几，&lt;/p&gt;
+&lt;p&gt;65xx型号星期几用英文表示,月份用数字表示。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;关于vlan创建与删除&#34;&gt;关于VLAN创建与删除
+&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一台Catalyst 3548的VTP域名是Cuk，在该交换机上建立ID号为131，名为jxzx131的VLAN， 并删除ID号为150，名为lib150的VLAN，交换机正确的配置是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(config)# &lt;strong&gt;VTP domain Cuk&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(config)**#VTP mode transparent****&lt;/p&gt;
+&lt;p&gt;Switch-3548(config)#exit Switch-3548#VLAN data&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#&lt;strong&gt;VLAN 131 name jszx131&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#&lt;strong&gt;no VLAN 150&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#exit&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Catalyst 6500的VTP域名是Bunt，在该交换机上建立ID号为128，名为phy128的VLAN，修改ID号为223， 名为phy223的VLAN的名字为mat223，并为端口3/10分配128号VLAN，交换机正确的配置是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(&lt;strong&gt;enable&lt;/strong&gt;)&lt;strong&gt;set VTP domain Bunt&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set VTP mode server&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;set VTP 128 name phy128&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set VTP 223 name mat223&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;set VTP 128 3/10&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;区别1：
+存在VTP时，35xx型号VTP状态改成transparent，65xx型号VTP状态改成server&lt;/p&gt;
+&lt;p&gt;35系列带#，65系列带enable&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在Catalyst 3548上建立ID号为120，名为phy120的VLAN，并删除ID号为100，名为phy100的VLAN，正确的配置命令是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548#VLAN data&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#VLAN 120 name phy120&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#&lt;strong&gt;no VLAN 100&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(VLAN)#exit&lt;/p&gt;
+&lt;p&gt;Switch-3548#&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一台Catalyst 6500的VTP域名是pun，在该交换机上建立ID号为222，名为lib222的VLAN， 并删除ID号为133，名为phy133的VLAN，正确的配置命令是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set VTP domain pun&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set VTP mode server&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set VLAN 222 name lib222&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;clear VLAN 133&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;区别2：
+35xx型号删除的关键词是“no”，65xx系列的型号是“clear”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;关于传输vlan信息&#34;&gt;关于传输VLAN信息
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;一台Catalyst 3500的g0/1端口工作在VLAN trunk模式，且端口3/1使用IEEE802.1Q协议，要求传输VLAN 1、2和17-37的VLAN信息， 不允许传输VLAN3-16的信息，下列Catalyst 3500 VLAN trunk的正确配置是&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3500(config)#interface g0/1&lt;/p&gt;
+&lt;p&gt;Switch-3500(config-if)#switchport mode trunk&lt;/p&gt;
+&lt;p&gt;Switch-3500(config-if)#&lt;strong&gt;switchport trunk encapsulation dot1q&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3500(config-if)#&lt;strong&gt;switchport trunk allowed VLAN 1-37&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3500(config-if)#&lt;strong&gt;switchport trunk allowed VLAN except 3-16&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​      &lt;strong&gt;Catalyst 6500的3/1端口工作在VLAN trunk模式，且端口g0/1使用IEEE802.1Q协议， 要求传输VLAN1,2和37-42的VLAN信息，但不允许传输VLAN3-36的信息，下列Catalyst6500 VLAN trunk的正确配置是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)set trunk 3/1 on &lt;strong&gt;dot1q&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;set trunk 3/1 VLAN 1,2,37-42&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;clear trunk 3/1 3-36&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;dot1q表示IEEE802.1Q协议，是有关VLAN虚拟网络的协议（是数字1，不是字母）&lt;/p&gt;
+&lt;p&gt;区别：&lt;/p&gt;
+&lt;p&gt;35xx型号的禁止传送关键词是“except”，65xx型号的禁止传送关键词是“clear”&lt;/p&gt;
+&lt;p&gt;35xx型号的要求传送关键词用“allowed&amp;quot;&lt;/p&gt;
+&lt;p&gt;65xx型号的传送关键词用“set”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2 id=&#34;关于管理地址设置和缺省路由&#34;&gt;关于管理地址设置和缺省路由
+&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;一台Catalyst 3548交换机的设备管理地址为137.189.11.73/24，缺省路由的地址是137.189.11.1， 下列对设备管理地址的正确配置是______。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548#config terminal&lt;/p&gt;
+&lt;p&gt;Switch-3548(config)#&lt;strong&gt;interface vlan1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(config-if)#&lt;strong&gt;IP address 137.189.11.73 255.255.255.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-3548(config-if)#exit&lt;/p&gt;
+&lt;p&gt;Switch-3548(config)#&lt;strong&gt;IP default-gateway 137.189.11.1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将一台Catalyst 6500交换机设备管理地址设置为219.75.208.254/24，缺省路由为219.75.208.1， 交换机正确的配置是：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;set interface sc0 219.75.208.254 255.255.255.0 219.75.208.255&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Switch-6500&amp;gt;(enable)&lt;strong&gt;set IP route 0.0.0.0 219.75.208.1&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;区别：
+35xx型号设置设备管理地址关键词是“vlan1”和“address”，65xx型号设置设备管理地址关键词是“sc0”&lt;/p&gt;
+&lt;p&gt;35xx型号设置缺省路由关键词是“default-gateway”，65xx设置缺省路由关键词是“route”&lt;/p&gt;
+&lt;p&gt;知识点：STP（生成树协议）&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=30&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;配置STP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于生成树协议（STP）的描述中，错误的是，交换机正确的配置是( )。&lt;/p&gt;
+&lt;p&gt;A) BPDU每2秒钟定时发送一次&lt;/p&gt;
+&lt;p&gt;B) 一般交换机优先级的默认值为32768&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C) 优先级的取值范围是1-61440，增值量是4096&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;D)  配置BPDU不超过35个字节，拓扑变化通知BPDU不超过4个字节&lt;/p&gt;
+&lt;p&gt;优先级的取值范围是0-61440，增值量是4096。&lt;/p&gt;
+&lt;p&gt;知识点：网络管理&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=58&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;秒杀W2003网络管理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在Cisco路由器上执行一条命令后得到下列信息
+File Length Name/status
+13638796igs-d-l.102-2&lt;/p&gt;
+&lt;p&gt;[3638860 bytes used,555444 available,4194304 total]&lt;/p&gt;
+&lt;p&gt;4096K bytes of processor board **System flash(**Read ONLY)&lt;/p&gt;
+&lt;p&gt;那么该路由器执行的命令是( )。&lt;/p&gt;
+&lt;p&gt;A) Router#show configuration&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B) Router#show flash&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;C) Router&amp;gt;show IP protocols&lt;/p&gt;
+&lt;p&gt;D) Router#show IP route&lt;/p&gt;
+&lt;p&gt;选项A是查看路由器配置，&lt;/p&gt;
+&lt;p&gt;选项B是查看flash，&lt;/p&gt;
+&lt;p&gt;选项C是查看路由协议的详细信息，&lt;/p&gt;
+&lt;p&gt;选项D是查看路由表。&lt;/p&gt;
+&lt;p&gt;在Windows2003系统中，能够获得如下图运行结果的命令是( )。&lt;/p&gt;
+&lt;p&gt;有一大段TCP的协议，还有本地地址，外部地址和状态&lt;/p&gt;
+&lt;p&gt;A) nbtstat -a&lt;/p&gt;
+&lt;p&gt;B) ARP -a&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C) netstat -a&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;D) netview&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;nbtstat-a&lt;/strong&gt;功能：显示本机与远程计算机的基于TCP/IP的NetBIOS的统计及连接信息,也就是使用远程计算机的名称列出名称表。&lt;/p&gt;
+&lt;p&gt;ARP功能是显示和修改ARP表项。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;netstat-a&lt;/strong&gt;功能：显示活动的&lt;strong&gt;TCP连接&lt;/strong&gt;、侦听的端口、以太网统计信息、IP路由表和IP统计信息。&lt;/p&gt;
+&lt;p&gt;net view功能：用于&lt;strong&gt;显示域列表、计算机列表&lt;/strong&gt;或指定计算机上&lt;strong&gt;共享资源的列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;知识点：DHCP&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=46&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DHCP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于Windows2003系统下DHCP服务器“保留”的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;A) 保留既可支持DHCP也可支持BOOTP&lt;/p&gt;
+&lt;p&gt;B) 新建保留时需输入客户机的MAC地址&lt;/p&gt;
+&lt;p&gt;C) 保留地址可使用作用域地址范围内的任何地址&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D) 客户机获得保留IP地址后，其地址租约不需续订&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;保留是指确保DHCP客户端永远可以得到同一IP地址，客户端可以释放该租约&lt;/p&gt;
+&lt;p&gt;默认的地址租约期限为8天，租约到期前客户端需要续订，续订工作由客户端自动完成。&lt;/p&gt;
+&lt;p&gt;保留地址可以使用作用域地址范围内的任何一个IP地址，即使该IP地址处于排除范围内&lt;/p&gt;
+&lt;p&gt;知识点：FTP&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=49&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FTP考点&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于Serv_U FTP服务器配置和使用的描述中，错误的是( )。&lt;/p&gt;
+&lt;p&gt;A) FTP服务器的匿名用户由管理员添加&lt;/p&gt;
+&lt;p&gt;B) 服务器常规选项中，最大用户数是指同时在线的用户数量&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;C) FTP服务器使用动态IP地址时，服务器IP地址应配置为0.0.0.0&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;D) 对用户数大于500的域，将域存放在注册表中可提供更高的性能&lt;/p&gt;
+&lt;p&gt;FTP服务器使用动态IP地址时，服务器IP地址应配置为空。&lt;/p&gt;
+&lt;p&gt;服务器选项不提供IP访问选项&lt;/p&gt;
+&lt;p&gt;知识点：E-mail&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=48&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;E-mail &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可设置Win mail邮件服务器是否允许自行注册新用户的选项是( )。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A) 域名设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;B) 系统设置&lt;/p&gt;
+&lt;p&gt;C) SMTP设置&lt;/p&gt;
+&lt;p&gt;D) 用户和组设置&lt;/p&gt;
+&lt;p&gt;可设置Win mail邮件服务器是否允许自行注册新用户的选项是&lt;strong&gt;域名设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;知识点：加密技术&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=52&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;加密技术&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;采用RC4算法，网络中N个用户之间进行加密通信，需要密钥个数是( )。&lt;/p&gt;
+&lt;p&gt;A) N&lt;/p&gt;
+&lt;p&gt;B) 2N&lt;/p&gt;
+&lt;p&gt;C) N*N&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;em&gt;D) N&lt;/em&gt;(N-1)&lt;/em&gt;*&lt;/p&gt;
+&lt;p&gt;采用RC4算法，属于对称加密算法，网络中N个用户之间进行加密通信，需要密钥个数是N*(N-1)&lt;/p&gt;
+&lt;p&gt;对称加密算法有：DES，IDEA，RC2，RC4，Skipjack&lt;/p&gt;
+&lt;p&gt;非对称加密算法（公钥加密算法）有：RSA，DSA，ECC椭圆曲线算法，PKCS算法，PGP算法&lt;/p&gt;
+&lt;p&gt;非对称需要密钥个数是2N&lt;/p&gt;
+&lt;p&gt;知识点：SNMP(简单网络管理协议)&lt;/p&gt;
+&lt;p&gt;链接：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;amp;p=56&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SNMP妙法解题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下列关于SNMP操作的描述中，正确的是( )。&lt;/p&gt;
+&lt;p&gt;A) 团体字的访问模式是read-write的条件下才能实现Get操作&lt;/p&gt;
+&lt;p&gt;B) 当出现自陷情况时，管理站会向代理发出包含团体字和Trap PDU的报文&lt;/p&gt;
+&lt;p&gt;C) 当管理站需要查询时，就向某个代理发出包含团体字和Set Response PDU的报文&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;D) 代理使用Inform方式执行Notification操作时需要收到管理站发出的一条确认消息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个团体可以规定具有一种访问模式（主要有read-only和read-write两种）&lt;/p&gt;
+&lt;p&gt;只有团体的访问模式是read-write的条件下才能实现Set操作。&lt;/p&gt;
+&lt;p&gt;当出现自陷情况时，代理会像管理站发出包含团体字和Trap PDU的报文。&lt;/p&gt;
+&lt;p&gt;当管理站需要查询时，就向某个代理发出包含团体字和Get Response PDU的报文。&lt;/p&gt;
+&lt;p&gt;因此选择D选项。&lt;/p&gt;
+&lt;p&gt;管理信息库MIB&lt;/p&gt;
+&lt;p&gt;每个MIB-2对象都有唯一的对象标识符（OID)，一定是1.3.6.1.2.1开头&lt;/p&gt;
+&lt;p&gt;而私有定义的管理对象的标识符（OID)是1.3.6.1.4.1.9开头&lt;/p&gt;
+&lt;p&gt;计数器不等于计量器。&lt;/p&gt;
+&lt;p&gt;计数器从0开始逐步增加但不能减少，加到最大后从0开始。&lt;/p&gt;
+&lt;p&gt;计量器可增加也可以减少，增加到最大值以后不归0，而是不再增加（封顶）可以降下来&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>前往中世纪开发者模式指令合集</title>
         <link>https://charles-lin-cell.github.io/p/%E5%89%8D%E5%BE%80%E4%B8%AD%E4%B8%96%E7%BA%AA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/</link>
         <pubDate>Thu, 04 Sep 2025 22:58:39 +0800</pubDate>

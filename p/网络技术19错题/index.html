@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本文章所用知识点链接来源于B站UP主的计算机网络技术视频。\n吃饭不留名的个人空间-吃饭不留名个人主页-哔哩哔哩视频\n添加对应链接是为了方便查找知识点，禁止违规搬运，二次贩卖等行为，违者后果自付。\n">
+<title>网络技术19错题</title>
+
+<link rel='canonical' href='https://charles-lin-cell.github.io/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="网络技术19错题">
+<meta property='og:description' content="本文章所用知识点链接来源于B站UP主的计算机网络技术视频。\n吃饭不留名的个人空间-吃饭不留名个人主页-哔哩哔哩视频\n添加对应链接是为了方便查找知识点，禁止违规搬运，二次贩卖等行为，违者后果自付。\n">
+<meta property='og:url' content='https://charles-lin-cell.github.io/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/'>
+<meta property='og:site_name' content='梦幻星河的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-14T11:01:16&#43;08:00'/><meta property='article:modified_time' content='2025-09-14T17:00:56&#43;08:00'/>
+<meta name="twitter:title" content="网络技术19错题">
+<meta name="twitter:description" content="本文章所用知识点链接来源于B站UP主的计算机网络技术视频。\n吃饭不留名的个人空间-吃饭不留名个人主页-哔哩哔哩视频\n添加对应链接是为了方便查找知识点，禁止违规搬运，二次贩卖等行为，违者后果自付。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu407594167405330445.png" width="300"
+                            height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⭐️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">梦幻星河的博客</a></h1>
+            <h2 class="site-description">本博客运用[hugo&#43;github]技术，主要记录生活琐事。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/1510507542'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/login?redirect_to_url=%2F'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8Eabout/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于|About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档|Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索|Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接|Link</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#选择题">选择题</a></li>
+      </ol>
+    </li>
+    <li><a href="#关于交换表命令">关于交换表命令</a></li>
+    <li><a href="#关于设置时间">关于设置时间</a></li>
+    <li><a href="#关于vlan创建与删除">关于VLAN创建与删除</a></li>
+    <li><a href="#关于传输vlan信息">关于传输VLAN信息</a></li>
+    <li><a href="#关于管理地址设置和缺省路由">关于管理地址设置和缺省路由</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+ 
+    <footer class="article-time">
+
+        <div class="article-lastmod">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time>
+                    Sep 14, 2025 17:00 &#43;0800
+                </time>
+            </div></footer>
+
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>本文章所用知识点链接来源于B站UP主的计算机网络技术视频。</p>
+<p><a class="link" href="https://space.bilibili.com/505255763?spm_id_from=333.788.upinfo.detail.click"  target="_blank" rel="noopener"
+    >吃饭不留名的个人空间-吃饭不留名个人主页-哔哩哔哩视频</a></p>
+<p>添加对应链接是为了方便查找知识点，禁止违规搬运，二次贩卖等行为，违者后果自付。</p>
+<h3 id="选择题">选择题
+</h3><p><strong>知识点：各种接入技术（x DSL部分的内容）</strong></p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=2"  target="_blank" rel="noopener"
+    >各种接入技术</a></p>
+<p>ADSL<strong>上行速率</strong>范围是( )。</p>
+<p><strong>A) 64Kbps-640Kbps</strong></p>
+<p>B) 640Kbps-7Mbps</p>
+<p>C) 7Mbps-10Mbps</p>
+<p>D) 10Mbps-20Mbps</p>
+<p>ADSL技术具有非对称带宽特性，上行速率在64kbps-640kbps，下行速率在500kbps-7Mbps。</p>
+<p><strong>知识点：宽带城域网</strong></p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=3"  target="_blank" rel="noopener"
+    >宽带城域网</a></p>
+<p>下列关于宽带城域网核心交换层特点的描述中，错误的是( )。</p>
+<p>A) 将多个汇聚层连接起来</p>
+<p>B) 实现与主干网络的互联，提供城市的宽带IP数据出口</p>
+<p><strong>C) 根据接入层的用户流量进行本地路由、过滤、流量均衡</strong></p>
+<p>D) 为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境</p>
+<p>宽带城域网核心交换层特点的是将多个汇聚层连接起来，为整个城域网提供一个高速、安全与具有QoS保障能力的数据传输环境，提供宽带城域网的用户访问Internet所需要的路由服务。</p>
+<p>选项C属于汇聚层的功能。</p>
+<p>知识点：RIP（路由信息协议）</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=17"  target="_blank" rel="noopener"
+    >RIP表格</a></p>
+<p>下列关于路由信息协议RIP的描述中，错误的是( )。</p>
+<p>A) 路由器周期性地向外发送路由刷新报文</p>
+<p>B) 路由刷新报文主要内容是由(V、D)组成的表</p>
+<p>C) 路由器在接收到更新报文后按照最短路径原则更新路由表</p>
+<p><strong>D) 矢量V标识该路由器可以到达的目的网络或目的主机的跳数</strong></p>
+<p>矢量V标识该路由器可以到达的目的网络或目的主机。</p>
+<p>V:路由器所能达到的目的网络</p>
+<p>D:路由器上的跳数</p>
+<p>知识点：OSPF</p>
+<p>链接:<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=18"  target="_blank" rel="noopener"
+    >OSPF</a></p>
+<p>下列关于OSPF协议的描述中，正确的是( )。</p>
+<p>A) 链路状态协议“度量”用跳数表示</p>
+<p>B) 链路状态数据库中保存一个完整的路由表</p>
+<p>C) 每一个OSPF区域拥有一个30位的区域标识符</p>
+<p><strong>D) 当链路状态发生变化时用洪泛法向所有路由器发送信息</strong></p>
+<p>OSPF中链路状态协议的度量主要指费用、距离、延时、带宽等。</p>
+<p>链路状态数据库中保存一个拓扑结构图，并且在全网内保持一致。</p>
+<p>每一个区域有一个32位的区域标识符，在一个区域内的路由器数不超过200个。</p>
+<p>当链路状态发生变化时用洪泛法向所有路由器发送信息。</p>
+<p>知识点：综合布线系统</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=20"  target="_blank" rel="noopener"
+    >综合布线系统</a></p>
+<p>下列关于综合布线的描述中，错误的是( )。</p>
+<p>A) 多介质信息插座是用于连接光纤和铜缆</p>
+<p>B) 干线线缆铺设经常采用点对点结合和分支结合两种方式</p>
+<p>C) 终端有高速率要求时，水平子系统可采用光纤直接铺设到桌面</p>
+<p><strong>D) 在工作区子系统中更改、增加、交换、扩展线缆用于改变线缆路由</strong></p>
+<p>在管理子系统中更改、增加、交换、扩展线缆用于改变线缆路由，选项D错误。</p>
+<p>知识点：集线器</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=21"  target="_blank" rel="noopener"
+    >中继器，集线器，网桥，交换机</a></p>
+<p>下列关于集线器的描述中，错误的是( )。</p>
+<p><strong>A) 集线器是基于MAC地址完成数据帧转发的</strong></p>
+<p>B) 连接到一个集线器的所有结点同属一个冲突域</p>
+<p>C) 连接到集线器的一个结点发送数据时，所有结点能够收到</p>
+<p>D) 通过在网络链路中串接一个集线器可以监听该链路中的数据包</p>
+<p>集线器是以太网中心设备，所有结点通过双绞线连接到一个集线器上，</p>
+<p>当一个结点发送数据时，所有的结点都能接收到数据，</p>
+<p>因此集线器仍然工作在物理层，所有连接在一个集线器上的结点都属于同一个“冲突域”。</p>
+<p>在任何一个时间段中，只能有一个结点可以发送数据帧，而其它结点只能处于接收状态。</p>
+<p>通过解析可知，集线器是通过广播转发帧的。</p>
+<p>知识点：VLAN虚拟局域网</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=24"  target="_blank" rel="noopener"
+    >VLAN虚拟局域网</a></p>
+<p>下列关于VLAN标识的描述中，错误的是( )。</p>
+<p><strong>A) 以太网的VLANID范围是1-1005</strong></p>
+<p>B) IEEE802.1Q标准规定VLANID用12位表示</p>
+<p>C) VLANID为223时，缺省的VLAN名是VLAN00223</p>
+<p>D) IEEE802.1Q标准规定，VLAN名最长用32个字符表示</p>
+<p>以太网VLAN ID标准范围是1-1005，其中可用于Ethernet的VLAN ID为2~1000,1是缺省VLAN</p>
+<p>FDDI和Token Ring的VLAN ID范围是1002-1005。</p>
+<p>知识点：VTP配置</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=29"  target="_blank" rel="noopener"
+    >VTP配置</a></p>
+<ul>
+<li>
+<h2 id="关于交换表命令">关于交换表命令
+</h2></li>
+</ul>
+<p><strong>下列一台Catalyst 3500显示交换表的命令及显示信息完全正确的是______。</strong></p>
+<p><strong>Cisco-3548#<em>show mac-address-table</em></strong></p>
+<p>0000.b4c2.bcb8  Dynamic  124 GigabitEthernet0/1</p>
+<p>0003.6bfb.bd00  Dynamic  112 Fast Ethernet0/48</p>
+<p>0003.e31b.5a00  Dynamic  120 Fast Ethernet0/44</p>
+<p><strong>在一台Catalyst 6500交换机上连接3台PC机，通过show命令显示该交换机的交换表，下列显示命令及显示的交换表内容，正确的是______。</strong></p>
+<p><strong>Switch-6500&gt;<em>show cam dynamic</em></strong></p>
+<p>120   00-03-e3-1b-5a-00             3/2 [ALL]</p>
+<p>112   00-03-6b-fb-bd-00             3/3 [ALL]</p>
+<p>124   00-00-b4-c2-bc-b8             3/5 [ALL]</p>
+<p>区别：
+1、35xx型号的显示交换表命令是show mac-address-table，</p>
+<p>其它的型号显示交换表的命令是show cam dynamic</p>
+<p>2、35xx型号的交换表由四部分组成，其他型号的交换表由三部分组成</p>
+<ul>
+<li>
+<h2 id="关于设置时间">关于设置时间
+</h2></li>
+</ul>
+<p><strong>将一台Catelyst3548的系统时间设置为2014年6月14日星期六的11点20分10秒，下列配置命令正确的是______。</strong></p>
+<p><strong>Switch-3548#clock set 11:20:10 14 June 2014</strong></p>
+<p><strong>将一台Catelyst6500的系统时间设置为2016年7月1日星期五的10点20分10秒，下列配置命令正确的是______。</strong></p>
+<p><strong>Switch-6500&gt;(enable)set time Friday 7/1/2016 10:20:10</strong></p>
+<p>区别：
+35xx型号的交换机的关键词是“clock”，时间格式是 <strong>时刻+月份+年份</strong>，</p>
+<p>65xx型号的交换机的关键词是“time”，时间格式是 <strong>周几+月/日/年+时刻</strong>，</p>
+<p>最显著的区别在于35xx型号的月份用英文表示没有星期几，</p>
+<p>65xx型号星期几用英文表示,月份用数字表示。</p>
+<ul>
+<li>
+<h2 id="关于vlan创建与删除">关于VLAN创建与删除
+</h2></li>
+</ul>
+<p><strong>一台Catalyst 3548的VTP域名是Cuk，在该交换机上建立ID号为131，名为jxzx131的VLAN， 并删除ID号为150，名为lib150的VLAN，交换机正确的配置是______。</strong></p>
+<p>Switch-3548(config)# <strong>VTP domain Cuk</strong></p>
+<p>Switch-3548(config)**#VTP mode transparent****</p>
+<p>Switch-3548(config)#exit Switch-3548#VLAN data</p>
+<p>Switch-3548(VLAN)#<strong>VLAN 131 name jszx131</strong></p>
+<p>Switch-3548(VLAN)#<strong>no VLAN 150</strong></p>
+<p>Switch-3548(VLAN)#exit</p>
+<p><strong>Catalyst 6500的VTP域名是Bunt，在该交换机上建立ID号为128，名为phy128的VLAN，修改ID号为223， 名为phy223的VLAN的名字为mat223，并为端口3/10分配128号VLAN，交换机正确的配置是______。</strong></p>
+<p>Switch-6500&gt;(<strong>enable</strong>)<strong>set VTP domain Bunt</strong></p>
+<p>Switch-6500&gt;(enable)set VTP mode server</p>
+<p>Switch-6500&gt;(enable)<strong>set VTP 128 name phy128</strong></p>
+<p>Switch-6500&gt;(enable)set VTP 223 name mat223</p>
+<p>Switch-6500&gt;(enable)<strong>set VTP 128 3/10</strong></p>
+<p>区别1：
+存在VTP时，35xx型号VTP状态改成transparent，65xx型号VTP状态改成server</p>
+<p>35系列带#，65系列带enable</p>
+<p><strong>在Catalyst 3548上建立ID号为120，名为phy120的VLAN，并删除ID号为100，名为phy100的VLAN，正确的配置命令是______。</strong></p>
+<p>Switch-3548#VLAN data</p>
+<p>Switch-3548(VLAN)#VLAN 120 name phy120</p>
+<p>Switch-3548(VLAN)#<strong>no VLAN 100</strong></p>
+<p>Switch-3548(VLAN)#exit</p>
+<p>Switch-3548#</p>
+<p><strong>一台Catalyst 6500的VTP域名是pun，在该交换机上建立ID号为222，名为lib222的VLAN， 并删除ID号为133，名为phy133的VLAN，正确的配置命令是______。</strong></p>
+<p>Switch-6500&gt;(enable)set VTP domain pun</p>
+<p>Switch-6500&gt;(enable)set VTP mode server</p>
+<p>Switch-6500&gt;(enable)set VLAN 222 name lib222</p>
+<p>Switch-6500&gt;(enable)<strong>clear VLAN 133</strong></p>
+<p>区别2：
+35xx型号删除的关键词是“no”，65xx系列的型号是“clear”</p>
+<ul>
+<li>
+<h2 id="关于传输vlan信息">关于传输VLAN信息
+</h2><p><strong>一台Catalyst 3500的g0/1端口工作在VLAN trunk模式，且端口3/1使用IEEE802.1Q协议，要求传输VLAN 1、2和17-37的VLAN信息， 不允许传输VLAN3-16的信息，下列Catalyst 3500 VLAN trunk的正确配置是</strong></p>
+<p>Switch-3500(config)#interface g0/1</p>
+<p>Switch-3500(config-if)#switchport mode trunk</p>
+<p>Switch-3500(config-if)#<strong>switchport trunk encapsulation dot1q</strong></p>
+<p>Switch-3500(config-if)#<strong>switchport trunk allowed VLAN 1-37</strong></p>
+<p>Switch-3500(config-if)#<strong>switchport trunk allowed VLAN except 3-16</strong></p>
+</li>
+</ul>
+<p>​      <strong>Catalyst 6500的3/1端口工作在VLAN trunk模式，且端口g0/1使用IEEE802.1Q协议， 要求传输VLAN1,2和37-42的VLAN信息，但不允许传输VLAN3-36的信息，下列Catalyst6500 VLAN trunk的正确配置是______。</strong></p>
+<p>Switch-6500&gt;(enable)set trunk 3/1 on <strong>dot1q</strong></p>
+<p>Switch-6500&gt;(enable)<strong>set trunk 3/1 VLAN 1,2,37-42</strong></p>
+<p>Switch-6500&gt;(enable)<strong>clear trunk 3/1 3-36</strong></p>
+<p>dot1q表示IEEE802.1Q协议，是有关VLAN虚拟网络的协议（是数字1，不是字母）</p>
+<p>区别：</p>
+<p>35xx型号的禁止传送关键词是“except”，65xx型号的禁止传送关键词是“clear”</p>
+<p>35xx型号的要求传送关键词用“allowed&quot;</p>
+<p>65xx型号的传送关键词用“set”</p>
+<ul>
+<li>
+<h2 id="关于管理地址设置和缺省路由">关于管理地址设置和缺省路由
+</h2></li>
+</ul>
+<p><strong>一台Catalyst 3548交换机的设备管理地址为137.189.11.73/24，缺省路由的地址是137.189.11.1， 下列对设备管理地址的正确配置是______。</strong></p>
+<p>Switch-3548#config terminal</p>
+<p>Switch-3548(config)#<strong>interface vlan1</strong></p>
+<p>Switch-3548(config-if)#<strong>IP address 137.189.11.73 255.255.255.0</strong></p>
+<p>Switch-3548(config-if)#exit</p>
+<p>Switch-3548(config)#<strong>IP default-gateway 137.189.11.1</strong></p>
+<p><strong>将一台Catalyst 6500交换机设备管理地址设置为219.75.208.254/24，缺省路由为219.75.208.1， 交换机正确的配置是：</strong></p>
+<p>Switch-6500&gt;(enable)<strong>set interface sc0 219.75.208.254 255.255.255.0 219.75.208.255</strong></p>
+<p>Switch-6500&gt;(enable)<strong>set IP route 0.0.0.0 219.75.208.1</strong></p>
+<p>区别：
+35xx型号设置设备管理地址关键词是“vlan1”和“address”，65xx型号设置设备管理地址关键词是“sc0”</p>
+<p>35xx型号设置缺省路由关键词是“default-gateway”，65xx设置缺省路由关键词是“route”</p>
+<p>知识点：STP（生成树协议）</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=30"  target="_blank" rel="noopener"
+    >配置STP</a></p>
+<p>下列关于生成树协议（STP）的描述中，错误的是，交换机正确的配置是( )。</p>
+<p>A) BPDU每2秒钟定时发送一次</p>
+<p>B) 一般交换机优先级的默认值为32768</p>
+<p><strong>C) 优先级的取值范围是1-61440，增值量是4096</strong></p>
+<p>D)  配置BPDU不超过35个字节，拓扑变化通知BPDU不超过4个字节</p>
+<p>优先级的取值范围是0-61440，增值量是4096。</p>
+<p>知识点：网络管理</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=58"  target="_blank" rel="noopener"
+    >秒杀W2003网络管理</a></p>
+<p>在Cisco路由器上执行一条命令后得到下列信息
+File Length Name/status
+13638796igs-d-l.102-2</p>
+<p>[3638860 bytes used,555444 available,4194304 total]</p>
+<p>4096K bytes of processor board **System flash(**Read ONLY)</p>
+<p>那么该路由器执行的命令是( )。</p>
+<p>A) Router#show configuration</p>
+<p><strong>B) Router#show flash</strong></p>
+<p>C) Router&gt;show IP protocols</p>
+<p>D) Router#show IP route</p>
+<p>选项A是查看路由器配置，</p>
+<p>选项B是查看flash，</p>
+<p>选项C是查看路由协议的详细信息，</p>
+<p>选项D是查看路由表。</p>
+<p>在Windows2003系统中，能够获得如下图运行结果的命令是( )。</p>
+<p>有一大段TCP的协议，还有本地地址，外部地址和状态</p>
+<p>A) nbtstat -a</p>
+<p>B) ARP -a</p>
+<p><strong>C) netstat -a</strong></p>
+<p>D) netview</p>
+<p><strong>nbtstat-a</strong>功能：显示本机与远程计算机的基于TCP/IP的NetBIOS的统计及连接信息,也就是使用远程计算机的名称列出名称表。</p>
+<p>ARP功能是显示和修改ARP表项。</p>
+<p><strong>netstat-a</strong>功能：显示活动的<strong>TCP连接</strong>、侦听的端口、以太网统计信息、IP路由表和IP统计信息。</p>
+<p>net view功能：用于<strong>显示域列表、计算机列表</strong>或指定计算机上<strong>共享资源的列表</strong>。</p>
+<p>知识点：DHCP</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=46"  target="_blank" rel="noopener"
+    >DHCP</a></p>
+<p>下列关于Windows2003系统下DHCP服务器“保留”的描述中，错误的是( )。</p>
+<p>A) 保留既可支持DHCP也可支持BOOTP</p>
+<p>B) 新建保留时需输入客户机的MAC地址</p>
+<p>C) 保留地址可使用作用域地址范围内的任何地址</p>
+<p><strong>D) 客户机获得保留IP地址后，其地址租约不需续订</strong></p>
+<p>保留是指确保DHCP客户端永远可以得到同一IP地址，客户端可以释放该租约</p>
+<p>默认的地址租约期限为8天，租约到期前客户端需要续订，续订工作由客户端自动完成。</p>
+<p>保留地址可以使用作用域地址范围内的任何一个IP地址，即使该IP地址处于排除范围内</p>
+<p>知识点：FTP</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=49"  target="_blank" rel="noopener"
+    >FTP考点</a></p>
+<p>下列关于Serv_U FTP服务器配置和使用的描述中，错误的是( )。</p>
+<p>A) FTP服务器的匿名用户由管理员添加</p>
+<p>B) 服务器常规选项中，最大用户数是指同时在线的用户数量</p>
+<p><strong>C) FTP服务器使用动态IP地址时，服务器IP地址应配置为0.0.0.0</strong></p>
+<p>D) 对用户数大于500的域，将域存放在注册表中可提供更高的性能</p>
+<p>FTP服务器使用动态IP地址时，服务器IP地址应配置为空。</p>
+<p>服务器选项不提供IP访问选项</p>
+<p>知识点：E-mail</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=48"  target="_blank" rel="noopener"
+    >E-mail </a></p>
+<p>可设置Win mail邮件服务器是否允许自行注册新用户的选项是( )。</p>
+<p><strong>A) 域名设置</strong></p>
+<p>B) 系统设置</p>
+<p>C) SMTP设置</p>
+<p>D) 用户和组设置</p>
+<p>可设置Win mail邮件服务器是否允许自行注册新用户的选项是<strong>域名设置</strong></p>
+<p>知识点：加密技术</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=52"  target="_blank" rel="noopener"
+    >加密技术</a></p>
+<p>采用RC4算法，网络中N个用户之间进行加密通信，需要密钥个数是( )。</p>
+<p>A) N</p>
+<p>B) 2N</p>
+<p>C) N*N</p>
+<p><em><em>D) N</em>(N-1)</em>*</p>
+<p>采用RC4算法，属于对称加密算法，网络中N个用户之间进行加密通信，需要密钥个数是N*(N-1)</p>
+<p>对称加密算法有：DES，IDEA，RC2，RC4，Skipjack</p>
+<p>非对称加密算法（公钥加密算法）有：RSA，DSA，ECC椭圆曲线算法，PKCS算法，PGP算法</p>
+<p>非对称需要密钥个数是2N</p>
+<p>知识点：SNMP(简单网络管理协议)</p>
+<p>链接：<a class="link" href="https://www.bilibili.com/video/BV1AruGzjEAf?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=56"  target="_blank" rel="noopener"
+    >SNMP妙法解题</a></p>
+<p>下列关于SNMP操作的描述中，正确的是( )。</p>
+<p>A) 团体字的访问模式是read-write的条件下才能实现Get操作</p>
+<p>B) 当出现自陷情况时，管理站会向代理发出包含团体字和Trap PDU的报文</p>
+<p>C) 当管理站需要查询时，就向某个代理发出包含团体字和Set Response PDU的报文</p>
+<p><strong>D) 代理使用Inform方式执行Notification操作时需要收到管理站发出的一条确认消息</strong></p>
+<p>一个团体可以规定具有一种访问模式（主要有read-only和read-write两种）</p>
+<p>只有团体的访问模式是read-write的条件下才能实现Set操作。</p>
+<p>当出现自陷情况时，代理会像管理站发出包含团体字和Trap PDU的报文。</p>
+<p>当管理站需要查询时，就向某个代理发出包含团体字和Get Response PDU的报文。</p>
+<p>因此选择D选项。</p>
+<p>管理信息库MIB</p>
+<p>每个MIB-2对象都有唯一的对象标识符（OID)，一定是1.3.6.1.2.1开头</p>
+<p>而私有定义的管理对象的标识符（OID)是1.3.6.1.4.1.9开头</p>
+<p>计数器不等于计量器。</p>
+<p>计数器从0开始逐步增加但不能减少，加到最大后从0开始。</p>
+<p>计量器可增加也可以减少，增加到最大值以后不归0，而是不再增加（封顶）可以降下来</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Sep 14, 2025 17:00 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%9C%9F%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机等级三级网络技术真题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机等级三级网络技术</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 梦幻星河
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://charles-lin-cell.github.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://charles-lin-cell.github.io/icons/codeMore.svg"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+
+
+
+
+
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+    </body>
+</html>
