@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="[TOC]\n大题链接：计算机三级网络技术（大题全讲）\n综合题第一道 根据信息补充 题型一：IP地址填空 IP地址 115.151.29.58 子网掩码 255.240.0.0 地址类别 A类 网络地址 115.144.0.0 直接广播地址 115.159.255.255 主机号 0.7.29.58 子网内的第一个可用IP地址 115.144.0.1 考察知识重点\n">
+<title>计算机网络技术大题讲解</title>
+
+<link rel='canonical' href='https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E5%A4%A7%E9%A2%98%E8%AE%B2%E8%A7%A3/'>
+
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="计算机网络技术大题讲解">
+<meta property='og:description' content="[TOC]\n大题链接：计算机三级网络技术（大题全讲）\n综合题第一道 根据信息补充 题型一：IP地址填空 IP地址 115.151.29.58 子网掩码 255.240.0.0 地址类别 A类 网络地址 115.144.0.0 直接广播地址 115.159.255.255 主机号 0.7.29.58 子网内的第一个可用IP地址 115.144.0.1 考察知识重点\n">
+<meta property='og:url' content='https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E5%A4%A7%E9%A2%98%E8%AE%B2%E8%A7%A3/'>
+<meta property='og:site_name' content='梦幻星河的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-14T17:06:12&#43;08:00'/><meta property='article:modified_time' content='2025-09-16T13:41:05&#43;08:00'/>
+<meta name="twitter:title" content="计算机网络技术大题讲解">
+<meta name="twitter:description" content="[TOC]\n大题链接：计算机三级网络技术（大题全讲）\n综合题第一道 根据信息补充 题型一：IP地址填空 IP地址 115.151.29.58 子网掩码 255.240.0.0 地址类别 A类 网络地址 115.144.0.0 直接广播地址 115.159.255.255 主机号 0.7.29.58 子网内的第一个可用IP地址 115.144.0.1 考察知识重点\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu407594167405330445.png" width="300"
+                            height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⭐️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">梦幻星河的博客</a></h1>
+            <h2 class="site-description">本博客运用[hugo&#43;github]技术，主要记录生活琐事。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/1510507542'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/login?redirect_to_url=%2F'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8Eabout/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于|About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档|Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索|Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接|Link</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#综合题第一道---根据信息补充">综合题第一道   根据信息补充</a>
+      <ol>
+        <li><a href="#题型一ip地址填空"><strong>题型一：IP地址填空</strong></a></li>
+        <li><a href="#题型二反推ip表格"><strong>题型二：反推IP表格</strong></a></li>
+      </ol>
+    </li>
+    <li><a href="#综合题第二道特殊题型">综合题第二道：特殊题型</a>
+      <ol>
+        <li><a href="#题型一考察交换机catalyst-6500系列的vlan虚拟网络的配置">题型一：考察交换机catalyst 6500系列的VLAN（虚拟网络）的配置</a></li>
+        <li><a href="#题型二配置ip-router重点">题型二：配置IP router（重点）</a>
+          <ol>
+            <li><a href="#考点-1-ip-route">考点 1 IP route</a></li>
+            <li><a href="#考点二--配置接口带宽-bandwidth">考点二  配置接口带宽 bandwidth</a></li>
+            <li><a href="#考点三-配置接口地址-ip-address">考点三 配置接口地址 IP address</a></li>
+            <li><a href="#考点-4-crc-校验位">考点 4 CRC 校验位</a></li>
+            <li><a href="#考点-5-pos-framingpos-帧格式">考点 5 pos framing（pos 帧格式）</a></li>
+            <li><a href="#考点6-network-和-area">考点6 network 和 area</a></li>
+            <li><a href="#考点-7-dhcp">考点 7 DHCP</a></li>
+            <li><a href="#考点8-router-ospf-进程号">考点8 router OSPF +进程号</a></li>
+            <li><a href="#考点-9-租用时间-lease">考点 9 租用时间 lease</a></li>
+            <li><a href="#考点-10-配置ip地址池的子网地址和子网掩码-和-ip地址池的缺省网关">考点 10 配置IP地址池的子网地址和子网掩码 和 IP地址池的缺省网关</a></li>
+            <li><a href="#考点11-特殊题型配置">考点11 特殊题型配置</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#综合题第三道dhcp报文分析">综合题第三道：DHCP报文分析</a>
+      <ol>
+        <li><a href="#题型一dhcp-请求-ip-地址四过程全程使用-udp-协议">题型一：DHCP 请求 IP 地址四过程（全程使用 UDP 协议）</a>
+          <ol>
+            <li><a href="#考点-1四过程英语">考点 1，四过程英语</a></li>
+            <li><a href="#考点-2-四过程-ip-地址-题目会给服务器真正地址">考点 2 四过程 ip 地址 （题目会给服务器真正地址）</a></li>
+            <li><a href="#考点-3英语翻译题目中直接有答案只需要自己找到对应上就行">考点 3，英语翻译（题目中直接有答案，只需要自己找到对应上就行）</a></li>
+            <li><a href="#考点4-硬件物理mac-地址">考点4 硬件/物理/mac 地址</a></li>
+          </ol>
+        </li>
+        <li><a href="#题型二续约">题型二．续约</a>
+          <ol>
+            <li><a href="#考点5-依次执行ipconfig-relaese和-ipconfig-renew也就是释放已获得地地租约">考点5 依次执行ipconfig relaese和 ipconfig renew（也就是释放已获得地地租约）</a></li>
+            <li><a href="#另一种考法-表格解读">另一种考法 表格解读</a></li>
+            <li><a href="#表格续约相关例题">表格续约相关例题</a></li>
+            <li><a href="#其他零碎知识点">其他零碎知识点</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#综合题第四题-dns或是sniffer抓包分析">综合题第四题 DNS或是Sniffer抓包分析</a>
+      <ol>
+        <li><a href="#考点1-dns域名解析">考点1 DNS域名解析</a></li>
+        <li><a href="#考点2-tcp三次握手">考点2 TCP三次握手</a></li>
+        <li><a href="#考点三-tracert命令">考点三 tracert命令</a></li>
+        <li><a href="#考点-4-url">考点 4 URL</a></li>
+        <li><a href="#考点-5主机执行的什么命令">考点 5，主机执行的什么命令？</a>
+          <ol>
+            <li><a href="#琐碎知识">琐碎知识：</a></li>
+          </ol>
+        </li>
+        <li><a href="#考点6-protocol--多少">考点6 Protocol = 多少？</a></li>
+        <li><a href="#考点7-type--多少">考点7 Type = 多少</a></li>
+        <li><a href="#考点8-网络号的长度">考点8 网络号的长度？</a></li>
+        <li><a href="#考点9-主机是什么服务器其提供服务的端口是">考点9 主机是什么服务器，其提供服务的端口是？</a></li>
+        <li><a href="#考点10-sniffer捕获分析">考点10 Sniffer捕获分析</a></li>
+        <li><a href="#考点11-主机的功能是什么">考点11 主机的功能是什么？</a></li>
+        <li><a href="#考点12-打开的窗口">考点12 打开的窗口？</a></li>
+        <li><a href="#考点13-被访问网站的端口是">考点13 被访问网站的端口是？</a></li>
+      </ol>
+    </li>
+    <li><a href="#综合题第五题-路由汇聚s1s0连接">综合题第五题 路由汇聚（s1,s0连接）</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#考点一--设备入侵防护系统ips">考点一  设备入侵防护系统（IPS)</a></li>
+            <li><a href="#考点二-设备-分路器tap">考点二 设备 分路器（TAP）</a></li>
+            <li><a href="#考点三-子网划分">考点三 子网划分</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#综合题第六题--常考命令与特殊题型">综合题第六题  常考命令与特殊题型</a>
+      <ol>
+        <li><a href="#配置命令">配置命令</a>
+          <ol>
+            <li><a href="#考点1-探测数据包传输路径tracert命令">考点1 探测数据包传输路径（tracert命令）</a></li>
+            <li><a href="#考点2-防火墙fw为cisco-pix525系列配置">考点2 防火墙FW为Cisco PIX525系列配置</a></li>
+            <li><a href="#零碎知识点">零碎知识点：</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#综合题第七题-wiresahrk捕获的数据包">综合题第七题 Wiresahrk捕获的数据包</a>
+      <ol>
+        <li><a href="#1-在浏览器中输入的url是-http--域名"><strong>(1) 在浏览器中输入的URL是 http:// + 域名</strong></a></li>
+        <li><a href="#2-该主机上使用的dns服务器的ip地址是-8888"><strong>(2) 该主机上使用的DNS服务器的IP地址是 8.8.8.8</strong></a></li>
+        <li><a href="#3-该主机的ip地址是-5967152250">(3) 该主机的IP地址是 59.67.152.250</a></li>
+        <li><a href="#4-域名-wwwenorthcomcn-对应的-ip-地址是">(4) 域名 <a href="http://www.enorth.com.cn">www.enorth.com.cn</a> 对应的 IP 地址是：</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+ 
+    <footer class="article-time">
+
+        <div class="article-lastmod">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time>
+                    Sep 16, 2025 13:41 &#43;0800
+                </time>
+            </div></footer>
+
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>[TOC]</p>
+<p>大题链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.player.switch&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=12"  target="_blank" rel="noopener"
+    >计算机三级网络技术（大题全讲）</a></p>
+<h2 id="综合题第一道---根据信息补充">综合题第一道   根据信息补充
+</h2><h3 id="题型一ip地址填空"><strong>题型一：IP地址填空</strong>
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">IP地址</th>
+          <th style="text-align: center">115.151.29.58</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">子网掩码</td>
+          <td style="text-align: center">255.240.0.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">地址类别</td>
+          <td style="text-align: center">A类</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">网络地址</td>
+          <td style="text-align: center">115.144.0.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">直接广播地址</td>
+          <td style="text-align: center">115.159.255.255</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">主机号</td>
+          <td style="text-align: center">0.7.29.58</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">子网内的第一个可用IP地址</td>
+          <td style="text-align: center">115.144.0.1</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>考察知识重点</p>
+<p>地址类别：</p>
+<p>A: 1 ~ 127, B: 128 ~ 191, C: 192 ~ 223</p>
+<p>(1) 子网掩码的功能</p>
+<p>根据子网掩码区分 IP 地址中的网络号和主机号，</p>
+<p>根据子网掩码划分 IP 地址，全 1 代表网络位，全 0 代表主机号。</p>
+<p>(2) 受限广播地址</p>
+<p>地址形式唯一，即 32 位全为 1 的 IP 地址</p>
+<p>或 (255.255.255.255)</p>
+<p>(3) <strong>直接广播地址</strong> 网络位不变，主机位变为 1</p>
+<p>(4) <strong>“主机号”地址</strong> 网络位全变成 0，主机位不变</p>
+<p>(5) <strong>网络地址</strong>： 网络位不变，主机号为 0</p>
+<p>(6) <strong>回送地址</strong>：</p>
+<p>A 类 I P 地址中的 <strong>127.0.0.0</strong> 是一个保留地址，它即回送地址。</p>
+<p>用于网络软件测试和本地进程间通信使用。</p>
+<p>(7) <strong>子网内第一个可用的 IP 地址</strong>：网络地址（十进制最后一位数）+1</p>
+<p>(8) <strong>子网内最后一个可用的 IP 地址</strong>：直接广播地址（十进制最后一位数）-1</p>
+<h3 id="题型二反推ip表格"><strong>题型二：反推IP表格</strong>
+</h3><p>根据表格剩余内容倒推前文。</p>
+<p>注意子网第一个和最后一个可用的IP地址</p>
+<p>还有倒推原来的IP地址，要看<strong>直接广播地址</strong>和<strong>主机号地址</strong>，根据不变的部分拼凑出原来的IP地址。</p>
+<h2 id="综合题第二道特殊题型">综合题第二道：特殊题型
+</h2><h3 id="题型一考察交换机catalyst-6500系列的vlan虚拟网络的配置">题型一：考察交换机catalyst 6500系列的VLAN（虚拟网络）的配置
+</h3><p>链接：<a class="link" href="https://blog.csdn.net/qq_36666115/article/details/88873321"  target="_blank" rel="noopener"
+    >计算机三级 网络技术 大题 第二题 类型2_1. 如图所示,有2台计算机连接在一台catalyst 6500交换机上,它们分别被划分在id号-CSDN博客</a></p>
+<p>这类题目考查的是交换机Catalyst 6500系列VLAN的配置。</p>
+<p>交换机VLAN配置的主要任务是：</p>
+<p><strong>配置VTP</strong>，</p>
+<p><strong>建立和删除VLAN</strong>，</p>
+<p><strong>为交换机端口分配VLAN</strong></p>
+<p><strong>在交换机端口上配置VLAN Trunk</strong>。</p>
+<ul>
+<li>
+<p>（1）交换机<strong>VTP的配置</strong>
+<strong>配置VTP的任务主要有两个</strong>，一是建立VTP域，二是设置VTP的工作模式。</p>
+<p>VTP有三种工作模式：<strong>VTP Server、VTP Client、VTP Transparent</strong>。</p>
+<p>其中</p>
+<p><strong>VTP Server</strong>维护该VTP域中所有VLAN信息列表，可以建立、删除或修改VLAN；</p>
+<p><strong>VTP Client</strong>也维护VTP域中所有VLAN信息列表，但其VLAN的配置信息是从Server模式学到的，且不能建立、删除、修改VLAN，</p>
+<p><strong>VTP Transparent</strong>不参与VTP工作，不从Server模式学习VLAN的配置信息，而拥有本设备上自己维护的VLAN信息，可以建立、删除和修改本机上的VLAN信息。</p>
+<p>区别：VTP Server和VTP Transparent都能够建立、删除和修改VLAN信息，但是VTP Client不能，只能从Server中学习。</p>
+<p><strong>进入配置界面的命令</strong></p>
+<p>①利用<strong>enable命令</strong>进入配置界面，配置VTP的域名和工作模式；</p>
+<p>②<strong>配置VTP域名</strong>：Catalyst 6500&gt;(enable) <strong>set VTP domain&lt;域名&gt;</strong>；</p>
+<p>③<strong>配置VTP工作模式</strong>：Catalyst 6500&gt;(enable) <strong>set VTP mode&lt;工作模式名称&gt;</strong>。</p>
+</li>
+<li>
+<p>（2）<strong>建立或删除VLAN</strong></p>
+<p>①建立VLAN语句是：Catalyst 6500&gt;(enable) set VLAN name&lt; VLAN_ name &gt;；</p>
+<p>②删除VLAN语句是：Catalyst 6500&gt;(enable) clear VLAN。</p>
+</li>
+<li>
+<p>（3）<strong>为交换机端口分配VLAN</strong>
+为端口分配VLAN:</p>
+<p>Catalyst 6500&gt;(enable) set VLAN&lt;端口号&gt;。</p>
+</li>
+<li>
+<p>（4）<strong>VLAN trunk的配置</strong></p>
+<p>trunk是中继模式</p>
+</li>
+<li>
+<p>VLAN trunk的配置任务有：设置交换机端口的VLAN Trunk模式，</p>
+</li>
+<li>
+<p>为VLAN Trunk封装VLAN协议和设置VLAN Trunk运行中继的VLANs。</p>
+<p>①配置VLAN Trunk模式，封装VLAN协议。</p>
+<p>Catalyst 6500&gt;(enable) set trunk&lt;端口号&gt;on&lt;封装协议类型&gt;；</p>
+<p><strong>（封装协议IEEE802.1Q要写成dot1q）</strong></p>
+<p>②设置允许中继的VLAN
+Catalyst 6500&gt;(enable) set trunk&lt;端口号&gt;VLAN&lt; VLAN ID &gt;</p>
+</li>
+</ul>
+<h3 id="题型二配置ip-router重点">题型二：配置IP router（重点）
+</h3><p>题目链接：<a class="link" href="https://jishuzhan.net/article/1826364465671573505"  target="_blank" rel="noopener"
+    >三级_网络技术_39_综合题（命令） - 技术栈</a></p>
+<p>非本人原创，仅做练习</p>
+<h4 id="考点-1-ip-route">考点 1 IP route
+</h4><p>在全局模式下，使用“IP route”命令来配置静态路由，</p>
+<p>命令格式为：IP route&lt;目的网络地址&gt;&lt;子网掩码&gt;&lt;下一跳路由器的IP地址&gt;</p>
+<p>IP route 分为两种情况</p>
+<ol>
+<li>
+<p><strong>校园网周围三朵金花 R1,R2,R3</strong> （一般情况排列）（但本题排列是R2,R3,R4)</p>
+<p>（<strong>无法确认目的网络和子网掩码，用 0.0.0.0 代替</strong>）</p>
+<p><strong>题目选择目录三</strong></p>
+</li>
+</ol>
+<p>Router-R2 (config) # IP route <strong>0.0.0.0</strong> 0.0.0.0 <strong>203.22.76.2</strong></p>
+<p>2**.独立路由器R1（题目选择目录三）**</p>
+<p>Router-R1 (config) # IP route <strong>182.93.0.0</strong> 255.255.0.0 <strong>203.22.76.1</strong></p>
+<p>特殊情况：校园网内部有多个地址，要<strong>先聚合，再判断独立的路由器</strong></p>
+<h4 id="考点二--配置接口带宽-bandwidth">考点二  配置接口带宽 bandwidth
+</h4><p><strong>带宽的单位：kbps</strong>，</p>
+<p>但是题目给大家的是 Gbps（<strong>1G = 1000M = 1000000 K</strong>）</p>
+<p>某校园网使用<strong>10Gbps</strong>的POS技术与CERNET相连</p>
+<p><strong>Router-R1 (config-if) # bandwidth</strong>  10000000</p>
+<p>（7个0，后面不要加单位）</p>
+<h4 id="考点三-配置接口地址-ip-address">考点三 配置接口地址 IP address
+</h4><p><strong>loopback 接口的 IP 地址</strong></p>
+<p>配置命令：<strong>IP address      loopback 接口的IP 地址    255.255.255.255</strong></p>
+<p><strong>POS接口的帧格式是SDH</strong>。</p>
+<p>在R3上配置一个<strong>loopback接口，IP地址为192.166.67.1</strong>。</p>
+<p><strong>真正的 IP 地址</strong></p>
+<p>配置命令：: <strong>IP address IP 地址 子网掩码</strong></p>
+<p>例题：</p>
+<p>Router-R3(config-if)#bandwidth 10000000</p>
+<p>Router-R3(config-if)#IP address 201.195.78.1 255.255.255.252 （<strong>真正的IP地址</strong>）</p>
+<p>Router-R3(config)#int loopback 0</p>
+<p>Router-R3(config-if)#IP address  192.166.67.1 255.255.255.255（<strong>loopback 接口的 IP 地址</strong>）</p>
+<h4 id="考点-4-crc-校验位">考点 4 CRC 校验位
+</h4><p>Router-R3(config-if)# CRC 32   （小写，大写都行）</p>
+<p>该处配置POS接口的CRC校验。CRC校验值有16和32，默认值是32。</p>
+<h4 id="考点-5-pos-framingpos-帧格式">考点 5 pos framing（pos 帧格式）
+</h4><p><strong>帧标识对应关系</strong></p>
+<p><strong>SONET</strong> 对应 <strong>s1s0 0</strong> 标志位</p>
+<p><strong>SDH</strong> 对应 <strong>s1s0 2</strong></p>
+<p>Router-R3(config-if)#pos <strong>framing SONET</strong></p>
+<p>Router-R3(config-if)#no IP directed-broadcast</p>
+<p>Router-R3(config-if)#pos flag  <strong>s1s0 0</strong></p>
+<p>如下图所示，某园区网用2.5Gbps的POS技术与Internet相连，POS接口的帧格式是 SDH</p>
+<p>Router-R3 (config-if) # pos  <strong>framing SDH</strong></p>
+<p>Router-R3 (config-if) # no IP directed-broadcast</p>
+<p>Router-R3(config-if)#pos flag  <strong>s1s0 2</strong></p>
+<h4 id="考点6-network-和-area">考点6 network 和 area
+</h4><p><strong>题目选择目录四</strong></p>
+<ol>
+<li><strong>network 开头</strong></li>
+</ol>
+<p>Network + 校园网/园区网 IP地址 + 校园网子网掩码反码
+特别注意：<strong>多个校园网要先聚合</strong></p>
+<p>Router-R3 (config-router)# network 211.100.66.0  <strong>0.0.0.127</strong> area 0</p>
+<p>(园区网内有两个网址211.100.66.0/26,211.100.66.64/26。</p>
+<p>聚合后的地址为211.100.66.0/25</p>
+<p>子网掩码：255.255.255.128</p>
+<p>子网掩码反码：0.0.0.127</p>
+<p>注意：<strong>正数的反码就是对应二进制的1变成0，0变成1。</strong></p>
+<p><strong>255-128=127（小技巧）</strong></p>
+<p>)</p>
+<ol start="2">
+<li><strong>area 开头</strong></li>
+</ol>
+<p>area + 校园网/园区网 IP 地址+子网掩码正码</p>
+<p>Router-R3 (config-router)# area 211.100.66.0  <strong>255.255.255.128</strong></p>
+<p><strong>正数的正码就是它本身。</strong></p>
+<h4 id="考点-7-dhcp">考点 7 DHCP
+</h4><p>要某些IP地址不参与DHCP地址分配，可以在全局配置模式下，</p>
+<p>使用“<strong>IP DHCP excluded-address</strong>”命令</p>
+<p>将要<strong>保留的地址从地址池中排出  (低地址 高地址)</strong></p>
+<ol>
+<li><strong>设置地址池名字</strong></li>
+</ol>
+<p><strong>配置地址池名称</strong>的语句是<strong>IP DHCP pool 地址池名称。</strong></p>
+<p>例题：</p>
+<p>路由器R1是DHCP服务器，可分配的IP地址是 211.152.83.0/24，</p>
+<p>其中<strong>211.152.83.200-211.152.83.254</strong>地址除外，</p>
+<p>地址池的名字为TJU</p>
+<p>R1的DHCP配置(要小写)</p>
+<p>Router-R1(config)# <strong>IP DHCP excluded-address</strong>     211.152.83.<strong>200</strong>       211.152.83.<strong>254</strong></p>
+<p>（保留地址写份，要写全）</p>
+<p>Router-R1(config)# <strong>IP DHCP pool</strong>  TJU</p>
+<h4 id="考点8-router-ospf-进程号">考点8 router OSPF +进程号
+</h4><p>Router-R1(config)# router OSPF <strong>65</strong></p>
+<h4 id="考点-9-租用时间-lease">考点 9 租用时间 lease
+</h4><p>租用时间：4小时30分钟     按照<strong>天 小时 分钟</strong>，不足一天写 0</p>
+<p>Router-R1(DHCP-config)#lease  0   4   30</p>
+<h4 id="考点-10-配置ip地址池的子网地址和子网掩码-和-ip地址池的缺省网关">考点 10 配置IP地址池的子网地址和子网掩码 和 IP地址池的缺省网关
+</h4><p>（只有表格题会出现）</p>
+<p><strong>network + IP 地址 + 子网掩码</strong></p>
+<p><strong>default-router +缺省网关</strong></p>
+<p>例题</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">参数名称</th>
+          <th style="text-align: center">值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">地址池名</td>
+          <td style="text-align: center">add pool</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">地址池地址</td>
+          <td style="text-align: center">213.98.104.0 /24</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">保留地址</td>
+          <td style="text-align: center">213.98.104.250-254</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">缺省网关</td>
+          <td style="text-align: center">213.98.104.1</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">域名</td>
+          <td style="text-align: center">pkudl.cn</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">域名服务器</td>
+          <td style="text-align: center">162.105.129.27, 162.105.129.26</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">租用时间</td>
+          <td style="text-align: center">4小时30分钟</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Router-R1(config)# <strong>IP DHCP POOL</strong> add pool</p>
+<p>Router-R1(DHCP-config)#<strong>network</strong>  213.98.104.0 255.255.255.0</p>
+<p>Router-R1(DHCP-config)#<strong>default-router</strong>  213.98.104.1</p>
+<h4 id="考点11-特殊题型配置">考点11 特殊题型配置
+</h4><p>Router-R3(config)#access-list 130 <strong>deny UDP</strong> any any eq 1034 （<strong>封禁UD</strong>P端口）</p>
+<p>Router-R3(config)#access-list 130 permit <strong>IP</strong> any any （<strong>允许任何IP</strong>)</p>
+<p>Router-R3(config)#interface pos 4/0</p>
+<p>Router-R3(config-if)#IP access-group <strong>130 in</strong></p>
+<p>Router-R3(config-if)#<strong>no shutdown</strong>（打开端口）</p>
+<p>Router-R3(config-if)#<strong>async default IP address</strong> 202.113.7.16</p>
+<p><strong>配置异步串行接口的命令async default IP address  <IP></strong></p>
+<h2 id="综合题第三道dhcp报文分析">综合题第三道：DHCP报文分析
+</h2><p>视频链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=7"  target="_blank" rel="noopener"
+    >DHCP大题（上）</a></p>
+<h3 id="题型一dhcp-请求-ip-地址四过程全程使用-udp-协议">题型一：DHCP 请求 IP 地址四过程（全程使用 UDP 协议）
+</h3><p>发送消息的：源 IP 地址</p>
+<p>收到消息的：目的 IP 地址（255.255.255.255）</p>
+<p>服务器真正地址英文： <strong>DHCP Server IP Address</strong></p>
+<p>客户端主机 广播 服务器</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">客户端/主机</th>
+          <th style="text-align: center">发送过程</th>
+          <th style="text-align: center">服务器</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">源IP地址：0.0.0.0</td>
+          <td style="text-align: center">DHCP discover（广播方式）</td>
+          <td style="text-align: center">目的地址：255.255.255.255</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">目的地址：255.255.255.255</td>
+          <td style="text-align: center">DHCP offer</td>
+          <td style="text-align: center">源IP地址：服务器地址</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">源IP地址：0.0.0.0</td>
+          <td style="text-align: center">DHCP request</td>
+          <td style="text-align: center">目的地址：255.255.255.255</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">目的地址：255.255.255.255</td>
+          <td style="text-align: center">DHCP ack</td>
+          <td style="text-align: center">源IP地址：服务器地址</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="考点-1四过程英语">考点 1，四过程英语
+</h4><ol>
+<li>DHCP:Request, Type:<strong>DHCP discover</strong></li>
+<li>DHCP:Reply, Type:<strong>DHCP offer</strong></li>
+<li>DHCP:Request, Type:<strong>DHCP Request</strong></li>
+<li>DHCP:Reply, Type:<strong>DHCP ACK</strong></li>
+</ol>
+<h4 id="考点-2-四过程-ip-地址-题目会给服务器真正地址">考点 2 四过程 ip 地址 （题目会给服务器真正地址）
+</h4><p>若是DHCP: Sever IP Address = [10.1.1.1]</p>
+<p>源IP地址 目的IP地址 报文摘要</p>
+<ol>
+<li>源IP地址：<strong>0.0.0.0</strong>    目的IP地址：<strong>255.255.255.255</strong>     报文摘要：DHCP:Request, Type:<strong>DHCP discover</strong></li>
+<li>源IP地址：<strong>10.1.1.1</strong> 目的IP地址：<strong>255.255.255.255</strong> 报文摘要：DHCP:Reply, Type:<strong>DHCP offer</strong></li>
+<li>源IP地址：<strong>0.0.0.0</strong> 目的IP地址：<strong>255.255.255.255</strong> 报文摘要：DHCP:Request, Type:<strong>DHCP request</strong></li>
+<li>源IP地址：<strong>10.1.1.1</strong> 目的IP地址：<strong>客户端IP地址（由服务器分配）</strong> 报文摘要：DHCP:Reply, Type: <strong>DHCP ack</strong></li>
+</ol>
+<h4 id="考点-3英语翻译题目中直接有答案只需要自己找到对应上就行">考点 3，英语翻译（题目中直接有答案，只需要自己找到对应上就行）
+</h4><ul>
+<li>
+<p><strong>Client address</strong> (客户端地址)：这是指分配给客户端设备的IP地址。在DHCP交互过程中，客户端通过DHCP请求获得这个地址，并将其设置为自己的网络接口地址。</p>
+</li>
+<li>
+<p><strong>Subnet mask</strong> (子网掩码)：这是一个与IP地址配合使用的32位数字，用于确定IP地址中的网络部分和主机部分。它帮助设备识别哪些IP地址属于同一个子网，从而进行正确的数据包路由。</p>
+<p>例如，一个常见的C类地址的子网掩码是255.255.255.0，表示前24位是网络地址，后8位是主机地址。</p>
+</li>
+<li>
+<p><strong>Gateway address</strong> (网关地址) = 默认网关</p>
+<p>Default Gateway: 10.1.1.1：这是指网络中的默认网关设备的IP地址，通常是一个路由器。</p>
+<p>当设备需要发送数据到其本地子网以外的目的地时，它会将数据包发送到默认网关，由网关负责转发到正确的网络。</p>
+<p>在这个例子中，默认网关的地址是10.1.1.1。</p>
+</li>
+</ul>
+<p>这些参数都是DHCP服务器在响应客户端的请求时提供的重要网络配置信息，确保客户端能够正确地在网络中通信。</p>
+<p>以下为真题例题</p>
+<p>DHCP: Client address = 10.1.1.10</p>
+<p>DHCP: Next Server to use in bootstrap = [0.0.0.0]</p>
+<p>DHCP: Relay Agent = [0.0.0.0]</p>
+<p>DHCP: Client hardware address = 000102030405</p>
+<p>DHCP: Vendor Information tag = 63825363</p>
+<p>DHCP: Message Type = 5</p>
+<p>DHCP: Address renewal interval =345600 (seconds)</p>
+<p>DHCP: Address rebinding interval = 604800 (seconds)</p>
+<p>DHCP: Request IP Address lease time =691200 (seconds)</p>
+<p>DHCP:Subnet mask = 255.255.255.0</p>
+<p>DHCP:Gateway address = 10.1.1.1</p>
+<p>表格为：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>DHCP Enabled</strong></th>
+          <th style="text-align: center">Yes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">IP Address</td>
+          <td style="text-align: center">10.1.1.10</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Subnet Mask</td>
+          <td style="text-align: center">255.255.255.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Default Gateway</td>
+          <td style="text-align: center">10.1.1.1</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="考点4-硬件物理mac-地址">考点4 硬件/物理/mac 地址
+</h4><p>Client hardware address = 000102030405</p>
+<p>硬件/物理/mac 地址</p>
+<p>题目给你 Physical Address&hellip;&hellip;&hellip;..: 00-01-02-03-04-05</p>
+<p>让你填 Client hardware address = <strong><strong><strong>000102030405</strong></strong></strong></p>
+<p>（要去掉横杆）</p>
+<h3 id="题型二续约">题型二．续约
+</h3><ul>
+<li>
+<p>续约&mdash;&mdash;&ndash;客户机直接执行第3步</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>源ip地址</th>
+          <th></th>
+          <th>目的地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>客户端地址（本身的地址）</td>
+          <td>DHCP request（→）</td>
+          <td>服务器本身的地址</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>目的地址</td>
+          <td></td>
+          <td>源ip地址</td>
+      </tr>
+      <tr>
+          <td>客户端地址</td>
+          <td>DHCP ack（← ）</td>
+          <td>服务器地址</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>这里的客户端和服务器地址不再是255或4个0了）</p>
+</li>
+</ul>
+<p>例题如下：</p>
+<p>某网络中DHCP服务器地址为10.0.0.1，MAC地址为00-12-34-56-78-90， 其中10.0.0.50保留给MAC地址是00-11-22-33-44-55的主机。</p>
+<p>在客户机捕获的2条报文及对第1条报文的分析如下图所示。</p>
+<p>编号 报文摘要</p>
+<p>1 DHCP:Request, Type:<strong>DHCP  request</strong></p>
+<p>2 DHCP:Reply, Type:<strong>DHCP  Ack</strong></p>
+<p>DLC Header &mdash;&ndash;</p>
+<p>IP: Destination Address =  <strong>10.0.0.1</strong>     也就是目的地址（服务器地址）</p>
+<p>Source Address =  <strong>10.0.0.50</strong>  也就是源地址（主机）</p>
+<p>DHCP: Client self-assigned address =  <strong>10.0. 0.50</strong>  也就是续约地址（保留地址）</p>
+<h4 id="考点5-依次执行ipconfig-relaese和-ipconfig-renew也就是释放已获得地地租约">考点5 依次执行ipconfig relaese和 ipconfig renew（也就是释放已获得地地租约）
+</h4><p>链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.player.switch&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=8"  target="_blank" rel="noopener"
+    >DHCP（下）</a></p>
+<ul>
+<li>
+<p>**源ip地址 → 目的地址 **</p>
+<p>客户端地址 <strong>DHCP release</strong> 服务器地址</p>
+</li>
+<li>
+<p><strong>源ip地址 → 目的地址</strong></p>
+<p><strong>0.0.0.0 DHCP discover 255.255.255.255</strong></p>
+</li>
+<li>
+<p>**目的地址 ← 源ip地址 **</p>
+<p>255.255.255.255 <strong>DHCP offer</strong> 服务器地址</p>
+</li>
+<li>
+<p>**源ip地址 → 目的地址 **</p>
+<p>0.0.0.0 <strong>DHCP request</strong> 255.255.255.255</p>
+</li>
+<li>
+<p><strong>目的地址 ← 源id地址</strong></p>
+</li>
+</ul>
+<p>255.255.255.255 <strong>DHCP Ack</strong> 服务器地址</p>
+<p>例题</p>
+<p>其中客户端的源IP地址为10.1.1.10</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">编号</th>
+          <th style="text-align: center">源IP地址</th>
+          <th style="text-align: center">目的IP地址</th>
+          <th style="text-align: center">报文摘要</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: center"><strong>10.1.1.10</strong></td>
+          <td style="text-align: center">10.1.1.1（服务器真正的地址）</td>
+          <td style="text-align: center">DHCP:Request, Type:<strong>DHCP release</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: center">0.0.0.0</td>
+          <td style="text-align: center">255.255.255.255</td>
+          <td style="text-align: center">DHCP:Request,Type:<strong>DHCP discover</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: center"><strong>10.1.1.1</strong></td>
+          <td style="text-align: center">255.255.255.255</td>
+          <td style="text-align: center">DHCP:Reply, Type:<strong>DHCP offer</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: center">0.0.0.0</td>
+          <td style="text-align: center">255.255.255.255</td>
+          <td style="text-align: center">DHCP:Request,Type:<strong>DHCP request</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: center">10.1.1.1</td>
+          <td style="text-align: center">255.255.255.255</td>
+          <td style="text-align: center">DHCP:Reply, Type:<strong>DHCP ack</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<p>DHCP: <strong>Client self-assigned address</strong> =  10.1.1.10  也就是续约地址（保留地址）</p>
+<h4 id="另一种考法-表格解读">另一种考法 表格解读
+</h4><p>在DHCP客户机上执行“ipconfig/all”得到的部分信息如表格所示，该客户机在进行地址续约时捕获到其中1条报文</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">参数名称</th>
+          <th style="text-align: center">值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Physical Address</td>
+          <td style="text-align: center">00-11-22-33-44-55</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Dhcp Enabled</td>
+          <td style="text-align: center">Yes</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">IP Address</td>
+          <td style="text-align: center">192.168.0.1</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Subnet Mask</td>
+          <td style="text-align: center">255.255.255.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Default Gateway</td>
+          <td style="text-align: center">192.168.0.100</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">DHCP Server</td>
+          <td style="text-align: center">192.168.0.101</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">DNS Server</td>
+          <td style="text-align: center">192.168.0.102</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>获得的报文如下</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">编号</th>
+          <th style="text-align: left">报文摘要</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: left">DHCP:Reply, Type:<strong>DHCP ACK</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: left">IP: &mdash;&ndash; IP Header &mdash;&ndash;</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: left">IP: Protocol = UDP</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: left">IP: Source address = 192.168.0.101   （这是DHCP服务器作为源地址）</td>
+      </tr>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: left">IP: Destination address = 192.168.0.1（客户机作为目的地址）</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>直接填命令DHCP ACK，因为客户机已经获得DHCP的全部信息</p>
+<p>DHCP(动态主机配置协议)是<strong>基于UDP协议</strong>工作的，通常使用<strong>67和68</strong>号端口进行通信</p>
+<p>DHCP Relay Agent  <strong>0.0.0.0</strong></p>
+<p>这是消息中继代理（若是表格中没有就填0.0.0.0）</p>
+<h4 id="表格续约相关例题">表格续约相关例题
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>参数名称</th>
+          <th>值</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Description</td>
+          <td>Broadcom 440x 10/100 Integrated Controller</td>
+      </tr>
+      <tr>
+          <td>Physical Address</td>
+          <td>00-16-18-F1-C5-68</td>
+      </tr>
+      <tr>
+          <td>Dhcp Enabled</td>
+          <td>Yes</td>
+      </tr>
+      <tr>
+          <td>IP Address</td>
+          <td>192.168.0.50</td>
+      </tr>
+      <tr>
+          <td>Subnet Mask</td>
+          <td>255.255.255.0</td>
+      </tr>
+      <tr>
+          <td>Default Gateway</td>
+          <td>192.168.0.1</td>
+      </tr>
+      <tr>
+          <td>DHCP Server</td>
+          <td>192.168.0.100</td>
+      </tr>
+      <tr>
+          <td>DNS Server</td>
+          <td>192.168.0.100</td>
+      </tr>
+      <tr>
+          <td>Lease Obtained</td>
+          <td>2013年7月18日 8:29:03</td>
+      </tr>
+      <tr>
+          <td>Lease Expires</td>
+          <td>2013年7月26日 8:29:03</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>1 192.168.0.50      <strong>192.168.0.100</strong>                  DHCP: Request, Type: DHCP Request</p>
+<p>2 192.168.0.100    <strong>192.168.0.50</strong>                  DHCP: Request, Type: DHCP ack</p>
+<p>表格题喜欢考察续约 2 步法，因为续约不受 0000，和四个 255 的限制，主要就是看清楚谁是这个步骤的源地址和目的地址。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>源ip地址</th>
+          <th></th>
+          <th>目的地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>客户端地址（本身的地址）</td>
+          <td>DHCP request（→）</td>
+          <td>服务器本身的地址</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>目的地址</td>
+          <td></td>
+          <td>源ip地址</td>
+      </tr>
+      <tr>
+          <td>客户端地址</td>
+          <td>DHCP ack（← ）</td>
+          <td>服务器地址</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="其他零碎知识点">其他零碎知识点
+</h4><p>DHCP: <strong>Hardware address length</strong> =  6 bytes （<strong>硬件地址长度默认6字节</strong>）</p>
+<p>DHCP: <strong>Client hardware address</strong> = 001618F1C568（硬件地址就是物理地址，记得去掉横杠)</p>
+<p>DHCP: <strong>Domain Name Server address</strong> = 192.168.0.100(<strong>域名服务器地址 = DNS 地址</strong>)</p>
+<p>DLC: Destination =  fffffffffff</p>
+<p>(<strong>DLC: Destination</strong>就是广播 mac 地址：默认填 12 个 f, | fffffffffff）</p>
+<p><strong>Boot record type</strong></p>
+<p><strong>=2   reply</strong></p>
+<p><strong>=1   request</strong></p>
+<p><strong>DHCP:Boot record type =2(reply)</strong></p>
+<p><strong>DHCP:Boot record type =1(request)</strong></p>
+<p>这些死记硬背就行了</p>
+<h2 id="综合题第四题-dns或是sniffer抓包分析">综合题第四题 DNS或是Sniffer抓包分析
+</h2><p>链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.player.switch&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=9"  target="_blank" rel="noopener"
+    >sniffer抓包分析（上）</a></p>
+<h3 id="考点1-dns域名解析">考点1 DNS域名解析
+</h3><p>技巧：先看 DNS 后面跟的是 C 还是 R</p>
+<p><strong>C: 主机 ip 地址 → DNS 服务器地址 (S 发给 D)</strong></p>
+<p><strong>R: DNS 服务器地址 → 主机 ip 地址 (D 发给 S)</strong></p>
+<p>大致问法如下</p>
+<p>(1) 该主机的 ip 地址是_________先找到C字眼，再找源地址_</p>
+<p>(2) 该主机上配置的域名服务器的 IP 地址是 (56) _________DNS 服务器地址 __</p>
+<p>域名/要访问的地址: 是________一般就是NAME字眼后面跟着的网络链接__</p>
+<p>(3) 该主机上配置的网关是 _________要查看主机在Sniffer上的列表上的信息，当主机的IP地址突然断裂，然后继续出现，那第一个出现的IP地址就是主机配置的网关</p>
+<h3 id="考点2-tcp三次握手">考点2 TCP三次握手
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>编号</th>
+          <th>协议</th>
+          <th style="text-align: left">C客户机</th>
+          <th style="text-align: center">传向过程</th>
+          <th style="text-align: left">S服务器</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>5</td>
+          <td>TCP</td>
+          <td style="text-align: left">Seq=x</td>
+          <td style="text-align: center">→</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td>6</td>
+          <td>TCP</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: center">←</td>
+          <td style="text-align: left">Seq=y  ack=x+1</td>
+      </tr>
+      <tr>
+          <td>7</td>
+          <td>TCP</td>
+          <td style="text-align: left">Seq=x+1  ack=y+1</td>
+          <td style="text-align: center">→</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td>8（握手完成标号)</td>
+          <td>&mdash;&mdash;</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table></div>
+<p>考点：</p>
+<p><strong>1.握手完成的标号</strong></p>
+<p>握手完成的标号是8，而不是7，因为7是正在进行握手过程（不用写单位，直接写数字）</p>
+<p><strong>2.握手完成后的命令内容</strong></p>
+<p>握手完成后的命令是get</p>
+<p>例如</p>
+<p>port=1101  <strong>get</strong>/HTTP/1/1</p>
+<p><strong>3.握手时seq,ack这些数值的计算</strong></p>
+<p>熟悉三次握手协议中客户机和服务器之间Seq和Ack的数值变换。</p>
+<p>1.seq=x</p>
+<p>2.seq=y，ack=x+1</p>
+<p>3.seq=x+1，ack=y+1</p>
+<p>一般会考察具体的值。</p>
+<p>当某一行是灰色的，下面必有该行的详细信息。</p>
+<p>例如出现</p>
+<p>TCP:<strong>Initial sequence number</strong> =3056467584</p>
+<p>Initial sequence number表示当前seq，后面的数字就是seq的值</p>
+<p>TCP:<strong>Next expected Seq number</strong>=</p>
+<p>Next expected Seq number就是下一行Seq的值</p>
+<h3 id="考点三-tracert命令">考点三 tracert命令
+</h3><p>链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.player.switch&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=10"  target="_blank" rel="noopener"
+    >sniffer抓包分析（下）</a></p>
+<p><strong>tracert命令</strong>是通过发送包含<strong>不同TTL的ICMP报文</strong>并<strong>监听回应报文</strong>，来探测到达目的计算机的路径。</p>
+<p><strong>Protocol :ICMP</strong></p>
+<p><strong>（目的地址 回应 源地址）</strong></p>
+<p>判断技巧：题目中<strong>既有Time-to-live，又有ECHO</strong>，<strong>就是tracert命令</strong></p>
+<p><strong>Destination address</strong> = [211.81.20.208]. ④ (<strong>tracert + 域名</strong>)</p>
+<p>空格4里面的内容就是填<strong>tracert + 域名</strong>，<strong>域名就是找NAME字眼后面的网址</strong></p>
+<p><strong>Tracert命令下设备应具有的功能是：路由</strong></p>
+<p>视频跳转位置5:27</p>
+<p><strong>当域名解析成功后就能进行通信，原先的目的地址可以写上Name后面的网址，也就是解析后的域名</strong></p>
+<h3 id="考点-4-url">考点 4 URL
+</h3><ul>
+<li>该 URL 是：网址，或者是解析后的域名</li>
+<li>观察 Destination port（目的端口）和 Source port（源端口）</li>
+<li>如果端口是 <strong>21</strong> (FTP-ctrl)，则 URL 是 <strong>ftp://域名</strong></li>
+<li>如果端口是 <strong>80</strong> (Http)，则 URL 是 <strong>http://域名</strong></li>
+<li>如果端口是 <strong>443</strong> (Https)，则 URL 是 <strong>https://域名</strong></li>
+</ul>
+<p>域名就是NAME后面的网址。</p>
+<h3 id="考点-5主机执行的什么命令">考点 5，主机执行的什么命令？
+</h3><p>链接:<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.player.switch&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=10"  target="_blank" rel="noopener"
+    >sniffer抓包分析（下)</a></p>
+<ul>
+<li>如果出现了 <strong>ftp</strong>，则命令是 “<strong>ftp 域名</strong>”；（中间是有空格的）</li>
+<li>出现了 <strong>Time-to-live 和 Echo</strong> 时，执行的命令为：“<strong>tracert 域名</strong>”</li>
+<li>出现 <strong>Echo（ping）和 Echo reply</strong> 时，执行的命令为“<strong>ping 域名</strong>”</li>
+</ul>
+<p>例题在视频11:21处。</p>
+<p><strong>看到&quot;Welcome&quot;,&ldquo;port&quot;字眼，看最前面的编号，那就是该服务的端口号</strong></p>
+<h4 id="琐碎知识">琐碎知识：
+</h4><p><strong>彩虹Ping比较特殊，它的DNS服务器的IP地址是8.8.8.8</strong></p>
+<p>例题在视频14:38处</p>
+<p><strong>彩虹Ping找Mac地址就找括号里面的一大段数字</strong></p>
+<p>例题在视频15:13处</p>
+<p><strong>主机的IP地址和主机www.12306.cn对应的IP地址是不同的。</strong></p>
+<p>前者直接找DNS的IP地址上方位置的IP，</p>
+<p>后者要先找到该网址对应哪一行，看对应行后面跟着的IP地址。</p>
+<h3 id="考点6-protocol--多少">考点6 Protocol = 多少？
+</h3><ul>
+<li><strong>Protocol = 1 (ICMP)</strong></li>
+<li><strong>Protocol = 6 (TCP)</strong></li>
+<li><strong>Protocol = 17 (UDP)</strong></li>
+</ul>
+<p>ICMP: Protocol = 1 (ICMP)</p>
+<h3 id="考点7-type--多少">考点7 Type = 多少
+</h3><ul>
+<li><strong>Type = 0 (Echo-reply)</strong></li>
+<li><strong>Type = 8 (Echo)</strong></li>
+<li><strong>Type = 11 (Time Exceeded)</strong></li>
+</ul>
+<p>ICMP: Type = 8 (Echo)</p>
+<h3 id="考点8-网络号的长度">考点8 网络号的长度？
+</h3><ul>
+<li><strong>记住 28</strong></li>
+</ul>
+<p><strong>(1) 该主机上配置的IP地址的网络号长度最多是 28。</strong></p>
+<p><strong>该主机上配置的子网掩码最大长度是  28。</strong></p>
+<h3 id="考点9-主机是什么服务器其提供服务的端口是">考点9 主机是什么服务器，其提供服务的端口是？
+</h3><ul>
+<li><strong>FTP——21</strong></li>
+<li><strong>DNS——53</strong></li>
+<li><strong>DHCP——67</strong></li>
+<li><strong>HTTP——80</strong></li>
+<li><strong>HTTPS——443</strong></li>
+</ul>
+<p><strong>该主机采用HTTP协议进行通信时,使用的源端口是  80</strong></p>
+<h3 id="考点10-sniffer捕获分析">考点10 Sniffer捕获分析
+</h3><ul>
+<li><strong>回放捕获的数据包，使用Sniffer内置的：数据包生成器</strong></li>
+<li><strong>显示捕获的所有数据包，使用Sniffer内置的：DNS域名解析</strong></li>
+</ul>
+<p>如果上图<strong>显示的是在该机上执行某个操作过程中捕获的所有数据包</strong>，那么该操作是 <strong>DNS域名解析</strong>。</p>
+<h3 id="考点11-主机的功能是什么">考点11 主机的功能是什么？
+</h3><ul>
+<li>DNS</li>
+</ul>
+<p><strong>IP地址为211.81.20.200的主机功能是 DNS。</strong></p>
+<p><strong>其提供服务的缺省端口是  53。</strong></p>
+<h3 id="考点12-打开的窗口">考点12 打开的窗口？
+</h3><p>如果用Sniffer<strong>统计网络流量中各种应用的分布情况</strong>，应打开的窗口是 <strong>Protocol Distribution</strong>。</p>
+<h3 id="考点13-被访问网站的端口是">考点13 被访问网站的端口是？
+</h3><p><strong>Source port 8080</strong></p>
+<h2 id="综合题第五题-路由汇聚s1s0连接">综合题第五题 路由汇聚（s1,s0连接）
+</h2><p>题目链接：<a class="link" href="https://zhuanlan.zhihu.com/p/687460750"  target="_blank" rel="noopener"
+    >计算机三级网络技术大题知识汇总</a></p>
+<p>视频链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=11"  target="_blank" rel="noopener"
+    >S1-S0 连接（注意进位法）</a></p>
+<p>先看 RG 分左右，顺着左右往下做</p>
+<p>进位法</p>
+<p>① 转换后可用地址数 (2^(32-n)-2 &gt; IP 数)</p>
+<p>② 转换后的目的网络不能与转换前相同</p>
+<h4 id="考点一--设备入侵防护系统ips">考点一  设备入侵防护系统（IPS)
+</h4><p>网络内服务器群的IP地址为192.168.33 <strong>11</strong>-192.168.33 <strong>25</strong></p>
+<p>采用一种设备能够对服务器提供如下保护措施：</p>
+<p>发送到服务器群的<strong>数据包将被进行过滤检测</strong>，如果检测到<strong>恶意数据包</strong>时，<strong>系统发出警报并阻断攻击</strong>。</p>
+<p>这种设备的名称是 入侵防护系统（IPS），</p>
+<p>该设备应部署在<strong>路由器  内部网络 和  外部网络 的端口</strong>上。</p>
+<p><strong>入侵防护系统（IPS）整合了防火墙技术和入侵检测技术</strong></p>
+<h4 id="考点二-设备-分路器tap">考点二 设备 分路器（TAP）
+</h4><p><strong>监视路由器RE和RG之设备间的流量</strong>，可以在该链路中串入一种设备。请写出这种设备的名称（2分）</p>
+<p>在该链路中串入<strong>分路器（TAP）</strong></p>
+<h4 id="考点三-子网划分">考点三 子网划分
+</h4><p>如果将172.0.35.128/25划分成3个子网，其中第一个子网能容纳55台主机，另外两个子网分别能容纳25台主机。</p>
+<p>要求网络地址从小到大依次分配给3个子网，</p>
+<p>这3个子网的掩码分别为 /26、/27 和 /27。</p>
+<p>解题步骤：</p>
+<ol>
+<li>
+<p>先观察子网掩码 /25，求出主机位。</p>
+<p>32-25=7（主机位）</p>
+<p>通过主机位求出可分配的主机数（2的n次方减2）2^7=128 128-2=126</p>
+</li>
+<li>
+<p>计算 2^n-2 ≥ 容纳主机数 求出几（主机位，掩码末尾0的个数）</p>
+<p>总：126</p>
+<p>55台 2^6-2=64-2=62, n=6     最后一位1100 0000 /26</p>
+<p>25台 2^5-2=32-2=30, n=5     最后一位1110 0000/27</p>
+<p><strong>IP地址段的起始地址和结束地址间必须用减号“-”，中间不能有空格</strong></p>
+</li>
+</ol>
+<p>对应链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=12"  target="_blank" rel="noopener"
+    >设备与子网划分（秒杀技巧）</a></p>
+<p>视频对应13:10处</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">子网网络地址</th>
+          <th style="text-align: center">子网掩码</th>
+          <th style="text-align: center">可用 IP 地址段（不包含广播地址）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">子网 1 (55 台)</td>
+          <td style="text-align: center">255.255.255.192</td>
+          <td style="text-align: center">172.0.35.129 - 172.0.35.190</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">子网 2 (25 台)</td>
+          <td style="text-align: center">255.255.255.224</td>
+          <td style="text-align: center">172.0.35.193 - 172.0.35.222</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">子网 3 (25 台)</td>
+          <td style="text-align: center">255.255.255.224</td>
+          <td style="text-align: center">172.0.35.225 - 172.0.35.254</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="综合题第六题--常考命令与特殊题型">综合题第六题  常考命令与特殊题型
+</h2><p>链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=13"  target="_blank" rel="noopener"
+    >常考命令与特殊题型</a></p>
+<h3 id="配置命令">配置命令
+</h3><h4 id="考点1-探测数据包传输路径tracert命令">考点1 探测数据包传输路径（tracert命令）
+</h4><ol>
+<li>填写路由器RG的路由表项①至⑥（每空2分，共12分）</li>
+</ol>
+<p>若在Windows主机192.168.64.215上<strong>探测数据包传输路径</strong>：从本机到主机192.168.66.195</p>
+<p><strong>应使用的命令是  tracert ，</strong></p>
+<p>数据包经过的第2个路由器为  RB （2分）。</p>
+<h4 id="考点2-防火墙fw为cisco-pix525系列配置">考点2 防火墙FW为Cisco PIX525系列配置
+</h4><p>并且<strong>部分内网需要访问外网</strong>，需要使用的<strong>两个配置命令依次是（nat）和（global）</strong>。</p>
+<p>若<strong>允许内网的FTP服务器向外网提供服务</strong>，需要使用的配置命令是 <strong>fixup protocol ftp</strong></p>
+<p>并且<strong>部分内网需要访问外网，需要依次使用的两个配置命令是  nat 和  global</strong> 。</p>
+<p>若需要<strong>为内网的一个服务器配置一个公网IP地址</strong>，请写出应该使用的<strong>配置命令是 static</strong>。</p>
+<p>如果在<strong>不改变路由表项的前提下</strong>，请写出在<strong>路由器RE最多可再连接的路由器数量</strong>。</p>
+<p>视频题目在2:45处</p>
+<p>步骤：</p>
+<p>把 RE 所在的三个端口按规定聚合，求出子网掩码</p>
+<p>得到聚合后为10.15.0.64/29</p>
+<p>32 - 子网掩码 29 = 3（答案）</p>
+<h4 id="零碎知识点">零碎知识点：
+</h4><p><strong>TCPFlag 值是：18</strong></p>
+<p><strong>TCP-Flag 十进制值是：19</strong></p>
+<p>使用<strong>第三方软件监控路由器 RG 的运行状态</strong>，路由器 RG 必须支持 <strong>SNMP 协议（简单网络管理协议）。</strong></p>
+<p><strong>域用户信息存储在：活动目录</strong></p>
+<p>考试若遇到以下两个问题（套路题）</p>
+<ol>
+<li>探测器应该连接在交换机 1 的 Gi2/16 端口上（<strong>Destination Ports：Gi2/16</strong>）</li>
+<li>除<strong>流量镜像方式</strong>外，还可以，<strong>新增集线器或 TAP 分流，来部署入侵检测探测器</strong>。</li>
+</ol>
+<h2 id="综合题第七题-wiresahrk捕获的数据包">综合题第七题 Wiresahrk捕获的数据包
+</h2><p>链接：<a class="link" href="https://www.bilibili.com/video/BV1uEY1zCECA?spm_id_from=333.788.videopod.sections&amp;vd_source=e93fd20e7955bf86bf2ce11864b4c9a9&amp;p=14"  target="_blank" rel="noopener"
+    >Wrieshark抓包分析</a></p>
+<h3 id="1-在浏览器中输入的url是-http--域名"><strong>(1) 在浏览器中输入的URL是 http:// + 域名</strong>
+</h3><p>就找灰色那行后面的网址</p>
+<p>DNS  201 Standard query response 0xf49c A <a class="link" href="https://www.enorth.com.cn"  target="_blank" rel="noopener"
+    >www.enorth.com.cn</a></p>
+<h3 id="2-该主机上使用的dns服务器的ip地址是-8888"><strong>(2) 该主机上使用的DNS服务器的IP地址是 8.8.8.8</strong>
+</h3><p><strong>8.8.8.8的作用是 DNS/域名解析</strong></p>
+<p>视频题目在2:35处</p>
+<p><strong>有时候会在多个DNS集中区域挖空，那个位置还是填DNS</strong></p>
+<p><strong>DNS端口号是53</strong></p>
+<p><strong>SRC port：53（有时候会把后面的数字隐去，一般这个端口号是DNS的端口号）</strong></p>
+<h3 id="3-该主机的ip地址是-5967152250">(3) 该主机的IP地址是 59.67.152.250
+</h3><p>还有一种问法，MAC 地址为 48:4d:7e:9d:27:05 主机配置对应的 IP 地址是？</p>
+<p><strong>该主机的MAC地址 就找这种带括号的，里面还有冒号的一串数字</strong>，<strong>记得要把冒号去掉</strong></p>
+<p>Dell_9d:27:05（48:4d:7e:9d:27:05）</p>
+<h3 id="4-域名-wwwenorthcomcn-对应的-ip-地址是">(4) 域名 <a class="link" href="https://www.enorth.com.cn"  target="_blank" rel="noopener"
+    >www.enorth.com.cn</a> 对应的 IP 地址是：
+</h3><p>若有以下信息：</p>
+<p>cname <a class="link" href="https://www.enorth.com.cn.cdn.dnsv1.com"  target="_blank" rel="noopener"
+    >www.enorth.com.cn.cdn.dnsv1.com</a></p>
+<p>NAME, class IN, cname 287911.s2.cdntip.com</p>
+<p>addr 220.194.79.33</p>
+<p>addr 220.194.79.34</p>
+<p>addr 125.39.132.236</p>
+<ul>
+<li>220.194.79.33</li>
+<li>220.194.79.34</li>
+<li>125.39.132.236</li>
+</ul>
+<p>这三个 IP 地址都是与域名 <a class="link" href="https://www.enorth.com.cn"  target="_blank" rel="noopener"
+    >www.enorth.com.cn</a> 相关联的，可能用于负载均衡或冗余配置，三中选一即可。</p>
+<p>注意：<strong>必须是问域名，而不是问本次访问。</strong></p>
+<p><strong>本次访问 <a class="link" href="https://www.enorth.com.cn"  target="_blank" rel="noopener"
+    >www.enorth.com.cn</a> 对应的 IP 地址是</strong></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">序号</th>
+          <th style="text-align: center">时间</th>
+          <th>源IP地址</th>
+          <th style="text-align: center">目标IP地址</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1086</td>
+          <td style="text-align: center">1.906380</td>
+          <td>8.8.8.8</td>
+          <td style="text-align: center">59.67.152.250</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1087</td>
+          <td style="text-align: center">1.907595</td>
+          <td>8.8.8.8</td>
+          <td style="text-align: center">59.67.152.250</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1088</td>
+          <td style="text-align: center">1.909468</td>
+          <td>8.8.8.8</td>
+          <td style="text-align: center">59.67.152.250</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1090</td>
+          <td style="text-align: center">1.911046</td>
+          <td>8.8.8.8</td>
+          <td style="text-align: center">59.67.152.250</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">1094</td>
+          <td style="text-align: center">1.911836</td>
+          <td>59.67.152.250</td>
+          <td style="text-align: center"><strong>220.194.79.33</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>8.8.8.8后面对应的那些目标IP地址是主机的IP地址</strong></p>
+<p>主机下面的那个目标IP地址才是<strong>本次访问 <a class="link" href="https://www.enorth.com.cn"  target="_blank" rel="noopener"
+    >www.enorth.com.cn</a> 对应的 IP 地址</strong></p>
+<p>也就是<strong>220.194.79.33</strong></p>
+<p><strong>主机qurl.f.360.cn对应的IP地址是</strong></p>
+<p>133 Standard query response 0x5bbe A <strong>qurl.f.360.cn</strong> CNAME <strong>qurl.qh-lb.com</strong> A <strong>111.206.62.164</strong> A <strong>111.206.62.169</strong></p>
+<p><strong>要先找到域名，然后找到主机，后面两个“A”是address（地址），跟着IP地址，两个任选其一即可。</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Sep 16, 2025 13:41 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">网络技术19错题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%9C%9F%E9%A2%98/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机等级三级网络技术真题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机等级三级网络技术</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 梦幻星河
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://charles-lin-cell.github.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://charles-lin-cell.github.io/icons/codeMore.svg"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+
+
+
+
+
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+    </body>
+</html>
