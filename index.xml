@@ -929,7 +929,9 @@ Catalyst 6500&amp;gt;(enable) set trunk&amp;lt;端口号&amp;gt;VLAN&amp;lt; VLA
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;strong&gt;area 开头&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;area + 校园网/园区网 IP 地址+子网掩码正码&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;area + 校园网/园区网 IP 地址+子网掩码正码&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;或是&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;area &amp;lt;区域号&amp;gt;range &amp;lt;子网地址&amp;gt; &amp;lt;子网掩码&amp;gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Router-R3 (config-router)# area 211.100.66.0  &lt;strong&gt;255.255.255.128&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正数的正码就是它本身。&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;考点-7-dhcp&#34;&gt;考点 7 DHCP
