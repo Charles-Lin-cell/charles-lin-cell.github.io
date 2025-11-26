@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本博客运用[hugo+github]技术，主要记录生活琐事。">
-<title>Posts</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2022年9月CET4真题一 作文 描述：Suppose your class has just finished celebrating the Teachers Day。You are now to write a report to the university newspaper on the celebration activities organized by your class.\n假设你们班刚刚结束了教师节的庆祝活动。你现在需要为大学报纸写一篇关于你们班组织的庆祝活动的报道。\n">
+<title>CET4_202209</title>
 
-<link rel='canonical' href='https://charles-lin-cell.github.io/post/'>
+<link rel='canonical' href='https://charles-lin-cell.github.io/p/cet4_202209/'>
 
-<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="Posts">
-<meta property='og:description' content="本博客运用[hugo+github]技术，主要记录生活琐事。">
-<meta property='og:url' content='https://charles-lin-cell.github.io/post/'>
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="CET4_202209">
+<meta property='og:description' content="2022年9月CET4真题一 作文 描述：Suppose your class has just finished celebrating the Teachers Day。You are now to write a report to the university newspaper on the celebration activities organized by your class.\n假设你们班刚刚结束了教师节的庆祝活动。你现在需要为大学报纸写一篇关于你们班组织的庆祝活动的报道。\n">
+<meta property='og:url' content='https://charles-lin-cell.github.io/p/cet4_202209/'>
 <meta property='og:site_name' content='梦幻星河的博客'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-11-26T16:31:14&#43;08:00 '/>
-<meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="本博客运用[hugo+github]技术，主要记录生活琐事。"><link rel="alternate" type="application/rss&#43;xml" href="https://charles-lin-cell.github.io/post/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-11-26T16:29:34&#43;08:00'/><meta property='article:modified_time' content='2025-11-26T16:31:14&#43;08:00'/>
+<meta name="twitter:title" content="CET4_202209">
+<meta name="twitter:description" content="2022年9月CET4真题一 作文 描述：Suppose your class has just finished celebrating the Teachers Day。You are now to write a report to the university newspaper on the celebration activities organized by your class.\n假设你们班刚刚结束了教师节的庆祝活动。你现在需要为大学报纸写一篇关于你们班组织的庆祝活动的报道。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -254,155 +256,10 @@
     <aside class="sidebar right-sidebar sticky">
         
             
-                <section class="widget clock">
-    <div class="widget--clock">
-        <div class="clock-face">
-            <div class="digital-clock"></div>
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="center-dot"></div>
-        </div>
-    </div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const clockFace = document.querySelector('.clock-face');
-    if (!clockFace) return;
-    
-    const radius = 62; 
-    const center = 67; 
-
-    
-    const existingMarks = clockFace.querySelectorAll('.mark, .clock-number');
-    existingMarks.forEach(mark => mark.remove());
-
-    for (let i = 0; i < 60; i++) {
-        const angle = i * 6;
-        const radians = (angle * Math.PI) / 180;
-        const x = center + radius * Math.sin(radians);
-        const y = center - radius * Math.cos(radians);
-
-        const mark = document.createElement('div');
-        mark.className = 'mark';
-        mark.style.left = `${x}px`;
-        mark.style.top = `${y}px`;
-        mark.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-
-        if (i % 15 === 0) {
-            mark.classList.add('long-mark');
-            const numberRadius = radius - 12;
-            const numberX = center + numberRadius * Math.sin(radians);
-            const numberY = center - numberRadius * Math.cos(radians);
-
-            const number = document.createElement('div');
-            number.textContent = (i / 5) || 12;
-            number.className = 'clock-number';
-            number.style.left = `${numberX}px`;
-            number.style.top = `${numberY}px`;
-            number.style.transform = `translate(-50%, -50%)`;
-            clockFace.appendChild(number);
-        } else if (i % 5 === 0) {
-            mark.classList.add('middle-mark');
-        } else {
-            mark.classList.add('short-mark');
-        }
-
-        clockFace.appendChild(mark);
-    }
-
-    function updateClock() {
-        const now = new Date();
-        const hour = now.getHours();
-        const minute = now.getMinutes();
-        const second = now.getSeconds();
-
-        const hourHand = clockFace.querySelector('.hour-hand');
-        const minuteHand = clockFace.querySelector('.minute-hand');
-        const secondHand = clockFace.querySelector('.second-hand');
-        const digitalClock = clockFace.querySelector('.digital-clock');
-
-        if (hourHand && minuteHand && secondHand && digitalClock) {
-            const hourDeg = (hour % 12) * 30 + (minute / 60) * 30;
-            const minuteDeg = minute * 6 + (second / 60) * 6;
-            const secondDeg = second * 6;
-
-            hourHand.style.transform = `rotate(${hourDeg}deg)`;
-            minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
-
-            secondHand.style.transition = second === 0 ? 'none' : 'transform 0.5s linear';
-            secondHand.style.transform = `rotate(${secondDeg}deg)`;
-
-            const timeString = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-            digitalClock.textContent = timeString;
-        }
-
-        setTimeout(updateClock, 1000);
-    }
-
-    updateClock();
-});
-</script>
-
-            
-        
-            
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label>搜索</label>
-            <input name="keyword" required placeholder="输入关键词..." />
-        
-            <button title="搜索">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">归档</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2025">
-                        
-                            <span class="year">2025</span>
-                            <span class="count">20</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -412,21 +269,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    </div>
-    <h2 class="widget-title section-title">分类</h2>
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#作文">作文</a></li>
+    <li><a href="#翻译">翻译</a></li>
+    <li><a href="#易错词">易错词</a></li>
+  </ol>
 
-    <div class="tagCloud-tags">
-        
-            <a href="/categories/study.md/" class="font_size_19">
-                Study.md
-            </a>
-        
-            <a href="/categories/game.md/" class="font_size_1">
-                Game.md
-            </a>
-        
-    </div>
-</section>
+  <ol>
+    <li><a href="#作文-1">作文</a></li>
+    <li><a href="#翻译-1">翻译</a></li>
+    <li><a href="#易错词-1">易错词</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#作文-2">作文</a></li>
+    <li><a href="#翻译-2">翻译</a></li>
+    <li><a href="#易错词-2">易错词</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
             
         
@@ -434,100 +301,183 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             <main class="main full-width">
-    <header>
-        <h3 class="section-title">
-            
-                章节
-            
-        </h3>
+    <article class="main-article">
+    <header class="article-header">
 
-        <div class="section-card">
-            <div class="section-details">
-                <h3 class="section-count">20 个页面</h3>
-                <h1 class="section-term">Posts</h1>
-                
-            </div>
-        </div>
-    </header>
+    <div class="article-details">
+ 
+    <footer class="article-time">
+
+        <div class="article-lastmod">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time>
+                    Nov 26, 2025 16:31 &#43;0800
+                </time>
+            </div></footer>
+
+</div>
+
+</header>
+
+    <section class="article-content">
     
-    <section class="article-list--compact">
-        
-            <article>
-    <a href="/p/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF19%E9%94%99%E9%A2%98/">
-        <div class="article-details">
-            <h2 class="article-title">网络技术19错题</h2>
-            <footer class="article-time">
-                <time datetime='2025-09-14T11:01:16&#43;08:00'>Sep 14, 2025</time>
-            </footer>
-        </div>
-    </a>
+    
+    <h1 id="2022年9月cet4真题一">2022年9月CET4真题一
+</h1><h2 id="作文">作文
+</h2><p>描述：Suppose your class has just finished celebrating the Teachers Day。You are now to write a report to the university newspaper on the celebration activities organized by your class.</p>
+<p>假设你们班刚刚结束了教师节的庆祝活动。你现在需要为大学报纸写一篇关于你们班组织的庆祝活动的报道。</p>
+<p>正文：</p>
+<p><strong>Report on Teachers&rsquo; Day Celebration by Class of 2023</strong></p>
+<p>On September 10th,our class organized a heartfelt Teachers&rsquo; Day celebration to express gratitude to our professors. The event was held in the main lecture hall,decorated with student-made cards and banners.</p>
+<p>The celebration began with a speech by our class president,thanking teachers for their dedication.</p>
+<p>This was followed by cultural performances including group songs, a traditional dance,and a humorous skit highlighting teacher-student bonding.</p>
+<p>We then presented handmade gifts and a collective thank-you card signed by all students.</p>
+<p>The teachers were deeply touched,sharing inspiring words and encouraging us to pursue excellence.</p>
+<p>The event concluded with a group photo and refreshments.</p>
+<p>This celebration strengthened our bond with the teachers and reminded us of the importance of respecting and appreciating our educators who shape our future.</p>
+<p><strong>2023级班级教师节庆祝活动报告</strong></p>
+<p>9月10日，我们班级组织了一场充满真挚情感的教师节庆祝活动，向教授们表达感激之情。活动在主演讲厅举行，现场装饰着学生们自制贺卡和横幅。</p>
+<p>庆祝活动以班长致感谢辞开始，随后进行了包括合唱、传统舞蹈和展现师生情谊的幽默小品等文化表演。我们随后向老师们赠送了手工礼物和全体学生签名的感谢卡。老师们深受感动，分享了鼓舞人心的话语，鼓励我们追求卓越。活动以集体合影和茶歇结束。</p>
+<p>此次庆祝活动加强了师生情感纽带，让我们再次认识到尊重和感恩教育工作者的重要性。</p>
+<h2 id="翻译">翻译
+</h2><p>中文：</p>
+<p>太极拳（Taijiquan）起源于中国古代，是中国武术（martial art）的一个重要分支。</p>
+<p>练太极拳最初是为了自卫，现在是促进身心健康的有效锻炼方式。</p>
+<p>大量研究表明，这种锻炼方式有助于保持力量，灵活性和平衡力，并减少压力和焦虑。</p>
+<p>太极拳练习起来极既容易又愉快，通过轻柔，流畅的动作，促使心情平静，头脑清晰。</p>
+<p>今天，太极拳已经传播到世界各地，深受广大健身者的喜爱。</p>
+<p>英文：</p>
+<p>Taijiquan,which originated in ancient China,is an important branch of Chinese martial arts.</p>
+<p>Originally practiced for self-defense,it is now an effective form of exercise for promoting both physical and mental well-being.</p>
+<p>Numerous studies have shown that this form of exercise helps maintain strength,flexibility,and balance,while reducing stress and anxiety.</p>
+<p>Taijiquan is easy and enjoyable to practice. Through its gentle,fluid movements,it promotes mental calmness and clarity.</p>
+<p>Today,Taijiquan has spread worldwide and is deeply loved by fitness enthusiasts everywhere.</p>
+<h2 id="易错词">易错词
+</h2><h1 id="2022年9月cet4真题二">2022年9月CET4真题二
+</h1><h2 id="作文-1">作文
+</h2><p>描述：Suppose your class plans to invite some former graduates to share their job experiences with the students. As the organizer of the activity,you are now to write an invitation letter to the invited speakers on behalf of your class.</p>
+<h2 id="翻译-1">翻译
+</h2><h2 id="易错词-1">易错词
+</h2><h1 id="2022年9月cet4真题三">2022年9月CET4真题三
+</h1><h2 id="作文-2">作文
+</h2><h2 id="翻译-2">翻译
+</h2><h2 id="易错词-2">易错词
+</h2>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Nov 26, 2025 16:31 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
 </article>
-        
-            <article>
-    <a href="/p/%E5%89%8D%E5%BE%80%E4%B8%AD%E4%B8%96%E7%BA%AA%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F%E6%8C%87%E4%BB%A4%E5%90%88%E9%9B%86/">
-        <div class="article-details">
-            <h2 class="article-title">前往中世纪开发者模式指令合集</h2>
-            <footer class="article-time">
-                <time datetime='2025-09-04T22:58:39&#43;08:00'>Sep 04, 2025</time>
-            </footer>
-        </div>
-    </a>
-</article>
-        
-            <article>
-    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%9C%9F%E9%A2%98/">
-        <div class="article-details">
-            <h2 class="article-title">计算机等级三级网络技术真题</h2>
-            <footer class="article-time">
-                <time datetime='2025-08-15T16:22:49&#43;08:00'>Aug 15, 2025</time>
-            </footer>
-        </div>
-    </a>
-</article>
-        
-            <article>
-    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%89%E7%BA%A7%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/">
-        <div class="article-details">
-            <h2 class="article-title">计算机等级三级网络技术</h2>
-            <footer class="article-time">
-                <time datetime='2025-08-10T15:38:14&#43;08:00'>Aug 10, 2025</time>
-            </footer>
-        </div>
-    </a>
-</article>
-        
-    </section>
-    <nav class='pagination'>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/cet4_unit10/">
         
         
 
-        
-            
-                    <a class='page-link' href='/post/'>1</a>
-                
-            
-            
-                    
-                        
-                        <span class='page-link dots'>&hellip;</span>
-                    
-                
-            
-            
-                    
-                
-            
-            
-                    <a class='page-link' href='/post/page/4/'>4</a>
-                
-            
-            
-                <span class='page-link current'>5</span>
-                
-            
-    </nav>
+        <div class="article-details">
+            <h2 class="article-title">CET4_Unit10</h2>
+        </div>
+    </a>
+</article>
 
-<footer class="site-footer">
+            
+                
+<article class="">
+    <a href="/p/cet4_unit9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_Unit9</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_unit8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_Unit8</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_unit7/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_Unit7</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_unit6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_Unit6</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -542,6 +492,84 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 </footer>
 
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>
