@@ -1,0 +1,2918 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一、网络基础 1. TCP三次握手 1.1 TCP是什么？ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接、可靠的传输层协议。\n主要特点：\n">
+<title>网工基础知识点</title>
+
+<link rel='canonical' href='https://charles-lin-cell.github.io/p/%E7%BD%91%E5%B7%A5%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/'>
+
+<link rel="stylesheet" href="/scss/style.min.8d59664cd30106ead78f46b5635ac7ecfcec14cf7b0bcebc89f98d394fc5d993.css"><meta property='og:title' content="网工基础知识点">
+<meta property='og:description' content="一、网络基础 1. TCP三次握手 1.1 TCP是什么？ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接、可靠的传输层协议。\n主要特点：\n">
+<meta property='og:url' content='https://charles-lin-cell.github.io/p/%E7%BD%91%E5%B7%A5%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/'>
+<meta property='og:site_name' content='梦幻星河的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-08-17T17:18:08&#43;08:00'/><meta property='article:modified_time' content='2026-08-17T17:20:45&#43;08:00'/>
+<meta name="twitter:title" content="网工基础知识点">
+<meta name="twitter:description" content="一、网络基础 1. TCP三次握手 1.1 TCP是什么？ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接、可靠的传输层协议。\n主要特点：\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu407594167405330445.png" width="300"
+                            height="250" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">⭐️</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">梦幻星河的博客</a></h1>
+            <h2 class="site-description">本博客运用[hugo&#43;github]技术，主要记录生活琐事。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/1510507542'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://gitee.com/login?redirect_to_url=%2F'
+                        target="_blank"
+                        title="Gitee"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8Eabout/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于|About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档|Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索|Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接|Link</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1-tcp三次握手">1. TCP三次握手</a>
+      <ol>
+        <li><a href="#11-tcp是什么">1.1 TCP是什么？</a></li>
+        <li><a href="#12-为什么需要三次握手">1.2 为什么需要三次握手？</a></li>
+        <li><a href="#13-三次握手过程">1.3 三次握手过程</a>
+          <ol>
+            <li><a href="#第一次握手">第一次握手</a></li>
+            <li><a href="#第二次握手">第二次握手</a></li>
+            <li><a href="#第三次握手">第三次握手</a></li>
+            <li><a href="#14-回答模板">1.4 回答模板</a></li>
+            <li><a href="#15-常见追问">1.5 常见追问</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#2-tcp四次挥手">2. TCP四次挥手</a>
+      <ol>
+        <li><a href="#21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？</a></li>
+        <li><a href="#22-四次挥手过程">2.2 四次挥手过程</a></li>
+        <li><a href="#23-四次挥手详细过程">2.3 四次挥手详细过程</a>
+          <ol>
+            <li><a href="#第一次">第一次</a></li>
+            <li><a href="#第二次">第二次</a></li>
+            <li><a href="#第三次">第三次</a></li>
+            <li><a href="#第四次">第四次</a></li>
+          </ol>
+        </li>
+        <li><a href="#24-time_wait是什么">2.4 TIME_WAIT是什么？</a></li>
+      </ol>
+    </li>
+    <li><a href="#3-udp">3. UDP</a>
+      <ol>
+        <li><a href="#31-udp是什么">3.1 UDP是什么？</a></li>
+        <li><a href="#32-tcp与udp对比">3.2 TCP与UDP对比</a></li>
+        <li><a href="#33-常见udp应用">3.3 常见UDP应用</a>
+          <ol>
+            <li><a href="#dnsdomain-name-system-域名系统的缩写">DNS（Domain Name System 域名系统的缩写）</a></li>
+            <li><a href="#dhcpdynamic-host-configuration-protocol-动态主机配置协议">DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）</a></li>
+            <li><a href="#snmpsimple-network-management-protocol-简单网络管理协议">SNMP（Simple Network Management Protocol 简单网络管理协议）</a></li>
+            <li><a href="#snmp-trap">SNMP Trap</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#4-arp">4. ARP</a>
+      <ol>
+        <li><a href="#41-arp是什么">4.1 ARP是什么？</a></li>
+        <li><a href="#42-arp工作过程">4.2 ARP工作过程</a></li>
+        <li><a href="#43-常用命令">4.3 常用命令</a></li>
+        <li><a href="#44-arp常见故障">4.4 ARP常见故障</a></li>
+      </ol>
+    </li>
+    <li><a href="#5-dns">5. DNS</a>
+      <ol>
+        <li><a href="#51-dns是什么">5.1 DNS是什么？</a></li>
+        <li><a href="#52-dns常见记录">5.2 DNS常见记录</a></li>
+        <li><a href="#53-dns常用端口">5.3 DNS常用端口</a></li>
+        <li><a href="#54-dns故障排查">5.4 DNS故障排查</a></li>
+      </ol>
+    </li>
+    <li><a href="#6-dhcp">6. DHCP</a>
+      <ol>
+        <li><a href="#61-dhcp是什么">6.1 DHCP是什么？</a></li>
+        <li><a href="#62-dhcp四步过程">6.2 DHCP四步过程</a>
+          <ol>
+            <li><a href="#dhcp-discover">DHCP Discover</a></li>
+            <li><a href="#dhcp-offer">DHCP Offer</a></li>
+            <li><a href="#dhcp-request">DHCP Request</a></li>
+            <li><a href="#dhcp-ack">DHCP ACK</a></li>
+          </ol>
+        </li>
+        <li><a href="#63-dhcp常用端口">6.3 DHCP常用端口</a></li>
+      </ol>
+    </li>
+    <li><a href="#7-http--https">7. HTTP / HTTPS</a>
+      <ol>
+        <li><a href="#71-http">7.1 HTTP</a></li>
+        <li><a href="#72-https">7.2 HTTPS</a></li>
+        <li><a href="#73-http常见状态码">7.3 HTTP常见状态码</a></li>
+        <li><a href="#74-常问502是什么意思">7.4 常问：502是什么意思？</a></li>
+      </ol>
+    </li>
+    <li><a href="#8-icmp">8. ICMP</a>
+      <ol>
+        <li><a href="#81-icmp是什么">8.1 ICMP是什么？</a></li>
+        <li><a href="#82-ping原理">8.2 Ping原理</a></li>
+        <li><a href="#83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#9-vlan">9. VLAN</a>
+      <ol>
+        <li><a href="#91-vlan是什么">9.1 VLAN是什么？</a></li>
+        <li><a href="#92-vlan的主要作用">9.2 VLAN的主要作用</a>
+          <ol>
+            <li><a href="#-隔离广播域">① 隔离广播域</a></li>
+            <li><a href="#-网络隔离">② 网络隔离</a></li>
+            <li><a href="#-提高安全性">③ 提高安全性</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#10-access端口">10. Access端口</a></li>
+    <li><a href="#11-trunk端口">11. Trunk端口</a>
+      <ol>
+        <li><a href="#111-access与trunk对比">11.1 Access与Trunk对比</a></li>
+      </ol>
+    </li>
+    <li><a href="#12-stp">12. STP</a>
+      <ol>
+        <li><a href="#121-stp是什么">12.1 STP是什么？</a></li>
+        <li><a href="#122-为什么会有环路">12.2 为什么会有环路？</a></li>
+        <li><a href="#123-stp解决方法">12.3 STP解决方法</a></li>
+      </ol>
+    </li>
+    <li><a href="#13-静态路由">13. 静态路由</a>
+      <ol>
+        <li><a href="#131-什么是静态路由">13.1 什么是静态路由？</a></li>
+        <li><a href="#132-优点">13.2 优点</a></li>
+        <li><a href="#133-缺点">13.3 缺点</a></li>
+      </ol>
+    </li>
+    <li><a href="#14-ospf">14. OSPF</a>
+      <ol>
+        <li><a href="#141-ospf是什么">14.1 OSPF是什么？</a></li>
+        <li><a href="#142-ospf特点">14.2 OSPF特点</a></li>
+        <li><a href="#143-ospf-area">14.3 OSPF Area</a></li>
+        <li><a href="#144-ospf常见问题">14.4 OSPF常见问题</a>
+          <ol>
+            <li><a href="#ospf和静态路由有什么区别">OSPF和静态路由有什么区别？</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#15-bgp基础">15. BGP基础</a>
+      <ol>
+        <li><a href="#151-bgp是什么">15.1 BGP是什么？</a></li>
+        <li><a href="#152-bgp常见应用">15.2 BGP常见应用</a></li>
+        <li><a href="#153-bgp特点">15.3 BGP特点</a></li>
+        <li><a href="#154-ospf和bgp区别">15.4 OSPF和BGP区别</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？</a></li>
+    <li><a href="#17-第一步检查物理链路">17. 第一步：检查物理链路</a></li>
+    <li><a href="#18-第二步检查ip配置">18. 第二步：检查IP配置</a></li>
+    <li><a href="#19-第三步检查arp">19. 第三步：检查ARP</a></li>
+    <li><a href="#20-第四步检查默认网关">20. 第四步：检查默认网关</a></li>
+    <li><a href="#21-第五步检查路由">21. 第五步：检查路由</a>
+      <ol>
+        <li><a href="#查看路由">查看路由</a></li>
+        <li><a href="#添加路由">添加路由</a></li>
+        <li><a href="#删除路由">删除路由</a></li>
+      </ol>
+    </li>
+    <li><a href="#22-第六步检查dns">22. 第六步：检查DNS</a></li>
+    <li><a href="#23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL</a></li>
+    <li><a href="#24-第八步检查服务端口">24. 第八步：检查服务端口</a></li>
+    <li><a href="#25-第九步检查应用层">25. 第九步：检查应用层</a></li>
+    <li><a href="#26-服务器排查标准回答">26. 服务器排查标准回答</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#27-zabbix是什么">27. Zabbix是什么？</a></li>
+    <li><a href="#28-zabbix基本架构">28. Zabbix基本架构</a></li>
+    <li><a href="#29-zabbix-server">29. Zabbix Server</a></li>
+    <li><a href="#30-zabbix-agent">30. Zabbix Agent</a></li>
+    <li><a href="#31-snmp">31. SNMP</a></li>
+    <li><a href="#311-snmp常见端口">31.1 SNMP常见端口</a></li>
+    <li><a href="#32-icmp监控">32. ICMP监控</a></li>
+    <li><a href="#33-cpu监控">33. CPU监控</a></li>
+    <li><a href="#34-内存监控">34. 内存监控</a></li>
+    <li><a href="#35-磁盘监控">35. 磁盘监控</a></li>
+    <li><a href="#36-网络流量监控">36. 网络流量监控</a></li>
+    <li><a href="#37-网络设备监控">37. 网络设备监控</a></li>
+    <li><a href="#交换机">交换机</a></li>
+    <li><a href="#路由器">路由器</a></li>
+    <li><a href="#防火墙">防火墙</a></li>
+    <li><a href="#38-zabbix告警">38. Zabbix告警</a></li>
+    <li><a href="#39-zabbix几个核心概念">39. Zabbix几个核心概念</a></li>
+    <li><a href="#host">Host</a></li>
+    <li><a href="#item">Item</a></li>
+    <li><a href="#trigger">Trigger</a></li>
+    <li><a href="#action">Action</a></li>
+    <li><a href="#template">Template</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#40-windows">40. Windows</a>
+      <ol>
+        <li><a href="#查看ip">查看IP</a></li>
+        <li><a href="#查看路由-1">查看路由</a></li>
+        <li><a href="#查看arp">查看ARP</a></li>
+        <li><a href="#ping">Ping</a></li>
+        <li><a href="#路径跟踪">路径跟踪</a></li>
+        <li><a href="#dns查询">DNS查询</a></li>
+        <li><a href="#查看tcp连接">查看TCP连接</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#41-查看ip">41. 查看IP</a></li>
+    <li><a href="#42-查看路由">42. 查看路由</a></li>
+    <li><a href="#43-查看arp邻居表">43. 查看ARP/邻居表</a></li>
+    <li><a href="#44-ping">44. Ping</a></li>
+    <li><a href="#45-路由追踪">45. 路由追踪</a></li>
+    <li><a href="#46-dns查询">46. DNS查询</a></li>
+    <li><a href="#47-查看监听端口">47. 查看监听端口</a></li>
+    <li><a href="#48-查看网络连接">48. 查看网络连接</a></li>
+    <li><a href="#49-查看网络接口">49. 查看网络接口</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#50-ping不通服务器怎么办">50. Ping不通服务器怎么办？</a></li>
+    <li><a href="#51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？</a></li>
+    <li><a href="#52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？</a></li>
+    <li><a href="#53-网站访问很慢怎么办">53. 网站访问很慢怎么办？</a></li>
+    <li><a href="#54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#第一优先级">第一优先级</a></li>
+    <li><a href="#第二优先级">第二优先级</a></li>
+    <li><a href="#第三优先级">第三优先级</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+ 
+    <footer class="article-time">
+
+        <div class="article-lastmod">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time>
+                    Aug 17, 2026 17:20 &#43;0800
+                </time>
+            </div></footer>
+
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="一网络基础">一、网络基础
+</h1><hr>
+<h2 id="1-tcp三次握手">1. TCP三次握手
+</h2><h3 id="11-tcp是什么">1.1 TCP是什么？
+</h3><p>TCP（Transmission Control Protocol，传输控制协议）是一种<strong>面向连接、可靠的传输层协议</strong>。</p>
+<p>主要特点：</p>
+<ul>
+<li>面向连接</li>
+<li>可靠传输</li>
+<li>字节流</li>
+<li>有序传输</li>
+<li>流量控制</li>
+<li>拥塞控制</li>
+<li>支持全双工通信</li>
+</ul>
+<p>TCP主要通过：</p>
+<ul>
+<li>序列号（Sequence Number）</li>
+<li>确认号（Acknowledgment Number）</li>
+<li>ACK</li>
+<li>SYN</li>
+<li>FIN</li>
+<li>重传机制</li>
+</ul>
+<p>来保证数据可靠传输。</p>
+<hr>
+<h3 id="12-为什么需要三次握手">1.2 为什么需要三次握手？
+</h3><p>TCP建立连接时需要确认双方：</p>
+<ol>
+<li>客户端能够发送数据</li>
+<li>服务端能够接收数据</li>
+<li>服务端能够发送数据</li>
+<li>客户端能够接收数据</li>
+</ol>
+<p>因此需要三次通信完成双方状态确认。</p>
+<hr>
+<h3 id="13-三次握手过程">1.3 三次握手过程
+</h3><p>客户端                                  服务端</p>
+<p>SYN, Seq=x</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
+<pre><code>                 SYN + ACK
+
+                 Seq=y
+
+                 Ack=x+1
+</code></pre>
+<p>&lt;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>ACK</p>
+<p>Ack=y+1</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
+<pre><code>      TCP连接建立
+</code></pre>
+<p>具体过程：</p>
+<h4 id="第一次握手">第一次握手
+</h4><p>客户端 → 服务端：</p>
+<p>SYN=1</p>
+<p>Seq=x</p>
+<p>表示：</p>
+<blockquote>
+<p>客户端请求建立TCP连接，并告诉服务器自己的初始序列号是x。</p>
+</blockquote>
+<hr>
+<h4 id="第二次握手">第二次握手
+</h4><p>服务端 → 客户端：</p>
+<p>SYN=1</p>
+<p>ACK=1</p>
+<p>Seq=y</p>
+<p>Ack=x+1</p>
+<p>表示：</p>
+<blockquote>
+<p>服务端收到客户端请求，同意建立连接，同时告诉客户端自己的初始序列号是y。</p>
+</blockquote>
+<hr>
+<h4 id="第三次握手">第三次握手
+</h4><p>客户端 → 服务端：</p>
+<p>ACK=1</p>
+<p>Ack=y+1</p>
+<p>表示：</p>
+<blockquote>
+<p>客户端已经收到服务端的确认。</p>
+</blockquote>
+<p>此时：</p>
+<p>TCP连接建立</p>
+<hr>
+<h4 id="14-回答模板">1.4 回答模板
+</h4><blockquote>
+<p>TCP三次握手主要用于建立可靠的TCP连接。</p>
+<p>第一次由客户端发送SYN，表示请求建立连接；</p>
+<p>第二次服务器返回SYN+ACK，表示服务器收到请求并同意建立连接；</p>
+<p>第三次客户端发送ACK，确认收到服务器响应。</p>
+<p>三次握手完成后，双方进入ESTABLISHED状态，可以开始传输数据。</p>
+</blockquote>
+<hr>
+<h4 id="15-常见追问">1.5 常见追问
+</h4><p><strong>为什么不是两次握手？</strong></p>
+<p>因为两次握手无法充分确认：</p>
+<blockquote>
+<p>服务端的发送能力和客户端的接收能力。</p>
+</blockquote>
+<p>第三次ACK可以让服务器确认：</p>
+<blockquote>
+<p>客户端已经收到自己的SYN+ACK。</p>
+</blockquote>
+<hr>
+<h2 id="2-tcp四次挥手">2. TCP四次挥手
+</h2><h3 id="21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？
+</h3><p>TCP是<strong>全双工通信</strong>。</p>
+<p>双方的数据发送方向需要分别关闭，因此通常需要：</p>
+<p>客户端 FIN</p>
+<p>服务器 ACK</p>
+<p>服务器 FIN</p>
+<p>客户端 ACK</p>
+<p>共四次。</p>
+<hr>
+<h3 id="22-四次挥手过程">2.2 四次挥手过程
+</h3><p>客户端                                  服务端</p>
+<p>FIN</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
+<pre><code>                 ACK
+</code></pre>
+<p>&lt;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<pre><code>                 FIN
+</code></pre>
+<p>&lt;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>ACK</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
+<pre><code>      TCP连接关闭
+</code></pre>
+<hr>
+<h3 id="23-四次挥手详细过程">2.3 四次挥手详细过程
+</h3><h4 id="第一次">第一次
+</h4><p>客户端：</p>
+<p>FIN=1</p>
+<p>表示：</p>
+<blockquote>
+<p>客户端没有数据要发送了，希望关闭连接。</p>
+</blockquote>
+<h4 id="第二次">第二次
+</h4><p>服务端：</p>
+<p>ACK=1</p>
+<p>表示：</p>
+<blockquote>
+<p>服务端收到客户端关闭请求。</p>
+</blockquote>
+<p>但是服务端可能还有数据没有发送完。</p>
+<hr>
+<h4 id="第三次">第三次
+</h4><p>服务端数据发送完成后：</p>
+<p>FIN=1</p>
+<p>表示：</p>
+<blockquote>
+<p>服务端也没有数据需要发送了。</p>
+</blockquote>
+<hr>
+<h4 id="第四次">第四次
+</h4><p>客户端：</p>
+<p>ACK=1</p>
+<p>表示：</p>
+<blockquote>
+<p>客户端收到服务器的FIN。</p>
+</blockquote>
+<p>连接关闭。</p>
+<hr>
+<h3 id="24-time_wait是什么">2.4 TIME_WAIT是什么？
+</h3><p>主动关闭连接的一方通常会进入：</p>
+<p>TIME_WAIT</p>
+<p>主要作用：</p>
+<ol>
+<li>确保最后一个ACK能够到达对方</li>
+<li>防止旧连接的数据包影响新连接</li>
+</ol>
+<p>经典等待时间：</p>
+<p>2MSL</p>
+<hr>
+<h2 id="3-udp">3. UDP
+</h2><h3 id="31-udp是什么">3.1 UDP是什么？
+</h3><p>UDP（User Datagram Protocol）是无连接的传输层协议。</p>
+<p>特点：</p>
+<ul>
+<li>无连接</li>
+<li>不保证可靠传输</li>
+<li>不保证顺序</li>
+<li>不负责重传</li>
+<li>协议头简单</li>
+<li>传输效率高</li>
+<li>延迟较低</li>
+</ul>
+<hr>
+<h3 id="32-tcp与udp对比">3.2 TCP与UDP对比
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>TCP</th>
+          <th>UDP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>连接</td>
+          <td>面向连接</td>
+          <td>无连接</td>
+      </tr>
+      <tr>
+          <td>可靠性</td>
+          <td>可靠</td>
+          <td>不保证</td>
+      </tr>
+      <tr>
+          <td>顺序</td>
+          <td>保证</td>
+          <td>不保证</td>
+      </tr>
+      <tr>
+          <td>重传</td>
+          <td>支持</td>
+          <td>不支持</td>
+      </tr>
+      <tr>
+          <td>流量控制</td>
+          <td>支持</td>
+          <td>不支持</td>
+      </tr>
+      <tr>
+          <td>拥塞控制</td>
+          <td>支持</td>
+          <td>不支持</td>
+      </tr>
+      <tr>
+          <td>速度</td>
+          <td>相对较慢</td>
+          <td>相对较快</td>
+      </tr>
+      <tr>
+          <td>应用</td>
+          <td>HTTP/HTTPS、SSH</td>
+          <td>DNS、DHCP、流媒体等</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="33-常见udp应用">3.3 常见UDP应用
+</h3><h4 id="dnsdomain-name-system-域名系统的缩写">DNS（Domain Name System 域名系统的缩写）
+</h4><p>通常：</p>
+<p>UDP 53</p>
+<h4 id="dhcpdynamic-host-configuration-protocol-动态主机配置协议">DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）
+</h4><p>使用：</p>
+<p>UDP 67/68</p>
+<h4 id="snmpsimple-network-management-protocol-简单网络管理协议">SNMP（Simple Network Management Protocol 简单网络管理协议）
+</h4><p>通常：</p>
+<p>UDP 161</p>
+<h4 id="snmp-trap">SNMP Trap
+</h4><p>通常：它允许被管理的设备在出现特定事件时主动向网络管理系统（NMS）发送消息。这种机制使得网络管理员无需不断轮询设备，从而节省了计算资源。</p>
+<p>UDP 162</p>
+<hr>
+<h2 id="4-arp">4. ARP
+</h2><h3 id="41-arp是什么">4.1 ARP是什么？
+</h3><p>ARP（Address Resolution Protocol 地址解析协议）用于：</p>
+<blockquote>
+<p><strong>根据IPv4地址查询对应的MAC地址。</strong></p>
+</blockquote>
+<p>例如：</p>
+<p>IP：</p>
+<p>192.168.1.100</p>
+<p>MAC：</p>
+<p>AA:BB:CC:DD:EE:FF</p>
+<p>主机需要发送数据时，如果知道目标IP但不知道MAC，就会使用ARP。</p>
+<hr>
+<h3 id="42-arp工作过程">4.2 ARP工作过程
+</h3><p>例如：</p>
+<p>客户端：</p>
+<p>192.168.1.10</p>
+<p>目标：</p>
+<p>192.168.1.20</p>
+<p>客户端广播：</p>
+<p>Who has 192.168.1.20?</p>
+<p>目标主机回复：</p>
+<p>192.168.1.20 is at AA:BB:CC:DD:EE:FF</p>
+<p>客户端将结果保存到：</p>
+<p>ARP缓存表</p>
+<hr>
+<h3 id="43-常用命令">4.3 常用命令
+</h3><p>Windows：</p>
+<p>arp -a   (用于<strong>显示本机ARP缓存表</strong>，即当前已解析的 <strong>IP地址与MAC地址映射关系</strong>。)</p>
+<p>Linux：</p>
+<p>ip neigh</p>
+<p>(<strong>ip neigh</strong> 命令是用于管理 IP 邻居表的工具，它允许用户添加、删除或显示 ARP（IPv4）或 NDP（IPv6）的静态记录。这些记录是协议地址和链路层地址之间的绑定，用于在同一链路上共享的主机。)</p>
+<hr>
+<h3 id="44-arp常见故障">4.4 ARP常见故障
+</h3><p>如果：</p>
+<blockquote>
+<p>IP地址正常，但无法访问同网段主机</p>
+</blockquote>
+<p>可以检查：</p>
+<p>ARP缓存</p>
+<p>↓</p>
+<p>ARP请求是否成功</p>
+<p>↓</p>
+<p>MAC地址是否正确</p>
+<p>↓</p>
+<p>交换机MAC地址表</p>
+<hr>
+<h2 id="5-dns">5. DNS
+</h2><h3 id="51-dns是什么">5.1 DNS是什么？
+</h3><p>DNS（Domain Name System）负责：</p>
+<blockquote>
+<p><strong>域名 → IP地址</strong></p>
+</blockquote>
+<p>例如：</p>
+<p><a class="link" href="https://www.example.com"  target="_blank" rel="noopener"
+    >www.example.com</a></p>
+<pre><code>    ↓
+</code></pre>
+<p>93.184.216.34</p>
+<hr>
+<h3 id="52-dns常见记录">5.2 DNS常见记录
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>类型</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>A</td>
+          <td>域名 → IPv4</td>
+      </tr>
+      <tr>
+          <td>AAAA</td>
+          <td>域名 → IPv6</td>
+      </tr>
+      <tr>
+          <td>CNAME</td>
+          <td>别名</td>
+      </tr>
+      <tr>
+          <td>MX</td>
+          <td>邮件服务器</td>
+      </tr>
+      <tr>
+          <td>NS</td>
+          <td>DNS服务器</td>
+      </tr>
+      <tr>
+          <td>TXT</td>
+          <td>文本信息</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="53-dns常用端口">5.3 DNS常用端口
+</h3><p>UDP 53</p>
+<p>DNS进行某些特殊查询或大响应时也可能使用：</p>
+<p>TCP 53</p>
+<hr>
+<h3 id="54-dns故障排查">5.4 DNS故障排查
+</h3><p>如果：</p>
+<blockquote>
+<p>能Ping IP，但访问域名失败</p>
+</blockquote>
+<p>重点检查：</p>
+<p>DNS服务器</p>
+<p>↓</p>
+<p>DNS配置</p>
+<p>↓</p>
+<p>DNS解析</p>
+<p>↓</p>
+<p>DNS缓存</p>
+<p>↓</p>
+<p>网络连通性</p>
+<p>常用命令：</p>
+<p>Windows：</p>
+<p>nslookup <a class="link" href="https://www.baidu.com"  target="_blank" rel="noopener"
+    >www.baidu.com</a>
+(<code>nslookup</code> 是 <strong>Name Server Lookup</strong> 的缩写，是一个命令行工具，用于向 DNS 服务器查询域名和 IP 地址之间的映射关系，以及其他 DNS 记录信息 。
+当你在命令行输入 <code>nslookup baidu.com</code> 时，系统会向默认或指定的 DNS 服务器发送请求，返回百度网站的 IP 地址和相关 DNS 信息)</p>
+<p>Linux：</p>
+<p>dig <a class="link" href="https://www.baidu.com"  target="_blank" rel="noopener"
+    >www.baidu.com</a>
+(dig（<strong>域信息搜索器</strong>）命令是一个用于询问 DNS 域名服务器的灵活的工具。 
+它执行 DNS 搜索，显示从受请求的域名服务器返回的答复。 
+多数 DNS 管理员利用 dig 作为 DNS 问题的故障诊断，因为它灵活性好、易用、输出清晰。 
+虽然通常情况下 dig 使用命令行参数，但它也可以按批处理模式从文件读取搜索请求。
+不同于早期版本，dig 的 BIND9 实现允许从命令行发出多个查询。)</p>
+<hr>
+<h2 id="6-dhcp">6. DHCP
+</h2><h3 id="61-dhcp是什么">6.1 DHCP是什么？
+</h3><p>DHCP（Dynamic Host Configuration Protocol <strong>动态主机配置协议</strong>）用于：</p>
+<blockquote>
+<p><strong>自动为客户端分配网络配置。</strong></p>
+</blockquote>
+<p>通常包括：</p>
+<ul>
+<li>IP地址</li>
+<li>子网掩码</li>
+<li>默认网关</li>
+<li>DNS服务器</li>
+<li>租期</li>
+</ul>
+<hr>
+<h3 id="62-dhcp四步过程">6.2 DHCP四步过程
+</h3><p>经典过程：</p>
+<p>Discover</p>
+<pre><code>↓
+</code></pre>
+<p>Offer</p>
+<pre><code>↓
+</code></pre>
+<p>Request</p>
+<pre><code>↓
+</code></pre>
+<p>ACK</p>
+<p>简称：</p>
+<blockquote>
+<p><strong>DORA</strong></p>
+</blockquote>
+<hr>
+<h4 id="dhcp-discover">DHCP Discover
+</h4><p>客户端广播：</p>
+<blockquote>
+<p>我需要一个IP地址。</p>
+</blockquote>
+<h4 id="dhcp-offer">DHCP Offer
+</h4><p>服务器提供：</p>
+<blockquote>
+<p>可以给你这个IP。</p>
+</blockquote>
+<h4 id="dhcp-request">DHCP Request
+</h4><p>客户端：</p>
+<blockquote>
+<p>我选择这个IP。</p>
+</blockquote>
+<h4 id="dhcp-ack">DHCP ACK
+</h4><p>服务器：</p>
+<blockquote>
+<p>确认分配。</p>
+</blockquote>
+<hr>
+<h3 id="63-dhcp常用端口">6.3 DHCP常用端口
+</h3><p>Server：UDP 67</p>
+<p>Client：UDP 68</p>
+<hr>
+<h2 id="7-http--https">7. HTTP / HTTPS
+</h2><h3 id="71-http">7.1 HTTP
+</h3><p>HTTP（HyperText Transfer Protocol <strong>超文本传输协议</strong>）是应用层协议。</p>
+<p>常见端口：</p>
+<p>TCP 80</p>
+<hr>
+<h3 id="72-https">7.2 HTTPS
+</h3><p>HTTPS：</p>
+<p>HTTP + TLS<br>
+(传输层加密（<strong>TLS，Transport Layer Security</strong>）)</p>
+<p>常见端口：</p>
+<p>TCP 443</p>
+<p>HTTPS主要解决：</p>
+<ul>
+<li>数据加密</li>
+<li>身份认证</li>
+<li>数据完整性</li>
+</ul>
+<hr>
+<h3 id="73-http常见状态码">7.3 HTTP常见状态码
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>状态码</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>200</td>
+          <td>请求成功</td>
+      </tr>
+      <tr>
+          <td>301</td>
+          <td>永久重定向</td>
+      </tr>
+      <tr>
+          <td>302</td>
+          <td>临时重定向</td>
+      </tr>
+      <tr>
+          <td>400</td>
+          <td>请求错误</td>
+      </tr>
+      <tr>
+          <td>401</td>
+          <td>未认证</td>
+      </tr>
+      <tr>
+          <td>403</td>
+          <td>禁止访问</td>
+      </tr>
+      <tr>
+          <td>404</td>
+          <td>页面不存在</td>
+      </tr>
+      <tr>
+          <td>500</td>
+          <td>服务器内部错误</td>
+      </tr>
+      <tr>
+          <td>502</td>
+          <td>网关错误</td>
+      </tr>
+      <tr>
+          <td>503</td>
+          <td>服务不可用</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h3 id="74-常问502是什么意思">7.4 常问：502是什么意思？
+</h3><p>502 Bad Gateway通常表示：</p>
+<blockquote>
+<p>网关/代理服务器从上游服务器获得了无效响应。</p>
+</blockquote>
+<p>排查：</p>
+<p>客户端</p>
+<p>↓</p>
+<p>负载均衡/反向代理</p>
+<p>↓</p>
+<p>Web服务器</p>
+<p>↓</p>
+<p>应用服务器</p>
+<p>↓</p>
+<p>数据库</p>
+<p>重点检查：</p>
+<ul>
+<li>上游服务是否运行</li>
+<li>端口是否监听</li>
+<li>网络是否连通</li>
+<li>防火墙</li>
+<li>服务超时</li>
+<li>应用程序状态</li>
+</ul>
+<hr>
+<h2 id="8-icmp">8. ICMP
+</h2><h3 id="81-icmp是什么">8.1 ICMP是什么？
+</h3><p>ICMP（Internet Control Message Protocol <strong>网际控制报文协议</strong>）主要用于：</p>
+<blockquote>
+<p><strong>网络状态检测和错误报告。</strong></p>
+</blockquote>
+<p>常见工具：</p>
+<p>ping
+(<strong>ping</strong> 是一个用于测试网络连接和诊断网络问题的工具。它的全称是 <strong>Packet Internet Groper</strong>，主要用于检测两个设备之间的连通性和网络延迟。)</p>
+<p>traceroute
+(<strong>traceroute</strong> 是一种网络诊断工具，用于追踪数据包从源主机到目标主机的路由路径。)</p>
+<p>tracert
+(<strong>Tracert</strong>（Trace Route）是一个在Windows操作系统中用于诊断网络连接问题的命令行工具。
+它可以帮助用户确定数据包从源计算机到目标地址在网络中的路径。
+Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请求消息来工作，每个消息的生存时间 (TTL) 值逐渐增加，从而发现数据包经过的路由器的 IP 地址。)</p>
+<hr>
+<h3 id="82-ping原理">8.2 Ping原理
+</h3><p>Ping主要使用：</p>
+<p>ICMP Echo Request</p>
+<p>对方返回：</p>
+<p>ICMP Echo Reply</p>
+<p>(ICMP Echo Request报文主要用于检测网络连通性和诊断网络问题。
+通过发送Echo Request报文并接收Echo Reply报文，可以判断目标主机是否可达以及网络延迟情况。)</p>
+<p>例如：</p>
+<p>主机A</p>
+<p>|</p>
+<p>| Echo Request</p>
+<p>↓</p>
+<p>主机B</p>
+<p>|</p>
+<p>| Echo Reply</p>
+<p>↓</p>
+<p>主机A</p>
+<hr>
+<h3 id="83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机
+</h3><p>可能原因：</p>
+<ul>
+<li>ICMP被防火墙禁止</li>
+<li>路由问题</li>
+<li>网络设备ACL</li>
+<li>服务器宕机</li>
+<li>网络链路故障</li>
+<li>安全设备丢弃ICMP</li>
+</ul>
+<p>所以：</p>
+<blockquote>
+<p><strong>Ping不通 ≠ 服务器一定宕机。</strong></p>
+</blockquote>
+<hr>
+<h1 id="二路由与交换">二、路由与交换
+</h1><hr>
+<h2 id="9-vlan">9. VLAN
+</h2><h3 id="91-vlan是什么">9.1 VLAN是什么？
+</h3><p>VLAN（Virtual Local Area Network <strong>虚拟局域网</strong>）：</p>
+<blockquote>
+<p><strong>虚拟局域网</strong></p>
+</blockquote>
+<p>作用：</p>
+<blockquote>
+<p>在一个物理交换网络中划分多个逻辑广播域。</p>
+</blockquote>
+<p>例如：</p>
+<p>VLAN 10：办公网</p>
+<p>VLAN 20：服务器网</p>
+<p>VLAN 30：访客网</p>
+<hr>
+<h3 id="92-vlan的主要作用">9.2 VLAN的主要作用
+</h3><h4 id="-隔离广播域">① 隔离广播域
+</h4><p>减少广播流量。</p>
+<h4 id="-网络隔离">② 网络隔离
+</h4><p>例如：</p>
+<p>员工网</p>
+<pre><code>×
+</code></pre>
+<p>访客网</p>
+<h4 id="-提高安全性">③ 提高安全性
+</h4><p>不同VLAN之间需要通过：</p>
+<blockquote>
+<p>三层交换机 / 路由器 / 防火墙</p>
+</blockquote>
+<p>进行通信。</p>
+<hr>
+<h2 id="10-access端口">10. Access端口
+</h2><p>Access端口通常用于：</p>
+<blockquote>
+<p><strong>连接终端设备。</strong></p>
+</blockquote>
+<p>(<strong>Access端口</strong>是VLAN中最基础的端口类型，主要用于连接终端设备（如计算机、打印机和VoIP电话）。</p>
+<p>每个Access端口只能属于一个VLAN，这意味着通过此端口连接的所有设备都被视为同一网络的一部分。Access端口不会对数据帧进行VLAN标记，因此传输的流量都是未标记的。)</p>
+<p>例如：</p>
+<p>PC</p>
+<p>|</p>
+<p>|</p>
+<p>交换机</p>
+<p>典型情况下：</p>
+<p>PC → Access端口 → VLAN 10</p>
+<p>PC通常不需要知道VLAN标签。</p>
+<p><strong>配置示例</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Switch(config)# interface FastEthernet0/1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Switch(config-if)# switchport mode access
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Switch(config-if)# switchport access vlan 10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上述配置将FastEthernet0/1端口设置为Access端口，并将其分配到VLAN 10。此端口将仅允许来自VLAN 10的流量进入。</p>
+<hr>
+<h2 id="11-trunk端口">11. Trunk端口
+</h2><p>Trunk端口用于：</p>
+<blockquote>
+<p><strong>在交换机之间传输多个VLAN。</strong></p>
+</blockquote>
+<p>(<strong>Trunk接口</strong> 是一种允许多个VLAN通过的交换机端口类型，通常用于连接交换机之间的端口。</p>
+<p>Trunk接口可以接收和发送多个VLAN的报文，通过在数据帧中添加VLAN标签来区分不同的VLAN数据。)</p>
+<p>例如：</p>
+<p>交换机A</p>
+<p>|</p>
+<p>| Trunk</p>
+<p>|</p>
+<p>交换机B</p>
+<p>可以同时传输：</p>
+<p>VLAN 10</p>
+<p>VLAN 20</p>
+<p>VLAN 30</p>
+<p>Trunk接口的配置</p>
+<p>以下是配置Trunk接口的基本步骤：</p>
+<ul>
+<li><strong>进入接口模式</strong>：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Huawei]int e0/0/0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>定义二层端口为Trunk模式</strong>：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Huawei-Etherneto/o/0]port link-type trunk
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>配置Trunk端口允许通过的VLAN</strong>：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Huawei-Etherneto/o/o]port trunk allow-pass vlan 10 20 30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>开启当前接口</strong>：(<strong>undo 禁止</strong>)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Huawei-Etherneto/o/o]undo shutdown
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>禁止Trunk传送某个VLAN的数据</strong>：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Huawei-Etherneto/o/o]undo port trunk allow-pass vlan 10
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="111-access与trunk对比">11.1 Access与Trunk对比
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>Access</th>
+          <th>Trunk</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>主要连接</td>
+          <td>PC、打印机等终端</td>
+          <td>交换机、路由设备等</td>
+      </tr>
+      <tr>
+          <td>VLAN数量</td>
+          <td>通常一个</td>
+          <td>多个</td>
+      </tr>
+      <tr>
+          <td>VLAN Tag</td>
+          <td>通常不带标签</td>
+          <td>可携带802.1Q标签</td>
+      </tr>
+      <tr>
+          <td>（<strong>802.1Q</strong>是由IEEE定义的标准协议，主要用于实现虚拟局域网（VLAN）。</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>它允许多个网桥在同一个物理网络上共享信息而不泄露数据。</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>802.1Q协议通过在以太网帧中插入一个32位的VLAN标签来标识不同的VLAN。）</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="12-stp">12. STP
+</h2><h3 id="121-stp是什么">12.1 STP是什么？
+</h3><p>STP（Spanning Tree Protocol）：</p>
+<blockquote>
+<p><strong>生成树协议</strong></p>
+</blockquote>
+<p>主要解决：</p>
+<blockquote>
+<p>二层网络环路问题。</p>
+</blockquote>
+<hr>
+<h3 id="122-为什么会有环路">12.2 为什么会有环路？
+</h3><p>例如：</p>
+<p>交换机A</p>
+<p>/     \</p>
+<p>/       \</p>
+<p>B &mdash;&mdash;- C</p>
+<p>如果没有STP：</p>
+<blockquote>
+<p>广播帧可能在网络中不断循环。</p>
+</blockquote>
+<p>导致：</p>
+<ul>
+<li>广播风暴</li>
+<li>MAC地址表震荡</li>
+<li>网络性能下降</li>
+<li>网络瘫痪</li>
+</ul>
+<hr>
+<h3 id="123-stp解决方法">12.3 STP解决方法
+</h3><p>STP通过计算生成树：</p>
+<blockquote>
+<p><strong>逻辑上阻塞部分链路。</strong></p>
+</blockquote>
+<p>当主链路故障时：</p>
+<blockquote>
+<p>重新计算生成树并恢复备用链路。</p>
+</blockquote>
+<hr>
+<h2 id="13-静态路由">13. 静态路由
+</h2><h3 id="131-什么是静态路由">13.1 什么是静态路由？
+</h3><p>静态路由由管理员：</p>
+<blockquote>
+<p><strong>手动配置路由。</strong></p>
+</blockquote>
+<p>例如：</p>
+<p>目标网络：</p>
+<p>192.168.20.0/24</p>
+<p>下一跳：</p>
+<p>192.168.1.2</p>
+<hr>
+<h3 id="132-优点">13.2 优点
+</h3><ul>
+<li>配置简单</li>
+<li>路径明确</li>
+<li>资源消耗少</li>
+<li>可控性高</li>
+</ul>
+<hr>
+<h3 id="133-缺点">13.3 缺点
+</h3><p>大型网络维护困难。</p>
+<p>如果网络拓扑发生变化：</p>
+<blockquote>
+<p>需要人工修改。</p>
+</blockquote>
+<hr>
+<h2 id="14-ospf">14. OSPF
+</h2><h3 id="141-ospf是什么">14.1 OSPF是什么？
+</h3><p>OSPF：</p>
+<blockquote>
+<p>Open Shortest Path First（<strong>开放式最短路径优先</strong>）</p>
+</blockquote>
+<p>是一种：</p>
+<blockquote>
+<p><strong>链路状态型动态路由协议。</strong></p>
+</blockquote>
+<p>主要用于：</p>
+<blockquote>
+<p>企业内部网络。</p>
+</blockquote>
+<hr>
+<h3 id="142-ospf特点">14.2 OSPF特点
+</h3><ul>
+<li>动态路由</li>
+<li>链路状态协议</li>
+<li>使用SPF算法</li>
+<li>支持区域</li>
+<li>收敛速度较快</li>
+</ul>
+<hr>
+<h3 id="143-ospf-area">14.3 OSPF Area
+</h3><p>常见：</p>
+<p>Area 0</p>
+<p>称为：</p>
+<blockquote>
+<p>Backbone Area，骨干区域。</p>
+</blockquote>
+<p>大型网络可以：</p>
+<p>Area 0</p>
+<p>|</p>
+<p>+&mdash; Area 1</p>
+<p>|</p>
+<p>+&mdash; Area 2</p>
+<p>|</p>
+<p>+&mdash; Area 3</p>
+<hr>
+<h3 id="144-ospf常见问题">14.4 OSPF常见问题
+</h3><h4 id="ospf和静态路由有什么区别">OSPF和静态路由有什么区别？
+</h4><blockquote>
+<p>静态路由需要管理员手动配置，而OSPF能够根据网络拓扑动态学习和计算路由。</p>
+</blockquote>
+<hr>
+<h2 id="15-bgp基础">15. BGP基础
+</h2><h3 id="151-bgp是什么">15.1 BGP是什么？
+</h3><p>BGP：</p>
+<blockquote>
+<p>Border Gateway Protocol （<strong>边界网关协议</strong>）</p>
+</blockquote>
+<p>中文：</p>
+<blockquote>
+<p><strong>边界网关协议</strong></p>
+</blockquote>
+<p>主要用于：</p>
+<blockquote>
+<p><strong>不同自治系统（AS）之间交换路由信息。</strong></p>
+</blockquote>
+<hr>
+<h3 id="152-bgp常见应用">15.2 BGP常见应用
+</h3><p>例如：</p>
+<p>运营商A</p>
+<p>|</p>
+<p>| BGP</p>
+<p>|</p>
+<p>运营商B</p>
+<p>互联网的大量路由交换依赖BGP。</p>
+<hr>
+<h3 id="153-bgp特点">15.3 BGP特点
+</h3><ul>
+<li>路径向量型协议</li>
+<li>适合大型网络</li>
+<li>互联网核心路由协议</li>
+<li>支持策略控制</li>
+<li>使用TCP建立邻居关系</li>
+</ul>
+<p>BGP使用：</p>
+<p>TCP 179</p>
+<hr>
+<h3 id="154-ospf和bgp区别">15.4 OSPF和BGP区别
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>项目</th>
+          <th>OSPF</th>
+          <th>BGP</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>类型</td>
+          <td>链路状态</td>
+          <td>路径向量</td>
+      </tr>
+      <tr>
+          <td>主要场景</td>
+          <td>AS内部</td>
+          <td>AS之间</td>
+      </tr>
+      <tr>
+          <td>典型场景</td>
+          <td>企业内网</td>
+          <td>互联网/运营商</td>
+      </tr>
+      <tr>
+          <td>协议</td>
+          <td>IP协议89</td>
+          <td>TCP 179</td>
+      </tr>
+      <tr>
+          <td>策略控制</td>
+          <td>相对较少</td>
+          <td>非常强</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h1 id="三网络故障排查">三、网络故障排查
+</h1><h2 id="16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？
+</h2><p>这是网络工程师经典题。</p>
+<p>不要直接回答：</p>
+<blockquote>
+<p>“先Ping一下。”</p>
+</blockquote>
+<p>更好的回答方式是：</p>
+<p>物理链路</p>
+<pre><code>↓
+</code></pre>
+<p>网卡/IP配置</p>
+<pre><code>↓
+</code></pre>
+<p>ARP</p>
+<pre><code>↓
+</code></pre>
+<p>默认网关</p>
+<pre><code>↓
+</code></pre>
+<p>路由</p>
+<pre><code>↓
+</code></pre>
+<p>DNS</p>
+<pre><code>↓
+</code></pre>
+<p>防火墙/ACL</p>
+<pre><code>↓
+</code></pre>
+<p>服务端口</p>
+<pre><code>↓
+</code></pre>
+<p>应用层</p>
+<hr>
+<h2 id="17-第一步检查物理链路">17. 第一步：检查物理链路
+</h2><p>首先确认：</p>
+<ul>
+<li>网线是否正常</li>
+<li>光模块是否正常</li>
+<li>网卡Link是否正常</li>
+<li>交换机端口是否UP</li>
+<li>是否存在端口错误</li>
+</ul>
+<p>交换机重点查看：</p>
+<p>Interface Status （排查接口连接问题、查看 VLAN 配置以及监控接口性能。）</p>
+<p>Speed （交换机连接的速度，通常以Mbps为单位，表示数据在网络中的传输速率）</p>
+<p>Duplex （Duplex则代表双工模式，它决定了数据在网络链路中的传输方向。）</p>
+<p>CRC Error
+（该故障码在接收模块检测到来自网关控制模块D（Serial Data Gateway Module D）的串行数据通信信息存在校验错误、数据长度/ID不匹配、校验和/<strong>CRC错误</strong>等数据完整性问题时被设置，故障位置属于车辆网络通讯系统。）</p>
+<p>Packet Error</p>
+<hr>
+<h2 id="18-第二步检查ip配置">18. 第二步：检查IP配置
+</h2><p>Windows：</p>
+<p>ipconfig /all    （显示所有IP配置信息）</p>
+<p>Linux：</p>
+<p>ip addr    （显示IP地址）</p>
+<p>ip route     （显示IP路由）</p>
+<p>检查：</p>
+<ul>
+<li>IP地址</li>
+<li>子网掩码</li>
+<li>默认网关</li>
+<li>DNS</li>
+</ul>
+<p>例如：</p>
+<p>IP：</p>
+<p>192.168.1.100</p>
+<p>Mask：</p>
+<p>255.255.255.0</p>
+<p>Gateway：</p>
+<p>192.168.1.1</p>
+<hr>
+<h2 id="19-第三步检查arp">19. 第三步：检查ARP
+</h2><p>查看：</p>
+<p>arp -a</p>
+<p>或者：</p>
+<p>ip neigh</p>
+<p>确认：</p>
+<blockquote>
+<p>是否能够解析网关MAC地址。</p>
+</blockquote>
+<p>如果：</p>
+<p>IP配置正常</p>
+<p>↓</p>
+<p>ARP无法解析</p>
+<p>需要继续检查：</p>
+<ul>
+<li>VLAN</li>
+<li>交换机</li>
+<li>网卡</li>
+<li>ARP安全策略</li>
+<li>二层链路</li>
+</ul>
+<hr>
+<h2 id="20-第四步检查默认网关">20. 第四步：检查默认网关
+</h2><p>执行：</p>
+<p>ping 192.168.1.1</p>
+<p>如果：</p>
+<blockquote>
+<p>连网关都Ping不通</p>
+</blockquote>
+<p>优先检查：</p>
+<p>网卡</p>
+<p>↓</p>
+<p>VLAN</p>
+<p>↓</p>
+<p>交换机</p>
+<p>↓</p>
+<p>ARP</p>
+<p>↓</p>
+<p>网关接口</p>
+<hr>
+<h2 id="21-第五步检查路由">21. 第五步：检查路由
+</h2><p>Windows：</p>
+<p>route print<br>
+（<strong>Windows系统中用于显示本地路由表的命令</strong>，它能列出所有网络路由条目，包括目标网络、网关、接口和度量值等信息。）</p>
+<p>Linux：</p>
+<p>ip route
+（<strong>Linux查看当前系统的路由表</strong>，显示所有路由条目，包括默认路由、主机路由和网络路由。）</p>
+<p>检查：</p>
+<blockquote>
+<p>是否存在正确的默认路由或目标网段路由。</p>
+</blockquote>
+<p>Linux例如：</p>
+<p>default via 192.168.1.1</p>
+<h3 id="查看路由">查看路由
+</h3><p>使用_ip route_命令可以查看当前系统的路由表：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip route
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这将显示所有路由条目，包括默认路由、主机路由和网络路由。</p>
+<h3 id="添加路由">添加路由
+</h3><p>可以使用_ip route add_命令添加新的路由条目。例如，添加一个到达特定网络的路由：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip route add 192.168.1.0/24 via 192.168.0.1 dev eth0
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这表示将发往192.168.1.0/24网络的数据包通过192.168.0.1网关，并使用eth0接口发送。</p>
+<h3 id="删除路由">删除路由
+</h3><p>使用_ip route del_命令可以删除指定的路由条目。例如，删除一个到达特定网络的路由：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip route del 192.168.1.0/24
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="22-第六步检查dns">22. 第六步：检查DNS
+</h2><p>如果：</p>
+<p>ping IP地址正常</p>
+<p>但是：</p>
+<p>ping 域名失败</p>
+<p>重点检查：</p>
+<blockquote>
+<p>DNS。</p>
+</blockquote>
+<p>使用：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nslookup example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>或者Linux：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dig example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL
+</h2><p>需要检查：</p>
+<ul>
+<li>Windows Firewall</li>
+<li>Linux iptables</li>
+<li>nftables</li>
+<li>网络防火墙</li>
+<li>ACL</li>
+<li>安全组</li>
+</ul>
+<p><strong>iptables</strong> 是 Linux 系统中用于管理防火墙规则的工具，基于内核的 Netfilter 框架实现。
+它主要用于控制网络数据包的流入、流出和转发行为。
+通过 iptables，用户可以定义规则来过滤、修改或转发数据包，从而实现网络安全和流量管理。</p>
+<p><strong>nftables</strong> 是一种用于管理 Linux 内核网络堆栈的工具，旨在替代传统的 <strong>iptables</strong>。它由 Netfilter 项目开发，提供了更高效、灵活且可读性更强的网络管理解决方案。</p>
+<p><strong>访问控制列表（ACL）</strong> 是由一条或多条规则组成的集合，用于描述报文匹配条件的判断语句。这些条件可以是报文的源地址、目的地址、端口号等。ACL 本质上是一种报文过滤器，规则是过滤器的滤芯。设备基于这些规则进行报文匹配，可以过滤出特定的报文，并根据应用 ACL 的业务模块的处理策略来允许或阻止该报文通过。</p>
+<p><strong>安全组是一种云上的虚拟防火墙，用于控制云服务器或其他云资源的入站和出站流量，实现网络安全隔离和访问控制</strong>。</p>
+<p>例如：</p>
+<p>客户端</p>
+<p>↓</p>
+<p>防火墙</p>
+<p>↓</p>
+<p>服务器</p>
+<p>可能：</p>
+<blockquote>
+<p>Ping正常，但是TCP 443被防火墙阻断。</p>
+</blockquote>
+<hr>
+<h2 id="24-第八步检查服务端口">24. 第八步：检查服务端口
+</h2><p>Linux：</p>
+<p>[ss -lntp](<a class="link" href="https://blog.csdn.net/whatday/article/details/112170240"  target="_blank" rel="noopener"
+    >linux ss 命令简介 端口连接查看 代替netstat_使用ss命令查看当前系统中处于listen状态的所有tcp连接，并显示ip信息和socket信息，使-CSDN博客</a>)</p>
+<p>或者：</p>
+<p>[netstat -lntp](<a class="link" href="https://www.runoob.com/linux/linux-comm-netstat.html"  target="_blank" rel="noopener"
+    >Linux netstat命令 | 菜鸟教程</a>)</p>
+<p>例如：</p>
+<p>0.0.0.0:80</p>
+<p>0.0.0.0:443</p>
+<p>说明Web服务正在监听。</p>
+<p>Windows：</p>
+<p>[netstat -ano](<a class="link" href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html"  target="_blank" rel="noopener"
+    >Windows下如何查看某个端口被谁占用 | 菜鸟教程</a>)</p>
+<hr>
+<h2 id="25-第九步检查应用层">25. 第九步：检查应用层
+</h2><p>如果：</p>
+<p>网络正常</p>
+<p>↓</p>
+<p>TCP端口正常</p>
+<p>↓</p>
+<p>应用仍然无法访问</p>
+<p>继续检查：</p>
+<ul>
+<li>Web服务</li>
+<li>数据库</li>
+<li>应用日志</li>
+<li>CPU</li>
+<li>内存</li>
+<li>磁盘</li>
+<li>进程</li>
+<li>服务状态</li>
+</ul>
+<p>例如：</p>
+<p>[systemctl status nginx](<a class="link" href="https://blog.csdn.net/luoganttcc/article/details/113852646"  target="_blank" rel="noopener"
+    >如何启动，停止和重新启动Nginx（Systemctl和Nginx命令）_systemctl restart nginx-CSDN博客</a>)</p>
+<p>查看日志：</p>
+<p>[journalctl -u nginx](<a class="link" href="https://cloud.tencent.com/developer/article/2469398"  target="_blank" rel="noopener"
+    >Job for nginx.service Failed: Nginx服务启动失败的完美解决方法-腾讯云开发者社区-腾讯云</a>)</p>
+<hr>
+<h2 id="26-服务器排查标准回答">26. 服务器排查标准回答
+</h2><blockquote>
+<p><strong>“服务器突然无法访问，你怎么排查？”</strong></p>
+</blockquote>
+<p>推荐回答：</p>
+<blockquote>
+<p>“我会按照从底层到上层的顺序进行排查。首先确认物理链路和交换机端口状态，然后检查服务器IP、子网掩码、默认网关和DNS配置。接着通过ARP确认二层通信是否正常，再测试默认网关和目标地址，检查路由表。</p>
+<p>如果IP层连通正常但域名访问异常，我会检查DNS。然后检查防火墙、ACL、安全组等策略。如果网络层没有问题，再检查服务器对应的TCP端口是否监听，以及Web或其他应用服务是否正常，最后结合系统日志和应用日志进一步定位。”</p>
+</blockquote>
+<hr>
+<h1 id="四zabbix网络监控">四、Zabbix网络监控
+</h1><h2 id="27-zabbix是什么">27. Zabbix是什么？
+</h2><p>Zabbix是一款：</p>
+<blockquote>
+<p><strong>开源监控与告警平台。</strong></p>
+</blockquote>
+<p>可以监控：</p>
+<ul>
+<li>服务器</li>
+<li>网络设备</li>
+<li>虚拟机</li>
+<li>数据库</li>
+<li>应用服务</li>
+<li>网络流量</li>
+<li>CPU</li>
+<li>内存</li>
+<li>磁盘</li>
+<li>系统状态</li>
+</ul>
+<hr>
+<h2 id="28-zabbix基本架构">28. Zabbix基本架构
+</h2><p>典型结构：</p>
+<pre><code>          Zabbix Server
+
+                |
+
+   +------------+------------+
+
+   |            |            |
+
+   ↓            ↓            ↓
+</code></pre>
+<p>Zabbix Agent    SNMP        ICMP</p>
+<pre><code>   |            |            |
+
+   ↓            ↓            ↓
+
+Linux服务器   交换机       网络设备
+</code></pre>
+<hr>
+<h2 id="29-zabbix-server">29. Zabbix Server
+</h2><p>Zabbix Server是：</p>
+<blockquote>
+<p><strong>监控系统的核心组件。</strong></p>
+</blockquote>
+<p>主要负责：</p>
+<ul>
+<li>接收监控数据</li>
+<li>存储监控数据</li>
+<li>执行监控逻辑</li>
+<li>判断触发器</li>
+<li>产生告警</li>
+<li>管理监控对象</li>
+</ul>
+<hr>
+<h2 id="30-zabbix-agent">30. Zabbix Agent
+</h2><p>Zabbix Agent通常安装在：</p>
+<blockquote>
+<p><strong>被监控服务器上。</strong></p>
+</blockquote>
+<p>例如：</p>
+<p>Zabbix Server</p>
+<pre><code>  ↓
+</code></pre>
+<p>Zabbix Agent</p>
+<pre><code>  ↓
+</code></pre>
+<p>Linux服务器</p>
+<p>可以采集：</p>
+<ul>
+<li>CPU</li>
+<li>内存</li>
+<li>磁盘</li>
+<li>网络流量</li>
+<li>进程</li>
+<li>系统状态</li>
+</ul>
+<hr>
+<h2 id="31-snmp">31. SNMP
+</h2><p>SNMP：</p>
+<blockquote>
+<p>Simple Network Management Protocol</p>
+</blockquote>
+<p>中文：</p>
+<blockquote>
+<p><strong>简单网络管理协议</strong></p>
+</blockquote>
+<p>主要用于：</p>
+<blockquote>
+<p><strong>监控网络设备。</strong></p>
+</blockquote>
+<p>例如：</p>
+<ul>
+<li>交换机</li>
+<li>路由器</li>
+<li>防火墙</li>
+<li>无线控制器</li>
+</ul>
+<hr>
+<h2 id="311-snmp常见端口">31.1 SNMP常见端口
+</h2><p>监控查询：</p>
+<p>UDP 161</p>
+<p>Trap告警：</p>
+<p>UDP 162</p>
+<hr>
+<h2 id="32-icmp监控">32. ICMP监控
+</h2><p>Zabbix可以使用ICMP检测：</p>
+<blockquote>
+<p><strong>设备是否在线。</strong></p>
+</blockquote>
+<p>例如：</p>
+<p>Zabbix</p>
+<p>↓</p>
+<p>Ping</p>
+<p>↓</p>
+<p>交换机</p>
+<p>如果设备连续无法Ping：</p>
+<blockquote>
+<p>产生告警。</p>
+</blockquote>
+<hr>
+<h2 id="33-cpu监控">33. CPU监控
+</h2><p>CPU监控可以发现：</p>
+<ul>
+<li>CPU持续过高</li>
+<li>单核过载</li>
+<li>进程异常</li>
+<li>系统负载过高</li>
+</ul>
+<p>例如：</p>
+<p>CPU &gt; 90%</p>
+<p>持续5分钟</p>
+<p>可以触发：</p>
+<blockquote>
+<p>高CPU告警。</p>
+</blockquote>
+<hr>
+<h2 id="34-内存监控">34. 内存监控
+</h2><p>重点关注：</p>
+<ul>
+<li>内存使用率</li>
+<li>可用内存</li>
+<li>Swap</li>
+<li>内存泄漏</li>
+</ul>
+<p>例如：</p>
+<p>Memory Usage &gt; 90%</p>
+<p>触发：</p>
+<blockquote>
+<p>内存使用率过高告警。</p>
+</blockquote>
+<hr>
+<h2 id="35-磁盘监控">35. 磁盘监控
+</h2><p>监控：</p>
+<ul>
+<li>磁盘空间</li>
+<li>inode</li>
+<li>IO</li>
+<li>读写速度</li>
+</ul>
+<p>例如：</p>
+<p>Disk Usage &gt; 90%</p>
+<p>触发：</p>
+<blockquote>
+<p>磁盘空间不足。</p>
+</blockquote>
+<hr>
+<h2 id="36-网络流量监控">36. 网络流量监控
+</h2><p>网络设备通常通过：</p>
+<blockquote>
+<p><strong>SNMP</strong></p>
+</blockquote>
+<p>获取接口流量。</p>
+<p>例如：</p>
+<p>Interface Gi0/1</p>
+<p>↓</p>
+<p>Incoming Traffic</p>
+<p>Outgoing Traffic</p>
+<p>可以监控：</p>
+<ul>
+<li>入方向流量</li>
+<li>出方向流量</li>
+<li>带宽利用率</li>
+<li>丢包</li>
+<li>错误包</li>
+<li>接口状态</li>
+</ul>
+<hr>
+<h2 id="37-网络设备监控">37. 网络设备监控
+</h2><p>Zabbix可以监控：</p>
+<h2 id="交换机">交换机
+</h2><ul>
+<li>CPU</li>
+<li>内存</li>
+<li>端口状态</li>
+<li>端口流量</li>
+<li>错误包</li>
+</ul>
+<h2 id="路由器">路由器
+</h2><ul>
+<li>CPU</li>
+<li>内存</li>
+<li>接口状态</li>
+<li>带宽</li>
+<li>丢包</li>
+<li>路由相关指标</li>
+</ul>
+<h2 id="防火墙">防火墙
+</h2><ul>
+<li>CPU</li>
+<li>内存</li>
+<li>接口流量</li>
+<li>会话数</li>
+<li>VPN状态</li>
+<li>告警</li>
+</ul>
+<hr>
+<h2 id="38-zabbix告警">38. Zabbix告警
+</h2><p>Zabbix核心能力之一：</p>
+<blockquote>
+<p><strong>监控 → 判断 → 告警</strong></p>
+</blockquote>
+<p>例如：</p>
+<p>服务器</p>
+<p>↓</p>
+<p>CPU 95%</p>
+<p>↓</p>
+<p>Zabbix检测</p>
+<p>↓</p>
+<p>Trigger触发</p>
+<p>↓</p>
+<p>Action执行</p>
+<p>↓</p>
+<p>发送告警</p>
+<p>告警方式可以包括：</p>
+<ul>
+<li>邮件</li>
+<li>Webhook</li>
+<li>企业微信</li>
+<li>钉钉</li>
+<li>Telegram等</li>
+</ul>
+<p>具体取决于配置和版本。</p>
+<hr>
+<h2 id="39-zabbix几个核心概念">39. Zabbix几个核心概念
+</h2><h2 id="host">Host
+</h2><p>被监控对象。</p>
+<p>例如：</p>
+<p>192.168.1.100</p>
+<hr>
+<h2 id="item">Item
+</h2><p>监控指标。</p>
+<p>例如：</p>
+<p>CPU利用率</p>
+<p>内存使用率</p>
+<p>磁盘空间</p>
+<p>网络流量</p>
+<hr>
+<h2 id="trigger">Trigger
+</h2><p>触发条件。</p>
+<p>例如：</p>
+<p>CPU &gt; 90%</p>
+<hr>
+<h2 id="action">Action
+</h2><p>触发之后执行的动作。</p>
+<p>例如：</p>
+<p>发送邮件</p>
+<p>发送Webhook</p>
+<hr>
+<h2 id="template">Template
+</h2><p>监控模板。</p>
+<p>可以把一组：</p>
+<blockquote>
+<p>Item + Trigger + Discovery</p>
+</blockquote>
+<p>等配置批量应用到多个设备。</p>
+<hr>
+<h1 id="五网络工程师常用命令">五、网络工程师常用命令
+</h1><hr>
+<h2 id="40-windows">40. Windows
+</h2><h3 id="查看ip">查看IP
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ipconfig /all
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查看路由-1">查看路由
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">route print
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查看arp">查看ARP
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">arp -a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="ping">Ping
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ping 192.168.1.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="路径跟踪">路径跟踪
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tracert 8.8.8.8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="dns查询">DNS查询
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nslookup www.example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查看tcp连接">查看TCP连接
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">netstat -ano
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="六linux网络排查命令">六、Linux网络排查命令
+</h1><hr>
+<h2 id="41-查看ip">41. 查看IP
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip addr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="42-查看路由">42. 查看路由
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip route
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="43-查看arp邻居表">43. 查看ARP/邻居表
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip neigh
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="44-ping">44. Ping
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ping 192.168.1.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="45-路由追踪">45. 路由追踪
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">traceroute 8.8.8.8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="46-dns查询">46. DNS查询
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dig www.example.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="47-查看监听端口">47. 查看监听端口
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ss -lntp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="48-查看网络连接">48. 查看网络连接
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ss -ant
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="49-查看网络接口">49. 查看网络接口
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ip link
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="七高频问题">七、高频问题
+</h1><hr>
+<h2 id="50-ping不通服务器怎么办">50. Ping不通服务器怎么办？
+</h2><p>回答思路：</p>
+<p>物理链路</p>
+<p>↓</p>
+<p>网卡</p>
+<p>↓</p>
+<p>IP配置</p>
+<p>↓</p>
+<p>VLAN</p>
+<p>↓</p>
+<p>ARP</p>
+<p>↓</p>
+<p>网关</p>
+<p>↓</p>
+<p>路由</p>
+<p>↓</p>
+<p>ACL/防火墙</p>
+<p>↓</p>
+<p>服务器状态</p>
+<p>↓</p>
+<p>ICMP策略</p>
+<p>注意：</p>
+<blockquote>
+<p>Ping不通不一定代表服务器宕机。</p>
+</blockquote>
+<hr>
+<h2 id="51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？
+</h2><p>排查：</p>
+<p>Ping IP</p>
+<p>↓</p>
+<p>TCP 80/443</p>
+<p>↓</p>
+<p>DNS</p>
+<p>↓</p>
+<p>防火墙</p>
+<p>↓</p>
+<p>Web服务</p>
+<p>↓</p>
+<p>应用</p>
+<p>可以使用：</p>
+<p>[curl -I http://服务器IP](<a class="link" href="https://blog.csdn.net/davidullua/article/details/115945111"  target="_blank" rel="noopener"
+    >curl获取本机公网IP（命令行备忘）_curl 我的ip-CSDN博客</a>)</p>
+<p>测试HTTP服务。</p>
+<hr>
+<h2 id="52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？
+</h2><p>优先考虑：</p>
+<blockquote>
+<p>DNS问题。</p>
+</blockquote>
+<p>检查：</p>
+<p>nslookup example.com</p>
+<p>或者：</p>
+<p>dig example.com</p>
+<hr>
+<h2 id="53-网站访问很慢怎么办">53. 网站访问很慢怎么办？
+</h2><p>可以按照：</p>
+<p>客户端</p>
+<p>↓</p>
+<p>DNS</p>
+<p>↓</p>
+<p>网络延迟</p>
+<p>↓</p>
+<p>路由</p>
+<p>↓</p>
+<p>防火墙</p>
+<p>↓</p>
+<p>负载均衡</p>
+<p>↓</p>
+<p>Web服务器</p>
+<p>↓</p>
+<p>应用服务器</p>
+<p>↓</p>
+<p>数据库</p>
+<p>逐层排查。</p>
+<p>重点观察：</p>
+<ul>
+<li>Ping延迟</li>
+<li>丢包率</li>
+<li>TCP建立时间</li>
+<li>HTTP响应时间</li>
+<li>CPU</li>
+<li>内存</li>
+<li>磁盘IO</li>
+<li>数据库性能</li>
+</ul>
+<hr>
+<h2 id="54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？
+</h2><p>不要直接认为服务器宕机。</p>
+<p>先判断：</p>
+<p>Zabbix Server自身是否正常</p>
+<p>↓</p>
+<p>网络是否正常</p>
+<p>↓</p>
+<p>Ping是否正常</p>
+<p>↓</p>
+<p>Agent是否正常</p>
+<p>↓</p>
+<p>SNMP是否正常</p>
+<p>↓</p>
+<p>服务器是否正常</p>
+<p>例如：</p>
+<blockquote>
+<p>Ping失败</p>
+</blockquote>
+<p>可能是：</p>
+<ul>
+<li>服务器宕机</li>
+<li>网络中断</li>
+<li>防火墙阻断ICMP</li>
+<li>交换机故障</li>
+<li>路由问题</li>
+</ul>
+<p>如果：</p>
+<blockquote>
+<p>Ping正常，但Agent数据中断</p>
+</blockquote>
+<p>则重点检查：</p>
+<p>Zabbix Agent</p>
+<p>↓</p>
+<p>Agent进程</p>
+<p>↓</p>
+<p>Agent端口</p>
+<p>↓</p>
+<p>防火墙</p>
+<p>↓</p>
+<p>Zabbix Server</p>
+<hr>
+<h1 id="八知识速记表">八、知识速记表
+</h1><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>知识点</th>
+          <th>重点记忆</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>TCP</td>
+          <td>面向连接、可靠传输</td>
+      </tr>
+      <tr>
+          <td>三次握手</td>
+          <td>SYN → SYN+ACK → ACK</td>
+      </tr>
+      <tr>
+          <td>四次挥手</td>
+          <td>FIN → ACK → FIN → ACK</td>
+      </tr>
+      <tr>
+          <td>UDP</td>
+          <td>无连接、速度快</td>
+      </tr>
+      <tr>
+          <td>ARP</td>
+          <td>IP → MAC</td>
+      </tr>
+      <tr>
+          <td>DNS</td>
+          <td>域名 → IP</td>
+      </tr>
+      <tr>
+          <td>DHCP</td>
+          <td>自动分配IP等网络参数</td>
+      </tr>
+      <tr>
+          <td>HTTP</td>
+          <td>TCP 80</td>
+      </tr>
+      <tr>
+          <td>HTTPS</td>
+          <td>TCP 443 + TLS</td>
+      </tr>
+      <tr>
+          <td>ICMP</td>
+          <td>Ping、网络错误报告</td>
+      </tr>
+      <tr>
+          <td>VLAN</td>
+          <td>划分广播域</td>
+      </tr>
+      <tr>
+          <td>Access</td>
+          <td>通常连接终端</td>
+      </tr>
+      <tr>
+          <td>Trunk</td>
+          <td>承载多个VLAN</td>
+      </tr>
+      <tr>
+          <td>STP</td>
+          <td>防止二层环路</td>
+      </tr>
+      <tr>
+          <td>静态路由</td>
+          <td>手动配置</td>
+      </tr>
+      <tr>
+          <td>OSPF</td>
+          <td>AS内部动态路由</td>
+      </tr>
+      <tr>
+          <td>BGP</td>
+          <td>AS之间交换路由</td>
+      </tr>
+      <tr>
+          <td>Zabbix</td>
+          <td>监控与告警平台</td>
+      </tr>
+      <tr>
+          <td>Agent</td>
+          <td>监控服务器</td>
+      </tr>
+      <tr>
+          <td>SNMP</td>
+          <td>监控网络设备</td>
+      </tr>
+      <tr>
+          <td>ICMP</td>
+          <td>检测设备连通性</td>
+      </tr>
+      <tr>
+          <td>Item</td>
+          <td>监控指标</td>
+      </tr>
+      <tr>
+          <td>Trigger</td>
+          <td>触发条件</td>
+      </tr>
+      <tr>
+          <td>Action</td>
+          <td>告警动作</td>
+      </tr>
+      <tr>
+          <td>Template</td>
+          <td>批量监控模板</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h1 id="九网络故障排查万能思路">九、网络故障排查万能思路
+</h1><p>遇到网络问题，可以记住：</p>
+<p>先判断“哪里不通”</p>
+<pre><code>    ↓
+</code></pre>
+<p>物理层</p>
+<pre><code>    ↓
+</code></pre>
+<p>二层</p>
+<pre><code>    ↓
+</code></pre>
+<p>三层</p>
+<pre><code>    ↓
+</code></pre>
+<p>四层</p>
+<pre><code>    ↓
+</code></pre>
+<p>应用层</p>
+<p>对应：</p>
+<p>物理链路</p>
+<p>↓</p>
+<p>VLAN / MAC / ARP</p>
+<p>↓</p>
+<p>IP / 网关 / 路由</p>
+<p>↓</p>
+<p>TCP / UDP / 端口</p>
+<p>↓</p>
+<p>DNS / HTTP / HTTPS / 应用</p>
+<p>然后再结合：</p>
+<p>防火墙</p>
+<p>ACL</p>
+<p>安全组</p>
+<p>服务器状态</p>
+<p>应用日志</p>
+<p>监控告警</p>
+<p>进行交叉验证。</p>
+<hr>
+<h1 id="十答题万能模板">十、答题万能模板
+</h1><p>面对网络故障类问题，可以采用：</p>
+<blockquote>
+<p><strong>“我会先确定故障范围，然后按照从底层到上层的顺序进行排查。”</strong></p>
+</blockquote>
+<p>接着：</p>
+<ol>
+<li>
+<p>确认故障范围</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查物理链路</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查IP/VLAN/ARP</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查网关和路由</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查DNS</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查TCP/UDP端口</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查防火墙/ACL</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查服务器服务</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>检查应用日志</p>
+<pre><code>↓
+</code></pre>
+</li>
+<li>
+<p>结合Zabbix等监控数据确认</p>
+</li>
+</ol>
+<p>最后：</p>
+<blockquote>
+<p><strong>“我会结合ping、tracert/traceroute、nslookup/dig、ipconfig/ip、ss/netstat以及Zabbix监控数据进行交叉验证，而不是只通过单一工具判断故障。”</strong></p>
+</blockquote>
+<hr>
+<h1 id="十一重点背诵清单">十一、重点背诵清单
+</h1><p>如果复习时间比较紧，优先掌握以下内容：</p>
+<h2 id="第一优先级">第一优先级
+</h2><ul>
+<li><input disabled="" type="checkbox"> TCP三次握手</li>
+<li><input disabled="" type="checkbox"> TCP四次挥手</li>
+<li><input disabled="" type="checkbox"> TCP与UDP区别</li>
+<li><input disabled="" type="checkbox"> ARP</li>
+<li><input disabled="" type="checkbox"> DNS</li>
+<li><input disabled="" type="checkbox"> DHCP</li>
+<li><input disabled="" type="checkbox"> HTTP/HTTPS</li>
+<li><input disabled="" type="checkbox"> VLAN</li>
+<li><input disabled="" type="checkbox"> Access/Trunk</li>
+<li><input disabled="" type="checkbox"> 静态路由</li>
+<li><input disabled="" type="checkbox"> OSPF</li>
+<li><input disabled="" type="checkbox"> 网络故障排查流程</li>
+</ul>
+<h2 id="第二优先级">第二优先级
+</h2><ul>
+<li><input disabled="" type="checkbox"> STP</li>
+<li><input disabled="" type="checkbox"> BGP基础</li>
+<li><input disabled="" type="checkbox"> ICMP</li>
+<li><input disabled="" type="checkbox"> 防火墙/ACL</li>
+<li><input disabled="" type="checkbox"> Linux网络命令</li>
+<li><input disabled="" type="checkbox"> Windows网络命令</li>
+</ul>
+<h2 id="第三优先级">第三优先级
+</h2><ul>
+<li><input disabled="" type="checkbox"> Zabbix Server</li>
+<li><input disabled="" type="checkbox"> Zabbix Agent</li>
+<li><input disabled="" type="checkbox"> SNMP</li>
+<li><input disabled="" type="checkbox"> ICMP监控</li>
+<li><input disabled="" type="checkbox"> Item</li>
+<li><input disabled="" type="checkbox"> Trigger</li>
+<li><input disabled="" type="checkbox"> Action</li>
+<li><input disabled="" type="checkbox"> Template</li>
+<li><input disabled="" type="checkbox"> CPU/内存/磁盘/网络流量监控</li>
+</ul>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 Aug 17, 2026 17:20 &#43;0800
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 梦幻星河
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+    #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://charles-lin-cell.github.io/icons/backTop.svg);
+    }
+</style>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://charles-lin-cell.github.io/icons/codeMore.svg"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+
+
+
+
+
+<style>
+    #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+    </body>
+</html>
