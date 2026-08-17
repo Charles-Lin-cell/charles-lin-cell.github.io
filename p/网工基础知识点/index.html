@@ -10,7 +10,7 @@
 <meta property='og:description' content="一、网络基础 1. TCP三次握手 1.1 TCP是什么？ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接、可靠的传输层协议。\n主要特点：\n">
 <meta property='og:url' content='https://charles-lin-cell.github.io/p/%E7%BD%91%E5%B7%A5%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/'>
 <meta property='og:site_name' content='梦幻星河的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-08-17T17:18:08&#43;08:00'/><meta property='article:modified_time' content='2026-08-17T17:20:45&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-08-17T17:18:08&#43;08:00'/><meta property='article:modified_time' content='2026-08-17T17:45:08&#43;08:00'/>
 <meta name="twitter:title" content="网工基础知识点">
 <meta name="twitter:description" content="一、网络基础 1. TCP三次握手 1.1 TCP是什么？ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接、可靠的传输层协议。\n主要特点：\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -275,235 +275,217 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#1-tcp三次握手">1. TCP三次握手</a>
+    <li><a href="#一网络基础">一、网络基础</a>
       <ol>
-        <li><a href="#11-tcp是什么">1.1 TCP是什么？</a></li>
-        <li><a href="#12-为什么需要三次握手">1.2 为什么需要三次握手？</a></li>
-        <li><a href="#13-三次握手过程">1.3 三次握手过程</a>
+        <li><a href="#1-tcp三次握手">1. TCP三次握手</a>
           <ol>
-            <li><a href="#第一次握手">第一次握手</a></li>
-            <li><a href="#第二次握手">第二次握手</a></li>
-            <li><a href="#第三次握手">第三次握手</a></li>
+            <li><a href="#11-tcp是什么">1.1 TCP是什么？</a></li>
+            <li><a href="#12-为什么需要三次握手">1.2 为什么需要三次握手？</a></li>
+            <li><a href="#13-三次握手过程">1.3 三次握手过程</a></li>
             <li><a href="#14-回答模板">1.4 回答模板</a></li>
             <li><a href="#15-常见追问">1.5 常见追问</a></li>
           </ol>
         </li>
-      </ol>
-    </li>
-    <li><a href="#2-tcp四次挥手">2. TCP四次挥手</a>
-      <ol>
-        <li><a href="#21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？</a></li>
-        <li><a href="#22-四次挥手过程">2.2 四次挥手过程</a></li>
-        <li><a href="#23-四次挥手详细过程">2.3 四次挥手详细过程</a>
+        <li><a href="#2-tcp四次挥手">2. TCP四次挥手</a>
           <ol>
-            <li><a href="#第一次">第一次</a></li>
-            <li><a href="#第二次">第二次</a></li>
-            <li><a href="#第三次">第三次</a></li>
-            <li><a href="#第四次">第四次</a></li>
+            <li><a href="#21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？</a></li>
+            <li><a href="#22-四次挥手过程">2.2 四次挥手过程</a></li>
+            <li><a href="#23-四次挥手详细过程">2.3 四次挥手详细过程</a></li>
           </ol>
         </li>
-        <li><a href="#24-time_wait是什么">2.4 TIME_WAIT是什么？</a></li>
-      </ol>
-    </li>
-    <li><a href="#3-udp">3. UDP</a>
-      <ol>
-        <li><a href="#31-udp是什么">3.1 UDP是什么？</a></li>
-        <li><a href="#32-tcp与udp对比">3.2 TCP与UDP对比</a></li>
-        <li><a href="#33-常见udp应用">3.3 常见UDP应用</a>
+        <li><a href="#3-udp">3. UDP</a>
           <ol>
-            <li><a href="#dnsdomain-name-system-域名系统的缩写">DNS（Domain Name System 域名系统的缩写）</a></li>
-            <li><a href="#dhcpdynamic-host-configuration-protocol-动态主机配置协议">DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）</a></li>
-            <li><a href="#snmpsimple-network-management-protocol-简单网络管理协议">SNMP（Simple Network Management Protocol 简单网络管理协议）</a></li>
-            <li><a href="#snmp-trap">SNMP Trap</a></li>
+            <li><a href="#31-udp是什么">3.1 UDP是什么？</a></li>
+            <li><a href="#32-tcp与udp对比">3.2 TCP与UDP对比</a></li>
+            <li><a href="#33-常见udp应用">3.3 常见UDP应用</a></li>
           </ol>
         </li>
-      </ol>
-    </li>
-    <li><a href="#4-arp">4. ARP</a>
-      <ol>
-        <li><a href="#41-arp是什么">4.1 ARP是什么？</a></li>
-        <li><a href="#42-arp工作过程">4.2 ARP工作过程</a></li>
-        <li><a href="#43-常用命令">4.3 常用命令</a></li>
-        <li><a href="#44-arp常见故障">4.4 ARP常见故障</a></li>
-      </ol>
-    </li>
-    <li><a href="#5-dns">5. DNS</a>
-      <ol>
-        <li><a href="#51-dns是什么">5.1 DNS是什么？</a></li>
-        <li><a href="#52-dns常见记录">5.2 DNS常见记录</a></li>
-        <li><a href="#53-dns常用端口">5.3 DNS常用端口</a></li>
-        <li><a href="#54-dns故障排查">5.4 DNS故障排查</a></li>
-      </ol>
-    </li>
-    <li><a href="#6-dhcp">6. DHCP</a>
-      <ol>
-        <li><a href="#61-dhcp是什么">6.1 DHCP是什么？</a></li>
-        <li><a href="#62-dhcp四步过程">6.2 DHCP四步过程</a>
+        <li><a href="#4-arp">4. ARP</a>
           <ol>
-            <li><a href="#dhcp-discover">DHCP Discover</a></li>
-            <li><a href="#dhcp-offer">DHCP Offer</a></li>
-            <li><a href="#dhcp-request">DHCP Request</a></li>
-            <li><a href="#dhcp-ack">DHCP ACK</a></li>
+            <li><a href="#41-arp是什么">4.1 ARP是什么？</a></li>
+            <li><a href="#42-arp工作过程">4.2 ARP工作过程</a></li>
+            <li><a href="#43-常用命令">4.3 常用命令</a></li>
+            <li><a href="#44-arp常见故障">4.4 ARP常见故障</a></li>
           </ol>
         </li>
-        <li><a href="#63-dhcp常用端口">6.3 DHCP常用端口</a></li>
-      </ol>
-    </li>
-    <li><a href="#7-http--https">7. HTTP / HTTPS</a>
-      <ol>
-        <li><a href="#71-http">7.1 HTTP</a></li>
-        <li><a href="#72-https">7.2 HTTPS</a></li>
-        <li><a href="#73-http常见状态码">7.3 HTTP常见状态码</a></li>
-        <li><a href="#74-常问502是什么意思">7.4 常问：502是什么意思？</a></li>
-      </ol>
-    </li>
-    <li><a href="#8-icmp">8. ICMP</a>
-      <ol>
-        <li><a href="#81-icmp是什么">8.1 ICMP是什么？</a></li>
-        <li><a href="#82-ping原理">8.2 Ping原理</a></li>
-        <li><a href="#83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机</a></li>
-      </ol>
-    </li>
-  </ol>
-
-  <ol>
-    <li><a href="#9-vlan">9. VLAN</a>
-      <ol>
-        <li><a href="#91-vlan是什么">9.1 VLAN是什么？</a></li>
-        <li><a href="#92-vlan的主要作用">9.2 VLAN的主要作用</a>
+        <li><a href="#5-dns">5. DNS</a>
           <ol>
-            <li><a href="#-隔离广播域">① 隔离广播域</a></li>
-            <li><a href="#-网络隔离">② 网络隔离</a></li>
-            <li><a href="#-提高安全性">③ 提高安全性</a></li>
+            <li><a href="#51-dns是什么">5.1 DNS是什么？</a></li>
+            <li><a href="#52-dns常见记录">5.2 DNS常见记录</a></li>
+            <li><a href="#53-dns常用端口">5.3 DNS常用端口</a></li>
+            <li><a href="#54-dns故障排查">5.4 DNS故障排查</a></li>
+          </ol>
+        </li>
+        <li><a href="#6-dhcp">6. DHCP</a>
+          <ol>
+            <li><a href="#61-dhcp是什么">6.1 DHCP是什么？</a></li>
+            <li><a href="#62-dhcp四步过程">6.2 DHCP四步过程</a></li>
+            <li><a href="#63-dhcp常用端口">6.3 DHCP常用端口</a></li>
+          </ol>
+        </li>
+        <li><a href="#7-http--https">7. HTTP / HTTPS</a>
+          <ol>
+            <li><a href="#71-http">7.1 HTTP</a></li>
+            <li><a href="#72-https">7.2 HTTPS</a></li>
+            <li><a href="#73-http常见状态码">7.3 HTTP常见状态码</a></li>
+            <li><a href="#74-常问502是什么意思">7.4 常问：502是什么意思？</a></li>
+          </ol>
+        </li>
+        <li><a href="#8-icmp">8. ICMP</a>
+          <ol>
+            <li><a href="#81-icmp是什么">8.1 ICMP是什么？</a></li>
+            <li><a href="#82-ping原理">8.2 Ping原理</a></li>
+            <li><a href="#83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机</a></li>
           </ol>
         </li>
       </ol>
     </li>
-    <li><a href="#10-access端口">10. Access端口</a></li>
-    <li><a href="#11-trunk端口">11. Trunk端口</a>
+    <li><a href="#二路由与交换">二、路由与交换</a>
       <ol>
-        <li><a href="#111-access与trunk对比">11.1 Access与Trunk对比</a></li>
-      </ol>
-    </li>
-    <li><a href="#12-stp">12. STP</a>
-      <ol>
-        <li><a href="#121-stp是什么">12.1 STP是什么？</a></li>
-        <li><a href="#122-为什么会有环路">12.2 为什么会有环路？</a></li>
-        <li><a href="#123-stp解决方法">12.3 STP解决方法</a></li>
-      </ol>
-    </li>
-    <li><a href="#13-静态路由">13. 静态路由</a>
-      <ol>
-        <li><a href="#131-什么是静态路由">13.1 什么是静态路由？</a></li>
-        <li><a href="#132-优点">13.2 优点</a></li>
-        <li><a href="#133-缺点">13.3 缺点</a></li>
-      </ol>
-    </li>
-    <li><a href="#14-ospf">14. OSPF</a>
-      <ol>
-        <li><a href="#141-ospf是什么">14.1 OSPF是什么？</a></li>
-        <li><a href="#142-ospf特点">14.2 OSPF特点</a></li>
-        <li><a href="#143-ospf-area">14.3 OSPF Area</a></li>
-        <li><a href="#144-ospf常见问题">14.4 OSPF常见问题</a>
+        <li><a href="#9-vlan">9. VLAN</a>
           <ol>
-            <li><a href="#ospf和静态路由有什么区别">OSPF和静态路由有什么区别？</a></li>
+            <li><a href="#91-vlan是什么">9.1 VLAN是什么？</a></li>
+            <li><a href="#92-vlan的主要作用">9.2 VLAN的主要作用</a></li>
+          </ol>
+        </li>
+        <li><a href="#10-access端口">10. Access端口</a></li>
+        <li><a href="#11-trunk端口">11. Trunk端口</a>
+          <ol>
+            <li><a href="#111-access与trunk对比">11.1 Access与Trunk对比</a></li>
+          </ol>
+        </li>
+        <li><a href="#12-stp">12. STP</a>
+          <ol>
+            <li><a href="#121-stp是什么">12.1 STP是什么？</a></li>
+            <li><a href="#122-为什么会有环路">12.2 为什么会有环路？</a></li>
+            <li><a href="#123-stp解决方法">12.3 STP解决方法</a></li>
+          </ol>
+        </li>
+        <li><a href="#13-静态路由">13. 静态路由</a>
+          <ol>
+            <li><a href="#131-什么是静态路由">13.1 什么是静态路由？</a></li>
+            <li><a href="#132-优点">13.2 优点</a></li>
+            <li><a href="#133-缺点">13.3 缺点</a></li>
+          </ol>
+        </li>
+        <li><a href="#14-ospf">14. OSPF</a>
+          <ol>
+            <li><a href="#141-ospf是什么">14.1 OSPF是什么？</a></li>
+            <li><a href="#142-ospf特点">14.2 OSPF特点</a></li>
+            <li><a href="#143-ospf-area">14.3 OSPF Area</a></li>
+            <li><a href="#144-ospf常见问题">14.4 OSPF常见问题</a></li>
+          </ol>
+        </li>
+        <li><a href="#15-bgp基础">15. BGP基础</a>
+          <ol>
+            <li><a href="#151-bgp是什么">15.1 BGP是什么？</a></li>
+            <li><a href="#152-bgp常见应用">15.2 BGP常见应用</a></li>
+            <li><a href="#153-bgp特点">15.3 BGP特点</a></li>
+            <li><a href="#154-ospf和bgp区别">15.4 OSPF和BGP区别</a></li>
           </ol>
         </li>
       </ol>
     </li>
-    <li><a href="#15-bgp基础">15. BGP基础</a>
+    <li><a href="#三网络故障排查">三、网络故障排查</a>
       <ol>
-        <li><a href="#151-bgp是什么">15.1 BGP是什么？</a></li>
-        <li><a href="#152-bgp常见应用">15.2 BGP常见应用</a></li>
-        <li><a href="#153-bgp特点">15.3 BGP特点</a></li>
-        <li><a href="#154-ospf和bgp区别">15.4 OSPF和BGP区别</a></li>
+        <li><a href="#16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？</a></li>
+        <li><a href="#17-第一步检查物理链路">17. 第一步：检查物理链路</a></li>
+        <li><a href="#18-第二步检查ip配置">18. 第二步：检查IP配置</a></li>
+        <li><a href="#19-第三步检查arp">19. 第三步：检查ARP</a></li>
+        <li><a href="#20-第四步检查默认网关">20. 第四步：检查默认网关</a></li>
+        <li><a href="#21-第五步检查路由">21. 第五步：检查路由</a>
+          <ol>
+            <li><a href="#查看路由">查看路由</a></li>
+            <li><a href="#添加路由">添加路由</a></li>
+            <li><a href="#删除路由">删除路由</a></li>
+          </ol>
+        </li>
+        <li><a href="#22-第六步检查dns">22. 第六步：检查DNS</a></li>
+        <li><a href="#23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL</a></li>
+        <li><a href="#24-第八步检查服务端口">24. 第八步：检查服务端口</a></li>
+        <li><a href="#25-第九步检查应用层">25. 第九步：检查应用层</a></li>
+        <li><a href="#26-服务器排查标准回答">26. 服务器排查标准回答</a></li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li><a href="#16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？</a></li>
-    <li><a href="#17-第一步检查物理链路">17. 第一步：检查物理链路</a></li>
-    <li><a href="#18-第二步检查ip配置">18. 第二步：检查IP配置</a></li>
-    <li><a href="#19-第三步检查arp">19. 第三步：检查ARP</a></li>
-    <li><a href="#20-第四步检查默认网关">20. 第四步：检查默认网关</a></li>
-    <li><a href="#21-第五步检查路由">21. 第五步：检查路由</a>
+    <li><a href="#四zabbix网络监控">四、Zabbix网络监控</a>
       <ol>
-        <li><a href="#查看路由">查看路由</a></li>
-        <li><a href="#添加路由">添加路由</a></li>
-        <li><a href="#删除路由">删除路由</a></li>
+        <li><a href="#27-zabbix是什么">27. Zabbix是什么？</a></li>
+        <li><a href="#28-zabbix基本架构">28. Zabbix基本架构</a></li>
+        <li><a href="#29-zabbix-server">29. Zabbix Server</a></li>
+        <li><a href="#30-zabbix-agent">30. Zabbix Agent</a></li>
+        <li><a href="#31-snmp">31. SNMP</a></li>
+        <li><a href="#311-snmp常见端口">31.1 SNMP常见端口</a></li>
+        <li><a href="#32-icmp监控">32. ICMP监控</a></li>
+        <li><a href="#33-cpu监控">33. CPU监控</a></li>
+        <li><a href="#34-内存监控">34. 内存监控</a></li>
+        <li><a href="#35-磁盘监控">35. 磁盘监控</a></li>
+        <li><a href="#36-网络流量监控">36. 网络流量监控</a></li>
+        <li><a href="#37-网络设备监控">37. 网络设备监控</a>
+          <ol>
+            <li><a href="#交换机">交换机</a></li>
+            <li><a href="#路由器">路由器</a></li>
+            <li><a href="#防火墙">防火墙</a></li>
+          </ol>
+        </li>
+        <li><a href="#38-zabbix告警">38. Zabbix告警</a></li>
+        <li><a href="#39-zabbix几个核心概念">39. Zabbix几个核心概念</a>
+          <ol>
+            <li><a href="#host">Host</a></li>
+            <li><a href="#item">Item</a></li>
+            <li><a href="#trigger">Trigger</a></li>
+            <li><a href="#action">Action</a></li>
+            <li><a href="#template">Template</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-    <li><a href="#22-第六步检查dns">22. 第六步：检查DNS</a></li>
-    <li><a href="#23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL</a></li>
-    <li><a href="#24-第八步检查服务端口">24. 第八步：检查服务端口</a></li>
-    <li><a href="#25-第九步检查应用层">25. 第九步：检查应用层</a></li>
-    <li><a href="#26-服务器排查标准回答">26. 服务器排查标准回答</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#27-zabbix是什么">27. Zabbix是什么？</a></li>
-    <li><a href="#28-zabbix基本架构">28. Zabbix基本架构</a></li>
-    <li><a href="#29-zabbix-server">29. Zabbix Server</a></li>
-    <li><a href="#30-zabbix-agent">30. Zabbix Agent</a></li>
-    <li><a href="#31-snmp">31. SNMP</a></li>
-    <li><a href="#311-snmp常见端口">31.1 SNMP常见端口</a></li>
-    <li><a href="#32-icmp监控">32. ICMP监控</a></li>
-    <li><a href="#33-cpu监控">33. CPU监控</a></li>
-    <li><a href="#34-内存监控">34. 内存监控</a></li>
-    <li><a href="#35-磁盘监控">35. 磁盘监控</a></li>
-    <li><a href="#36-网络流量监控">36. 网络流量监控</a></li>
-    <li><a href="#37-网络设备监控">37. 网络设备监控</a></li>
-    <li><a href="#交换机">交换机</a></li>
-    <li><a href="#路由器">路由器</a></li>
-    <li><a href="#防火墙">防火墙</a></li>
-    <li><a href="#38-zabbix告警">38. Zabbix告警</a></li>
-    <li><a href="#39-zabbix几个核心概念">39. Zabbix几个核心概念</a></li>
-    <li><a href="#host">Host</a></li>
-    <li><a href="#item">Item</a></li>
-    <li><a href="#trigger">Trigger</a></li>
-    <li><a href="#action">Action</a></li>
-    <li><a href="#template">Template</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#40-windows">40. Windows</a>
+    <li><a href="#五网络工程师常用命令">五、网络工程师常用命令</a>
       <ol>
-        <li><a href="#查看ip">查看IP</a></li>
-        <li><a href="#查看路由-1">查看路由</a></li>
-        <li><a href="#查看arp">查看ARP</a></li>
-        <li><a href="#ping">Ping</a></li>
-        <li><a href="#路径跟踪">路径跟踪</a></li>
-        <li><a href="#dns查询">DNS查询</a></li>
-        <li><a href="#查看tcp连接">查看TCP连接</a></li>
+        <li><a href="#40-windows">40. Windows</a>
+          <ol>
+            <li><a href="#查看ip">查看IP</a></li>
+            <li><a href="#查看路由-1">查看路由</a></li>
+            <li><a href="#查看arp">查看ARP</a></li>
+            <li><a href="#ping">Ping</a></li>
+            <li><a href="#路径跟踪">路径跟踪</a></li>
+            <li><a href="#dns查询">DNS查询</a></li>
+            <li><a href="#查看tcp连接">查看TCP连接</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
-  </ol>
-
-  <ol>
-    <li><a href="#41-查看ip">41. 查看IP</a></li>
-    <li><a href="#42-查看路由">42. 查看路由</a></li>
-    <li><a href="#43-查看arp邻居表">43. 查看ARP/邻居表</a></li>
-    <li><a href="#44-ping">44. Ping</a></li>
-    <li><a href="#45-路由追踪">45. 路由追踪</a></li>
-    <li><a href="#46-dns查询">46. DNS查询</a></li>
-    <li><a href="#47-查看监听端口">47. 查看监听端口</a></li>
-    <li><a href="#48-查看网络连接">48. 查看网络连接</a></li>
-    <li><a href="#49-查看网络接口">49. 查看网络接口</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#50-ping不通服务器怎么办">50. Ping不通服务器怎么办？</a></li>
-    <li><a href="#51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？</a></li>
-    <li><a href="#52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？</a></li>
-    <li><a href="#53-网站访问很慢怎么办">53. 网站访问很慢怎么办？</a></li>
-    <li><a href="#54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？</a></li>
-  </ol>
-
-  <ol>
-    <li><a href="#第一优先级">第一优先级</a></li>
-    <li><a href="#第二优先级">第二优先级</a></li>
-    <li><a href="#第三优先级">第三优先级</a></li>
+    <li><a href="#六linux网络排查命令">六、Linux网络排查命令</a>
+      <ol>
+        <li><a href="#41-查看ip">41. 查看IP</a></li>
+        <li><a href="#42-查看路由">42. 查看路由</a></li>
+        <li><a href="#43-查看arp邻居表">43. 查看ARP/邻居表</a></li>
+        <li><a href="#44-ping">44. Ping</a></li>
+        <li><a href="#45-路由追踪">45. 路由追踪</a></li>
+        <li><a href="#46-dns查询">46. DNS查询</a></li>
+        <li><a href="#47-查看监听端口">47. 查看监听端口</a></li>
+        <li><a href="#48-查看网络连接">48. 查看网络连接</a></li>
+        <li><a href="#49-查看网络接口">49. 查看网络接口</a></li>
+      </ol>
+    </li>
+    <li><a href="#七高频问题">七、高频问题</a>
+      <ol>
+        <li><a href="#50-ping不通服务器怎么办">50. Ping不通服务器怎么办？</a></li>
+        <li><a href="#51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？</a></li>
+        <li><a href="#52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？</a></li>
+        <li><a href="#53-网站访问很慢怎么办">53. 网站访问很慢怎么办？</a></li>
+        <li><a href="#54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？</a></li>
+      </ol>
+    </li>
+    <li><a href="#八知识速记表">八、知识速记表</a></li>
+    <li><a href="#九网络故障排查万能思路">九、网络故障排查万能思路</a></li>
+    <li><a href="#十答题万能模板">十、答题万能模板</a></li>
+    <li><a href="#十一重点背诵清单">十一、重点背诵清单</a>
+      <ol>
+        <li><a href="#第一优先级">第一优先级</a></li>
+        <li><a href="#第二优先级">第二优先级</a></li>
+        <li><a href="#第三优先级">第三优先级</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -532,7 +514,7 @@
 
 
                 <time>
-                    Aug 17, 2026 17:20 &#43;0800
+                    Aug 17, 2026 17:45 &#43;0800
                 </time>
             </div></footer>
 
@@ -543,11 +525,11 @@
     <section class="article-content">
     
     
-    <h1 id="一网络基础">一、网络基础
-</h1><hr>
-<h2 id="1-tcp三次握手">1. TCP三次握手
-</h2><h3 id="11-tcp是什么">1.1 TCP是什么？
-</h3><p>TCP（Transmission Control Protocol，传输控制协议）是一种<strong>面向连接、可靠的传输层协议</strong>。</p>
+    <h2 id="一网络基础">一、网络基础
+</h2><hr>
+<h3 id="1-tcp三次握手">1. TCP三次握手
+</h3><h4 id="11-tcp是什么">1.1 TCP是什么？
+</h4><p>TCP（Transmission Control Protocol，传输控制协议）是一种<strong>面向连接、可靠的传输层协议</strong>。</p>
 <p>主要特点：</p>
 <ul>
 <li>面向连接</li>
@@ -569,8 +551,8 @@
 </ul>
 <p>来保证数据可靠传输。</p>
 <hr>
-<h3 id="12-为什么需要三次握手">1.2 为什么需要三次握手？
-</h3><p>TCP建立连接时需要确认双方：</p>
+<h4 id="12-为什么需要三次握手">1.2 为什么需要三次握手？
+</h4><p>TCP建立连接时需要确认双方：</p>
 <ol>
 <li>客户端能够发送数据</li>
 <li>服务端能够接收数据</li>
@@ -579,8 +561,8 @@
 </ol>
 <p>因此需要三次通信完成双方状态确认。</p>
 <hr>
-<h3 id="13-三次握手过程">1.3 三次握手过程
-</h3><p>客户端                                  服务端</p>
+<h4 id="13-三次握手过程">1.3 三次握手过程
+</h4><p>客户端                                  服务端</p>
 <p>SYN, Seq=x</p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
 <pre><code>                 SYN + ACK
@@ -596,8 +578,8 @@
 <pre><code>      TCP连接建立
 </code></pre>
 <p>具体过程：</p>
-<h4 id="第一次握手">第一次握手
-</h4><p>客户端 → 服务端：</p>
+<h5 id="第一次握手">第一次握手
+</h5><p>客户端 → 服务端：</p>
 <p>SYN=1</p>
 <p>Seq=x</p>
 <p>表示：</p>
@@ -605,8 +587,8 @@
 <p>客户端请求建立TCP连接，并告诉服务器自己的初始序列号是x。</p>
 </blockquote>
 <hr>
-<h4 id="第二次握手">第二次握手
-</h4><p>服务端 → 客户端：</p>
+<h5 id="第二次握手">第二次握手
+</h5><p>服务端 → 客户端：</p>
 <p>SYN=1</p>
 <p>ACK=1</p>
 <p>Seq=y</p>
@@ -616,8 +598,8 @@
 <p>服务端收到客户端请求，同意建立连接，同时告诉客户端自己的初始序列号是y。</p>
 </blockquote>
 <hr>
-<h4 id="第三次握手">第三次握手
-</h4><p>客户端 → 服务端：</p>
+<h5 id="第三次握手">第三次握手
+</h5><p>客户端 → 服务端：</p>
 <p>ACK=1</p>
 <p>Ack=y+1</p>
 <p>表示：</p>
@@ -637,8 +619,8 @@
 </blockquote>
 <hr>
 <h4 id="15-常见追问">1.5 常见追问
-</h4><p><strong>为什么不是两次握手？</strong></p>
-<p>因为两次握手无法充分确认：</p>
+</h4><h5 id="为什么不是两次握手"><strong>为什么不是两次握手？</strong>
+</h5><p>因为两次握手无法充分确认：</p>
 <blockquote>
 <p>服务端的发送能力和客户端的接收能力。</p>
 </blockquote>
@@ -647,9 +629,9 @@
 <p>客户端已经收到自己的SYN+ACK。</p>
 </blockquote>
 <hr>
-<h2 id="2-tcp四次挥手">2. TCP四次挥手
-</h2><h3 id="21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？
-</h3><p>TCP是<strong>全双工通信</strong>。</p>
+<h3 id="2-tcp四次挥手">2. TCP四次挥手
+</h3><h4 id="21-为什么tcp断开连接需要四次">2.1 为什么TCP断开连接需要四次？
+</h4><p>TCP是<strong>全双工通信</strong>。</p>
 <p>双方的数据发送方向需要分别关闭，因此通常需要：</p>
 <p>客户端 FIN</p>
 <p>服务器 ACK</p>
@@ -657,8 +639,8 @@
 <p>客户端 ACK</p>
 <p>共四次。</p>
 <hr>
-<h3 id="22-四次挥手过程">2.2 四次挥手过程
-</h3><p>客户端                                  服务端</p>
+<h4 id="22-四次挥手过程">2.2 四次挥手过程
+</h4><p>客户端                                  服务端</p>
 <p>FIN</p>
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&gt;</p>
 <pre><code>                 ACK
@@ -672,16 +654,16 @@
 <pre><code>      TCP连接关闭
 </code></pre>
 <hr>
-<h3 id="23-四次挥手详细过程">2.3 四次挥手详细过程
-</h3><h4 id="第一次">第一次
-</h4><p>客户端：</p>
+<h4 id="23-四次挥手详细过程">2.3 四次挥手详细过程
+</h4><h5 id="第一次">第一次
+</h5><p>客户端：</p>
 <p>FIN=1</p>
 <p>表示：</p>
 <blockquote>
 <p>客户端没有数据要发送了，希望关闭连接。</p>
 </blockquote>
-<h4 id="第二次">第二次
-</h4><p>服务端：</p>
+<h5 id="第二次">第二次
+</h5><p>服务端：</p>
 <p>ACK=1</p>
 <p>表示：</p>
 <blockquote>
@@ -689,16 +671,16 @@
 </blockquote>
 <p>但是服务端可能还有数据没有发送完。</p>
 <hr>
-<h4 id="第三次">第三次
-</h4><p>服务端数据发送完成后：</p>
+<h5 id="第三次">第三次
+</h5><p>服务端数据发送完成后：</p>
 <p>FIN=1</p>
 <p>表示：</p>
 <blockquote>
 <p>服务端也没有数据需要发送了。</p>
 </blockquote>
 <hr>
-<h4 id="第四次">第四次
-</h4><p>客户端：</p>
+<h5 id="第四次">第四次
+</h5><p>客户端：</p>
 <p>ACK=1</p>
 <p>表示：</p>
 <blockquote>
@@ -706,8 +688,8 @@
 </blockquote>
 <p>连接关闭。</p>
 <hr>
-<h3 id="24-time_wait是什么">2.4 TIME_WAIT是什么？
-</h3><p>主动关闭连接的一方通常会进入：</p>
+<p>2.4 TIME_WAIT是什么？</p>
+<p>主动关闭连接的一方通常会进入：</p>
 <p>TIME_WAIT</p>
 <p>主要作用：</p>
 <ol>
@@ -717,9 +699,9 @@
 <p>经典等待时间：</p>
 <p>2MSL</p>
 <hr>
-<h2 id="3-udp">3. UDP
-</h2><h3 id="31-udp是什么">3.1 UDP是什么？
-</h3><p>UDP（User Datagram Protocol）是无连接的传输层协议。</p>
+<h3 id="3-udp">3. UDP
+</h3><h4 id="31-udp是什么">3.1 UDP是什么？
+</h4><p>UDP（User Datagram Protocol）是无连接的传输层协议。</p>
 <p>特点：</p>
 <ul>
 <li>无连接</li>
@@ -731,8 +713,8 @@
 <li>延迟较低</li>
 </ul>
 <hr>
-<h3 id="32-tcp与udp对比">3.2 TCP与UDP对比
-</h3><div class="table-wrapper"><table>
+<h4 id="32-tcp与udp对比">3.2 TCP与UDP对比
+</h4><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>项目</th>
@@ -784,23 +766,23 @@
   </tbody>
 </table></div>
 <hr>
-<h3 id="33-常见udp应用">3.3 常见UDP应用
-</h3><h4 id="dnsdomain-name-system-域名系统的缩写">DNS（Domain Name System 域名系统的缩写）
-</h4><p>通常：</p>
+<h4 id="33-常见udp应用">3.3 常见UDP应用
+</h4><h5 id="dnsdomain-name-system-域名系统的缩写">DNS（Domain Name System 域名系统的缩写）
+</h5><p>通常：</p>
 <p>UDP 53</p>
-<h4 id="dhcpdynamic-host-configuration-protocol-动态主机配置协议">DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）
-</h4><p>使用：</p>
+<h5 id="dhcpdynamic-host-configuration-protocol-动态主机配置协议">DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）
+</h5><p>使用：</p>
 <p>UDP 67/68</p>
-<h4 id="snmpsimple-network-management-protocol-简单网络管理协议">SNMP（Simple Network Management Protocol 简单网络管理协议）
-</h4><p>通常：</p>
+<h5 id="snmpsimple-network-management-protocol-简单网络管理协议">SNMP（Simple Network Management Protocol 简单网络管理协议）
+</h5><p>通常：</p>
 <p>UDP 161</p>
-<h4 id="snmp-trap">SNMP Trap
-</h4><p>通常：它允许被管理的设备在出现特定事件时主动向网络管理系统（NMS）发送消息。这种机制使得网络管理员无需不断轮询设备，从而节省了计算资源。</p>
+<h5 id="snmp-trap">SNMP Trap
+</h5><p>通常：它允许被管理的设备在出现特定事件时主动向网络管理系统（NMS）发送消息。这种机制使得网络管理员无需不断轮询设备，从而节省了计算资源。</p>
 <p>UDP 162</p>
 <hr>
-<h2 id="4-arp">4. ARP
-</h2><h3 id="41-arp是什么">4.1 ARP是什么？
-</h3><p>ARP（Address Resolution Protocol 地址解析协议）用于：</p>
+<h3 id="4-arp">4. ARP
+</h3><h4 id="41-arp是什么">4.1 ARP是什么？
+</h4><p>ARP（Address Resolution Protocol 地址解析协议）用于：</p>
 <blockquote>
 <p><strong>根据IPv4地址查询对应的MAC地址。</strong></p>
 </blockquote>
@@ -811,8 +793,8 @@
 <p>AA:BB:CC:DD:EE:FF</p>
 <p>主机需要发送数据时，如果知道目标IP但不知道MAC，就会使用ARP。</p>
 <hr>
-<h3 id="42-arp工作过程">4.2 ARP工作过程
-</h3><p>例如：</p>
+<h4 id="42-arp工作过程">4.2 ARP工作过程
+</h4><p>例如：</p>
 <p>客户端：</p>
 <p>192.168.1.10</p>
 <p>目标：</p>
@@ -824,15 +806,15 @@
 <p>客户端将结果保存到：</p>
 <p>ARP缓存表</p>
 <hr>
-<h3 id="43-常用命令">4.3 常用命令
-</h3><p>Windows：</p>
+<h4 id="43-常用命令">4.3 常用命令
+</h4><p>Windows：</p>
 <p>arp -a   (用于<strong>显示本机ARP缓存表</strong>，即当前已解析的 <strong>IP地址与MAC地址映射关系</strong>。)</p>
 <p>Linux：</p>
 <p>ip neigh</p>
 <p>(<strong>ip neigh</strong> 命令是用于管理 IP 邻居表的工具，它允许用户添加、删除或显示 ARP（IPv4）或 NDP（IPv6）的静态记录。这些记录是协议地址和链路层地址之间的绑定，用于在同一链路上共享的主机。)</p>
 <hr>
-<h3 id="44-arp常见故障">4.4 ARP常见故障
-</h3><p>如果：</p>
+<h4 id="44-arp常见故障">4.4 ARP常见故障
+</h4><p>如果：</p>
 <blockquote>
 <p>IP地址正常，但无法访问同网段主机</p>
 </blockquote>
@@ -845,9 +827,9 @@
 <p>↓</p>
 <p>交换机MAC地址表</p>
 <hr>
-<h2 id="5-dns">5. DNS
-</h2><h3 id="51-dns是什么">5.1 DNS是什么？
-</h3><p>DNS（Domain Name System）负责：</p>
+<h3 id="5-dns">5. DNS
+</h3><h4 id="51-dns是什么">5.1 DNS是什么？
+</h4><p>DNS（Domain Name System）负责：</p>
 <blockquote>
 <p><strong>域名 → IP地址</strong></p>
 </blockquote>
@@ -858,8 +840,8 @@
 </code></pre>
 <p>93.184.216.34</p>
 <hr>
-<h3 id="52-dns常见记录">5.2 DNS常见记录
-</h3><div class="table-wrapper"><table>
+<h4 id="52-dns常见记录">5.2 DNS常见记录
+</h4><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>类型</th>
@@ -894,13 +876,13 @@
   </tbody>
 </table></div>
 <hr>
-<h3 id="53-dns常用端口">5.3 DNS常用端口
-</h3><p>UDP 53</p>
+<h4 id="53-dns常用端口">5.3 DNS常用端口
+</h4><p>UDP 53</p>
 <p>DNS进行某些特殊查询或大响应时也可能使用：</p>
 <p>TCP 53</p>
 <hr>
-<h3 id="54-dns故障排查">5.4 DNS故障排查
-</h3><p>如果：</p>
+<h4 id="54-dns故障排查">5.4 DNS故障排查
+</h4><p>如果：</p>
 <blockquote>
 <p>能Ping IP，但访问域名失败</p>
 </blockquote>
@@ -929,9 +911,9 @@
 虽然通常情况下 dig 使用命令行参数，但它也可以按批处理模式从文件读取搜索请求。
 不同于早期版本，dig 的 BIND9 实现允许从命令行发出多个查询。)</p>
 <hr>
-<h2 id="6-dhcp">6. DHCP
-</h2><h3 id="61-dhcp是什么">6.1 DHCP是什么？
-</h3><p>DHCP（Dynamic Host Configuration Protocol <strong>动态主机配置协议</strong>）用于：</p>
+<h3 id="6-dhcp">6. DHCP
+</h3><h4 id="61-dhcp是什么">6.1 DHCP是什么？
+</h4><p>DHCP（Dynamic Host Configuration Protocol <strong>动态主机配置协议</strong>）用于：</p>
 <blockquote>
 <p><strong>自动为客户端分配网络配置。</strong></p>
 </blockquote>
@@ -944,8 +926,8 @@
 <li>租期</li>
 </ul>
 <hr>
-<h3 id="62-dhcp四步过程">6.2 DHCP四步过程
-</h3><p>经典过程：</p>
+<h4 id="62-dhcp四步过程">6.2 DHCP四步过程
+</h4><p>经典过程：</p>
 <p>Discover</p>
 <pre><code>↓
 </code></pre>
@@ -961,39 +943,39 @@
 <p><strong>DORA</strong></p>
 </blockquote>
 <hr>
-<h4 id="dhcp-discover">DHCP Discover
-</h4><p>客户端广播：</p>
+<h5 id="dhcp-discover">DHCP Discover
+</h5><p>客户端广播：</p>
 <blockquote>
 <p>我需要一个IP地址。</p>
 </blockquote>
-<h4 id="dhcp-offer">DHCP Offer
-</h4><p>服务器提供：</p>
+<h5 id="dhcp-offer">DHCP Offer
+</h5><p>服务器提供：</p>
 <blockquote>
 <p>可以给你这个IP。</p>
 </blockquote>
-<h4 id="dhcp-request">DHCP Request
-</h4><p>客户端：</p>
+<h5 id="dhcp-request">DHCP Request
+</h5><p>客户端：</p>
 <blockquote>
 <p>我选择这个IP。</p>
 </blockquote>
-<h4 id="dhcp-ack">DHCP ACK
-</h4><p>服务器：</p>
+<h5 id="dhcp-ack">DHCP ACK
+</h5><p>服务器：</p>
 <blockquote>
 <p>确认分配。</p>
 </blockquote>
 <hr>
-<h3 id="63-dhcp常用端口">6.3 DHCP常用端口
-</h3><p>Server：UDP 67</p>
+<h4 id="63-dhcp常用端口">6.3 DHCP常用端口
+</h4><p>Server：UDP 67</p>
 <p>Client：UDP 68</p>
 <hr>
-<h2 id="7-http--https">7. HTTP / HTTPS
-</h2><h3 id="71-http">7.1 HTTP
-</h3><p>HTTP（HyperText Transfer Protocol <strong>超文本传输协议</strong>）是应用层协议。</p>
+<h3 id="7-http--https">7. HTTP / HTTPS
+</h3><h4 id="71-http">7.1 HTTP
+</h4><p>HTTP（HyperText Transfer Protocol <strong>超文本传输协议</strong>）是应用层协议。</p>
 <p>常见端口：</p>
 <p>TCP 80</p>
 <hr>
-<h3 id="72-https">7.2 HTTPS
-</h3><p>HTTPS：</p>
+<h4 id="72-https">7.2 HTTPS
+</h4><p>HTTPS：</p>
 <p>HTTP + TLS<br>
 (传输层加密（<strong>TLS，Transport Layer Security</strong>）)</p>
 <p>常见端口：</p>
@@ -1005,8 +987,8 @@
 <li>数据完整性</li>
 </ul>
 <hr>
-<h3 id="73-http常见状态码">7.3 HTTP常见状态码
-</h3><div class="table-wrapper"><table>
+<h4 id="73-http常见状态码">7.3 HTTP常见状态码
+</h4><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>状态码</th>
@@ -1057,8 +1039,8 @@
   </tbody>
 </table></div>
 <hr>
-<h3 id="74-常问502是什么意思">7.4 常问：502是什么意思？
-</h3><p>502 Bad Gateway通常表示：</p>
+<h4 id="74-常问502是什么意思">7.4 常问：502是什么意思？
+</h4><p>502 Bad Gateway通常表示：</p>
 <blockquote>
 <p>网关/代理服务器从上游服务器获得了无效响应。</p>
 </blockquote>
@@ -1082,9 +1064,9 @@
 <li>应用程序状态</li>
 </ul>
 <hr>
-<h2 id="8-icmp">8. ICMP
-</h2><h3 id="81-icmp是什么">8.1 ICMP是什么？
-</h3><p>ICMP（Internet Control Message Protocol <strong>网际控制报文协议</strong>）主要用于：</p>
+<h3 id="8-icmp">8. ICMP
+</h3><h4 id="81-icmp是什么">8.1 ICMP是什么？
+</h4><p>ICMP（Internet Control Message Protocol <strong>网际控制报文协议</strong>）主要用于：</p>
 <blockquote>
 <p><strong>网络状态检测和错误报告。</strong></p>
 </blockquote>
@@ -1098,8 +1080,8 @@
 它可以帮助用户确定数据包从源计算机到目标地址在网络中的路径。
 Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请求消息来工作，每个消息的生存时间 (TTL) 值逐渐增加，从而发现数据包经过的路由器的 IP 地址。)</p>
 <hr>
-<h3 id="82-ping原理">8.2 Ping原理
-</h3><p>Ping主要使用：</p>
+<h4 id="82-ping原理">8.2 Ping原理
+</h4><p>Ping主要使用：</p>
 <p>ICMP Echo Request</p>
 <p>对方返回：</p>
 <p>ICMP Echo Reply</p>
@@ -1116,8 +1098,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>↓</p>
 <p>主机A</p>
 <hr>
-<h3 id="83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机
-</h3><p>可能原因：</p>
+<h4 id="83-ping不通不一定代表服务器宕机">8.3 Ping不通不一定代表服务器宕机
+</h4><p>可能原因：</p>
 <ul>
 <li>ICMP被防火墙禁止</li>
 <li>路由问题</li>
@@ -1131,11 +1113,11 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p><strong>Ping不通 ≠ 服务器一定宕机。</strong></p>
 </blockquote>
 <hr>
-<h1 id="二路由与交换">二、路由与交换
-</h1><hr>
-<h2 id="9-vlan">9. VLAN
-</h2><h3 id="91-vlan是什么">9.1 VLAN是什么？
-</h3><p>VLAN（Virtual Local Area Network <strong>虚拟局域网</strong>）：</p>
+<h2 id="二路由与交换">二、路由与交换
+</h2><hr>
+<h3 id="9-vlan">9. VLAN
+</h3><h4 id="91-vlan是什么">9.1 VLAN是什么？
+</h4><p>VLAN（Virtual Local Area Network <strong>虚拟局域网</strong>）：</p>
 <blockquote>
 <p><strong>虚拟局域网</strong></p>
 </blockquote>
@@ -1148,24 +1130,24 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>VLAN 20：服务器网</p>
 <p>VLAN 30：访客网</p>
 <hr>
-<h3 id="92-vlan的主要作用">9.2 VLAN的主要作用
-</h3><h4 id="-隔离广播域">① 隔离广播域
-</h4><p>减少广播流量。</p>
-<h4 id="-网络隔离">② 网络隔离
-</h4><p>例如：</p>
+<h4 id="92-vlan的主要作用">9.2 VLAN的主要作用
+</h4><h5 id="-隔离广播域">① 隔离广播域
+</h5><p>减少广播流量。</p>
+<h5 id="-网络隔离">② 网络隔离
+</h5><p>例如：</p>
 <p>员工网</p>
 <pre><code>×
 </code></pre>
 <p>访客网</p>
-<h4 id="-提高安全性">③ 提高安全性
-</h4><p>不同VLAN之间需要通过：</p>
+<h5 id="-提高安全性">③ 提高安全性
+</h5><p>不同VLAN之间需要通过：</p>
 <blockquote>
 <p>三层交换机 / 路由器 / 防火墙</p>
 </blockquote>
 <p>进行通信。</p>
 <hr>
-<h2 id="10-access端口">10. Access端口
-</h2><p>Access端口通常用于：</p>
+<h3 id="10-access端口">10. Access端口
+</h3><p>Access端口通常用于：</p>
 <blockquote>
 <p><strong>连接终端设备。</strong></p>
 </blockquote>
@@ -1198,8 +1180,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </div>
 </div><p>上述配置将FastEthernet0/1端口设置为Access端口，并将其分配到VLAN 10。此端口将仅允许来自VLAN 10的流量进入。</p>
 <hr>
-<h2 id="11-trunk端口">11. Trunk端口
-</h2><p>Trunk端口用于：</p>
+<h3 id="11-trunk端口">11. Trunk端口
+</h3><p>Trunk端口用于：</p>
 <blockquote>
 <p><strong>在交换机之间传输多个VLAN。</strong></p>
 </blockquote>
@@ -1273,8 +1255,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h3 id="111-access与trunk对比">11.1 Access与Trunk对比
-</h3><div class="table-wrapper"><table>
+<h4 id="111-access与trunk对比">11.1 Access与Trunk对比
+</h4><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>项目</th>
@@ -1316,9 +1298,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
   </tbody>
 </table></div>
 <hr>
-<h2 id="12-stp">12. STP
-</h2><h3 id="121-stp是什么">12.1 STP是什么？
-</h3><p>STP（Spanning Tree Protocol）：</p>
+<h3 id="12-stp">12. STP
+</h3><h4 id="121-stp是什么">12.1 STP是什么？
+</h4><p>STP（Spanning Tree Protocol）：</p>
 <blockquote>
 <p><strong>生成树协议</strong></p>
 </blockquote>
@@ -1327,8 +1309,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>二层网络环路问题。</p>
 </blockquote>
 <hr>
-<h3 id="122-为什么会有环路">12.2 为什么会有环路？
-</h3><p>例如：</p>
+<h4 id="122-为什么会有环路">12.2 为什么会有环路？
+</h4><p>例如：</p>
 <p>交换机A</p>
 <p>/     \</p>
 <p>/       \</p>
@@ -1345,8 +1327,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <li>网络瘫痪</li>
 </ul>
 <hr>
-<h3 id="123-stp解决方法">12.3 STP解决方法
-</h3><p>STP通过计算生成树：</p>
+<h4 id="123-stp解决方法">12.3 STP解决方法
+</h4><p>STP通过计算生成树：</p>
 <blockquote>
 <p><strong>逻辑上阻塞部分链路。</strong></p>
 </blockquote>
@@ -1355,9 +1337,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>重新计算生成树并恢复备用链路。</p>
 </blockquote>
 <hr>
-<h2 id="13-静态路由">13. 静态路由
-</h2><h3 id="131-什么是静态路由">13.1 什么是静态路由？
-</h3><p>静态路由由管理员：</p>
+<h3 id="13-静态路由">13. 静态路由
+</h3><h4 id="131-什么是静态路由">13.1 什么是静态路由？
+</h4><p>静态路由由管理员：</p>
 <blockquote>
 <p><strong>手动配置路由。</strong></p>
 </blockquote>
@@ -1367,24 +1349,24 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>下一跳：</p>
 <p>192.168.1.2</p>
 <hr>
-<h3 id="132-优点">13.2 优点
-</h3><ul>
+<h4 id="132-优点">13.2 优点
+</h4><ul>
 <li>配置简单</li>
 <li>路径明确</li>
 <li>资源消耗少</li>
 <li>可控性高</li>
 </ul>
 <hr>
-<h3 id="133-缺点">13.3 缺点
-</h3><p>大型网络维护困难。</p>
+<h4 id="133-缺点">13.3 缺点
+</h4><p>大型网络维护困难。</p>
 <p>如果网络拓扑发生变化：</p>
 <blockquote>
 <p>需要人工修改。</p>
 </blockquote>
 <hr>
-<h2 id="14-ospf">14. OSPF
-</h2><h3 id="141-ospf是什么">14.1 OSPF是什么？
-</h3><p>OSPF：</p>
+<h3 id="14-ospf">14. OSPF
+</h3><h4 id="141-ospf是什么">14.1 OSPF是什么？
+</h4><p>OSPF：</p>
 <blockquote>
 <p>Open Shortest Path First（<strong>开放式最短路径优先</strong>）</p>
 </blockquote>
@@ -1397,8 +1379,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>企业内部网络。</p>
 </blockquote>
 <hr>
-<h3 id="142-ospf特点">14.2 OSPF特点
-</h3><ul>
+<h4 id="142-ospf特点">14.2 OSPF特点
+</h4><ul>
 <li>动态路由</li>
 <li>链路状态协议</li>
 <li>使用SPF算法</li>
@@ -1406,8 +1388,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <li>收敛速度较快</li>
 </ul>
 <hr>
-<h3 id="143-ospf-area">14.3 OSPF Area
-</h3><p>常见：</p>
+<h4 id="143-ospf-area">14.3 OSPF Area
+</h4><p>常见：</p>
 <p>Area 0</p>
 <p>称为：</p>
 <blockquote>
@@ -1422,15 +1404,15 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>|</p>
 <p>+&mdash; Area 3</p>
 <hr>
-<h3 id="144-ospf常见问题">14.4 OSPF常见问题
-</h3><h4 id="ospf和静态路由有什么区别">OSPF和静态路由有什么区别？
-</h4><blockquote>
+<h4 id="144-ospf常见问题">14.4 OSPF常见问题
+</h4><h5 id="ospf和静态路由有什么区别">OSPF和静态路由有什么区别？
+</h5><blockquote>
 <p>静态路由需要管理员手动配置，而OSPF能够根据网络拓扑动态学习和计算路由。</p>
 </blockquote>
 <hr>
-<h2 id="15-bgp基础">15. BGP基础
-</h2><h3 id="151-bgp是什么">15.1 BGP是什么？
-</h3><p>BGP：</p>
+<h3 id="15-bgp基础">15. BGP基础
+</h3><h4 id="151-bgp是什么">15.1 BGP是什么？
+</h4><p>BGP：</p>
 <blockquote>
 <p>Border Gateway Protocol （<strong>边界网关协议</strong>）</p>
 </blockquote>
@@ -1443,8 +1425,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p><strong>不同自治系统（AS）之间交换路由信息。</strong></p>
 </blockquote>
 <hr>
-<h3 id="152-bgp常见应用">15.2 BGP常见应用
-</h3><p>例如：</p>
+<h4 id="152-bgp常见应用">15.2 BGP常见应用
+</h4><p>例如：</p>
 <p>运营商A</p>
 <p>|</p>
 <p>| BGP</p>
@@ -1452,8 +1434,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>运营商B</p>
 <p>互联网的大量路由交换依赖BGP。</p>
 <hr>
-<h3 id="153-bgp特点">15.3 BGP特点
-</h3><ul>
+<h4 id="153-bgp特点">15.3 BGP特点
+</h4><ul>
 <li>路径向量型协议</li>
 <li>适合大型网络</li>
 <li>互联网核心路由协议</li>
@@ -1463,8 +1445,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>BGP使用：</p>
 <p>TCP 179</p>
 <hr>
-<h3 id="154-ospf和bgp区别">15.4 OSPF和BGP区别
-</h3><div class="table-wrapper"><table>
+<h4 id="154-ospf和bgp区别">15.4 OSPF和BGP区别
+</h4><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>项目</th>
@@ -1501,9 +1483,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
   </tbody>
 </table></div>
 <hr>
-<h1 id="三网络故障排查">三、网络故障排查
-</h1><h2 id="16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？
-</h2><p>这是网络工程师经典题。</p>
+<h2 id="三网络故障排查">三、网络故障排查
+</h2><h3 id="16-服务器突然无法访问如何排查">16. 服务器突然无法访问，如何排查？
+</h3><p>这是网络工程师经典题。</p>
 <p>不要直接回答：</p>
 <blockquote>
 <p>“先Ping一下。”</p>
@@ -1535,8 +1517,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </code></pre>
 <p>应用层</p>
 <hr>
-<h2 id="17-第一步检查物理链路">17. 第一步：检查物理链路
-</h2><p>首先确认：</p>
+<h3 id="17-第一步检查物理链路">17. 第一步：检查物理链路
+</h3><p>首先确认：</p>
 <ul>
 <li>网线是否正常</li>
 <li>光模块是否正常</li>
@@ -1552,8 +1534,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 （该故障码在接收模块检测到来自网关控制模块D（Serial Data Gateway Module D）的串行数据通信信息存在校验错误、数据长度/ID不匹配、校验和/<strong>CRC错误</strong>等数据完整性问题时被设置，故障位置属于车辆网络通讯系统。）</p>
 <p>Packet Error</p>
 <hr>
-<h2 id="18-第二步检查ip配置">18. 第二步：检查IP配置
-</h2><p>Windows：</p>
+<h3 id="18-第二步检查ip配置">18. 第二步：检查IP配置
+</h3><p>Windows：</p>
 <p>ipconfig /all    （显示所有IP配置信息）</p>
 <p>Linux：</p>
 <p>ip addr    （显示IP地址）</p>
@@ -1573,8 +1555,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>Gateway：</p>
 <p>192.168.1.1</p>
 <hr>
-<h2 id="19-第三步检查arp">19. 第三步：检查ARP
-</h2><p>查看：</p>
+<h3 id="19-第三步检查arp">19. 第三步：检查ARP
+</h3><p>查看：</p>
 <p>arp -a</p>
 <p>或者：</p>
 <p>ip neigh</p>
@@ -1595,8 +1577,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <li>二层链路</li>
 </ul>
 <hr>
-<h2 id="20-第四步检查默认网关">20. 第四步：检查默认网关
-</h2><p>执行：</p>
+<h3 id="20-第四步检查默认网关">20. 第四步：检查默认网关
+</h3><p>执行：</p>
 <p>ping 192.168.1.1</p>
 <p>如果：</p>
 <blockquote>
@@ -1613,8 +1595,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>↓</p>
 <p>网关接口</p>
 <hr>
-<h2 id="21-第五步检查路由">21. 第五步：检查路由
-</h2><p>Windows：</p>
+<h3 id="21-第五步检查路由">21. 第五步：检查路由
+</h3><p>Windows：</p>
 <p>route print<br>
 （<strong>Windows系统中用于显示本地路由表的命令</strong>，它能列出所有网络路由条目，包括目标网络、网关、接口和度量值等信息。）</p>
 <p>Linux：</p>
@@ -1626,8 +1608,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </blockquote>
 <p>Linux例如：</p>
 <p>default via 192.168.1.1</p>
-<h3 id="查看路由">查看路由
-</h3><p>使用_ip route_命令可以查看当前系统的路由表：</p>
+<h4 id="查看路由">查看路由
+</h4><p>使用_ip route_命令可以查看当前系统的路由表：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1637,8 +1619,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这将显示所有路由条目，包括默认路由、主机路由和网络路由。</p>
-<h3 id="添加路由">添加路由
-</h3><p>可以使用_ip route add_命令添加新的路由条目。例如，添加一个到达特定网络的路由：</p>
+<h4 id="添加路由">添加路由
+</h4><p>可以使用_ip route add_命令添加新的路由条目。例如，添加一个到达特定网络的路由：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1648,8 +1630,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这表示将发往192.168.1.0/24网络的数据包通过192.168.0.1网关，并使用eth0接口发送。</p>
-<h3 id="删除路由">删除路由
-</h3><p>使用_ip route del_命令可以删除指定的路由条目。例如，删除一个到达特定网络的路由：</p>
+<h4 id="删除路由">删除路由
+</h4><p>使用_ip route del_命令可以删除指定的路由条目。例如，删除一个到达特定网络的路由：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1659,8 +1641,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="22-第六步检查dns">22. 第六步：检查DNS
-</h2><p>如果：</p>
+<h3 id="22-第六步检查dns">22. 第六步：检查DNS
+</h3><p>如果：</p>
 <p>ping IP地址正常</p>
 <p>但是：</p>
 <p>ping 域名失败</p>
@@ -1687,8 +1669,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL
-</h2><p>需要检查：</p>
+<h3 id="23-第七步检查防火墙和acl">23. 第七步：检查防火墙和ACL
+</h3><p>需要检查：</p>
 <ul>
 <li>Windows Firewall</li>
 <li>Linux iptables</li>
@@ -1714,8 +1696,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>Ping正常，但是TCP 443被防火墙阻断。</p>
 </blockquote>
 <hr>
-<h2 id="24-第八步检查服务端口">24. 第八步：检查服务端口
-</h2><p>Linux：</p>
+<h3 id="24-第八步检查服务端口">24. 第八步：检查服务端口
+</h3><p>Linux：</p>
 <p>[ss -lntp](<a class="link" href="https://blog.csdn.net/whatday/article/details/112170240"  target="_blank" rel="noopener"
     >linux ss 命令简介 端口连接查看 代替netstat_使用ss命令查看当前系统中处于listen状态的所有tcp连接，并显示ip信息和socket信息，使-CSDN博客</a>)</p>
 <p>或者：</p>
@@ -1729,8 +1711,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>[netstat -ano](<a class="link" href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html"  target="_blank" rel="noopener"
     >Windows下如何查看某个端口被谁占用 | 菜鸟教程</a>)</p>
 <hr>
-<h2 id="25-第九步检查应用层">25. 第九步：检查应用层
-</h2><p>如果：</p>
+<h3 id="25-第九步检查应用层">25. 第九步：检查应用层
+</h3><p>如果：</p>
 <p>网络正常</p>
 <p>↓</p>
 <p>TCP端口正常</p>
@@ -1754,8 +1736,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>[journalctl -u nginx](<a class="link" href="https://cloud.tencent.com/developer/article/2469398"  target="_blank" rel="noopener"
     >Job for nginx.service Failed: Nginx服务启动失败的完美解决方法-腾讯云开发者社区-腾讯云</a>)</p>
 <hr>
-<h2 id="26-服务器排查标准回答">26. 服务器排查标准回答
-</h2><blockquote>
+<h3 id="26-服务器排查标准回答">26. 服务器排查标准回答
+</h3><blockquote>
 <p><strong>“服务器突然无法访问，你怎么排查？”</strong></p>
 </blockquote>
 <p>推荐回答：</p>
@@ -1764,9 +1746,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <p>如果IP层连通正常但域名访问异常，我会检查DNS。然后检查防火墙、ACL、安全组等策略。如果网络层没有问题，再检查服务器对应的TCP端口是否监听，以及Web或其他应用服务是否正常，最后结合系统日志和应用日志进一步定位。”</p>
 </blockquote>
 <hr>
-<h1 id="四zabbix网络监控">四、Zabbix网络监控
-</h1><h2 id="27-zabbix是什么">27. Zabbix是什么？
-</h2><p>Zabbix是一款：</p>
+<h2 id="四zabbix网络监控">四、Zabbix网络监控
+</h2><h3 id="27-zabbix是什么">27. Zabbix是什么？
+</h3><p>Zabbix是一款：</p>
 <blockquote>
 <p><strong>开源监控与告警平台。</strong></p>
 </blockquote>
@@ -1784,8 +1766,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 <li>系统状态</li>
 </ul>
 <hr>
-<h2 id="28-zabbix基本架构">28. Zabbix基本架构
-</h2><p>典型结构：</p>
+<h3 id="28-zabbix基本架构">28. Zabbix基本架构
+</h3><p>典型结构：</p>
 <pre><code>          Zabbix Server
 
                 |
@@ -1804,8 +1786,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 Linux服务器   交换机       网络设备
 </code></pre>
 <hr>
-<h2 id="29-zabbix-server">29. Zabbix Server
-</h2><p>Zabbix Server是：</p>
+<h3 id="29-zabbix-server">29. Zabbix Server
+</h3><p>Zabbix Server是：</p>
 <blockquote>
 <p><strong>监控系统的核心组件。</strong></p>
 </blockquote>
@@ -1819,8 +1801,8 @@ Linux服务器   交换机       网络设备
 <li>管理监控对象</li>
 </ul>
 <hr>
-<h2 id="30-zabbix-agent">30. Zabbix Agent
-</h2><p>Zabbix Agent通常安装在：</p>
+<h3 id="30-zabbix-agent">30. Zabbix Agent
+</h3><p>Zabbix Agent通常安装在：</p>
 <blockquote>
 <p><strong>被监控服务器上。</strong></p>
 </blockquote>
@@ -1842,8 +1824,8 @@ Linux服务器   交换机       网络设备
 <li>系统状态</li>
 </ul>
 <hr>
-<h2 id="31-snmp">31. SNMP
-</h2><p>SNMP：</p>
+<h3 id="31-snmp">31. SNMP
+</h3><p>SNMP：</p>
 <blockquote>
 <p>Simple Network Management Protocol</p>
 </blockquote>
@@ -1863,14 +1845,14 @@ Linux服务器   交换机       网络设备
 <li>无线控制器</li>
 </ul>
 <hr>
-<h2 id="311-snmp常见端口">31.1 SNMP常见端口
-</h2><p>监控查询：</p>
+<h3 id="311-snmp常见端口">31.1 SNMP常见端口
+</h3><p>监控查询：</p>
 <p>UDP 161</p>
 <p>Trap告警：</p>
 <p>UDP 162</p>
 <hr>
-<h2 id="32-icmp监控">32. ICMP监控
-</h2><p>Zabbix可以使用ICMP检测：</p>
+<h3 id="32-icmp监控">32. ICMP监控
+</h3><p>Zabbix可以使用ICMP检测：</p>
 <blockquote>
 <p><strong>设备是否在线。</strong></p>
 </blockquote>
@@ -1885,8 +1867,8 @@ Linux服务器   交换机       网络设备
 <p>产生告警。</p>
 </blockquote>
 <hr>
-<h2 id="33-cpu监控">33. CPU监控
-</h2><p>CPU监控可以发现：</p>
+<h3 id="33-cpu监控">33. CPU监控
+</h3><p>CPU监控可以发现：</p>
 <ul>
 <li>CPU持续过高</li>
 <li>单核过载</li>
@@ -1901,8 +1883,8 @@ Linux服务器   交换机       网络设备
 <p>高CPU告警。</p>
 </blockquote>
 <hr>
-<h2 id="34-内存监控">34. 内存监控
-</h2><p>重点关注：</p>
+<h3 id="34-内存监控">34. 内存监控
+</h3><p>重点关注：</p>
 <ul>
 <li>内存使用率</li>
 <li>可用内存</li>
@@ -1916,8 +1898,8 @@ Linux服务器   交换机       网络设备
 <p>内存使用率过高告警。</p>
 </blockquote>
 <hr>
-<h2 id="35-磁盘监控">35. 磁盘监控
-</h2><p>监控：</p>
+<h3 id="35-磁盘监控">35. 磁盘监控
+</h3><p>监控：</p>
 <ul>
 <li>磁盘空间</li>
 <li>inode</li>
@@ -1931,8 +1913,8 @@ Linux服务器   交换机       网络设备
 <p>磁盘空间不足。</p>
 </blockquote>
 <hr>
-<h2 id="36-网络流量监控">36. 网络流量监控
-</h2><p>网络设备通常通过：</p>
+<h3 id="36-网络流量监控">36. 网络流量监控
+</h3><p>网络设备通常通过：</p>
 <blockquote>
 <p><strong>SNMP</strong></p>
 </blockquote>
@@ -1952,18 +1934,18 @@ Linux服务器   交换机       网络设备
 <li>接口状态</li>
 </ul>
 <hr>
-<h2 id="37-网络设备监控">37. 网络设备监控
-</h2><p>Zabbix可以监控：</p>
-<h2 id="交换机">交换机
-</h2><ul>
+<h3 id="37-网络设备监控">37. 网络设备监控
+</h3><p>Zabbix可以监控：</p>
+<h4 id="交换机">交换机
+</h4><ul>
 <li>CPU</li>
 <li>内存</li>
 <li>端口状态</li>
 <li>端口流量</li>
 <li>错误包</li>
 </ul>
-<h2 id="路由器">路由器
-</h2><ul>
+<h4 id="路由器">路由器
+</h4><ul>
 <li>CPU</li>
 <li>内存</li>
 <li>接口状态</li>
@@ -1971,8 +1953,8 @@ Linux服务器   交换机       网络设备
 <li>丢包</li>
 <li>路由相关指标</li>
 </ul>
-<h2 id="防火墙">防火墙
-</h2><ul>
+<h4 id="防火墙">防火墙
+</h4><ul>
 <li>CPU</li>
 <li>内存</li>
 <li>接口流量</li>
@@ -1981,8 +1963,8 @@ Linux服务器   交换机       网络设备
 <li>告警</li>
 </ul>
 <hr>
-<h2 id="38-zabbix告警">38. Zabbix告警
-</h2><p>Zabbix核心能力之一：</p>
+<h3 id="38-zabbix告警">38. Zabbix告警
+</h3><p>Zabbix核心能力之一：</p>
 <blockquote>
 <p><strong>监控 → 判断 → 告警</strong></p>
 </blockquote>
@@ -2008,44 +1990,44 @@ Linux服务器   交换机       网络设备
 </ul>
 <p>具体取决于配置和版本。</p>
 <hr>
-<h2 id="39-zabbix几个核心概念">39. Zabbix几个核心概念
-</h2><h2 id="host">Host
-</h2><p>被监控对象。</p>
+<h3 id="39-zabbix几个核心概念">39. Zabbix几个核心概念
+</h3><h4 id="host">Host
+</h4><p>被监控对象。</p>
 <p>例如：</p>
 <p>192.168.1.100</p>
 <hr>
-<h2 id="item">Item
-</h2><p>监控指标。</p>
+<h4 id="item">Item
+</h4><p>监控指标。</p>
 <p>例如：</p>
 <p>CPU利用率</p>
 <p>内存使用率</p>
 <p>磁盘空间</p>
 <p>网络流量</p>
 <hr>
-<h2 id="trigger">Trigger
-</h2><p>触发条件。</p>
+<h4 id="trigger">Trigger
+</h4><p>触发条件。</p>
 <p>例如：</p>
 <p>CPU &gt; 90%</p>
 <hr>
-<h2 id="action">Action
-</h2><p>触发之后执行的动作。</p>
+<h4 id="action">Action
+</h4><p>触发之后执行的动作。</p>
 <p>例如：</p>
 <p>发送邮件</p>
 <p>发送Webhook</p>
 <hr>
-<h2 id="template">Template
-</h2><p>监控模板。</p>
+<h4 id="template">Template
+</h4><p>监控模板。</p>
 <p>可以把一组：</p>
 <blockquote>
 <p>Item + Trigger + Discovery</p>
 </blockquote>
 <p>等配置批量应用到多个设备。</p>
 <hr>
-<h1 id="五网络工程师常用命令">五、网络工程师常用命令
-</h1><hr>
-<h2 id="40-windows">40. Windows
-</h2><h3 id="查看ip">查看IP
-</h3><div class="highlight"><div class="chroma">
+<h2 id="五网络工程师常用命令">五、网络工程师常用命令
+</h2><hr>
+<h3 id="40-windows">40. Windows
+</h3><h4 id="查看ip">查看IP
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2053,8 +2035,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ipconfig /all
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="查看路由-1">查看路由
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="查看路由-1">查看路由
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2062,8 +2044,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">route print
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="查看arp">查看ARP
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="查看arp">查看ARP
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2071,8 +2053,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">arp -a
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="ping">Ping
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="ping">Ping
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2080,8 +2062,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ping 192.168.1.1
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="路径跟踪">路径跟踪
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="路径跟踪">路径跟踪
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2089,8 +2071,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tracert 8.8.8.8
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="dns查询">DNS查询
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="dns查询">DNS查询
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2098,8 +2080,8 @@ Linux服务器   交换机       网络设备
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nslookup www.example.com
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="查看tcp连接">查看TCP连接
-</h3><div class="highlight"><div class="chroma">
+</div><h4 id="查看tcp连接">查看TCP连接
+</h4><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2108,10 +2090,10 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h1 id="六linux网络排查命令">六、Linux网络排查命令
-</h1><hr>
-<h2 id="41-查看ip">41. 查看IP
-</h2><div class="highlight"><div class="chroma">
+<h2 id="六linux网络排查命令">六、Linux网络排查命令
+</h2><hr>
+<h3 id="41-查看ip">41. 查看IP
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2120,8 +2102,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="42-查看路由">42. 查看路由
-</h2><div class="highlight"><div class="chroma">
+<h3 id="42-查看路由">42. 查看路由
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2130,8 +2112,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="43-查看arp邻居表">43. 查看ARP/邻居表
-</h2><div class="highlight"><div class="chroma">
+<h3 id="43-查看arp邻居表">43. 查看ARP/邻居表
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2140,8 +2122,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="44-ping">44. Ping
-</h2><div class="highlight"><div class="chroma">
+<h3 id="44-ping">44. Ping
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2150,8 +2132,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="45-路由追踪">45. 路由追踪
-</h2><div class="highlight"><div class="chroma">
+<h3 id="45-路由追踪">45. 路由追踪
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2160,8 +2142,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="46-dns查询">46. DNS查询
-</h2><div class="highlight"><div class="chroma">
+<h3 id="46-dns查询">46. DNS查询
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2170,8 +2152,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="47-查看监听端口">47. 查看监听端口
-</h2><div class="highlight"><div class="chroma">
+<h3 id="47-查看监听端口">47. 查看监听端口
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2180,8 +2162,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="48-查看网络连接">48. 查看网络连接
-</h2><div class="highlight"><div class="chroma">
+<h3 id="48-查看网络连接">48. 查看网络连接
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2190,8 +2172,8 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="49-查看网络接口">49. 查看网络接口
-</h2><div class="highlight"><div class="chroma">
+<h3 id="49-查看网络接口">49. 查看网络接口
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
@@ -2200,10 +2182,10 @@ Linux服务器   交换机       网络设备
 </span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
-<h1 id="七高频问题">七、高频问题
-</h1><hr>
-<h2 id="50-ping不通服务器怎么办">50. Ping不通服务器怎么办？
-</h2><p>回答思路：</p>
+<h2 id="七高频问题">七、高频问题
+</h2><hr>
+<h3 id="50-ping不通服务器怎么办">50. Ping不通服务器怎么办？
+</h3><p>回答思路：</p>
 <p>物理链路</p>
 <p>↓</p>
 <p>网卡</p>
@@ -2228,8 +2210,8 @@ Linux服务器   交换机       网络设备
 <p>Ping不通不一定代表服务器宕机。</p>
 </blockquote>
 <hr>
-<h2 id="51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？
-</h2><p>排查：</p>
+<h3 id="51-能ping-ip但不能访问网站怎么办">51. 能Ping IP，但不能访问网站怎么办？
+</h3><p>排查：</p>
 <p>Ping IP</p>
 <p>↓</p>
 <p>TCP 80/443</p>
@@ -2246,8 +2228,8 @@ Linux服务器   交换机       网络设备
     >curl获取本机公网IP（命令行备忘）_curl 我的ip-CSDN博客</a>)</p>
 <p>测试HTTP服务。</p>
 <hr>
-<h2 id="52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？
-</h2><p>优先考虑：</p>
+<h3 id="52-能访问ip但不能访问域名怎么办">52. 能访问IP，但不能访问域名怎么办？
+</h3><p>优先考虑：</p>
 <blockquote>
 <p>DNS问题。</p>
 </blockquote>
@@ -2256,8 +2238,8 @@ Linux服务器   交换机       网络设备
 <p>或者：</p>
 <p>dig example.com</p>
 <hr>
-<h2 id="53-网站访问很慢怎么办">53. 网站访问很慢怎么办？
-</h2><p>可以按照：</p>
+<h3 id="53-网站访问很慢怎么办">53. 网站访问很慢怎么办？
+</h3><p>可以按照：</p>
 <p>客户端</p>
 <p>↓</p>
 <p>DNS</p>
@@ -2288,8 +2270,8 @@ Linux服务器   交换机       网络设备
 <li>数据库性能</li>
 </ul>
 <hr>
-<h2 id="54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？
-</h2><p>不要直接认为服务器宕机。</p>
+<h3 id="54-zabbix突然报警服务器down怎么办">54. Zabbix突然报警服务器Down怎么办？
+</h3><p>不要直接认为服务器宕机。</p>
 <p>先判断：</p>
 <p>Zabbix Server自身是否正常</p>
 <p>↓</p>
@@ -2329,8 +2311,8 @@ Linux服务器   交换机       网络设备
 <p>↓</p>
 <p>Zabbix Server</p>
 <hr>
-<h1 id="八知识速记表">八、知识速记表
-</h1><div class="table-wrapper"><table>
+<h2 id="八知识速记表">八、知识速记表
+</h2><div class="table-wrapper"><table>
   <thead>
       <tr>
           <th>知识点</th>
@@ -2441,8 +2423,8 @@ Linux服务器   交换机       网络设备
   </tbody>
 </table></div>
 <hr>
-<h1 id="九网络故障排查万能思路">九、网络故障排查万能思路
-</h1><p>遇到网络问题，可以记住：</p>
+<h2 id="九网络故障排查万能思路">九、网络故障排查万能思路
+</h2><p>遇到网络问题，可以记住：</p>
 <p>先判断“哪里不通”</p>
 <pre><code>    ↓
 </code></pre>
@@ -2478,8 +2460,8 @@ Linux服务器   交换机       网络设备
 <p>监控告警</p>
 <p>进行交叉验证。</p>
 <hr>
-<h1 id="十答题万能模板">十、答题万能模板
-</h1><p>面对网络故障类问题，可以采用：</p>
+<h2 id="十答题万能模板">十、答题万能模板
+</h2><p>面对网络故障类问题，可以采用：</p>
 <blockquote>
 <p><strong>“我会先确定故障范围，然后按照从底层到上层的顺序进行排查。”</strong></p>
 </blockquote>
@@ -2539,10 +2521,10 @@ Linux服务器   交换机       网络设备
 <p><strong>“我会结合ping、tracert/traceroute、nslookup/dig、ipconfig/ip、ss/netstat以及Zabbix监控数据进行交叉验证，而不是只通过单一工具判断故障。”</strong></p>
 </blockquote>
 <hr>
-<h1 id="十一重点背诵清单">十一、重点背诵清单
-</h1><p>如果复习时间比较紧，优先掌握以下内容：</p>
-<h2 id="第一优先级">第一优先级
-</h2><ul>
+<h2 id="十一重点背诵清单">十一、重点背诵清单
+</h2><p>如果复习时间比较紧，优先掌握以下内容：</p>
+<h3 id="第一优先级">第一优先级
+</h3><ul>
 <li><input disabled="" type="checkbox"> TCP三次握手</li>
 <li><input disabled="" type="checkbox"> TCP四次挥手</li>
 <li><input disabled="" type="checkbox"> TCP与UDP区别</li>
@@ -2556,8 +2538,8 @@ Linux服务器   交换机       网络设备
 <li><input disabled="" type="checkbox"> OSPF</li>
 <li><input disabled="" type="checkbox"> 网络故障排查流程</li>
 </ul>
-<h2 id="第二优先级">第二优先级
-</h2><ul>
+<h3 id="第二优先级">第二优先级
+</h3><ul>
 <li><input disabled="" type="checkbox"> STP</li>
 <li><input disabled="" type="checkbox"> BGP基础</li>
 <li><input disabled="" type="checkbox"> ICMP</li>
@@ -2565,8 +2547,8 @@ Linux服务器   交换机       网络设备
 <li><input disabled="" type="checkbox"> Linux网络命令</li>
 <li><input disabled="" type="checkbox"> Windows网络命令</li>
 </ul>
-<h2 id="第三优先级">第三优先级
-</h2><ul>
+<h3 id="第三优先级">第三优先级
+</h3><ul>
 <li><input disabled="" type="checkbox"> Zabbix Server</li>
 <li><input disabled="" type="checkbox"> Zabbix Agent</li>
 <li><input disabled="" type="checkbox"> SNMP</li>
@@ -2595,10 +2577,36 @@ Linux服务器   交换机       网络设备
 
 
         <span>
-            最后更新于 Aug 17, 2026 17:20 &#43;0800
+            最后更新于 Aug 17, 2026 17:45 &#43;0800
         </span>
     </section></footer>
 
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
 
     
 </article>
@@ -2606,6 +2614,80 @@ Linux服务器   交换机       网络设备
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%96%E8%AF%81%E6%8A%80%E6%9C%AF%E5%AE%9E%E8%AE%AD/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">计算机取证技术实训</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_eassay2025/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_Eassay(2025)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_%E6%A8%A1%E6%8B%9F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_模拟</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_202206/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_202206</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/cet4_202209/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CET4_202209</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

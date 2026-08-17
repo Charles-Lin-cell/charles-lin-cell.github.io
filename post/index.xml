@@ -7,17 +7,17 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>梦幻星河</copyright>
-        <lastBuildDate>Mon, 17 Aug 2026 17:20:45 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Aug 2026 17:45:08 +0800</lastBuildDate><atom:link href="https://charles-lin-cell.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>网工基础知识点</title>
         <link>https://charles-lin-cell.github.io/p/%E7%BD%91%E5%B7%A5%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
         <pubDate>Mon, 17 Aug 2026 17:18:08 +0800</pubDate>
         
         <guid>https://charles-lin-cell.github.io/p/%E7%BD%91%E5%B7%A5%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
-        <description>&lt;h1 id=&#34;一网络基础&#34;&gt;一、网络基础
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;1-tcp三次握手&#34;&gt;1. TCP三次握手
-&lt;/h2&gt;&lt;h3 id=&#34;11-tcp是什么&#34;&gt;1.1 TCP是什么？
-&lt;/h3&gt;&lt;p&gt;TCP（Transmission Control Protocol，传输控制协议）是一种&lt;strong&gt;面向连接、可靠的传输层协议&lt;/strong&gt;。&lt;/p&gt;
+        <description>&lt;h2 id=&#34;一网络基础&#34;&gt;一、网络基础
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-tcp三次握手&#34;&gt;1. TCP三次握手
+&lt;/h3&gt;&lt;h4 id=&#34;11-tcp是什么&#34;&gt;1.1 TCP是什么？
+&lt;/h4&gt;&lt;p&gt;TCP（Transmission Control Protocol，传输控制协议）是一种&lt;strong&gt;面向连接、可靠的传输层协议&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;主要特点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;面向连接&lt;/li&gt;
@@ -39,8 +39,8 @@
 &lt;/ul&gt;
 &lt;p&gt;来保证数据可靠传输。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;12-为什么需要三次握手&#34;&gt;1.2 为什么需要三次握手？
-&lt;/h3&gt;&lt;p&gt;TCP建立连接时需要确认双方：&lt;/p&gt;
+&lt;h4 id=&#34;12-为什么需要三次握手&#34;&gt;1.2 为什么需要三次握手？
+&lt;/h4&gt;&lt;p&gt;TCP建立连接时需要确认双方：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;客户端能够发送数据&lt;/li&gt;
 &lt;li&gt;服务端能够接收数据&lt;/li&gt;
@@ -49,8 +49,8 @@
 &lt;/ol&gt;
 &lt;p&gt;因此需要三次通信完成双方状态确认。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;13-三次握手过程&#34;&gt;1.3 三次握手过程
-&lt;/h3&gt;&lt;p&gt;客户端                                  服务端&lt;/p&gt;
+&lt;h4 id=&#34;13-三次握手过程&#34;&gt;1.3 三次握手过程
+&lt;/h4&gt;&lt;p&gt;客户端                                  服务端&lt;/p&gt;
 &lt;p&gt;SYN, Seq=x&lt;/p&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;                 SYN + ACK
@@ -66,8 +66,8 @@
 &lt;pre&gt;&lt;code&gt;      TCP连接建立
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;具体过程：&lt;/p&gt;
-&lt;h4 id=&#34;第一次握手&#34;&gt;第一次握手
-&lt;/h4&gt;&lt;p&gt;客户端 → 服务端：&lt;/p&gt;
+&lt;h5 id=&#34;第一次握手&#34;&gt;第一次握手
+&lt;/h5&gt;&lt;p&gt;客户端 → 服务端：&lt;/p&gt;
 &lt;p&gt;SYN=1&lt;/p&gt;
 &lt;p&gt;Seq=x&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
@@ -75,8 +75,8 @@
 &lt;p&gt;客户端请求建立TCP连接，并告诉服务器自己的初始序列号是x。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;第二次握手&#34;&gt;第二次握手
-&lt;/h4&gt;&lt;p&gt;服务端 → 客户端：&lt;/p&gt;
+&lt;h5 id=&#34;第二次握手&#34;&gt;第二次握手
+&lt;/h5&gt;&lt;p&gt;服务端 → 客户端：&lt;/p&gt;
 &lt;p&gt;SYN=1&lt;/p&gt;
 &lt;p&gt;ACK=1&lt;/p&gt;
 &lt;p&gt;Seq=y&lt;/p&gt;
@@ -86,8 +86,8 @@
 &lt;p&gt;服务端收到客户端请求，同意建立连接，同时告诉客户端自己的初始序列号是y。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;第三次握手&#34;&gt;第三次握手
-&lt;/h4&gt;&lt;p&gt;客户端 → 服务端：&lt;/p&gt;
+&lt;h5 id=&#34;第三次握手&#34;&gt;第三次握手
+&lt;/h5&gt;&lt;p&gt;客户端 → 服务端：&lt;/p&gt;
 &lt;p&gt;ACK=1&lt;/p&gt;
 &lt;p&gt;Ack=y+1&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
@@ -107,8 +107,8 @@
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h4 id=&#34;15-常见追问&#34;&gt;1.5 常见追问
-&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;为什么不是两次握手？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;因为两次握手无法充分确认：&lt;/p&gt;
+&lt;/h4&gt;&lt;h5 id=&#34;为什么不是两次握手&#34;&gt;&lt;strong&gt;为什么不是两次握手？&lt;/strong&gt;
+&lt;/h5&gt;&lt;p&gt;因为两次握手无法充分确认：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;服务端的发送能力和客户端的接收能力。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -117,9 +117,9 @@
 &lt;p&gt;客户端已经收到自己的SYN+ACK。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-tcp四次挥手&#34;&gt;2. TCP四次挥手
-&lt;/h2&gt;&lt;h3 id=&#34;21-为什么tcp断开连接需要四次&#34;&gt;2.1 为什么TCP断开连接需要四次？
-&lt;/h3&gt;&lt;p&gt;TCP是&lt;strong&gt;全双工通信&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;2-tcp四次挥手&#34;&gt;2. TCP四次挥手
+&lt;/h3&gt;&lt;h4 id=&#34;21-为什么tcp断开连接需要四次&#34;&gt;2.1 为什么TCP断开连接需要四次？
+&lt;/h4&gt;&lt;p&gt;TCP是&lt;strong&gt;全双工通信&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;双方的数据发送方向需要分别关闭，因此通常需要：&lt;/p&gt;
 &lt;p&gt;客户端 FIN&lt;/p&gt;
 &lt;p&gt;服务器 ACK&lt;/p&gt;
@@ -127,8 +127,8 @@
 &lt;p&gt;客户端 ACK&lt;/p&gt;
 &lt;p&gt;共四次。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;22-四次挥手过程&#34;&gt;2.2 四次挥手过程
-&lt;/h3&gt;&lt;p&gt;客户端                                  服务端&lt;/p&gt;
+&lt;h4 id=&#34;22-四次挥手过程&#34;&gt;2.2 四次挥手过程
+&lt;/h4&gt;&lt;p&gt;客户端                                  服务端&lt;/p&gt;
 &lt;p&gt;FIN&lt;/p&gt;
 &lt;p&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;                 ACK
@@ -142,16 +142,16 @@
 &lt;pre&gt;&lt;code&gt;      TCP连接关闭
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;23-四次挥手详细过程&#34;&gt;2.3 四次挥手详细过程
-&lt;/h3&gt;&lt;h4 id=&#34;第一次&#34;&gt;第一次
-&lt;/h4&gt;&lt;p&gt;客户端：&lt;/p&gt;
+&lt;h4 id=&#34;23-四次挥手详细过程&#34;&gt;2.3 四次挥手详细过程
+&lt;/h4&gt;&lt;h5 id=&#34;第一次&#34;&gt;第一次
+&lt;/h5&gt;&lt;p&gt;客户端：&lt;/p&gt;
 &lt;p&gt;FIN=1&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;客户端没有数据要发送了，希望关闭连接。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;第二次&#34;&gt;第二次
-&lt;/h4&gt;&lt;p&gt;服务端：&lt;/p&gt;
+&lt;h5 id=&#34;第二次&#34;&gt;第二次
+&lt;/h5&gt;&lt;p&gt;服务端：&lt;/p&gt;
 &lt;p&gt;ACK=1&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -159,16 +159,16 @@
 &lt;/blockquote&gt;
 &lt;p&gt;但是服务端可能还有数据没有发送完。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;第三次&#34;&gt;第三次
-&lt;/h4&gt;&lt;p&gt;服务端数据发送完成后：&lt;/p&gt;
+&lt;h5 id=&#34;第三次&#34;&gt;第三次
+&lt;/h5&gt;&lt;p&gt;服务端数据发送完成后：&lt;/p&gt;
 &lt;p&gt;FIN=1&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;服务端也没有数据需要发送了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;第四次&#34;&gt;第四次
-&lt;/h4&gt;&lt;p&gt;客户端：&lt;/p&gt;
+&lt;h5 id=&#34;第四次&#34;&gt;第四次
+&lt;/h5&gt;&lt;p&gt;客户端：&lt;/p&gt;
 &lt;p&gt;ACK=1&lt;/p&gt;
 &lt;p&gt;表示：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -176,8 +176,8 @@
 &lt;/blockquote&gt;
 &lt;p&gt;连接关闭。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;24-time_wait是什么&#34;&gt;2.4 TIME_WAIT是什么？
-&lt;/h3&gt;&lt;p&gt;主动关闭连接的一方通常会进入：&lt;/p&gt;
+&lt;p&gt;2.4 TIME_WAIT是什么？&lt;/p&gt;
+&lt;p&gt;主动关闭连接的一方通常会进入：&lt;/p&gt;
 &lt;p&gt;TIME_WAIT&lt;/p&gt;
 &lt;p&gt;主要作用：&lt;/p&gt;
 &lt;ol&gt;
@@ -187,9 +187,9 @@
 &lt;p&gt;经典等待时间：&lt;/p&gt;
 &lt;p&gt;2MSL&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-udp&#34;&gt;3. UDP
-&lt;/h2&gt;&lt;h3 id=&#34;31-udp是什么&#34;&gt;3.1 UDP是什么？
-&lt;/h3&gt;&lt;p&gt;UDP（User Datagram Protocol）是无连接的传输层协议。&lt;/p&gt;
+&lt;h3 id=&#34;3-udp&#34;&gt;3. UDP
+&lt;/h3&gt;&lt;h4 id=&#34;31-udp是什么&#34;&gt;3.1 UDP是什么？
+&lt;/h4&gt;&lt;p&gt;UDP（User Datagram Protocol）是无连接的传输层协议。&lt;/p&gt;
 &lt;p&gt;特点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;无连接&lt;/li&gt;
@@ -201,8 +201,8 @@
 &lt;li&gt;延迟较低&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;32-tcp与udp对比&#34;&gt;3.2 TCP与UDP对比
-&lt;/h3&gt;&lt;table&gt;
+&lt;h4 id=&#34;32-tcp与udp对比&#34;&gt;3.2 TCP与UDP对比
+&lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;项目&lt;/th&gt;
@@ -254,23 +254,23 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;33-常见udp应用&#34;&gt;3.3 常见UDP应用
-&lt;/h3&gt;&lt;h4 id=&#34;dnsdomain-name-system-域名系统的缩写&#34;&gt;DNS（Domain Name System 域名系统的缩写）
-&lt;/h4&gt;&lt;p&gt;通常：&lt;/p&gt;
+&lt;h4 id=&#34;33-常见udp应用&#34;&gt;3.3 常见UDP应用
+&lt;/h4&gt;&lt;h5 id=&#34;dnsdomain-name-system-域名系统的缩写&#34;&gt;DNS（Domain Name System 域名系统的缩写）
+&lt;/h5&gt;&lt;p&gt;通常：&lt;/p&gt;
 &lt;p&gt;UDP 53&lt;/p&gt;
-&lt;h4 id=&#34;dhcpdynamic-host-configuration-protocol-动态主机配置协议&#34;&gt;DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）
-&lt;/h4&gt;&lt;p&gt;使用：&lt;/p&gt;
+&lt;h5 id=&#34;dhcpdynamic-host-configuration-protocol-动态主机配置协议&#34;&gt;DHCP（Dynamic Host Configuration Protocol 动态主机配置协议）
+&lt;/h5&gt;&lt;p&gt;使用：&lt;/p&gt;
 &lt;p&gt;UDP 67/68&lt;/p&gt;
-&lt;h4 id=&#34;snmpsimple-network-management-protocol-简单网络管理协议&#34;&gt;SNMP（Simple Network Management Protocol 简单网络管理协议）
-&lt;/h4&gt;&lt;p&gt;通常：&lt;/p&gt;
+&lt;h5 id=&#34;snmpsimple-network-management-protocol-简单网络管理协议&#34;&gt;SNMP（Simple Network Management Protocol 简单网络管理协议）
+&lt;/h5&gt;&lt;p&gt;通常：&lt;/p&gt;
 &lt;p&gt;UDP 161&lt;/p&gt;
-&lt;h4 id=&#34;snmp-trap&#34;&gt;SNMP Trap
-&lt;/h4&gt;&lt;p&gt;通常：它允许被管理的设备在出现特定事件时主动向网络管理系统（NMS）发送消息。这种机制使得网络管理员无需不断轮询设备，从而节省了计算资源。&lt;/p&gt;
+&lt;h5 id=&#34;snmp-trap&#34;&gt;SNMP Trap
+&lt;/h5&gt;&lt;p&gt;通常：它允许被管理的设备在出现特定事件时主动向网络管理系统（NMS）发送消息。这种机制使得网络管理员无需不断轮询设备，从而节省了计算资源。&lt;/p&gt;
 &lt;p&gt;UDP 162&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-arp&#34;&gt;4. ARP
-&lt;/h2&gt;&lt;h3 id=&#34;41-arp是什么&#34;&gt;4.1 ARP是什么？
-&lt;/h3&gt;&lt;p&gt;ARP（Address Resolution Protocol 地址解析协议）用于：&lt;/p&gt;
+&lt;h3 id=&#34;4-arp&#34;&gt;4. ARP
+&lt;/h3&gt;&lt;h4 id=&#34;41-arp是什么&#34;&gt;4.1 ARP是什么？
+&lt;/h4&gt;&lt;p&gt;ARP（Address Resolution Protocol 地址解析协议）用于：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;根据IPv4地址查询对应的MAC地址。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -281,8 +281,8 @@
 &lt;p&gt;AA:BB:CC:DD:EE:FF&lt;/p&gt;
 &lt;p&gt;主机需要发送数据时，如果知道目标IP但不知道MAC，就会使用ARP。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;42-arp工作过程&#34;&gt;4.2 ARP工作过程
-&lt;/h3&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;h4 id=&#34;42-arp工作过程&#34;&gt;4.2 ARP工作过程
+&lt;/h4&gt;&lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;客户端：&lt;/p&gt;
 &lt;p&gt;192.168.1.10&lt;/p&gt;
 &lt;p&gt;目标：&lt;/p&gt;
@@ -294,15 +294,15 @@
 &lt;p&gt;客户端将结果保存到：&lt;/p&gt;
 &lt;p&gt;ARP缓存表&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;43-常用命令&#34;&gt;4.3 常用命令
-&lt;/h3&gt;&lt;p&gt;Windows：&lt;/p&gt;
+&lt;h4 id=&#34;43-常用命令&#34;&gt;4.3 常用命令
+&lt;/h4&gt;&lt;p&gt;Windows：&lt;/p&gt;
 &lt;p&gt;arp -a   (用于&lt;strong&gt;显示本机ARP缓存表&lt;/strong&gt;，即当前已解析的 &lt;strong&gt;IP地址与MAC地址映射关系&lt;/strong&gt;。)&lt;/p&gt;
 &lt;p&gt;Linux：&lt;/p&gt;
 &lt;p&gt;ip neigh&lt;/p&gt;
 &lt;p&gt;(&lt;strong&gt;ip neigh&lt;/strong&gt; 命令是用于管理 IP 邻居表的工具，它允许用户添加、删除或显示 ARP（IPv4）或 NDP（IPv6）的静态记录。这些记录是协议地址和链路层地址之间的绑定，用于在同一链路上共享的主机。)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;44-arp常见故障&#34;&gt;4.4 ARP常见故障
-&lt;/h3&gt;&lt;p&gt;如果：&lt;/p&gt;
+&lt;h4 id=&#34;44-arp常见故障&#34;&gt;4.4 ARP常见故障
+&lt;/h4&gt;&lt;p&gt;如果：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;IP地址正常，但无法访问同网段主机&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -315,9 +315,9 @@
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;交换机MAC地址表&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;5-dns&#34;&gt;5. DNS
-&lt;/h2&gt;&lt;h3 id=&#34;51-dns是什么&#34;&gt;5.1 DNS是什么？
-&lt;/h3&gt;&lt;p&gt;DNS（Domain Name System）负责：&lt;/p&gt;
+&lt;h3 id=&#34;5-dns&#34;&gt;5. DNS
+&lt;/h3&gt;&lt;h4 id=&#34;51-dns是什么&#34;&gt;5.1 DNS是什么？
+&lt;/h4&gt;&lt;p&gt;DNS（Domain Name System）负责：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;域名 → IP地址&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -328,8 +328,8 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;93.184.216.34&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;52-dns常见记录&#34;&gt;5.2 DNS常见记录
-&lt;/h3&gt;&lt;table&gt;
+&lt;h4 id=&#34;52-dns常见记录&#34;&gt;5.2 DNS常见记录
+&lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;类型&lt;/th&gt;
@@ -364,13 +364,13 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;53-dns常用端口&#34;&gt;5.3 DNS常用端口
-&lt;/h3&gt;&lt;p&gt;UDP 53&lt;/p&gt;
+&lt;h4 id=&#34;53-dns常用端口&#34;&gt;5.3 DNS常用端口
+&lt;/h4&gt;&lt;p&gt;UDP 53&lt;/p&gt;
 &lt;p&gt;DNS进行某些特殊查询或大响应时也可能使用：&lt;/p&gt;
 &lt;p&gt;TCP 53&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;54-dns故障排查&#34;&gt;5.4 DNS故障排查
-&lt;/h3&gt;&lt;p&gt;如果：&lt;/p&gt;
+&lt;h4 id=&#34;54-dns故障排查&#34;&gt;5.4 DNS故障排查
+&lt;/h4&gt;&lt;p&gt;如果：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;能Ping IP，但访问域名失败&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -399,9 +399,9 @@
 虽然通常情况下 dig 使用命令行参数，但它也可以按批处理模式从文件读取搜索请求。
 不同于早期版本，dig 的 BIND9 实现允许从命令行发出多个查询。)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;6-dhcp&#34;&gt;6. DHCP
-&lt;/h2&gt;&lt;h3 id=&#34;61-dhcp是什么&#34;&gt;6.1 DHCP是什么？
-&lt;/h3&gt;&lt;p&gt;DHCP（Dynamic Host Configuration Protocol &lt;strong&gt;动态主机配置协议&lt;/strong&gt;）用于：&lt;/p&gt;
+&lt;h3 id=&#34;6-dhcp&#34;&gt;6. DHCP
+&lt;/h3&gt;&lt;h4 id=&#34;61-dhcp是什么&#34;&gt;6.1 DHCP是什么？
+&lt;/h4&gt;&lt;p&gt;DHCP（Dynamic Host Configuration Protocol &lt;strong&gt;动态主机配置协议&lt;/strong&gt;）用于：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;自动为客户端分配网络配置。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -414,8 +414,8 @@
 &lt;li&gt;租期&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;62-dhcp四步过程&#34;&gt;6.2 DHCP四步过程
-&lt;/h3&gt;&lt;p&gt;经典过程：&lt;/p&gt;
+&lt;h4 id=&#34;62-dhcp四步过程&#34;&gt;6.2 DHCP四步过程
+&lt;/h4&gt;&lt;p&gt;经典过程：&lt;/p&gt;
 &lt;p&gt;Discover&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;↓
 &lt;/code&gt;&lt;/pre&gt;
@@ -431,39 +431,39 @@
 &lt;p&gt;&lt;strong&gt;DORA&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h4 id=&#34;dhcp-discover&#34;&gt;DHCP Discover
-&lt;/h4&gt;&lt;p&gt;客户端广播：&lt;/p&gt;
+&lt;h5 id=&#34;dhcp-discover&#34;&gt;DHCP Discover
+&lt;/h5&gt;&lt;p&gt;客户端广播：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我需要一个IP地址。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;dhcp-offer&#34;&gt;DHCP Offer
-&lt;/h4&gt;&lt;p&gt;服务器提供：&lt;/p&gt;
+&lt;h5 id=&#34;dhcp-offer&#34;&gt;DHCP Offer
+&lt;/h5&gt;&lt;p&gt;服务器提供：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;可以给你这个IP。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;dhcp-request&#34;&gt;DHCP Request
-&lt;/h4&gt;&lt;p&gt;客户端：&lt;/p&gt;
+&lt;h5 id=&#34;dhcp-request&#34;&gt;DHCP Request
+&lt;/h5&gt;&lt;p&gt;客户端：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我选择这个IP。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4 id=&#34;dhcp-ack&#34;&gt;DHCP ACK
-&lt;/h4&gt;&lt;p&gt;服务器：&lt;/p&gt;
+&lt;h5 id=&#34;dhcp-ack&#34;&gt;DHCP ACK
+&lt;/h5&gt;&lt;p&gt;服务器：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;确认分配。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;63-dhcp常用端口&#34;&gt;6.3 DHCP常用端口
-&lt;/h3&gt;&lt;p&gt;Server：UDP 67&lt;/p&gt;
+&lt;h4 id=&#34;63-dhcp常用端口&#34;&gt;6.3 DHCP常用端口
+&lt;/h4&gt;&lt;p&gt;Server：UDP 67&lt;/p&gt;
 &lt;p&gt;Client：UDP 68&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;7-http--https&#34;&gt;7. HTTP / HTTPS
-&lt;/h2&gt;&lt;h3 id=&#34;71-http&#34;&gt;7.1 HTTP
-&lt;/h3&gt;&lt;p&gt;HTTP（HyperText Transfer Protocol &lt;strong&gt;超文本传输协议&lt;/strong&gt;）是应用层协议。&lt;/p&gt;
+&lt;h3 id=&#34;7-http--https&#34;&gt;7. HTTP / HTTPS
+&lt;/h3&gt;&lt;h4 id=&#34;71-http&#34;&gt;7.1 HTTP
+&lt;/h4&gt;&lt;p&gt;HTTP（HyperText Transfer Protocol &lt;strong&gt;超文本传输协议&lt;/strong&gt;）是应用层协议。&lt;/p&gt;
 &lt;p&gt;常见端口：&lt;/p&gt;
 &lt;p&gt;TCP 80&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;72-https&#34;&gt;7.2 HTTPS
-&lt;/h3&gt;&lt;p&gt;HTTPS：&lt;/p&gt;
+&lt;h4 id=&#34;72-https&#34;&gt;7.2 HTTPS
+&lt;/h4&gt;&lt;p&gt;HTTPS：&lt;/p&gt;
 &lt;p&gt;HTTP + TLS&lt;br&gt;
 (传输层加密（&lt;strong&gt;TLS，Transport Layer Security&lt;/strong&gt;）)&lt;/p&gt;
 &lt;p&gt;常见端口：&lt;/p&gt;
@@ -475,8 +475,8 @@
 &lt;li&gt;数据完整性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;73-http常见状态码&#34;&gt;7.3 HTTP常见状态码
-&lt;/h3&gt;&lt;table&gt;
+&lt;h4 id=&#34;73-http常见状态码&#34;&gt;7.3 HTTP常见状态码
+&lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;状态码&lt;/th&gt;
@@ -527,8 +527,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;74-常问502是什么意思&#34;&gt;7.4 常问：502是什么意思？
-&lt;/h3&gt;&lt;p&gt;502 Bad Gateway通常表示：&lt;/p&gt;
+&lt;h4 id=&#34;74-常问502是什么意思&#34;&gt;7.4 常问：502是什么意思？
+&lt;/h4&gt;&lt;p&gt;502 Bad Gateway通常表示：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;网关/代理服务器从上游服务器获得了无效响应。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -552,9 +552,9 @@
 &lt;li&gt;应用程序状态&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;8-icmp&#34;&gt;8. ICMP
-&lt;/h2&gt;&lt;h3 id=&#34;81-icmp是什么&#34;&gt;8.1 ICMP是什么？
-&lt;/h3&gt;&lt;p&gt;ICMP（Internet Control Message Protocol &lt;strong&gt;网际控制报文协议&lt;/strong&gt;）主要用于：&lt;/p&gt;
+&lt;h3 id=&#34;8-icmp&#34;&gt;8. ICMP
+&lt;/h3&gt;&lt;h4 id=&#34;81-icmp是什么&#34;&gt;8.1 ICMP是什么？
+&lt;/h4&gt;&lt;p&gt;ICMP（Internet Control Message Protocol &lt;strong&gt;网际控制报文协议&lt;/strong&gt;）主要用于：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;网络状态检测和错误报告。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -568,8 +568,8 @@
 它可以帮助用户确定数据包从源计算机到目标地址在网络中的路径。
 Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请求消息来工作，每个消息的生存时间 (TTL) 值逐渐增加，从而发现数据包经过的路由器的 IP 地址。)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;82-ping原理&#34;&gt;8.2 Ping原理
-&lt;/h3&gt;&lt;p&gt;Ping主要使用：&lt;/p&gt;
+&lt;h4 id=&#34;82-ping原理&#34;&gt;8.2 Ping原理
+&lt;/h4&gt;&lt;p&gt;Ping主要使用：&lt;/p&gt;
 &lt;p&gt;ICMP Echo Request&lt;/p&gt;
 &lt;p&gt;对方返回：&lt;/p&gt;
 &lt;p&gt;ICMP Echo Reply&lt;/p&gt;
@@ -586,8 +586,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;主机A&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;83-ping不通不一定代表服务器宕机&#34;&gt;8.3 Ping不通不一定代表服务器宕机
-&lt;/h3&gt;&lt;p&gt;可能原因：&lt;/p&gt;
+&lt;h4 id=&#34;83-ping不通不一定代表服务器宕机&#34;&gt;8.3 Ping不通不一定代表服务器宕机
+&lt;/h4&gt;&lt;p&gt;可能原因：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;ICMP被防火墙禁止&lt;/li&gt;
 &lt;li&gt;路由问题&lt;/li&gt;
@@ -601,11 +601,11 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;&lt;strong&gt;Ping不通 ≠ 服务器一定宕机。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;二路由与交换&#34;&gt;二、路由与交换
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;9-vlan&#34;&gt;9. VLAN
-&lt;/h2&gt;&lt;h3 id=&#34;91-vlan是什么&#34;&gt;9.1 VLAN是什么？
-&lt;/h3&gt;&lt;p&gt;VLAN（Virtual Local Area Network &lt;strong&gt;虚拟局域网&lt;/strong&gt;）：&lt;/p&gt;
+&lt;h2 id=&#34;二路由与交换&#34;&gt;二、路由与交换
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;9-vlan&#34;&gt;9. VLAN
+&lt;/h3&gt;&lt;h4 id=&#34;91-vlan是什么&#34;&gt;9.1 VLAN是什么？
+&lt;/h4&gt;&lt;p&gt;VLAN（Virtual Local Area Network &lt;strong&gt;虚拟局域网&lt;/strong&gt;）：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;虚拟局域网&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -618,24 +618,24 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;VLAN 20：服务器网&lt;/p&gt;
 &lt;p&gt;VLAN 30：访客网&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;92-vlan的主要作用&#34;&gt;9.2 VLAN的主要作用
-&lt;/h3&gt;&lt;h4 id=&#34;-隔离广播域&#34;&gt;① 隔离广播域
-&lt;/h4&gt;&lt;p&gt;减少广播流量。&lt;/p&gt;
-&lt;h4 id=&#34;-网络隔离&#34;&gt;② 网络隔离
-&lt;/h4&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;h4 id=&#34;92-vlan的主要作用&#34;&gt;9.2 VLAN的主要作用
+&lt;/h4&gt;&lt;h5 id=&#34;-隔离广播域&#34;&gt;① 隔离广播域
+&lt;/h5&gt;&lt;p&gt;减少广播流量。&lt;/p&gt;
+&lt;h5 id=&#34;-网络隔离&#34;&gt;② 网络隔离
+&lt;/h5&gt;&lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;员工网&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;×
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;访客网&lt;/p&gt;
-&lt;h4 id=&#34;-提高安全性&#34;&gt;③ 提高安全性
-&lt;/h4&gt;&lt;p&gt;不同VLAN之间需要通过：&lt;/p&gt;
+&lt;h5 id=&#34;-提高安全性&#34;&gt;③ 提高安全性
+&lt;/h5&gt;&lt;p&gt;不同VLAN之间需要通过：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;三层交换机 / 路由器 / 防火墙&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;进行通信。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;10-access端口&#34;&gt;10. Access端口
-&lt;/h2&gt;&lt;p&gt;Access端口通常用于：&lt;/p&gt;
+&lt;h3 id=&#34;10-access端口&#34;&gt;10. Access端口
+&lt;/h3&gt;&lt;p&gt;Access端口通常用于：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;连接终端设备。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -668,8 +668,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;上述配置将FastEthernet0/1端口设置为Access端口，并将其分配到VLAN 10。此端口将仅允许来自VLAN 10的流量进入。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;11-trunk端口&#34;&gt;11. Trunk端口
-&lt;/h2&gt;&lt;p&gt;Trunk端口用于：&lt;/p&gt;
+&lt;h3 id=&#34;11-trunk端口&#34;&gt;11. Trunk端口
+&lt;/h3&gt;&lt;p&gt;Trunk端口用于：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;在交换机之间传输多个VLAN。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -743,8 +743,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h3 id=&#34;111-access与trunk对比&#34;&gt;11.1 Access与Trunk对比
-&lt;/h3&gt;&lt;table&gt;
+&lt;h4 id=&#34;111-access与trunk对比&#34;&gt;11.1 Access与Trunk对比
+&lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;项目&lt;/th&gt;
@@ -786,9 +786,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;12-stp&#34;&gt;12. STP
-&lt;/h2&gt;&lt;h3 id=&#34;121-stp是什么&#34;&gt;12.1 STP是什么？
-&lt;/h3&gt;&lt;p&gt;STP（Spanning Tree Protocol）：&lt;/p&gt;
+&lt;h3 id=&#34;12-stp&#34;&gt;12. STP
+&lt;/h3&gt;&lt;h4 id=&#34;121-stp是什么&#34;&gt;12.1 STP是什么？
+&lt;/h4&gt;&lt;p&gt;STP（Spanning Tree Protocol）：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;生成树协议&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -797,8 +797,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;二层网络环路问题。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;122-为什么会有环路&#34;&gt;12.2 为什么会有环路？
-&lt;/h3&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;h4 id=&#34;122-为什么会有环路&#34;&gt;12.2 为什么会有环路？
+&lt;/h4&gt;&lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;交换机A&lt;/p&gt;
 &lt;p&gt;/     \&lt;/p&gt;
 &lt;p&gt;/       \&lt;/p&gt;
@@ -815,8 +815,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;li&gt;网络瘫痪&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;123-stp解决方法&#34;&gt;12.3 STP解决方法
-&lt;/h3&gt;&lt;p&gt;STP通过计算生成树：&lt;/p&gt;
+&lt;h4 id=&#34;123-stp解决方法&#34;&gt;12.3 STP解决方法
+&lt;/h4&gt;&lt;p&gt;STP通过计算生成树：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;逻辑上阻塞部分链路。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -825,9 +825,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;重新计算生成树并恢复备用链路。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;13-静态路由&#34;&gt;13. 静态路由
-&lt;/h2&gt;&lt;h3 id=&#34;131-什么是静态路由&#34;&gt;13.1 什么是静态路由？
-&lt;/h3&gt;&lt;p&gt;静态路由由管理员：&lt;/p&gt;
+&lt;h3 id=&#34;13-静态路由&#34;&gt;13. 静态路由
+&lt;/h3&gt;&lt;h4 id=&#34;131-什么是静态路由&#34;&gt;13.1 什么是静态路由？
+&lt;/h4&gt;&lt;p&gt;静态路由由管理员：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;手动配置路由。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -837,24 +837,24 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;下一跳：&lt;/p&gt;
 &lt;p&gt;192.168.1.2&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;132-优点&#34;&gt;13.2 优点
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h4 id=&#34;132-优点&#34;&gt;13.2 优点
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;配置简单&lt;/li&gt;
 &lt;li&gt;路径明确&lt;/li&gt;
 &lt;li&gt;资源消耗少&lt;/li&gt;
 &lt;li&gt;可控性高&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;133-缺点&#34;&gt;13.3 缺点
-&lt;/h3&gt;&lt;p&gt;大型网络维护困难。&lt;/p&gt;
+&lt;h4 id=&#34;133-缺点&#34;&gt;13.3 缺点
+&lt;/h4&gt;&lt;p&gt;大型网络维护困难。&lt;/p&gt;
 &lt;p&gt;如果网络拓扑发生变化：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;需要人工修改。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;14-ospf&#34;&gt;14. OSPF
-&lt;/h2&gt;&lt;h3 id=&#34;141-ospf是什么&#34;&gt;14.1 OSPF是什么？
-&lt;/h3&gt;&lt;p&gt;OSPF：&lt;/p&gt;
+&lt;h3 id=&#34;14-ospf&#34;&gt;14. OSPF
+&lt;/h3&gt;&lt;h4 id=&#34;141-ospf是什么&#34;&gt;14.1 OSPF是什么？
+&lt;/h4&gt;&lt;p&gt;OSPF：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Open Shortest Path First（&lt;strong&gt;开放式最短路径优先&lt;/strong&gt;）&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -867,8 +867,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;企业内部网络。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;142-ospf特点&#34;&gt;14.2 OSPF特点
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h4 id=&#34;142-ospf特点&#34;&gt;14.2 OSPF特点
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;动态路由&lt;/li&gt;
 &lt;li&gt;链路状态协议&lt;/li&gt;
 &lt;li&gt;使用SPF算法&lt;/li&gt;
@@ -876,8 +876,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;li&gt;收敛速度较快&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;143-ospf-area&#34;&gt;14.3 OSPF Area
-&lt;/h3&gt;&lt;p&gt;常见：&lt;/p&gt;
+&lt;h4 id=&#34;143-ospf-area&#34;&gt;14.3 OSPF Area
+&lt;/h4&gt;&lt;p&gt;常见：&lt;/p&gt;
 &lt;p&gt;Area 0&lt;/p&gt;
 &lt;p&gt;称为：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -892,15 +892,15 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;|&lt;/p&gt;
 &lt;p&gt;+&amp;mdash; Area 3&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;144-ospf常见问题&#34;&gt;14.4 OSPF常见问题
-&lt;/h3&gt;&lt;h4 id=&#34;ospf和静态路由有什么区别&#34;&gt;OSPF和静态路由有什么区别？
-&lt;/h4&gt;&lt;blockquote&gt;
+&lt;h4 id=&#34;144-ospf常见问题&#34;&gt;14.4 OSPF常见问题
+&lt;/h4&gt;&lt;h5 id=&#34;ospf和静态路由有什么区别&#34;&gt;OSPF和静态路由有什么区别？
+&lt;/h5&gt;&lt;blockquote&gt;
 &lt;p&gt;静态路由需要管理员手动配置，而OSPF能够根据网络拓扑动态学习和计算路由。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;15-bgp基础&#34;&gt;15. BGP基础
-&lt;/h2&gt;&lt;h3 id=&#34;151-bgp是什么&#34;&gt;15.1 BGP是什么？
-&lt;/h3&gt;&lt;p&gt;BGP：&lt;/p&gt;
+&lt;h3 id=&#34;15-bgp基础&#34;&gt;15. BGP基础
+&lt;/h3&gt;&lt;h4 id=&#34;151-bgp是什么&#34;&gt;15.1 BGP是什么？
+&lt;/h4&gt;&lt;p&gt;BGP：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Border Gateway Protocol （&lt;strong&gt;边界网关协议&lt;/strong&gt;）&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -913,8 +913,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;&lt;strong&gt;不同自治系统（AS）之间交换路由信息。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;152-bgp常见应用&#34;&gt;15.2 BGP常见应用
-&lt;/h3&gt;&lt;p&gt;例如：&lt;/p&gt;
+&lt;h4 id=&#34;152-bgp常见应用&#34;&gt;15.2 BGP常见应用
+&lt;/h4&gt;&lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;运营商A&lt;/p&gt;
 &lt;p&gt;|&lt;/p&gt;
 &lt;p&gt;| BGP&lt;/p&gt;
@@ -922,8 +922,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;运营商B&lt;/p&gt;
 &lt;p&gt;互联网的大量路由交换依赖BGP。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;153-bgp特点&#34;&gt;15.3 BGP特点
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h4 id=&#34;153-bgp特点&#34;&gt;15.3 BGP特点
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;路径向量型协议&lt;/li&gt;
 &lt;li&gt;适合大型网络&lt;/li&gt;
 &lt;li&gt;互联网核心路由协议&lt;/li&gt;
@@ -933,8 +933,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;BGP使用：&lt;/p&gt;
 &lt;p&gt;TCP 179&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;154-ospf和bgp区别&#34;&gt;15.4 OSPF和BGP区别
-&lt;/h3&gt;&lt;table&gt;
+&lt;h4 id=&#34;154-ospf和bgp区别&#34;&gt;15.4 OSPF和BGP区别
+&lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;项目&lt;/th&gt;
@@ -971,9 +971,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;三网络故障排查&#34;&gt;三、网络故障排查
-&lt;/h1&gt;&lt;h2 id=&#34;16-服务器突然无法访问如何排查&#34;&gt;16. 服务器突然无法访问，如何排查？
-&lt;/h2&gt;&lt;p&gt;这是网络工程师经典题。&lt;/p&gt;
+&lt;h2 id=&#34;三网络故障排查&#34;&gt;三、网络故障排查
+&lt;/h2&gt;&lt;h3 id=&#34;16-服务器突然无法访问如何排查&#34;&gt;16. 服务器突然无法访问，如何排查？
+&lt;/h3&gt;&lt;p&gt;这是网络工程师经典题。&lt;/p&gt;
 &lt;p&gt;不要直接回答：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“先Ping一下。”&lt;/p&gt;
@@ -1005,8 +1005,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;应用层&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;17-第一步检查物理链路&#34;&gt;17. 第一步：检查物理链路
-&lt;/h2&gt;&lt;p&gt;首先确认：&lt;/p&gt;
+&lt;h3 id=&#34;17-第一步检查物理链路&#34;&gt;17. 第一步：检查物理链路
+&lt;/h3&gt;&lt;p&gt;首先确认：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;网线是否正常&lt;/li&gt;
 &lt;li&gt;光模块是否正常&lt;/li&gt;
@@ -1022,8 +1022,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 （该故障码在接收模块检测到来自网关控制模块D（Serial Data Gateway Module D）的串行数据通信信息存在校验错误、数据长度/ID不匹配、校验和/&lt;strong&gt;CRC错误&lt;/strong&gt;等数据完整性问题时被设置，故障位置属于车辆网络通讯系统。）&lt;/p&gt;
 &lt;p&gt;Packet Error&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;18-第二步检查ip配置&#34;&gt;18. 第二步：检查IP配置
-&lt;/h2&gt;&lt;p&gt;Windows：&lt;/p&gt;
+&lt;h3 id=&#34;18-第二步检查ip配置&#34;&gt;18. 第二步：检查IP配置
+&lt;/h3&gt;&lt;p&gt;Windows：&lt;/p&gt;
 &lt;p&gt;ipconfig /all    （显示所有IP配置信息）&lt;/p&gt;
 &lt;p&gt;Linux：&lt;/p&gt;
 &lt;p&gt;ip addr    （显示IP地址）&lt;/p&gt;
@@ -1043,8 +1043,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;Gateway：&lt;/p&gt;
 &lt;p&gt;192.168.1.1&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;19-第三步检查arp&#34;&gt;19. 第三步：检查ARP
-&lt;/h2&gt;&lt;p&gt;查看：&lt;/p&gt;
+&lt;h3 id=&#34;19-第三步检查arp&#34;&gt;19. 第三步：检查ARP
+&lt;/h3&gt;&lt;p&gt;查看：&lt;/p&gt;
 &lt;p&gt;arp -a&lt;/p&gt;
 &lt;p&gt;或者：&lt;/p&gt;
 &lt;p&gt;ip neigh&lt;/p&gt;
@@ -1065,8 +1065,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;li&gt;二层链路&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;20-第四步检查默认网关&#34;&gt;20. 第四步：检查默认网关
-&lt;/h2&gt;&lt;p&gt;执行：&lt;/p&gt;
+&lt;h3 id=&#34;20-第四步检查默认网关&#34;&gt;20. 第四步：检查默认网关
+&lt;/h3&gt;&lt;p&gt;执行：&lt;/p&gt;
 &lt;p&gt;ping 192.168.1.1&lt;/p&gt;
 &lt;p&gt;如果：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1083,8 +1083,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;网关接口&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;21-第五步检查路由&#34;&gt;21. 第五步：检查路由
-&lt;/h2&gt;&lt;p&gt;Windows：&lt;/p&gt;
+&lt;h3 id=&#34;21-第五步检查路由&#34;&gt;21. 第五步：检查路由
+&lt;/h3&gt;&lt;p&gt;Windows：&lt;/p&gt;
 &lt;p&gt;route print&lt;br&gt;
 （&lt;strong&gt;Windows系统中用于显示本地路由表的命令&lt;/strong&gt;，它能列出所有网络路由条目，包括目标网络、网关、接口和度量值等信息。）&lt;/p&gt;
 &lt;p&gt;Linux：&lt;/p&gt;
@@ -1096,8 +1096,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/blockquote&gt;
 &lt;p&gt;Linux例如：&lt;/p&gt;
 &lt;p&gt;default via 192.168.1.1&lt;/p&gt;
-&lt;h3 id=&#34;查看路由&#34;&gt;查看路由
-&lt;/h3&gt;&lt;p&gt;使用_ip route_命令可以查看当前系统的路由表：&lt;/p&gt;
+&lt;h4 id=&#34;查看路由&#34;&gt;查看路由
+&lt;/h4&gt;&lt;p&gt;使用_ip route_命令可以查看当前系统的路由表：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1107,8 +1107,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这将显示所有路由条目，包括默认路由、主机路由和网络路由。&lt;/p&gt;
-&lt;h3 id=&#34;添加路由&#34;&gt;添加路由
-&lt;/h3&gt;&lt;p&gt;可以使用_ip route add_命令添加新的路由条目。例如，添加一个到达特定网络的路由：&lt;/p&gt;
+&lt;h4 id=&#34;添加路由&#34;&gt;添加路由
+&lt;/h4&gt;&lt;p&gt;可以使用_ip route add_命令添加新的路由条目。例如，添加一个到达特定网络的路由：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1118,8 +1118,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;这表示将发往192.168.1.0/24网络的数据包通过192.168.0.1网关，并使用eth0接口发送。&lt;/p&gt;
-&lt;h3 id=&#34;删除路由&#34;&gt;删除路由
-&lt;/h3&gt;&lt;p&gt;使用_ip route del_命令可以删除指定的路由条目。例如，删除一个到达特定网络的路由：&lt;/p&gt;
+&lt;h4 id=&#34;删除路由&#34;&gt;删除路由
+&lt;/h4&gt;&lt;p&gt;使用_ip route del_命令可以删除指定的路由条目。例如，删除一个到达特定网络的路由：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -1129,8 +1129,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;22-第六步检查dns&#34;&gt;22. 第六步：检查DNS
-&lt;/h2&gt;&lt;p&gt;如果：&lt;/p&gt;
+&lt;h3 id=&#34;22-第六步检查dns&#34;&gt;22. 第六步：检查DNS
+&lt;/h3&gt;&lt;p&gt;如果：&lt;/p&gt;
 &lt;p&gt;ping IP地址正常&lt;/p&gt;
 &lt;p&gt;但是：&lt;/p&gt;
 &lt;p&gt;ping 域名失败&lt;/p&gt;
@@ -1157,8 +1157,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;23-第七步检查防火墙和acl&#34;&gt;23. 第七步：检查防火墙和ACL
-&lt;/h2&gt;&lt;p&gt;需要检查：&lt;/p&gt;
+&lt;h3 id=&#34;23-第七步检查防火墙和acl&#34;&gt;23. 第七步：检查防火墙和ACL
+&lt;/h3&gt;&lt;p&gt;需要检查：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows Firewall&lt;/li&gt;
 &lt;li&gt;Linux iptables&lt;/li&gt;
@@ -1184,8 +1184,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;Ping正常，但是TCP 443被防火墙阻断。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;24-第八步检查服务端口&#34;&gt;24. 第八步：检查服务端口
-&lt;/h2&gt;&lt;p&gt;Linux：&lt;/p&gt;
+&lt;h3 id=&#34;24-第八步检查服务端口&#34;&gt;24. 第八步：检查服务端口
+&lt;/h3&gt;&lt;p&gt;Linux：&lt;/p&gt;
 &lt;p&gt;[ss -lntp](&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/whatday/article/details/112170240&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;linux ss 命令简介 端口连接查看 代替netstat_使用ss命令查看当前系统中处于listen状态的所有tcp连接，并显示ip信息和socket信息，使-CSDN博客&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;或者：&lt;/p&gt;
@@ -1199,8 +1199,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;[netstat -ano](&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/w3cnote/windows-finds-port-usage.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Windows下如何查看某个端口被谁占用 | 菜鸟教程&lt;/a&gt;)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;25-第九步检查应用层&#34;&gt;25. 第九步：检查应用层
-&lt;/h2&gt;&lt;p&gt;如果：&lt;/p&gt;
+&lt;h3 id=&#34;25-第九步检查应用层&#34;&gt;25. 第九步：检查应用层
+&lt;/h3&gt;&lt;p&gt;如果：&lt;/p&gt;
 &lt;p&gt;网络正常&lt;/p&gt;
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;TCP端口正常&lt;/p&gt;
@@ -1224,8 +1224,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;[journalctl -u nginx](&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/developer/article/2469398&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Job for nginx.service Failed: Nginx服务启动失败的完美解决方法-腾讯云开发者社区-腾讯云&lt;/a&gt;)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;26-服务器排查标准回答&#34;&gt;26. 服务器排查标准回答
-&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h3 id=&#34;26-服务器排查标准回答&#34;&gt;26. 服务器排查标准回答
+&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“服务器突然无法访问，你怎么排查？”&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;推荐回答：&lt;/p&gt;
@@ -1234,9 +1234,9 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;p&gt;如果IP层连通正常但域名访问异常，我会检查DNS。然后检查防火墙、ACL、安全组等策略。如果网络层没有问题，再检查服务器对应的TCP端口是否监听，以及Web或其他应用服务是否正常，最后结合系统日志和应用日志进一步定位。”&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;四zabbix网络监控&#34;&gt;四、Zabbix网络监控
-&lt;/h1&gt;&lt;h2 id=&#34;27-zabbix是什么&#34;&gt;27. Zabbix是什么？
-&lt;/h2&gt;&lt;p&gt;Zabbix是一款：&lt;/p&gt;
+&lt;h2 id=&#34;四zabbix网络监控&#34;&gt;四、Zabbix网络监控
+&lt;/h2&gt;&lt;h3 id=&#34;27-zabbix是什么&#34;&gt;27. Zabbix是什么？
+&lt;/h3&gt;&lt;p&gt;Zabbix是一款：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;开源监控与告警平台。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1254,8 +1254,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 &lt;li&gt;系统状态&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;28-zabbix基本架构&#34;&gt;28. Zabbix基本架构
-&lt;/h2&gt;&lt;p&gt;典型结构：&lt;/p&gt;
+&lt;h3 id=&#34;28-zabbix基本架构&#34;&gt;28. Zabbix基本架构
+&lt;/h3&gt;&lt;p&gt;典型结构：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;          Zabbix Server
 
                 |
@@ -1274,8 +1274,8 @@ Tracert 命令通过发送一系列 Internet 控制消息协议 (ICMP) 回显请
 Linux服务器   交换机       网络设备
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;29-zabbix-server&#34;&gt;29. Zabbix Server
-&lt;/h2&gt;&lt;p&gt;Zabbix Server是：&lt;/p&gt;
+&lt;h3 id=&#34;29-zabbix-server&#34;&gt;29. Zabbix Server
+&lt;/h3&gt;&lt;p&gt;Zabbix Server是：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;监控系统的核心组件。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1289,8 +1289,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;管理监控对象&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;30-zabbix-agent&#34;&gt;30. Zabbix Agent
-&lt;/h2&gt;&lt;p&gt;Zabbix Agent通常安装在：&lt;/p&gt;
+&lt;h3 id=&#34;30-zabbix-agent&#34;&gt;30. Zabbix Agent
+&lt;/h3&gt;&lt;p&gt;Zabbix Agent通常安装在：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;被监控服务器上。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1312,8 +1312,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;系统状态&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;31-snmp&#34;&gt;31. SNMP
-&lt;/h2&gt;&lt;p&gt;SNMP：&lt;/p&gt;
+&lt;h3 id=&#34;31-snmp&#34;&gt;31. SNMP
+&lt;/h3&gt;&lt;p&gt;SNMP：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Simple Network Management Protocol&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1333,14 +1333,14 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;无线控制器&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;311-snmp常见端口&#34;&gt;31.1 SNMP常见端口
-&lt;/h2&gt;&lt;p&gt;监控查询：&lt;/p&gt;
+&lt;h3 id=&#34;311-snmp常见端口&#34;&gt;31.1 SNMP常见端口
+&lt;/h3&gt;&lt;p&gt;监控查询：&lt;/p&gt;
 &lt;p&gt;UDP 161&lt;/p&gt;
 &lt;p&gt;Trap告警：&lt;/p&gt;
 &lt;p&gt;UDP 162&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;32-icmp监控&#34;&gt;32. ICMP监控
-&lt;/h2&gt;&lt;p&gt;Zabbix可以使用ICMP检测：&lt;/p&gt;
+&lt;h3 id=&#34;32-icmp监控&#34;&gt;32. ICMP监控
+&lt;/h3&gt;&lt;p&gt;Zabbix可以使用ICMP检测：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;设备是否在线。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1355,8 +1355,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;产生告警。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;33-cpu监控&#34;&gt;33. CPU监控
-&lt;/h2&gt;&lt;p&gt;CPU监控可以发现：&lt;/p&gt;
+&lt;h3 id=&#34;33-cpu监控&#34;&gt;33. CPU监控
+&lt;/h3&gt;&lt;p&gt;CPU监控可以发现：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;CPU持续过高&lt;/li&gt;
 &lt;li&gt;单核过载&lt;/li&gt;
@@ -1371,8 +1371,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;高CPU告警。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;34-内存监控&#34;&gt;34. 内存监控
-&lt;/h2&gt;&lt;p&gt;重点关注：&lt;/p&gt;
+&lt;h3 id=&#34;34-内存监控&#34;&gt;34. 内存监控
+&lt;/h3&gt;&lt;p&gt;重点关注：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内存使用率&lt;/li&gt;
 &lt;li&gt;可用内存&lt;/li&gt;
@@ -1386,8 +1386,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;内存使用率过高告警。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;35-磁盘监控&#34;&gt;35. 磁盘监控
-&lt;/h2&gt;&lt;p&gt;监控：&lt;/p&gt;
+&lt;h3 id=&#34;35-磁盘监控&#34;&gt;35. 磁盘监控
+&lt;/h3&gt;&lt;p&gt;监控：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;磁盘空间&lt;/li&gt;
 &lt;li&gt;inode&lt;/li&gt;
@@ -1401,8 +1401,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;磁盘空间不足。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;36-网络流量监控&#34;&gt;36. 网络流量监控
-&lt;/h2&gt;&lt;p&gt;网络设备通常通过：&lt;/p&gt;
+&lt;h3 id=&#34;36-网络流量监控&#34;&gt;36. 网络流量监控
+&lt;/h3&gt;&lt;p&gt;网络设备通常通过：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;SNMP&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1422,18 +1422,18 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;接口状态&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;37-网络设备监控&#34;&gt;37. 网络设备监控
-&lt;/h2&gt;&lt;p&gt;Zabbix可以监控：&lt;/p&gt;
-&lt;h2 id=&#34;交换机&#34;&gt;交换机
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;37-网络设备监控&#34;&gt;37. 网络设备监控
+&lt;/h3&gt;&lt;p&gt;Zabbix可以监控：&lt;/p&gt;
+&lt;h4 id=&#34;交换机&#34;&gt;交换机
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;CPU&lt;/li&gt;
 &lt;li&gt;内存&lt;/li&gt;
 &lt;li&gt;端口状态&lt;/li&gt;
 &lt;li&gt;端口流量&lt;/li&gt;
 &lt;li&gt;错误包&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;路由器&#34;&gt;路由器
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h4 id=&#34;路由器&#34;&gt;路由器
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;CPU&lt;/li&gt;
 &lt;li&gt;内存&lt;/li&gt;
 &lt;li&gt;接口状态&lt;/li&gt;
@@ -1441,8 +1441,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;丢包&lt;/li&gt;
 &lt;li&gt;路由相关指标&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;防火墙&#34;&gt;防火墙
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h4 id=&#34;防火墙&#34;&gt;防火墙
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;CPU&lt;/li&gt;
 &lt;li&gt;内存&lt;/li&gt;
 &lt;li&gt;接口流量&lt;/li&gt;
@@ -1451,8 +1451,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;告警&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;38-zabbix告警&#34;&gt;38. Zabbix告警
-&lt;/h2&gt;&lt;p&gt;Zabbix核心能力之一：&lt;/p&gt;
+&lt;h3 id=&#34;38-zabbix告警&#34;&gt;38. Zabbix告警
+&lt;/h3&gt;&lt;p&gt;Zabbix核心能力之一：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;监控 → 判断 → 告警&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1478,44 +1478,44 @@ Linux服务器   交换机       网络设备
 &lt;/ul&gt;
 &lt;p&gt;具体取决于配置和版本。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;39-zabbix几个核心概念&#34;&gt;39. Zabbix几个核心概念
-&lt;/h2&gt;&lt;h2 id=&#34;host&#34;&gt;Host
-&lt;/h2&gt;&lt;p&gt;被监控对象。&lt;/p&gt;
+&lt;h3 id=&#34;39-zabbix几个核心概念&#34;&gt;39. Zabbix几个核心概念
+&lt;/h3&gt;&lt;h4 id=&#34;host&#34;&gt;Host
+&lt;/h4&gt;&lt;p&gt;被监控对象。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;192.168.1.100&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;item&#34;&gt;Item
-&lt;/h2&gt;&lt;p&gt;监控指标。&lt;/p&gt;
+&lt;h4 id=&#34;item&#34;&gt;Item
+&lt;/h4&gt;&lt;p&gt;监控指标。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;CPU利用率&lt;/p&gt;
 &lt;p&gt;内存使用率&lt;/p&gt;
 &lt;p&gt;磁盘空间&lt;/p&gt;
 &lt;p&gt;网络流量&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;trigger&#34;&gt;Trigger
-&lt;/h2&gt;&lt;p&gt;触发条件。&lt;/p&gt;
+&lt;h4 id=&#34;trigger&#34;&gt;Trigger
+&lt;/h4&gt;&lt;p&gt;触发条件。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;CPU &amp;gt; 90%&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;action&#34;&gt;Action
-&lt;/h2&gt;&lt;p&gt;触发之后执行的动作。&lt;/p&gt;
+&lt;h4 id=&#34;action&#34;&gt;Action
+&lt;/h4&gt;&lt;p&gt;触发之后执行的动作。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;发送邮件&lt;/p&gt;
 &lt;p&gt;发送Webhook&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;template&#34;&gt;Template
-&lt;/h2&gt;&lt;p&gt;监控模板。&lt;/p&gt;
+&lt;h4 id=&#34;template&#34;&gt;Template
+&lt;/h4&gt;&lt;p&gt;监控模板。&lt;/p&gt;
 &lt;p&gt;可以把一组：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Item + Trigger + Discovery&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;等配置批量应用到多个设备。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;五网络工程师常用命令&#34;&gt;五、网络工程师常用命令
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;40-windows&#34;&gt;40. Windows
-&lt;/h2&gt;&lt;h3 id=&#34;查看ip&#34;&gt;查看IP
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;五网络工程师常用命令&#34;&gt;五、网络工程师常用命令
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;40-windows&#34;&gt;40. Windows
+&lt;/h3&gt;&lt;h4 id=&#34;查看ip&#34;&gt;查看IP
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1523,8 +1523,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ipconfig /all
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;查看路由-1&#34;&gt;查看路由
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;查看路由-1&#34;&gt;查看路由
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1532,8 +1532,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;route print
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;查看arp&#34;&gt;查看ARP
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;查看arp&#34;&gt;查看ARP
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1541,8 +1541,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arp -a
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;ping&#34;&gt;Ping
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;ping&#34;&gt;Ping
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1550,8 +1550,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping 192.168.1.1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;路径跟踪&#34;&gt;路径跟踪
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;路径跟踪&#34;&gt;路径跟踪
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1559,8 +1559,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tracert 8.8.8.8
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;dns查询&#34;&gt;DNS查询
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;dns查询&#34;&gt;DNS查询
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1568,8 +1568,8 @@ Linux服务器   交换机       网络设备
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nslookup www.example.com
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;查看tcp连接&#34;&gt;查看TCP连接
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/div&gt;&lt;h4 id=&#34;查看tcp连接&#34;&gt;查看TCP连接
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1578,10 +1578,10 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;六linux网络排查命令&#34;&gt;六、Linux网络排查命令
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;41-查看ip&#34;&gt;41. 查看IP
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h2 id=&#34;六linux网络排查命令&#34;&gt;六、Linux网络排查命令
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;41-查看ip&#34;&gt;41. 查看IP
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1590,8 +1590,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;42-查看路由&#34;&gt;42. 查看路由
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;42-查看路由&#34;&gt;42. 查看路由
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1600,8 +1600,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;43-查看arp邻居表&#34;&gt;43. 查看ARP/邻居表
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;43-查看arp邻居表&#34;&gt;43. 查看ARP/邻居表
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1610,8 +1610,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;44-ping&#34;&gt;44. Ping
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;44-ping&#34;&gt;44. Ping
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1620,8 +1620,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;45-路由追踪&#34;&gt;45. 路由追踪
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;45-路由追踪&#34;&gt;45. 路由追踪
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1630,8 +1630,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;46-dns查询&#34;&gt;46. DNS查询
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;46-dns查询&#34;&gt;46. DNS查询
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1640,8 +1640,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;47-查看监听端口&#34;&gt;47. 查看监听端口
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;47-查看监听端口&#34;&gt;47. 查看监听端口
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1650,8 +1650,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;48-查看网络连接&#34;&gt;48. 查看网络连接
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;48-查看网络连接&#34;&gt;48. 查看网络连接
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1660,8 +1660,8 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;49-查看网络接口&#34;&gt;49. 查看网络接口
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;49-查看网络接口&#34;&gt;49. 查看网络接口
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
@@ -1670,10 +1670,10 @@ Linux服务器   交换机       网络设备
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;七高频问题&#34;&gt;七、高频问题
-&lt;/h1&gt;&lt;hr&gt;
-&lt;h2 id=&#34;50-ping不通服务器怎么办&#34;&gt;50. Ping不通服务器怎么办？
-&lt;/h2&gt;&lt;p&gt;回答思路：&lt;/p&gt;
+&lt;h2 id=&#34;七高频问题&#34;&gt;七、高频问题
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;50-ping不通服务器怎么办&#34;&gt;50. Ping不通服务器怎么办？
+&lt;/h3&gt;&lt;p&gt;回答思路：&lt;/p&gt;
 &lt;p&gt;物理链路&lt;/p&gt;
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;网卡&lt;/p&gt;
@@ -1698,8 +1698,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;Ping不通不一定代表服务器宕机。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;51-能ping-ip但不能访问网站怎么办&#34;&gt;51. 能Ping IP，但不能访问网站怎么办？
-&lt;/h2&gt;&lt;p&gt;排查：&lt;/p&gt;
+&lt;h3 id=&#34;51-能ping-ip但不能访问网站怎么办&#34;&gt;51. 能Ping IP，但不能访问网站怎么办？
+&lt;/h3&gt;&lt;p&gt;排查：&lt;/p&gt;
 &lt;p&gt;Ping IP&lt;/p&gt;
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;TCP 80/443&lt;/p&gt;
@@ -1716,8 +1716,8 @@ Linux服务器   交换机       网络设备
     &gt;curl获取本机公网IP（命令行备忘）_curl 我的ip-CSDN博客&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;测试HTTP服务。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;52-能访问ip但不能访问域名怎么办&#34;&gt;52. 能访问IP，但不能访问域名怎么办？
-&lt;/h2&gt;&lt;p&gt;优先考虑：&lt;/p&gt;
+&lt;h3 id=&#34;52-能访问ip但不能访问域名怎么办&#34;&gt;52. 能访问IP，但不能访问域名怎么办？
+&lt;/h3&gt;&lt;p&gt;优先考虑：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;DNS问题。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1726,8 +1726,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;或者：&lt;/p&gt;
 &lt;p&gt;dig example.com&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;53-网站访问很慢怎么办&#34;&gt;53. 网站访问很慢怎么办？
-&lt;/h2&gt;&lt;p&gt;可以按照：&lt;/p&gt;
+&lt;h3 id=&#34;53-网站访问很慢怎么办&#34;&gt;53. 网站访问很慢怎么办？
+&lt;/h3&gt;&lt;p&gt;可以按照：&lt;/p&gt;
 &lt;p&gt;客户端&lt;/p&gt;
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;DNS&lt;/p&gt;
@@ -1758,8 +1758,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;数据库性能&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;54-zabbix突然报警服务器down怎么办&#34;&gt;54. Zabbix突然报警服务器Down怎么办？
-&lt;/h2&gt;&lt;p&gt;不要直接认为服务器宕机。&lt;/p&gt;
+&lt;h3 id=&#34;54-zabbix突然报警服务器down怎么办&#34;&gt;54. Zabbix突然报警服务器Down怎么办？
+&lt;/h3&gt;&lt;p&gt;不要直接认为服务器宕机。&lt;/p&gt;
 &lt;p&gt;先判断：&lt;/p&gt;
 &lt;p&gt;Zabbix Server自身是否正常&lt;/p&gt;
 &lt;p&gt;↓&lt;/p&gt;
@@ -1799,8 +1799,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;↓&lt;/p&gt;
 &lt;p&gt;Zabbix Server&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;八知识速记表&#34;&gt;八、知识速记表
-&lt;/h1&gt;&lt;table&gt;
+&lt;h2 id=&#34;八知识速记表&#34;&gt;八、知识速记表
+&lt;/h2&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
           &lt;th&gt;知识点&lt;/th&gt;
@@ -1911,8 +1911,8 @@ Linux服务器   交换机       网络设备
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;九网络故障排查万能思路&#34;&gt;九、网络故障排查万能思路
-&lt;/h1&gt;&lt;p&gt;遇到网络问题，可以记住：&lt;/p&gt;
+&lt;h2 id=&#34;九网络故障排查万能思路&#34;&gt;九、网络故障排查万能思路
+&lt;/h2&gt;&lt;p&gt;遇到网络问题，可以记住：&lt;/p&gt;
 &lt;p&gt;先判断“哪里不通”&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    ↓
 &lt;/code&gt;&lt;/pre&gt;
@@ -1948,8 +1948,8 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;监控告警&lt;/p&gt;
 &lt;p&gt;进行交叉验证。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;十答题万能模板&#34;&gt;十、答题万能模板
-&lt;/h1&gt;&lt;p&gt;面对网络故障类问题，可以采用：&lt;/p&gt;
+&lt;h2 id=&#34;十答题万能模板&#34;&gt;十、答题万能模板
+&lt;/h2&gt;&lt;p&gt;面对网络故障类问题，可以采用：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;“我会先确定故障范围，然后按照从底层到上层的顺序进行排查。”&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2009,10 +2009,10 @@ Linux服务器   交换机       网络设备
 &lt;p&gt;&lt;strong&gt;“我会结合ping、tracert/traceroute、nslookup/dig、ipconfig/ip、ss/netstat以及Zabbix监控数据进行交叉验证，而不是只通过单一工具判断故障。”&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;十一重点背诵清单&#34;&gt;十一、重点背诵清单
-&lt;/h1&gt;&lt;p&gt;如果复习时间比较紧，优先掌握以下内容：&lt;/p&gt;
-&lt;h2 id=&#34;第一优先级&#34;&gt;第一优先级
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&#34;十一重点背诵清单&#34;&gt;十一、重点背诵清单
+&lt;/h2&gt;&lt;p&gt;如果复习时间比较紧，优先掌握以下内容：&lt;/p&gt;
+&lt;h3 id=&#34;第一优先级&#34;&gt;第一优先级
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; TCP三次握手&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; TCP四次挥手&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; TCP与UDP区别&lt;/li&gt;
@@ -2026,8 +2026,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; OSPF&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 网络故障排查流程&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;第二优先级&#34;&gt;第二优先级
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;第二优先级&#34;&gt;第二优先级
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; STP&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; BGP基础&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ICMP&lt;/li&gt;
@@ -2035,8 +2035,8 @@ Linux服务器   交换机       网络设备
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Linux网络命令&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Windows网络命令&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;第三优先级&#34;&gt;第三优先级
-&lt;/h2&gt;&lt;ul&gt;
+&lt;h3 id=&#34;第三优先级&#34;&gt;第三优先级
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Zabbix Server&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Zabbix Agent&lt;/li&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SNMP&lt;/li&gt;
